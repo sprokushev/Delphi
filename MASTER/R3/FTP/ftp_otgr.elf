@@ -1,0 +1,554 @@
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Thu, 10 Aug 2006 10:44:24 +0300
+  1.2 Name/Description: ftp_otgr.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+----------------------------------------------
+  2.1 Date   : Thu, 10 Aug 2006 10:44:33 +0300
+  2.2 Address: 4002F63A
+  2.3 Module : rtl70.bpl
+  2.4 Type   : EListError
+  2.5 Message: List index out of bounds (0).
+
+Active Controls:
+----------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Form1
+  3.3 Control Class: TButton
+  3.4 Control Text : Button1
+
+Computer:
+------------------------------
+  4.1 Name        : SRV1000
+  4.2 User        : systemuser
+  4.3 Total Memory: 255 Mb
+  4.4 Free Memory : 145 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 1.51 Gb
+
+Operating System:
+--------------------------------------
+  5.1 Type    : Microsoft Windows 2000
+  5.2 Build # : 2195
+  5.3 Update  : Service Pack 2
+  5.4 Language: Russian
+
+Call Stack Information:
+----------------------------------------------------------------------------------------
+|Address |Module      |Unit          |Class          |Procedure/Method            |Line|
+----------------------------------------------------------------------------------------
+|4002F50C|rtl70.bpl   |Classes.pas   |TList          |Error                       |    |
+|4002F571|rtl70.bpl   |Classes.pas   |TList          |Error                       |    |
+|4002F544|rtl70.bpl   |Classes.pas   |TList          |Error                       |    |
+|4002F63A|rtl70.bpl   |Classes.pas   |TList          |Get                         |    |
+|4002F620|rtl70.bpl   |Classes.pas   |TList          |Get                         |    |
+|40030F57|rtl70.bpl   |Classes.pas   |TCollection    |GetItem                     |    |
+|40030F4C|rtl70.bpl   |Classes.pas   |TCollection    |GetItem                     |    |
+|40708494|indy70.bpl  |Idftplist.pas |TIdFTPListItems|GetItems                    |    |
+|004229F3|ftp_otgr.exe|ftp_upload.pas|TForm1         |Button1Click                |37  |
+|40005F48|rtl70.bpl   |System.pas    |TObject        |InheritsFrom                |    |
+|40005E8E|rtl70.bpl   |System.pas    |               |_IsClass                    |    |
+|002B1BD4|vcl70.bpl   |Controls.pas  |TControl       |Click                       |    |
+|40005EF0|rtl70.bpl   |System.pas    |               |_CallDynaInst               |    |
+|002A1EDC|vcl70.bpl   |Stdctrls.pas  |TButton        |CNCommand                   |    |
+|002B1A98|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|77E16B06|user32.dll  |              |               |CallWindowProcW             |    |
+|77F81FF0|ntdll.dll   |              |               |RtlMultiByteToUnicodeN      |    |
+|77F82D25|ntdll.dll   |              |               |RtlAnsiStringToUnicodeString|    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|002B4B40|vcl70.bpl   |Controls.pas  |TWinControl    |WndProc                     |    |
+|002B1868|vcl70.bpl   |Controls.pas  |TControl       |Perform                     |    |
+|002B1844|vcl70.bpl   |Controls.pas  |TControl       |Perform                     |    |
+|002B5487|vcl70.bpl   |Controls.pas  |TWinControl    |WMCommand                   |    |
+|002B547C|vcl70.bpl   |Controls.pas  |TWinControl    |WMCommand                   |    |
+|002B1A98|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|77E1709E|user32.dll  |              |               |DrawFocusRect               |    |
+|77E17086|user32.dll  |              |               |DrawFocusRect               |    |
+|77F4243F|GDI32.DLL   |              |               |GdiReleaseDC                |    |
+|77E13A8C|user32.dll  |              |               |ReleaseDC                   |    |
+|77E16B06|user32.dll  |              |               |CallWindowProcW             |    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|002B4B40|vcl70.bpl   |Controls.pas  |TWinControl    |WndProc                     |    |
+|002CE87D|vcl70.bpl   |Forms.pas     |TCustomForm    |WndProc                     |    |
+|002B4914|vcl70.bpl   |Controls.pas  |TWinControl    |MainWndProc                 |    |
+|77E16B06|user32.dll  |              |               |CallWindowProcW             |    |
+|77E15B22|user32.dll  |              |               |SendMessageW                |    |
+|77E15AE4|user32.dll  |              |               |SendMessageW                |    |
+|77E16AE9|user32.dll  |              |               |CallWindowProcA             |    |
+|77E16AD5|user32.dll  |              |               |CallWindowProcA             |    |
+|77E16AE9|user32.dll  |              |               |CallWindowProcA             |    |
+|77E16AD5|user32.dll  |              |               |CallWindowProcA             |    |
+|002B1A98|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|002B1844|vcl70.bpl   |Controls.pas  |TControl       |Perform                     |    |
+|002D00A5|vcl70.bpl   |Forms.pas     |TCustomForm    |SetFocusedControl           |    |
+|002D2F94|vcl70.bpl   |Forms.pas     |TScreen        |UpdateLastActive            |    |
+|002D00F8|vcl70.bpl   |Forms.pas     |TCustomForm    |SetFocusedControl           |    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|77F82207|ntdll.dll   |              |               |RtlLeaveCriticalSection     |    |
+|4002FE98|rtl70.bpl   |Classes.pas   |TThreadList    |UnlockList                  |    |
+|4002FE94|rtl70.bpl   |Classes.pas   |TThreadList    |UnlockList                  |    |
+|0023B2D8|vcl70.bpl   |Graphics.pas  |               |FreeMemoryContexts          |    |
+|002B4914|vcl70.bpl   |Controls.pas  |TWinControl    |MainWndProc                 |    |
+|0023B240|vcl70.bpl   |Graphics.pas  |               |FreeMemoryContexts          |    |
+|002B4929|vcl70.bpl   |Controls.pas  |TWinControl    |MainWndProc                 |    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|77F82207|ntdll.dll   |              |               |RtlLeaveCriticalSection     |    |
+|4002FE98|rtl70.bpl   |Classes.pas   |TThreadList    |UnlockList                  |    |
+|4002FE94|rtl70.bpl   |Classes.pas   |TThreadList    |UnlockList                  |    |
+|0023B2D8|vcl70.bpl   |Graphics.pas  |               |FreeMemoryContexts          |    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|77E15DC3|user32.dll  |              |               |GetCapture                  |    |
+|77F82207|ntdll.dll   |              |               |RtlLeaveCriticalSection     |    |
+|4002FE98|rtl70.bpl   |Classes.pas   |TThreadList    |UnlockList                  |    |
+|4002FE94|rtl70.bpl   |Classes.pas   |TThreadList    |UnlockList                  |    |
+|0023B2D8|vcl70.bpl   |Graphics.pas  |               |FreeMemoryContexts          |    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|0023B240|vcl70.bpl   |Graphics.pas  |               |FreeMemoryContexts          |    |
+|002B4929|vcl70.bpl   |Controls.pas  |TWinControl    |MainWndProc                 |    |
+|002B4B40|vcl70.bpl   |Controls.pas  |TWinControl    |WndProc                     |    |
+|002B4914|vcl70.bpl   |Controls.pas  |TWinControl    |MainWndProc                 |    |
+|77E1581F|user32.dll  |              |               |DispatchMessageA            |    |
+|77E15819|user32.dll  |              |               |DispatchMessageA            |    |
+|002D5608|vcl70.bpl   |Forms.pas     |TApplication   |ProcessMessage              |    |
+|002D56B8|vcl70.bpl   |Forms.pas     |TApplication   |HandleMessage               |    |
+|002D58F2|vcl70.bpl   |Forms.pas     |TApplication   |Run                         |    |
+|002D585C|vcl70.bpl   |Forms.pas     |TApplication   |Run                         |    |
+|00422E17|ftp_otgr.exe|ftp_otgr.dpr  |               |                            |13  |
+----------------------------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------
+|Handle  |Name        |Description                                         |Version       |Size   |Path             |
+---------------------------------------------------------------------------------------------------------------------
+|00230000|vcl70.bpl   |Borland Component Package                           |7.0.8.1       |1383936|U:\MASTER\R3\FTP |
+|00400000|ftp_otgr.exe|                                                    |              |195072 |U:\MASTER\R3\FTP |
+|40000000|rtl70.bpl   |Borland Component Package                           |7.0.8.1       |783360 |U:\MASTER\R3\FTP |
+|406D0000|indy70.bpl  |                                                    |              |1013248|U:\MASTER\R3\FTP |
+|690A0000|PSAPI.DLL   |Process Status Helper                               |5.0.2134.1    |28944  |C:\WINNT\System32|
+|6E420000|INDICDLL.dll|Keyboard Language Indicator Shell Hook Extension    |5.0.2920.0    |11536  |C:\WINNT\System32|
+|74FD0000|msafd.dll   |Microsoft Windows Sockets 2.0 Service Provider      |5.0.2195.2779 |109328 |C:\WINNT\system32|
+|75010000|wshtcpip.dll|Windows Sockets Helper DLL                          |5.0.2195.2104 |17680  |C:\WINNT\System32|
+|75020000|WS2HELP.DLL |Windows Socket 2.0 Helper for Windows NT            |5.0.2134.1    |18192  |C:\WINNT\System32|
+|75030000|WS2_32.DLL  |Windows Socket 2.0 32-Bit DLL                       |5.0.2195.2780 |69392  |C:\WINNT\System32|
+|75050000|wsock32.dll |Windows Socket 32-Bit DLL                           |5.0.2195.2871 |21776  |C:\WINNT\System32|
+|75090000|mpr.dll     |Multiple Provider Router DLL                        |5.0.2195.2779 |54544  |C:\WINNT\system32|
+|752F0000|oledlg.dll  |Microsoft Windows(TM) OLE 2.0 User Interface Support|5.0.2134.1    |118032 |C:\WINNT\System32|
+|759B0000|LZ32.DLL    |LZ Expand/Compress API DLL                          |5.0.2134.1    |10000  |C:\WINNT\system32|
+|75E60000|IMM32.dll   |Windows 2000 IMM32 API Client DLL                   |5.0.2195.2821 |96528  |C:\WINNT\System32|
+|76B30000|comdlg32.dll|Common Dialogs DLL                                  |5.0.3103.1000 |242448 |C:\WINNT\system32|
+|77800000|winspool.drv|Windows Spooler Driver                              |5.0.2195.2780 |112400 |C:\WINNT\System32|
+|77820000|version.dll |Version Checking and File Installation Libraries    |5.0.2134.1    |16144  |C:\WINNT\system32|
+|779B0000|oleaut32.dll|                                                    |2.40.4517.0   |626960 |C:\WINNT\system32|
+|77A50000|ole32.dll   |Microsoft OLE for Windows                           |5.0.2195.2887 |993040 |C:\WINNT\system32|
+|77B50000|comctl32.dll|Common Controls Library                             |5.81.3103.1000|550672 |C:\WINNT\system32|
+|77C70000|SHLWAPI.DLL |Shell Light-weight Utility Library                  |5.0.3315.1000 |289552 |C:\WINNT\system32|
+|77D40000|RPCRT4.DLL  |Remote Procedure Call Runtime                       |5.0.2195.2832 |447760 |C:\WINNT\system32|
+|77DB0000|advapi32.dll|Advanced Windows 32 Base API                        |5.0.2195.2867 |360208 |C:\WINNT\system32|
+|77E10000|user32.dll  |Windows 2000 USER API Client DLL                    |5.0.2195.2821 |402192 |C:\WINNT\system32|
+|77E80000|kernel32.dll|Windows NT BASE API Client DLL                      |5.0.2195.2778 |731920 |C:\WINNT\system32|
+|77F40000|GDI32.DLL   |GDI Client DLL                                      |5.0.2195.2778 |234256 |C:\WINNT\system32|
+|77F80000|ntdll.dll   |NT Layer DLL                                        |5.0.2195.2779 |490256 |C:\WINNT\System32|
+|78000000|MSVCRT.DLL  |Microsoft (R) C Runtime Library                     |6.1.8924.0    |290869 |C:\WINNT\system32|
+|782F0000|SHELL32.DLL |Windows Shell Common Dll                            |5.0.3315.2902 |2359056|C:\WINNT\system32|
+---------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F53C: 00000000   4002F63A: E8 05 FF FF FF 8B 43 04 8B 04 B0 89 04 24 8B 04  ......C......$..
+0012F540: 40006000   4002F64A: 24 5A 5E 5B C3 90 8B 50 0C 83 FA 40 7E 0E 8B CA  $Z^[...P...@~...
+0012F544: 00000000   4002F65A: 85 C9 79 03 83 C1 03 C1 F9 02 EB 11 83 FA 08 7E  ..y............~
+0012F548: 400259C0   4002F66A: 07 B9 10 00 00 00 EB 05 B9 04 00 00 00 03 CA 8B  ................
+0012F54C: 4002F576   4002F67A: D1 E8 AC 01 00 00 C3 8D 40 00 53 33 C9 EB 01 41  ........@.S3...A
+0012F550: 0012F598   4002F68A: 3B 48 08 7D 08 8B 58 04 3B 14 8B 75 F2 3B 48 08  ;H.}..X.;..u.;H.
+0012F554: 400064E8   4002F69A: 75 03 83 C9 FF 8B C1 5B C3 90 53 56 57 8B F9 8B  u......[..SVW...
+0012F558: 0012F568   4002F6AA: F2 8B D8 85 F6 7C 05 3B 73 08 7E 0F 8B 15 FC 61  .....|.;s.~....a
+0012F55C: 00000000   4002F6BA: 07 40 8B CE 8B 03 E8 7F FE FF FF 8B 43 08 3B 43  .@..........C.;C
+0012F560: 00D669C8   4002F6CA: 0C 75 06 8B C3 8B 10 FF 12 8B 43 08 3B F0 7D 19  .u........C.;.}.
+0012F564: 00000000   4002F6DA: 2B C6 8B C8 C1 E1 02 8B 43 04 8D 54 B0 04 8B 43  +.......C..T...C
+0012F568: 0012F5BC   4002F6EA: 04 8D 04 B0 E8 B9 41 FD FF 8B 43 04 89 3C B0 FF  ......A...C..<..
+0012F56C: 4002F63F   4002F6FA: 43 08 85 FF 74 0B 33 C9 8B D7 8B C3 8B 18 FF 53  C...t.3........S
+0012F570: 0012F590   4002F70A: 04 5F 5E 5B C3 90 53 51 8B D8 8B 53 08 4A 8B C3  ._^[..SQ...S.J..
+0012F574: 00000000   4002F71A: E8 01 FF FF FF 89 04 24 8B 04 24 5A 5B C3 53 56  .......$..$Z[.SV
+0012F578: 00D66990   4002F72A: 57 51 8B F1 8B FA 8B D8 3B F7 74 49 85 F6 7C 05  WQ......;.tI..|.
+
+
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Thu, 10 Aug 2006 10:49:57 +0300
+  1.2 Name/Description: ftp_otgr.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+----------------------------------------------
+  2.1 Date   : Thu, 10 Aug 2006 10:50:02 +0300
+  2.2 Address: 4002F63A
+  2.3 Module : rtl70.bpl
+  2.4 Type   : EListError
+  2.5 Message: List index out of bounds (0).
+
+Active Controls:
+----------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Form1
+  3.3 Control Class: TButton
+  3.4 Control Text : Button1
+
+Computer:
+------------------------------
+  4.1 Name        : SRV1000
+  4.2 User        : systemuser
+  4.3 Total Memory: 255 Mb
+  4.4 Free Memory : 36 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 1.51 Gb
+
+Operating System:
+--------------------------------------
+  5.1 Type    : Microsoft Windows 2000
+  5.2 Build # : 2195
+  5.3 Update  : Service Pack 2
+  5.4 Language: Russian
+
+Call Stack Information:
+----------------------------------------------------------------------------------------
+|Address |Module      |Unit          |Class          |Procedure/Method            |Line|
+----------------------------------------------------------------------------------------
+|4002F50C|rtl70.bpl   |Classes.pas   |TList          |Error                       |    |
+|4002F571|rtl70.bpl   |Classes.pas   |TList          |Error                       |    |
+|4002F544|rtl70.bpl   |Classes.pas   |TList          |Error                       |    |
+|4002F63A|rtl70.bpl   |Classes.pas   |TList          |Get                         |    |
+|4002F620|rtl70.bpl   |Classes.pas   |TList          |Get                         |    |
+|40030F57|rtl70.bpl   |Classes.pas   |TCollection    |GetItem                     |    |
+|40030F4C|rtl70.bpl   |Classes.pas   |TCollection    |GetItem                     |    |
+|40708494|indy70.bpl  |Idftplist.pas |TIdFTPListItems|GetItems                    |    |
+|00422A0B|ftp_otgr.exe|ftp_upload.pas|TForm1         |Button1Click                |39  |
+|002B1BD4|vcl70.bpl   |Controls.pas  |TControl       |Click                       |    |
+|40005EF0|rtl70.bpl   |System.pas    |               |_CallDynaInst               |    |
+|002A1EDC|vcl70.bpl   |Stdctrls.pas  |TButton        |CNCommand                   |    |
+|002B1A98|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|77E16B06|user32.dll  |              |               |CallWindowProcW             |    |
+|77F81FF0|ntdll.dll   |              |               |RtlMultiByteToUnicodeN      |    |
+|77F82D25|ntdll.dll   |              |               |RtlAnsiStringToUnicodeString|    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|002B4B40|vcl70.bpl   |Controls.pas  |TWinControl    |WndProc                     |    |
+|002B1868|vcl70.bpl   |Controls.pas  |TControl       |Perform                     |    |
+|002B1844|vcl70.bpl   |Controls.pas  |TControl       |Perform                     |    |
+|002B5487|vcl70.bpl   |Controls.pas  |TWinControl    |WMCommand                   |    |
+|002B547C|vcl70.bpl   |Controls.pas  |TWinControl    |WMCommand                   |    |
+|002B1A98|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|77E1709E|user32.dll  |              |               |DrawFocusRect               |    |
+|77E17086|user32.dll  |              |               |DrawFocusRect               |    |
+|77F4243F|GDI32.DLL   |              |               |GdiReleaseDC                |    |
+|77E13A8C|user32.dll  |              |               |ReleaseDC                   |    |
+|77E16B06|user32.dll  |              |               |CallWindowProcW             |    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|002B4B40|vcl70.bpl   |Controls.pas  |TWinControl    |WndProc                     |    |
+|002CE87D|vcl70.bpl   |Forms.pas     |TCustomForm    |WndProc                     |    |
+|002B4914|vcl70.bpl   |Controls.pas  |TWinControl    |MainWndProc                 |    |
+|77E16B06|user32.dll  |              |               |CallWindowProcW             |    |
+|77E15B22|user32.dll  |              |               |SendMessageW                |    |
+|77E15AE4|user32.dll  |              |               |SendMessageW                |    |
+|77E16AE9|user32.dll  |              |               |CallWindowProcA             |    |
+|77E16AD5|user32.dll  |              |               |CallWindowProcA             |    |
+|77E16AE9|user32.dll  |              |               |CallWindowProcA             |    |
+|77E16AD5|user32.dll  |              |               |CallWindowProcA             |    |
+|002B1A98|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|002B1844|vcl70.bpl   |Controls.pas  |TControl       |Perform                     |    |
+|002D00A5|vcl70.bpl   |Forms.pas     |TCustomForm    |SetFocusedControl           |    |
+|002D2F94|vcl70.bpl   |Forms.pas     |TScreen        |UpdateLastActive            |    |
+|002D00F8|vcl70.bpl   |Forms.pas     |TCustomForm    |SetFocusedControl           |    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|77F82207|ntdll.dll   |              |               |RtlLeaveCriticalSection     |    |
+|4002FE98|rtl70.bpl   |Classes.pas   |TThreadList    |UnlockList                  |    |
+|4002FE94|rtl70.bpl   |Classes.pas   |TThreadList    |UnlockList                  |    |
+|0023B2D8|vcl70.bpl   |Graphics.pas  |               |FreeMemoryContexts          |    |
+|002B4914|vcl70.bpl   |Controls.pas  |TWinControl    |MainWndProc                 |    |
+|0023B240|vcl70.bpl   |Graphics.pas  |               |FreeMemoryContexts          |    |
+|002B4929|vcl70.bpl   |Controls.pas  |TWinControl    |MainWndProc                 |    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|77F82207|ntdll.dll   |              |               |RtlLeaveCriticalSection     |    |
+|4002FE98|rtl70.bpl   |Classes.pas   |TThreadList    |UnlockList                  |    |
+|4002FE94|rtl70.bpl   |Classes.pas   |TThreadList    |UnlockList                  |    |
+|0023B2D8|vcl70.bpl   |Graphics.pas  |               |FreeMemoryContexts          |    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|77E15DC3|user32.dll  |              |               |GetCapture                  |    |
+|77F82207|ntdll.dll   |              |               |RtlLeaveCriticalSection     |    |
+|4002FE98|rtl70.bpl   |Classes.pas   |TThreadList    |UnlockList                  |    |
+|4002FE94|rtl70.bpl   |Classes.pas   |TThreadList    |UnlockList                  |    |
+|0023B2D8|vcl70.bpl   |Graphics.pas  |               |FreeMemoryContexts          |    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl       |WndProc                     |    |
+|0023B240|vcl70.bpl   |Graphics.pas  |               |FreeMemoryContexts          |    |
+|002B4929|vcl70.bpl   |Controls.pas  |TWinControl    |MainWndProc                 |    |
+|002B4B40|vcl70.bpl   |Controls.pas  |TWinControl    |WndProc                     |    |
+|002B4914|vcl70.bpl   |Controls.pas  |TWinControl    |MainWndProc                 |    |
+|77E1581F|user32.dll  |              |               |DispatchMessageA            |    |
+|77E15819|user32.dll  |              |               |DispatchMessageA            |    |
+|002D5608|vcl70.bpl   |Forms.pas     |TApplication   |ProcessMessage              |    |
+|002D56B8|vcl70.bpl   |Forms.pas     |TApplication   |HandleMessage               |    |
+|002D58F2|vcl70.bpl   |Forms.pas     |TApplication   |Run                         |    |
+|002D585C|vcl70.bpl   |Forms.pas     |TApplication   |Run                         |    |
+|00422E47|ftp_otgr.exe|ftp_otgr.dpr  |               |                            |13  |
+----------------------------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------
+|Handle  |Name        |Description                                         |Version       |Size   |Path             |
+---------------------------------------------------------------------------------------------------------------------
+|00230000|vcl70.bpl   |Borland Component Package                           |7.0.8.1       |1383936|U:\MASTER\R3\FTP |
+|00400000|ftp_otgr.exe|                                                    |              |195072 |U:\MASTER\R3\FTP |
+|40000000|rtl70.bpl   |Borland Component Package                           |7.0.8.1       |783360 |U:\MASTER\R3\FTP |
+|406D0000|indy70.bpl  |                                                    |              |1013248|U:\MASTER\R3\FTP |
+|690A0000|PSAPI.DLL   |Process Status Helper                               |5.0.2134.1    |28944  |C:\WINNT\System32|
+|6E420000|INDICDLL.dll|Keyboard Language Indicator Shell Hook Extension    |5.0.2920.0    |11536  |C:\WINNT\System32|
+|74FD0000|msafd.dll   |Microsoft Windows Sockets 2.0 Service Provider      |5.0.2195.2779 |109328 |C:\WINNT\system32|
+|75010000|wshtcpip.dll|Windows Sockets Helper DLL                          |5.0.2195.2104 |17680  |C:\WINNT\System32|
+|75020000|WS2HELP.DLL |Windows Socket 2.0 Helper for Windows NT            |5.0.2134.1    |18192  |C:\WINNT\System32|
+|75030000|WS2_32.DLL  |Windows Socket 2.0 32-Bit DLL                       |5.0.2195.2780 |69392  |C:\WINNT\System32|
+|75050000|wsock32.dll |Windows Socket 32-Bit DLL                           |5.0.2195.2871 |21776  |C:\WINNT\System32|
+|75090000|mpr.dll     |Multiple Provider Router DLL                        |5.0.2195.2779 |54544  |C:\WINNT\system32|
+|752F0000|oledlg.dll  |Microsoft Windows(TM) OLE 2.0 User Interface Support|5.0.2134.1    |118032 |C:\WINNT\System32|
+|759B0000|LZ32.DLL    |LZ Expand/Compress API DLL                          |5.0.2134.1    |10000  |C:\WINNT\system32|
+|75E60000|IMM32.dll   |Windows 2000 IMM32 API Client DLL                   |5.0.2195.2821 |96528  |C:\WINNT\System32|
+|76B30000|comdlg32.dll|Common Dialogs DLL                                  |5.0.3103.1000 |242448 |C:\WINNT\system32|
+|77800000|winspool.drv|Windows Spooler Driver                              |5.0.2195.2780 |112400 |C:\WINNT\System32|
+|77820000|version.dll |Version Checking and File Installation Libraries    |5.0.2134.1    |16144  |C:\WINNT\system32|
+|779B0000|oleaut32.dll|                                                    |2.40.4517.0   |626960 |C:\WINNT\system32|
+|77A50000|ole32.dll   |Microsoft OLE for Windows                           |5.0.2195.2887 |993040 |C:\WINNT\system32|
+|77B50000|comctl32.dll|Common Controls Library                             |5.81.3103.1000|550672 |C:\WINNT\system32|
+|77C70000|SHLWAPI.DLL |Shell Light-weight Utility Library                  |5.0.3315.1000 |289552 |C:\WINNT\system32|
+|77D40000|RPCRT4.DLL  |Remote Procedure Call Runtime                       |5.0.2195.2832 |447760 |C:\WINNT\system32|
+|77DB0000|advapi32.dll|Advanced Windows 32 Base API                        |5.0.2195.2867 |360208 |C:\WINNT\system32|
+|77E10000|user32.dll  |Windows 2000 USER API Client DLL                    |5.0.2195.2821 |402192 |C:\WINNT\system32|
+|77E80000|kernel32.dll|Windows NT BASE API Client DLL                      |5.0.2195.2778 |731920 |C:\WINNT\system32|
+|77F40000|GDI32.DLL   |GDI Client DLL                                      |5.0.2195.2778 |234256 |C:\WINNT\system32|
+|77F80000|ntdll.dll   |NT Layer DLL                                        |5.0.2195.2779 |490256 |C:\WINNT\System32|
+|78000000|MSVCRT.DLL  |Microsoft (R) C Runtime Library                     |6.1.8924.0    |290869 |C:\WINNT\system32|
+|782F0000|SHELL32.DLL |Windows Shell Common Dll                            |5.0.3315.2902 |2359056|C:\WINNT\system32|
+---------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F530: 00000000   4002F63A: E8 05 FF FF FF 8B 43 04 8B 04 B0 89 04 24 8B 04  ......C......$..
+0012F534: 40006000   4002F64A: 24 5A 5E 5B C3 90 8B 50 0C 83 FA 40 7E 0E 8B CA  $Z^[...P...@~...
+0012F538: 00000000   4002F65A: 85 C9 79 03 83 C1 03 C1 F9 02 EB 11 83 FA 08 7E  ..y............~
+0012F53C: 400259C0   4002F66A: 07 B9 10 00 00 00 EB 05 B9 04 00 00 00 03 CA 8B  ................
+0012F540: 4002F576   4002F67A: D1 E8 AC 01 00 00 C3 8D 40 00 53 33 C9 EB 01 41  ........@.S3...A
+0012F544: 0012F58C   4002F68A: 3B 48 08 7D 08 8B 58 04 3B 14 8B 75 F2 3B 48 08  ;H.}..X.;..u.;H.
+0012F548: 400064E8   4002F69A: 75 03 83 C9 FF 8B C1 5B C3 90 53 56 57 8B F9 8B  u......[..SVW...
+0012F54C: 0012F55C   4002F6AA: F2 8B D8 85 F6 7C 05 3B 73 08 7E 0F 8B 15 FC 61  .....|.;s.~....a
+0012F550: 00000000   4002F6BA: 07 40 8B CE 8B 03 E8 7F FE FF FF 8B 43 08 3B 43  .@..........C.;C
+0012F554: 00D669C4   4002F6CA: 0C 75 06 8B C3 8B 10 FF 12 8B 43 08 3B F0 7D 19  .u........C.;.}.
+0012F558: 00000000   4002F6DA: 2B C6 8B C8 C1 E1 02 8B 43 04 8D 54 B0 04 8B 43  +.......C..T...C
+0012F55C: 0012F5BC   4002F6EA: 04 8D 04 B0 E8 B9 41 FD FF 8B 43 04 89 3C B0 FF  ......A...C..<..
+0012F560: 4002F63F   4002F6FA: 43 08 85 FF 74 0B 33 C9 8B D7 8B C3 8B 18 FF 53  C...t.3........S
+0012F564: 0012F584   4002F70A: 04 5F 5E 5B C3 90 53 51 8B D8 8B 53 08 4A 8B C3  ._^[..SQ...S.J..
+0012F568: 00000000   4002F71A: E8 01 FF FF FF 89 04 24 8B 04 24 5A 5B C3 53 56  .......$..$Z[.SV
+0012F56C: 00D6698C   4002F72A: 57 51 8B F1 8B FA 8B D8 3B F7 74 49 85 F6 7C 05  WQ......;.tI..|.
+
+
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Thu, 10 Aug 2006 10:53:38 +0300
+  1.2 Name/Description: ftp_otgr.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+----------------------------------------------
+  2.1 Date   : Thu, 10 Aug 2006 10:53:56 +0300
+  2.2 Address: 40032B80
+  2.3 Module : rtl70.bpl
+  2.4 Type   : EStringListError
+  2.5 Message: List index out of bounds (0).
+
+Active Controls:
+----------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Form1
+  3.3 Control Class: TButton
+  3.4 Control Text : Button1
+
+Computer:
+------------------------------
+  4.1 Name        : SRV1000
+  4.2 User        : systemuser
+  4.3 Total Memory: 255 Mb
+  4.4 Free Memory : 58 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 1.51 Gb
+
+Operating System:
+--------------------------------------
+  5.1 Type    : Microsoft Windows 2000
+  5.2 Build # : 2195
+  5.3 Update  : Service Pack 2
+  5.4 Language: Russian
+
+Call Stack Information:
+-------------------------------------------------------------------------------------
+|Address |Module      |Unit          |Class       |Procedure/Method            |Line|
+-------------------------------------------------------------------------------------
+|4003168C|rtl70.bpl   |Classes.pas   |TStrings    |Error                       |    |
+|400316F1|rtl70.bpl   |Classes.pas   |TStrings    |Error                       |    |
+|400316C4|rtl70.bpl   |Classes.pas   |TStrings    |Error                       |    |
+|00422A06|ftp_otgr.exe|ftp_upload.pas|TForm1      |Button1Click                |41  |
+|002B1BD4|vcl70.bpl   |Controls.pas  |TControl    |Click                       |    |
+|40005EF0|rtl70.bpl   |System.pas    |            |_CallDynaInst               |    |
+|002A1EDC|vcl70.bpl   |Stdctrls.pas  |TButton     |CNCommand                   |    |
+|002B1A98|vcl70.bpl   |Controls.pas  |TControl    |WndProc                     |    |
+|77E16B06|user32.dll  |              |            |CallWindowProcW             |    |
+|77F81FF0|ntdll.dll   |              |            |RtlMultiByteToUnicodeN      |    |
+|77F82D25|ntdll.dll   |              |            |RtlAnsiStringToUnicodeString|    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl    |WndProc                     |    |
+|002B4B40|vcl70.bpl   |Controls.pas  |TWinControl |WndProc                     |    |
+|002B1868|vcl70.bpl   |Controls.pas  |TControl    |Perform                     |    |
+|002B1844|vcl70.bpl   |Controls.pas  |TControl    |Perform                     |    |
+|002B5487|vcl70.bpl   |Controls.pas  |TWinControl |WMCommand                   |    |
+|002B547C|vcl70.bpl   |Controls.pas  |TWinControl |WMCommand                   |    |
+|002B1A98|vcl70.bpl   |Controls.pas  |TControl    |WndProc                     |    |
+|77E1709E|user32.dll  |              |            |DrawFocusRect               |    |
+|77E17086|user32.dll  |              |            |DrawFocusRect               |    |
+|77F4243F|GDI32.DLL   |              |            |GdiReleaseDC                |    |
+|77E13A8C|user32.dll  |              |            |ReleaseDC                   |    |
+|77E16B06|user32.dll  |              |            |CallWindowProcW             |    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl    |WndProc                     |    |
+|002B4B40|vcl70.bpl   |Controls.pas  |TWinControl |WndProc                     |    |
+|002CE87D|vcl70.bpl   |Forms.pas     |TCustomForm |WndProc                     |    |
+|002B4914|vcl70.bpl   |Controls.pas  |TWinControl |MainWndProc                 |    |
+|77E16B06|user32.dll  |              |            |CallWindowProcW             |    |
+|77E15B22|user32.dll  |              |            |SendMessageW                |    |
+|77E15AE4|user32.dll  |              |            |SendMessageW                |    |
+|77E16AE9|user32.dll  |              |            |CallWindowProcA             |    |
+|77E16AD5|user32.dll  |              |            |CallWindowProcA             |    |
+|77E16AE9|user32.dll  |              |            |CallWindowProcA             |    |
+|77E16AD5|user32.dll  |              |            |CallWindowProcA             |    |
+|002B1A98|vcl70.bpl   |Controls.pas  |TControl    |WndProc                     |    |
+|002B1844|vcl70.bpl   |Controls.pas  |TControl    |Perform                     |    |
+|002D00A5|vcl70.bpl   |Forms.pas     |TCustomForm |SetFocusedControl           |    |
+|002D2F94|vcl70.bpl   |Forms.pas     |TScreen     |UpdateLastActive            |    |
+|002D00F8|vcl70.bpl   |Forms.pas     |TCustomForm |SetFocusedControl           |    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl    |WndProc                     |    |
+|77F82207|ntdll.dll   |              |            |RtlLeaveCriticalSection     |    |
+|4002FE98|rtl70.bpl   |Classes.pas   |TThreadList |UnlockList                  |    |
+|4002FE94|rtl70.bpl   |Classes.pas   |TThreadList |UnlockList                  |    |
+|0023B2D8|vcl70.bpl   |Graphics.pas  |            |FreeMemoryContexts          |    |
+|002B4914|vcl70.bpl   |Controls.pas  |TWinControl |MainWndProc                 |    |
+|0023B240|vcl70.bpl   |Graphics.pas  |            |FreeMemoryContexts          |    |
+|002B4929|vcl70.bpl   |Controls.pas  |TWinControl |MainWndProc                 |    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl    |WndProc                     |    |
+|77F82207|ntdll.dll   |              |            |RtlLeaveCriticalSection     |    |
+|4002FE98|rtl70.bpl   |Classes.pas   |TThreadList |UnlockList                  |    |
+|4002FE94|rtl70.bpl   |Classes.pas   |TThreadList |UnlockList                  |    |
+|0023B2D8|vcl70.bpl   |Graphics.pas  |            |FreeMemoryContexts          |    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl    |WndProc                     |    |
+|77E15DC3|user32.dll  |              |            |GetCapture                  |    |
+|77F82207|ntdll.dll   |              |            |RtlLeaveCriticalSection     |    |
+|4002FE98|rtl70.bpl   |Classes.pas   |TThreadList |UnlockList                  |    |
+|4002FE94|rtl70.bpl   |Classes.pas   |TThreadList |UnlockList                  |    |
+|0023B2D8|vcl70.bpl   |Graphics.pas  |            |FreeMemoryContexts          |    |
+|002B1910|vcl70.bpl   |Controls.pas  |TControl    |WndProc                     |    |
+|0023B240|vcl70.bpl   |Graphics.pas  |            |FreeMemoryContexts          |    |
+|002B4929|vcl70.bpl   |Controls.pas  |TWinControl |MainWndProc                 |    |
+|002B4B40|vcl70.bpl   |Controls.pas  |TWinControl |WndProc                     |    |
+|002B4914|vcl70.bpl   |Controls.pas  |TWinControl |MainWndProc                 |    |
+|77E1581F|user32.dll  |              |            |DispatchMessageA            |    |
+|77E15819|user32.dll  |              |            |DispatchMessageA            |    |
+|002D5608|vcl70.bpl   |Forms.pas     |TApplication|ProcessMessage              |    |
+|002D56B8|vcl70.bpl   |Forms.pas     |TApplication|HandleMessage               |    |
+|002D58F2|vcl70.bpl   |Forms.pas     |TApplication|Run                         |    |
+|002D585C|vcl70.bpl   |Forms.pas     |TApplication|Run                         |    |
+|00422E23|ftp_otgr.exe|ftp_otgr.dpr  |            |                            |13  |
+-------------------------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------
+|Handle  |Name        |Description                                         |Version       |Size   |Path             |
+---------------------------------------------------------------------------------------------------------------------
+|00230000|vcl70.bpl   |Borland Component Package                           |7.0.8.1       |1383936|U:\MASTER\R3\FTP |
+|00400000|ftp_otgr.exe|                                                    |              |194560 |U:\MASTER\R3\FTP |
+|40000000|rtl70.bpl   |Borland Component Package                           |7.0.8.1       |783360 |U:\MASTER\R3\FTP |
+|406D0000|indy70.bpl  |                                                    |              |1013248|U:\MASTER\R3\FTP |
+|690A0000|PSAPI.DLL   |Process Status Helper                               |5.0.2134.1    |28944  |C:\WINNT\System32|
+|6E420000|INDICDLL.dll|Keyboard Language Indicator Shell Hook Extension    |5.0.2920.0    |11536  |C:\WINNT\System32|
+|74FD0000|msafd.dll   |Microsoft Windows Sockets 2.0 Service Provider      |5.0.2195.2779 |109328 |C:\WINNT\system32|
+|75010000|wshtcpip.dll|Windows Sockets Helper DLL                          |5.0.2195.2104 |17680  |C:\WINNT\System32|
+|75020000|WS2HELP.DLL |Windows Socket 2.0 Helper for Windows NT            |5.0.2134.1    |18192  |C:\WINNT\System32|
+|75030000|WS2_32.DLL  |Windows Socket 2.0 32-Bit DLL                       |5.0.2195.2780 |69392  |C:\WINNT\System32|
+|75050000|wsock32.dll |Windows Socket 32-Bit DLL                           |5.0.2195.2871 |21776  |C:\WINNT\System32|
+|75090000|mpr.dll     |Multiple Provider Router DLL                        |5.0.2195.2779 |54544  |C:\WINNT\system32|
+|752F0000|oledlg.dll  |Microsoft Windows(TM) OLE 2.0 User Interface Support|5.0.2134.1    |118032 |C:\WINNT\System32|
+|759B0000|LZ32.DLL    |LZ Expand/Compress API DLL                          |5.0.2134.1    |10000  |C:\WINNT\system32|
+|75E60000|IMM32.dll   |Windows 2000 IMM32 API Client DLL                   |5.0.2195.2821 |96528  |C:\WINNT\System32|
+|76B30000|comdlg32.dll|Common Dialogs DLL                                  |5.0.3103.1000 |242448 |C:\WINNT\system32|
+|77800000|winspool.drv|Windows Spooler Driver                              |5.0.2195.2780 |112400 |C:\WINNT\System32|
+|77820000|version.dll |Version Checking and File Installation Libraries    |5.0.2134.1    |16144  |C:\WINNT\system32|
+|779B0000|oleaut32.dll|                                                    |2.40.4517.0   |626960 |C:\WINNT\system32|
+|77A50000|ole32.dll   |Microsoft OLE for Windows                           |5.0.2195.2887 |993040 |C:\WINNT\system32|
+|77B50000|comctl32.dll|Common Controls Library                             |5.81.3103.1000|550672 |C:\WINNT\system32|
+|77C70000|SHLWAPI.DLL |Shell Light-weight Utility Library                  |5.0.3315.1000 |289552 |C:\WINNT\system32|
+|77D40000|RPCRT4.DLL  |Remote Procedure Call Runtime                       |5.0.2195.2832 |447760 |C:\WINNT\system32|
+|77DB0000|advapi32.dll|Advanced Windows 32 Base API                        |5.0.2195.2867 |360208 |C:\WINNT\system32|
+|77E10000|user32.dll  |Windows 2000 USER API Client DLL                    |5.0.2195.2821 |402192 |C:\WINNT\system32|
+|77E80000|kernel32.dll|Windows NT BASE API Client DLL                      |5.0.2195.2778 |731920 |C:\WINNT\system32|
+|77F40000|GDI32.DLL   |GDI Client DLL                                      |5.0.2195.2778 |234256 |C:\WINNT\system32|
+|77F80000|ntdll.dll   |NT Layer DLL                                        |5.0.2195.2779 |490256 |C:\WINNT\System32|
+|78000000|MSVCRT.DLL  |Microsoft (R) C Runtime Library                     |6.1.8924.0    |290869 |C:\WINNT\system32|
+|782F0000|SHELL32.DLL |Windows Shell Common Dll                            |5.0.3315.2902 |2359056|C:\WINNT\system32|
+---------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F544: 00000000   40032B80: E8 3F EB FF FF 8B C7 8B 53 10 8B 14 F2 E8 E2 42  .?......S......B
+0012F548: 0012F500   40032B90: FD FF 5F 5E 5B C3 8B C0 8B 40 18 C3 8B 40 14 C3  .._^[....@...@..
+0012F54C: 400259C0   40032BA0: 53 56 8B F2 8B D8 85 F6 7C 05 3B 73 14 7C 0F 8B  SV......|.;s.|..
+0012F550: 00D662A4   40032BB0: 15 FC 61 07 40 8B CE 8B C3 E8 06 EB FF FF 8B 43  ..a.@..........C
+0012F554: 400316F6   40032BC0: 10 8B 44 F0 04 5E 5B C3 56 8B 50 18 83 FA 40 7E  ..D..^[.V.P...@~
+0012F558: 0012F58C   40032BD0: 0E 8B F2 85 F6 79 03 83 C6 03 C1 FE 02 EB 11 83  .....y..........
+0012F55C: 400064E8   40032BE0: FA 08 7E 07 BE 10 00 00 00 EB 05 BE 04 00 00 00  ..~.............
+0012F560: 0012F574   40032BF0: 03 F2 8B D6 8B 08 FF 51 28 5E C3 90 53 56 51 8B  .......Q(^..SVQ.
+0012F564: 0012F5B0   40032C00: F2 8B D8 80 7B 1C 00 75 0E 8B D6 8B C3 E8 66 F1  ....{..u......f.
+0012F568: 00000000   40032C10: FF FF 89 04 24 EB 19 8B CC 8B D6 8B C3 8B 18 FF  ....$...........
+0012F56C: 00D662A4   40032C20: 93 8C 00 00 00 84 C0 75 07 C7 04 24 FF FF FF FF  .......u...$....
+0012F570: 00000000   40032C30: 8B 04 24 5A 5E 5B C3 90 53 56 8B F0 6A 00 8B C6  ..$Z^[..SV..j...
+0012F574: 0012F5BC   40032C40: 8B 18 FF 53 64 5E 5B C3 55 8B EC 53 56 57 8B F9  ...Sd^[.U..SVW..
+0012F578: 40032B85   40032C50: 8B F2 8B D8 80 7B 1C 00 74 0F 8B 15 C4 5F 07 40  .....{..t...._.@
+0012F57C: 4002BB4C   40032C60: 33 C9 8B C3 E8 5B EA FF FF 85 F6 7C 05 3B 73 14  3....[.....|.;s.
+0012F580: 00000000   40032C70: 7E 0F 8B 15 FC 61 07 40 8B CE 8B C3 E8 43 EA FF  ~....a.@.....C..
+
+
+
+
+

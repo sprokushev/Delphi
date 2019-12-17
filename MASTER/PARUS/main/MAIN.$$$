@@ -1,0 +1,393 @@
+Unit MAIN;
+
+Interface
+
+Uses Windows, SysUtils, Classes, Graphics, Forms, Controls, Menus,
+  StdCtrls, Dialogs, Buttons, Messages, ExtCtrls, ComCtrls, StdActns,
+  ActnList, ToolWin, ImgList, TB2Item, TB2Dock, TB2Toolbar, TB2MDI,
+  XPStyleActnCtrls, ActnMan,  ActnColorMaps, Oracle, IdMessage,
+  IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient,
+  IdMessageClient, IdSMTP, Placemnt, IdExplicitTLSClientServerBase, IdSMTPBase, EventUnit,
+  TB2Item, TB2Dock, TB2Toolbar;
+
+Type
+  TfrmMain = Class(TForm)
+    StatusBar: TStatusBar;
+    ActionManager1: TActionManager;
+    acCord: TAction;
+    TBDock1: TTBDock;
+    TBToolbar1: TTBToolbar;
+    acDepord: TAction;
+    acTTN17d: TAction;
+    acTTN17: TAction;
+    acPR17: TAction;
+    TBSubmenuItem4: TTBSubmenuItem;
+    TBSubmenuItem5: TTBSubmenuItem;
+    TBSubmenuItem6: TTBSubmenuItem;
+    TBItem7: TTBItem;
+    TBItem8: TTBItem;
+    TBItem9: TTBItem;
+    TBItem11: TTBItem;
+    TBItem10: TTBItem;
+    TBItem12: TTBItem;
+    oraLogonMain: TOracleLogon;
+    oraParusMain: TOracleSession;
+    acExit: TAction;
+    TBMDIHandler2: TTBMDIHandler;
+    TBDock2: TTBDock;
+    TBToolbar2: TTBToolbar;
+    TBMDIWindowItem1: TTBMDIWindowItem;
+    IdSMTP: TIdSMTP;
+    IdMessage: TIdMessage;
+    TBItem1: TTBItem;
+    acGD: TAction;
+    FormPlacement1: TFormPlacement;
+    TBSubmenuItem1: TTBSubmenuItem;
+    TBItem2: TTBItem;
+    acWhat: TAction;
+    ImageList1: TImageList;
+    ImageList2: TImageList;
+    TBItem3: TTBItem;
+    acParty: TAction;
+    TBSubmenuItem2: TTBSubmenuItem;
+    TBItem4: TTBItem;
+    acTTNcPech: TAction;
+    TBItem5: TTBItem;
+    TBItem14: TTBItem;
+    acPayorder: TAction;
+    TBSubmenuItem3: TTBSubmenuItem;
+    TBItem16: TTBItem;
+    acTTNDIgma: TAction;
+    TBItem17: TTBItem;
+    acSmenReport: TAction;
+    TBItem18: TTBItem;
+    acCordIgma: TAction;
+    TBItem19: TTBItem;
+    TBSeparatorItem1: TTBSeparatorItem;
+    TBSeparatorItem2: TTBSeparatorItem;
+    TBSubmenuItem7: TTBSubmenuItem;
+    acTTNLoadIgma: TAction;
+    TBItem20: TTBItem;
+    TBSubmenuItem8: TTBSubmenuItem;
+    TBItem21: TTBItem;
+    TBItem22: TTBItem;
+    TBSeparatorItem3: TTBSeparatorItem;
+    acTTNKos: TAction;
+    acDordKoslan: TAction;
+    TBItem23: TTBItem;
+    TBSubmenuItem9: TTBSubmenuItem;
+    TBSubmenuItem10: TTBSubmenuItem;
+    TBSubmenuItem11: TTBSubmenuItem;
+    TBItem25: TTBItem;
+    TBItem26: TTBItem;
+    TBItem27: TTBItem;
+    TBSeparatorItem4: TTBSeparatorItem;
+    TBItem28: TTBItem;
+    TBItem29: TTBItem;
+    TBItem30: TTBItem;
+    TBItem31: TTBItem;
+    TBItem32: TTBItem;
+    TBSubmenuItem13: TTBSubmenuItem;
+    TBSeparatorItem5: TTBSeparatorItem;
+    acTTNDepart: TAction;
+    TBItem33: TTBItem;
+    TBSeparatorItem6: TTBSeparatorItem;
+    TBItem34: TTBItem;
+    TBSeparatorItem7: TTBSeparatorItem;
+    acUSL: TAction;
+    acStoreOper: TAction;
+    TBSubmenuItem14: TTBSubmenuItem;
+    TBItem35: TTBItem;
+    TBItem36: TTBItem;
+    acVozn: TAction;
+    ImageList3: TImageList;
+    acSendmail: TAction;
+    acConnectToParus: TAction;
+    acDisconnectFromParus: TAction;
+    acConnectToMaster: TAction;
+    acDisconnectFromMaster: TAction;
+    actZakaz: TAction;
+    TBSubmenuItem12: TTBSubmenuItem;
+    TBItem6: TTBItem;
+    procedure actZakazExecute(Sender: TObject);
+    procedure acDisconnectFromMasterExecute(Sender: TObject);
+    procedure acConnectToMasterExecute(Sender: TObject);
+    procedure acDisconnectFromParusExecute(Sender: TObject);
+    procedure acConnectToParusExecute(Sender: TObject);
+    procedure acSendmailExecute(Sender: TObject);
+    Procedure acPR17Execute(Sender: TObject);
+    Procedure acDepordExecute(Sender: TObject);
+    Procedure acCordExecute(Sender: TObject);
+    Procedure acTTN17dExecute(Sender: TObject);
+    Procedure acTTN17Execute(Sender: TObject);
+    Procedure acExitExecute(Sender: TObject);
+    Procedure acGDExecute(Sender: TObject);
+    Procedure acWhatExecute(Sender: TObject);
+    Procedure acPartyExecute(Sender: TObject);
+    Procedure acTTNcPechExecute(Sender: TObject);
+    Procedure acPayorderExecute(Sender: TObject);
+    Procedure acTTNDIgmaExecute(Sender: TObject);
+    Procedure acSmenReportExecute(Sender: TObject);
+    Procedure FormClose(Sender: TObject; Var Action: TCloseAction);
+    Procedure acCordIgmaExecute(Sender: TObject);
+    Procedure acTTNLoadIgmaExecute(Sender: TObject);
+    Procedure acTTNKosExecute(Sender: TObject);
+    Procedure acDordKoslanExecute(Sender: TObject);
+    Procedure acTTNDepartExecute(Sender: TObject);
+    procedure acUSLExecute(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure acStoreOperExecute(Sender: TObject);
+    procedure acVoznExecute(Sender: TObject);
+    Procedure WriteEvent(Tag: String; forma: String);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  End;
+
+Var
+  frmMain                               : TfrmMain;
+  frmEvent: TfrmEvents;
+Implementation
+
+{$R *.dfm}
+Uses PR17load, TTN17load, ttn17dload, depordload, cordload, gd17load, what, partyprice,
+  ttn17c_pech, payord, ttnd_igma, sr_igma, cord_igma, ttn_igma, ttn_kos, dord_igma,
+  ttnd_kos,usl17load,mStoreOper,voznload, DMunit, ZakazLoad;
+
+
+Procedure TfrmMain.WriteEvent(Tag: String; forma: String);
+Begin
+frmEvent.lbEvents.Items.Add(DateTimeToStr(Now) + ': ' +forma+' :: ' +Tag);
+End;
+
+Procedure TfrmMain.acPR17Execute(Sender: TObject);
+Begin
+  With TfrmPR17.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+Procedure TfrmMain.acDepordExecute(Sender: TObject);
+Begin
+  With TfrmDepord.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+Procedure TfrmMain.acCordExecute(Sender: TObject);
+Begin
+  With TfrmCord.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+Procedure TfrmMain.acTTN17dExecute(Sender: TObject);
+Begin
+  With TfrmTTN17d.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+Procedure TfrmMain.acTTN17Execute(Sender: TObject);
+Begin
+  With TfrmTTN17.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+Procedure TfrmMain.acExitExecute(Sender: TObject);
+Begin
+  Application.Terminate;
+End;
+
+Procedure TfrmMain.acGDExecute(Sender: TObject);
+Begin
+  With TfrmGD17.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+Procedure TfrmMain.acWhatExecute(Sender: TObject);
+Begin
+  With TfrmWhat.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+Procedure TfrmMain.acPartyExecute(Sender: TObject);
+Begin
+  With TfrmPP.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+Procedure TfrmMain.acTTNcPechExecute(Sender: TObject);
+Begin
+  With TfrmTTN17c.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+Procedure TfrmMain.acPayorderExecute(Sender: TObject);
+Begin
+  With tfrmPayOrd.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+Procedure TfrmMain.acTTNDIgmaExecute(Sender: TObject);
+Begin
+  With tfrmIgmaTTND.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+Procedure TfrmMain.acSmenReportExecute(Sender: TObject);
+Begin
+  With tfrmSRIgma.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+Procedure TfrmMain.FormClose(Sender: TObject; Var Action: TCloseAction);
+Var
+  I                                     : Integer;
+Begin
+  acSendmail.Execute;
+  frmEvent.Close;
+  With frmMain Do
+    For I := MDIChildCount - 1 Downto 0 Do
+      MDIChildren[I].Close; 
+End;
+
+Procedure TfrmMain.acCordIgmaExecute(Sender: TObject);
+Begin
+  With tfrmIgmaCord.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+Procedure TfrmMain.acTTNLoadIgmaExecute(Sender: TObject);
+Begin
+  With tfrmTTNigma.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+Procedure TfrmMain.acTTNKosExecute(Sender: TObject);
+Begin
+  With tfrmTTNKos.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+Procedure TfrmMain.acDordKoslanExecute(Sender: TObject);
+Begin
+  With TfrmIgmaDord.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+Procedure TfrmMain.acTTNDepartExecute(Sender: TObject);
+Begin
+  With TfrmTTNdKos.Create(Self) Do
+    FormStyle := fsMDIChild;
+End;
+
+procedure TfrmMain.acUSLExecute(Sender: TObject);
+begin
+  With TfrmUSL17.Create(Self) Do
+    FormStyle := fsMDIChild;
+end;
+
+procedure TfrmMain.FormShow(Sender: TObject);
+begin
+  oraLogonMain.Execute;
+  If Not oraParusMain.Connected Then
+    application.terminate
+  Else
+    Begin
+      frmMain.Caption := frmMain.Caption + ' (' + oraParusMain.LogonUsername + '@' + oraParusMain.LogonDatabase + ')';
+      oraParusMain.LogOff;
+      IdMessage.Recipients.EMailAddresses := 'FrolovAV@lukoil.com';
+    End;
+  frmEvent := TfrmEvents.Create(Self);
+  frmEvent.FormStyle := fsStayOnTop;
+end;
+
+procedure TfrmMain.acStoreOperExecute(Sender: TObject);
+begin
+  With TfrmStoreOper.Create(Self) Do
+    FormStyle := fsMDIChild;
+end;
+
+procedure TfrmMain.acVoznExecute(Sender: TObject);
+begin
+With TfrmVZ17.Create(Self) Do
+    FormStyle := fsMDIChild;
+end;
+
+procedure TfrmMain.acSendmailExecute(Sender: TObject);
+begin
+  If frmEvent.lbEvents.Items.Count > 1 Then
+  With IdMessage do
+  begin
+      From.Text := DM.oraParus.LogonUsername + '@' + DM.oraParus.LogonDatabase;
+      Sender.Text := DM.oraParus.LogonUsername + '@' + DM.oraParus.LogonDatabase;
+      WriteEvent('Приложение закрыто', 'Главная');
+      Body := frmEvent.lbEvents.Items;
+      Subject := 'From application Load';
+  end;
+    With frmMain.IdSMTP Do
+      Begin
+        Try
+          Connect;
+          Send(frmMain.IdMessage);
+          Disconnect;
+        Except On E: Exception Do
+            Begin
+              If connected Then
+                Try
+                  disconnect;
+                Except
+                End;
+              ShowMessage(E.Message);
+            End;
+        End;
+      End;
+end;
+
+procedure TfrmMain.acConnectToParusExecute(Sender: TObject);
+begin
+  With DM.oraParus do
+  if not Connected then
+  begin
+   LogonUsername := oraParusMain.LogonUsername;
+   LogonPassword := oraParusMain.LogonPassword;
+   LogonDatabase := oraParusMain.LogonDatabase;
+   Logon;
+  WriteEvent('Пользователь '+Dm.oraParus.LogonUsername+'@'+DM.oraParus.LogonDatabase+' открыл соединение с Парус БД!', 'Главная');
+  End;
+end;
+
+procedure TfrmMain.acDisconnectFromParusExecute(Sender: TObject);
+begin
+ if DM.oraParus.Connected and (frmMain.MDIChildCount < 2) then
+ begin
+  DM.oraParus.LogOff;
+  WriteEvent('Пользователь '+DM.oraParus.LogonUsername+'@'+DM.oraParus.LogonDatabase+' закрыл соединение с Парус БД!', 'Главная');
+ end;
+end;
+
+procedure TfrmMain.acConnectToMasterExecute(Sender: TObject);
+begin
+  With DM.oraMain do
+  if not Connected then
+  begin
+   Logon;
+   WriteEvent('Пользователь '+Dm.oraParus.LogonUsername+'@'+DM.oraParus.LogonDatabase+' открыл соединение с Мастер БД!', 'Главная');
+  End;
+end;
+
+procedure TfrmMain.acDisconnectFromMasterExecute(Sender: TObject);
+begin
+ if DM.oraMain.Connected and (frmMain.MDIChildCount < 2) then
+ begin
+  DM.oraMain.LogOff;
+  WriteEvent('Пользователь '+DM.oraParus.LogonUsername+'@'+DM.oraParus.LogonDatabase+' закрыл соединение с Мастер БД!', 'Главная');
+ end;
+end;
+
+procedure TfrmMain.actZakazExecute(Sender: TObject);
+begin
+  With TfrmZakaz.Create(Self) Do
+    FormStyle := fsMDIChild;
+end;
+
+End.
+

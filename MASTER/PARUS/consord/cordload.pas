@@ -1,0 +1,600 @@
+Unit cordload;
+
+Interface
+
+Uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, DB, OracleData, Oracle, Grids, DBGridEh, ExtCtrls, StdCtrls,
+  Mask, ToolEdit, Buttons, ActnList,  ActnMan, dateutils,
+  StrUtils, ComCtrls, ImgList, XPStyleActnCtrls, MemTableDataEh, DataDriverEh, MemTableEh,
+  GridsEh;
+
+Type
+  TfrmCord = Class(TForm)
+    oraCord: TOracleDataSet;
+    dsCord: TDataSource;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    dbgCord: TDBGridEh;
+    ActionManager1: TActionManager;
+    acFilter: TAction;
+    acLoad: TAction;
+    BitBtn2: TBitBtn;
+    OraQuery: TOracleQuery;
+    Panel3: TPanel;
+    Splitter3: TSplitter;
+    oraCatalog: TOracleDataSet;
+    dsCatalog: TDataSource;
+    oraQ: TOracleQuery;
+    oraInvIns: TOracleQuery;
+    oraInvsIns: TOracleQuery;
+    oraCordSFACEACC: TStringField;
+    oraCordSAGENT: TStringField;
+    oraCordSTARIF: TStringField;
+    oraCordSSHIPVIEW: TStringField;
+    oraCordSPAY_TYPE: TStringField;
+    oraCordNOM_ZD: TStringField;
+    oraCordTONN_DECLARED: TFloatField;
+    oraCordDATE_PLAN: TDateTimeField;
+    oraCordINPUT_DATE: TDateTimeField;
+    oraCordSAGNFIFO: TStringField;
+    oraCordSSUBDIV: TStringField;
+    oraCordSJUR_PERS: TStringField;
+    oraCordMODIF: TStringField;
+    oraCordMOD_MODIF: TStringField;
+    oraCordSTAN_NAME: TStringField;
+    oraProps: TOracleQuery;
+    GroupBox1: TGroupBox;
+    Label2: TLabel;
+    Label3: TLabel;
+    deBeg: TDateEdit;
+    deEnd: TDateEdit;
+    BitBtn1: TBitBtn;
+    oraState: TOracleQuery;
+    rbPotreb: TRadioButton;
+    rbArxPotr: TRadioButton;
+    oraDelIns: TOracleQuery;
+    oraDelsIns: TOracleQuery;
+    oraDelCat: TOracleQuery;
+    oraCordPLANSTRU_ID: TFloatField;
+    mteCatalog: TMemTableEh;
+    mteCatalogRN: TFloatField;
+    mteCatalogCRN: TFloatField;
+    mteCatalogNAME: TStringField;
+    dsdCatalog: TDataSetDriverEh;
+    DBGridEh1: TDBGridEh;
+    oraDelState: TOracleQuery;
+    oraCordTAXGR_CODE: TStringField;
+    oraCordTAXGR_CODE_NEW: TStringField;
+    oraCordREGION_NAME: TStringField;
+    oraCordCIST_DECLARED: TIntegerField;
+    oraCordPRIM: TStringField;
+    procedure DBGridEh1Columns0GetCellParams(Sender: TObject; EditMode: Boolean;
+      Params: TColCellParamsEh);
+    Procedure acFilterExecute(Sender: TObject);
+    Procedure FormCreate(Sender: TObject);
+    Procedure FormClose(Sender: TObject; Var Action: TCloseAction);
+    Procedure acLoadExecute(Sender: TObject);
+    Procedure dbgCordGetCellParams(Sender: TObject; Column: TColumnEh;
+      AFont: TFont; Var Background: TColor; State: TGridDrawState);
+    Procedure tvCatalogGetImageIndex(Sender: TObject; Node: TTreeNode);
+    Procedure LoadParus(z: integer);
+    Procedure deBegChange(Sender: TObject);
+    Procedure WriteEvent(Tag: String);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  End;
+
+Var
+  frmCord                               : TfrmCord;
+
+Implementation
+
+Uses MAIN, DMunit;
+
+{$R *.dfm}
+
+Procedure TfrmCord.WriteEvent(Tag: String);
+Begin
+frmMain.WriteEvent(Tag, 'Форма "Заявки потребителей в Парус"');
+End;
+
+Procedure TfrmCord.acFilterExecute(Sender: TObject);
+Begin
+  If oraCord.Active Then
+    oraCord.Close;
+  oraCord.SQL[17] := 'and m.input_date between TO_DATE(''' + FormatDateTime('dd.mm.yyyy', deBeg.Date) + ''',''dd.mm.yyyy'')';
+  oraCord.SQL[17] := oraCord.SQL[17] + 'and TO_DATE(''' + FormatDateTime('dd.mm.yyyy', deEnd.Date) + ''',''dd.mm.yyyy'')';
+  If rbArxPotr.Checked Then //Потребители АФ
+    oraCord.SQL[18] := 'and ps.region_id=21'
+  Else
+    oraCord.SQL[18] := 'and (ps.region_id<>21 or ps.region_id is null)';
+  oraCord.Open;
+  WriteEvent ('Выбран период c '+deBeg.Text+' по '+deEnd.Text+'.');
+End;
+
+Procedure TfrmCord.FormCreate(Sender: TObject);
+Begin
+  deBeg.Date := date - 1;
+  deEnd.Date := date;
+  WriteEvent('Форма открыта');
+  frmMain.acConnectToMaster.Execute;
+  frmMain.acConnectToParus.Execute;
+  oraCatalog.Open;
+  mteCatalog.Open;
+End;
+
+Procedure TfrmCord.FormClose(Sender: TObject; Var Action: TCloseAction);
+var
+i:integer;
+Begin
+  oraCord.Close;
+  oraCatalog.Close;
+  frmMain.acDisconnectFromMaster.Execute;
+  frmMain.acDisconnectFromParus.Execute;
+  WriteEvent('Форма закрыта');
+  action := caFree;
+End;
+
+Procedure TfrmCord.acLoadExecute(Sender: TObject);
+Begin
+  LoadParus(1);
+End;
+
+Procedure TfrmCord.LoadParus(z: integer);
+Var
+  summ                                  : String;
+  st1, st2, rn_crn, rn_crn2             : String;
+  rn_sved, rn, rn_isp, rn_isps          : integer;
+  ss                                    : ^TOracleDataSet;
+Begin
+  rn_crn := mtecatalog.fieldbyname('RN').asstring;
+  //Поиск каталога для заказа поставщика
+  oraDelCat.ClearVariables;
+  oraDelCat.SetVariable(':nFLAG_SMART',1);
+  oraDelCat.SetVariable(':nCOMPANY',2);
+  oraDelCat.SetVariable(':sUNITCODE','DeliveryOrders');
+  oraDelCat.SetVariable(':sNAME','Ж/Д УНП');
+  oraDelCat.Execute;
+  rn_crn2 := IntToStr(oraDelCat.GetVariable(':nRN'));
+  oraDelCat.Close;
+  If z = 1 Then
+    ss := @oraCord;
+  ss^.First;
+  While Not ss^.Eof Do
+    Begin
+      WriteEvent('Закачка в Парус заявки №' + ss^.fieldbyname('nom_zd').AsString + '.');
+      rn_sved := 0;
+      rn := 0;
+      oraInvIns.ClearVariables;
+      // Формирование заявки потребителей по данным из мастера
+      oraInvIns.SetVariable(':nCOMPANY', 2);
+      oraInvIns.SetVariable(':nCRN', rn_crn);
+      oraInvIns.SetVariable(':sJUR_PERS', 'СЕВЕРНЕФТЕПРОДУКТ');
+      oraInvIns.SetVariable(':sORD_DOCTYPE', 'ЗАЯВКА');
+      oraInvIns.SetVariable(':sORD_PREF', ss^.fieldbyname('nom_zd').asString);
+      oraInvIns.SetVariable(':sORD_NUMB', '1');
+      oraInvIns.SetVariable(':sAGENT', trim(ss^.fieldbyname('sagent').asString));
+      oraInvIns.SetVariable(':sFACEACC', trim(ss^.fieldbyname('sfaceacc').asString));
+      oraInvIns.SetVariable(':dORD_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('input_date').asDateTime));
+      oraInvIns.SetVariable(':nORD_STATE', 0);
+      oraInvIns.SetVariable(':dSTATE_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('input_date').asDateTime));
+      oraInvIns.SetVariable(':sDISP_TYPE', trim(ss^.fieldbyname('sshipview').asString));
+      oraInvIns.SetVariable(':sPAY_TYPE', trim(ss^.fieldbyname('spay_type').asString));
+      oraInvIns.SetVariable(':sTARIF', trim(ss^.fieldbyname('starif').asString));
+      oraInvIns.SetVariable(':sCURRENCY', 'Руб.');
+      oraInvIns.SetVariable(':sSTORE', 'УХТА_ЦА');
+      oraInvIns.SetVariable(':sACC_AGENT', 'Кульбицкая И.Н.');
+      oraInvIns.SetVariable(':sSUBDIV', 'ОТДЕЛ_ПОСТАВОК');
+      oraInvIns.SetVariable(':dPAY_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('date_plan').asDateTime + 30));
+      oraInvIns.SetVariable(':dRELEASE_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('date_plan').asDateTime + 30));
+      oraInvIns.SetVariable(':dPRICE_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('date_plan').asDateTime));
+      oraInvIns.SetVariable(':nORD_PERIOD', 0);
+      oraInvIns.SetVariable(':nPERIOD_CORR', 1);
+      oraInvIns.SetVariable(':nPERIOD_QUANT', 1);
+      oraInvIns.SetVariable(':nPERIOD_TYPE', 0);
+      oraInvIns.SetVariable(':nPERIOD_LEN', 1);
+      oraInvIns.SetVariable(':nATSAMETIME', 1);
+      oraInvIns.SetVariable(':nPRICE_TYPE', 1);
+      oraInvIns.SetVariable(':nREDUCTION', 0);
+      oraInvIns.SetVariable(':sNote', trim(ss^.fieldbyname('cist_declared').asString) +'|'+trim(ss^.fieldbyname('prim').asString));
+      oraInvIns.SetVariable(':sAGNFI', trim(ss^.fieldbyname('sagnfifo').asString));
+
+      Try
+        Begin
+          oraInvIns.Execute;
+          // формирование дополнительного свойства Код ТУ заявки потребителей
+          rn_sved := oraInvIns.GetVariable(':nRN');
+          oraProps.ClearVariables;
+          oraProps.SetVariable(':NCOMPANY', 2);
+          oraProps.SetVariable(':NRN', rn_sved);
+          oraProps.SetVariable(':SUNITCODE', 'ConsumersOrders');
+          oraProps.SetVariable(':SCODE', 'Код ТУ');
+          oraProps.SetVariable(':NFORMAT', 0);
+          oraProps.SetVariable(':SSTR_VALUE', '770800476705');
+          Try
+            Begin
+              oraProps.Execute;
+              WriteEvent('Код ТУ загружен.');
+            End;
+          Except On E: EOracleError Do
+               begin
+                  ShowMessage(E.Message);
+                  WriteEvent(E.Message);
+               end;
+          End;
+          // формирование дополнительных свойств Ж/Д станция заявки потребителей
+          oraProps.ClearVariables;
+          oraQ.SQL.Add('select str_value, note from extra_dicts_values where');
+          oraQ.SQL.Add('UPPER(note)=''' + ss^.fieldbyname('stan_name').asString + '''');
+          oraQ.execute;
+          If (oraQ.RowCount > 0) Then
+            Begin
+              // Формирование дополнительного свойства Код ж/д станции
+              oraProps.SetVariable(':NCOMPANY', 2);
+              oraProps.SetVariable(':NRN', rn_sved);
+              oraProps.SetVariable(':SUNITCODE', 'ConsumersOrders');
+              oraProps.SetVariable(':SCODE', 'Код станции');
+              oraProps.SetVariable(':NFORMAT', 0);
+              oraProps.SetVariable(':SSTR_VALUE', oraQ.FieldAsString(0));
+              Try
+                Begin
+                  oraProps.Execute;
+                  WriteEvent('Код станции загружен.');
+                End;
+              Except On E: EOracleError Do
+               begin
+                  ShowMessage(E.Message);
+                  WriteEvent(E.Message);
+               end;
+              End;
+
+         {   //Формирование дополнительного свойства наименование станции назначения
+          oraProps.ClearVariables;
+          st1 := trim(ss^.fieldbyname('stan_name').asString);
+              oraProps.SetVariable(':NCOMPANY', 2);
+              oraProps.SetVariable(':NRN', rn_sved);
+              oraProps.SetVariable(':SUNITCODE', 'ConsumersOrders');
+              oraProps.SetVariable(':SCODE', 'НаимСтанНазнач');
+              oraProps.SetVariable(':NFORMAT', 0);
+              oraProps.SetVariable(':SSTR_VALUE', oraQ.FieldAsString(1));
+              Try
+                Begin
+                  oraProps.Execute;
+                  WriteEvent('Наиманование станции загружено.');
+                End;
+              Except On E: EOracleError Do
+               begin
+                  ShowMessage(E.Message);
+                  WriteEvent(E.Message);
+               end;
+              End;  }
+            End;
+          oraQ.Clear;
+ {         //регион отгрузки
+          oraProps.ClearVariables;
+          st1 := trim(ss^.fieldbyname('REGION_NAME').asString);
+              oraProps.SetVariable(':NCOMPANY', 2);
+              oraProps.SetVariable(':NRN', rn_sved);
+              oraProps.SetVariable(':SUNITCODE', 'ConsumersOrders');
+              oraProps.SetVariable(':SCODE', 'РегОтгрузки');
+              oraProps.SetVariable(':NFORMAT', 0);
+              oraProps.SetVariable(':SSTR_VALUE', st1);
+              Try
+                Begin
+                  oraProps.Execute;
+                  WriteEvent('Регион откгрузки загружен.');
+                End;
+              Except On E: EOracleError Do
+                  ShowMessage(E.Message);
+              End;
+          //тип реализации (собственный, внутрикорпоративный)
+          oraProps.ClearVariables;
+          st1 := trim(ss^.fieldbyname('region_name').asString);
+              oraProps.SetVariable(':NCOMPANY', 2);
+              oraProps.SetVariable(':NRN', rn_sved);
+              oraProps.SetVariable(':SUNITCODE', 'ConsumersOrders');
+              oraProps.SetVariable(':SCODE', 'ТипРеализации');
+              oraProps.SetVariable(':NFORMAT', 0);
+              oraProps.SetVariable(':SSTR_VALUE', st1);
+              Try
+                Begin
+                  oraProps.Execute;
+                  WriteEvent('Тип реализации загружен.');
+                End;
+              Except On E: EOracleError Do
+                  ShowMessage(E.Message);
+              End;       }
+          // Спецификация вознаграждение
+          oraInvsIns.ClearVariables;
+          oraInvsIns.SetVariable(':nCOMPANY', 2);
+          oraInvsIns.SetVariable(':nPRN', rn_sved);
+          oraInvsIns.SetVariable(':sNOMEN', 'За транспортировку');
+					oraInvsIns.SetVariable(':sNOM_MODIF', 'За транспортировку');
+          if (ss^.fieldbyname('date_plan').asDateTime >= StrToDate('01.01.2006')) and (ss^.fieldbyname('date_plan').asDateTime < StrToDate('01.01.2007')) then
+    					oraInvsIns.SetVariable(':sTAX_GROUP', trim(ss^.fieldbyname('taxgr_code_new').asString))
+          else
+    					oraInvsIns.SetVariable(':sTAX_GROUP', trim(ss^.fieldbyname('taxgr_code').asString));
+          oraInvsIns.SetVariable(':nEXP_PRICE', 1.18);
+          oraInvsIns.SetVariable(':nPR_MEAS', 0);
+          oraInvsIns.SetVariable(':sSTORE', 'УХТА_ЦА');
+          oraInvsIns.SetVariable(':dACTPF_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('input_date').asDateTime));
+          oraInvsIns.SetVariable(':dBEGIN_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('input_date').asDateTime));
+          oraInvsIns.SetVariable(':nACTM_QUANT', trim(floatToStr(ss^.fieldbyname('tonn_declared').asFloat * 1000)));
+          oraInvsIns.SetVariable(':nACTA_QUANT', trim(floatToStr(ss^.fieldbyname('tonn_declared').asFloat * 1000)));
+          oraInvsIns.SetVariable(':nACTSWTAX', 0);
+          oraInvsIns.SetVariable(':nACTSWOTAX', 0);
+          Try
+            Begin
+              oraInvsIns.Execute;
+              WriteEvent('Спецификация по возгаграждению заявки загружена!');
+       			End
+					Except On E: EOracleError Do
+               begin
+                  ShowMessage(E.Message);
+                  WriteEvent(E.Message);
+               end;
+          end;
+         { // Спецификация страховка
+          oraInvsIns.ClearVariables;
+          oraInvsIns.SetVariable(':nCOMPANY', 2);
+          oraInvsIns.SetVariable(':nPRN', rn_sved);
+          oraInvsIns.SetVariable(':sNOMEN', 'СТРАХОВКА_ГР');
+					oraInvsIns.SetVariable(':sNOM_MODIF', 'СТРАХОВКА_ГР');
+					oraInvsIns.SetVariable(':sTAX_GROUP', 'ПЕРЕМ');
+          oraInvsIns.SetVariable(':nEXP_PRICE', 0);
+          oraInvsIns.SetVariable(':nPR_MEAS', 1);
+          oraInvsIns.SetVariable(':sSTORE', 'УХТА_ЦА');
+          oraInvsIns.SetVariable(':dACTPF_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('input_date').asDateTime));
+          oraInvsIns.SetVariable(':dBEGIN_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('input_date').asDateTime));
+          oraInvsIns.SetVariable(':nACTM_QUANT', 0);
+          oraInvsIns.SetVariable(':nACTA_QUANT', 0);
+          oraInvsIns.SetVariable(':nACTSWTAX', 0);
+          oraInvsIns.SetVariable(':nACTSWOTAX', 0);
+          Try
+            Begin
+              oraInvsIns.Execute;
+              mlog.Lines.Add('Спецификация по страховке заявки загружена!');
+       			End
+					Except On E: EOracleError Do
+							ShowMessage(E.Message);
+          end;  }
+          // Спецификация
+          oraInvsIns.ClearVariables;
+          oraInvsIns.SetVariable(':nCOMPANY', 2);
+          oraInvsIns.SetVariable(':nPRN', rn_sved);
+          oraInvsIns.SetVariable(':sNOMEN', trim(ss^.fieldbyname('modif').asString));
+					oraInvsIns.SetVariable(':sNOM_MODIF', trim(ss^.fieldbyname('mod_modif').asString));
+					oraInvsIns.SetVariable(':sTAX_GROUP', 'НДС 18%');
+          oraInvsIns.SetVariable(':nEXP_PRICE', 0);
+          oraInvsIns.SetVariable(':nPR_MEAS', 1);
+          oraInvsIns.SetVariable(':sSTORE', 'УХТА_ЦА');
+          oraInvsIns.SetVariable(':dACTPF_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('input_date').asDateTime));
+          oraInvsIns.SetVariable(':nACTM_QUANT', trim(floatToStr(ss^.fieldbyname('tonn_declared').asFloat * 1000)));
+          oraInvsIns.SetVariable(':nACTA_QUANT', trim(floatToStr(ss^.fieldbyname('tonn_declared').asFloat * 1000)));
+          oraInvsIns.SetVariable(':nACTSWTAX', 0);
+          oraInvsIns.SetVariable(':nACTSWOTAX', 0);
+          Try
+            Begin
+              oraInvsIns.Execute;
+              WriteEvent('Спецификация по продукту заявки загружена!');
+              //Сохраняем все
+              oraQuery.SQL.Clear;
+              // Добавляет в мастер информацию о том что данная спецификация занесена
+              oraQuery.SQL.Add('insert into parus_fin (month_id,task,rn,subtask,date_kvit,authid) values (');
+              oraQuery.SQL.Add('''' + trim(ss^.fieldbyname('nom_zd').AsString) + ''',');
+              oraQuery.SQL.Add('''ConsumersOrders'',');
+              oraQuery.SQL.Add(inttostr(rn_sved) + ',');
+              oraQuery.SQL.Add('1,');
+              oraQuery.SQL.Add('TO_DATE(''' + FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('input_date').AsDateTime) + ''',''dd.mm.yyyy''),');
+              oraQuery.SQL.Add('''' + DM.oraParus.LogonUsername + ''')');
+              oraQuery.Execute;
+              oraQuery.SQL.Clear;
+              oraQuery.Session.Commit;
+              oraQ.SQL.Clear;
+              oraQ.Session.Commit;
+              WriteEvent('Заказ потребителей сформирван успешно!');
+
+//              oraState.ClearVariables;
+//              oraState.SetVariable(':NFLAG_SMART', 0);
+//              oraState.SetVariable(':NCOMPANY', 2);
+//              oraState.SetVariable(':NRN', rn_sved);
+//              oraState.SetVariable(':NFLAG_MODE', 0);
+//              oraState.SetVariable(':NNEW_STATE', 1);
+//              oraState.SetVariable(':nRESERV_SIGN', 0);
+//              oraState.SetVariable(':nSIGN_WARN', 0);
+//              oraState.SetVariable(':DSTATE_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('input_date').asDateTime));
+//							//        oraState.SetVariable(':NRESULT',0);
+//							Try
+//                oraState.Execute
+//              Except On E: EOracleError Do
+//                  ShowMessage(E.Message);
+//              End;
+//							oraQ.SQL.Clear;
+//							oraQ.Session.Commit;
+//              mlog.Lines.Add('Утвержден Заказ потребителей № ' + ss^.fieldbyname('nom_zd').AsString + #13#10);
+						End
+					Except On E: EOracleError Do
+               begin
+                  ShowMessage(E.Message);
+                  WriteEvent(E.Message);
+               end;
+          End
+        End;
+      Except On E: EOracleError Do
+               begin
+                  ShowMessage(E.Message);
+                  WriteEvent(E.Message);
+               end;
+      End;
+//************************** Заказ поставщика****************************************************
+      WriteEvent('Закачка в Парус заказа поставщика №' + ss^.fieldbyname('nom_zd').AsString);
+      rn_sved := 0;
+      oraDelIns.ClearVariables;
+      oraDelIns.SetVariable(':nCOMPANY', 2);
+      oraDelIns.SetVariable(':nCRN', rn_crn2);
+      oraDelIns.SetVariable(':sJUR_PERS', 'СЕВЕРНЕФТЕПРОДУКТ');
+      oraDelIns.SetVariable(':sORD_DOCTYPE', 'ЗАКПОСТ');
+      oraDelIns.SetVariable(':sORD_PREF', ss^.fieldbyname('nom_zd').asString);
+      oraDelIns.SetVariable(':sORD_NUMB', '1');
+      oraDelIns.SetVariable(':sAGENT', 'ЛУКОЙЛ-УХТАНЕФТЕПЕРЕ');
+      oraDelIns.SetVariable(':sFACEACC', '050250001/1');
+      oraDelIns.SetVariable(':dORD_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('input_date').asDateTime));
+      oraDelIns.SetVariable(':nORD_STATE', 0);
+      oraDelIns.SetVariable(':dSTATE_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('input_date').asDateTime));
+      oraDelIns.SetVariable(':sDISP_TYPE', 'Ж/Д_ТРАНЗ');
+      oraDelIns.SetVariable(':sPAY_TYPE', 'ПО ФАКТУ 22');
+//      oraDelIns.SetVariable(':sTARIF', trim(ss^.fieldbyname('starif').asString));
+      oraDelIns.SetVariable(':sCURRENCY', 'Руб.');
+      oraDelIns.SetVariable(':sSTORE', 'УХТА_ЦА');
+      oraDelIns.SetVariable(':sACC_AGENT', 'Кульбицкая И.Н.');
+      oraDelIns.SetVariable(':sSUBDIV', 'УХТА');
+      oraDelIns.SetVariable(':dPAY_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('date_plan').asDateTime + 30));
+      oraDelIns.SetVariable(':dRELEASE_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('date_plan').asDateTime + 30));
+//      oraDelIns.SetVariable(':dPRICE_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('date_plan').asDateTime));
+      oraDelIns.SetVariable(':nORD_PERIOD', 0);
+      oraDelIns.SetVariable(':nPERIOD_CORR', 1);
+      oraDelIns.SetVariable(':nPERIOD_QUANT', 1);
+      oraDelIns.SetVariable(':nPERIOD_TYPE', 0);
+      oraDelIns.SetVariable(':nPERIOD_LEN', 1);
+      oraDelIns.SetVariable(':nATSAMETIME', 1);
+      oraDelIns.SetVariable(':NINCLUDETAX', 1);
+      oraDelIns.SetVariable(':nREDUCTION', 0);
+      Try
+        Begin
+          oraDelIns.Execute;
+          rn_sved := oraDelIns.GetVariable(':nRN');
+          oraProps.ClearVariables;
+          WriteEvent('Заголовок Заказа загружен...');
+          oraProps.SetVariable(':NCOMPANY', 2);
+          oraProps.SetVariable(':NRN', rn_sved);
+          oraProps.SetVariable(':SUNITCODE', 'DeliveryOrders');
+          oraProps.SetVariable(':SCODE', 'ПЛАН ПОСТАВКИ');
+          oraProps.SetVariable(':NFORMAT', 0);
+          oraProps.SetVariable(':SSTR_VALUE', trim(ss^.fieldbyname('planstru_id').asString));
+          Try
+            Begin
+              oraProps.Execute;
+              WriteEvent('Код Плана Поставки загружен');
+            End;
+          Except On E: EOracleError Do
+               begin
+                  ShowMessage(E.Message);
+                  WriteEvent(E.Message);
+               end;
+          End;
+
+          // Спецификация
+          oraDelsIns.ClearVariables;
+          oraDelsIns.SetVariable(':nCOMPANY', 2);
+          oraDelsIns.SetVariable(':nPRN', rn_sved);
+          oraDelsIns.SetVariable(':sNOMEN', trim(ss^.fieldbyname('modif').asString));
+					oraDelsIns.SetVariable(':sNOM_MODIF', trim(ss^.fieldbyname('mod_modif').asString));
+          if (ss^.fieldbyname('date_plan').asDateTime >= StrToDate('01.01.2006')) and (ss^.fieldbyname('date_plan').asDateTime < StrToDate('01.01.2007')) then
+    					oraDelsIns.SetVariable(':sTAX_GROUP', trim(ss^.fieldbyname('taxgr_code_new').asString))
+          else
+    					oraDelsIns.SetVariable(':sTAX_GROUP', trim(ss^.fieldbyname('taxgr_code').asString));
+          oraDelsIns.SetVariable(':nEXP_PRICE', 0);
+          oraDelsIns.SetVariable(':nPR_MEAS', 1);
+          oraDelsIns.SetVariable(':sSTORE', 'УХТА_ЦА');
+          oraDelsIns.SetVariable(':dACTPF_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('input_date').asDateTime));
+          oraDelsIns.SetVariable(':nACTM_QUANT', trim(floatToStr(ss^.fieldbyname('tonn_declared').asFloat * 1000)));
+          oraDelsIns.SetVariable(':nACTA_QUANT', trim(floatToStr(ss^.fieldbyname('tonn_declared').asFloat * 1000)));
+          oraDelsIns.SetVariable(':nACTSWTAX', 0);
+          oraDelsIns.SetVariable(':nACTSWOTAX', 0);
+          Try
+            Begin
+              oraDelsIns.Execute;
+              WriteEvent('Спецификация заказа поставщику загружена!');              //Сохраняем все
+              oraQuery.SQL.Clear;
+              // Добавляет в мастер информацию о том что данная спецификация занесена
+              oraQuery.SQL.Add('insert into parus_fin (month_id,task,rn,subtask,date_kvit,authid) values (');
+              oraQuery.SQL.Add('''' + trim(ss^.fieldbyname('nom_zd').AsString) + ''',');
+              oraQuery.SQL.Add('''DeliveryOrders'',');
+              oraQuery.SQL.Add(inttostr(rn_sved) + ',');
+              oraQuery.SQL.Add('1,');
+              oraQuery.SQL.Add('TO_DATE(''' + FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('input_date').AsDateTime) + ''',''dd.mm.yyyy''),');
+              oraQuery.SQL.Add('''' + DM.oraParus.LogonUsername + ''')');
+              oraQuery.Execute;
+              oraQuery.SQL.Clear;
+              oraQuery.Session.Commit;
+              oraQ.SQL.Clear;
+              oraQ.Session.Commit;
+              WriteEvent('Заказ поставщику сформирван успешно!');              //Сохраняем все
+              oraDelState.ClearVariables;
+              // Удаление состояния у спецификации
+              oraDelState.SetVariable(':NFLAG_SMART', 0);
+              oraDelState.SetVariable(':NCOMPANY', 2);
+              oraDelState.SetVariable(':NRN', rn_sved);
+              oraDelState.SetVariable(':NFLAG_MODE', 0);
+              oraDelState.SetVariable(':NNEW_STATE', 1);
+              oraDelState.SetVariable(':DSTATE_DATE', FormatDateTime('dd.mm.yyyy', ss^.fieldbyname('input_date').asDateTime));
+              Try
+                oraDelState.Execute
+              Except On E: EOracleError Do
+               begin
+                  ShowMessage(E.Message);
+                  WriteEvent(E.Message);
+               end;
+              End;
+              oraQ.Session.Commit;
+              WriteEvent('Утвержден Заказ Поставщику!');              //Сохраняем все
+  					End
+					Except On E: EOracleError Do
+               begin
+                  ShowMessage(E.Message);
+                  WriteEvent(E.Message);
+               end;
+          End
+        End;
+      Except On E: EOracleError Do
+               begin
+                  ShowMessage(E.Message);
+                  WriteEvent(E.Message);
+               end;
+      End;
+      ss^.Next;
+    End;
+  acFilterExecute(Self);
+End;
+
+Procedure TfrmCord.dbgCordGetCellParams(Sender: TObject;
+  Column: TColumnEh; AFont: TFont; Var Background: TColor;
+  State: TGridDrawState);
+Begin
+  If odd(oraCord.RecNo) Then
+    background := clMoneyGreen;
+End;
+
+Procedure TfrmCord.tvCatalogGetImageIndex(Sender: TObject;
+  Node: TTreeNode);
+Begin
+  If node.Expanded Then
+    node.ImageIndex := 1
+  Else
+    node.ImageIndex := 2;
+  If Not node.HasChildren Then
+    node.ImageIndex := 3;
+End;
+
+Procedure TfrmCord.deBegChange(Sender: TObject);
+Begin
+  deBeg.Date := deBeg.date - dayOf(deBeg.date) + 1
+End;
+
+procedure TfrmCord.DBGridEh1Columns0GetCellParams(Sender: TObject;
+  EditMode: Boolean; Params: TColCellParamsEh);
+begin
+ if mteCatalog.TreeNodeExpanded  then
+   params.ImageIndex:=1
+ else
+  if mteCatalog.TreeNodeHasChildren then
+   params.ImageIndex:=2
+  else
+   params.ImageIndex:=3;
+end;
+
+End.
+

@@ -1,0 +1,16 @@
+object F_mtredit: TF_mtredit
+  Left = 200
+  Top = 103
+  Width = 979
+  Height = 563
+  Caption = #1047#1072#1075#1088#1091#1079#1082#1072' '#1090#1077#1083#1077#1092#1086#1085#1085#1086#1075#1086' '#1090#1088#1072#1092#1080#1082#1072
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+end

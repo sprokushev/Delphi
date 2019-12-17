@@ -1,0 +1,473 @@
+object frmSRigma: TfrmSRigma
+  Left = 405
+  Top = 278
+  Width = 818
+  Height = 591
+  Caption = #1057#1084#1077#1085#1085#1099#1077' '#1086#1090#1095#1077#1090#1099' '#1074' '#1055#1072#1088#1091#1089
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Splitter3: TSplitter
+    Left = 185
+    Top = 73
+    Height = 487
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 810
+    Height = 73
+    Align = alTop
+    TabOrder = 0
+    object BitBtn2: TBitBtn
+      Left = 450
+      Top = 8
+      Width = 135
+      Height = 57
+      Action = acLoad
+      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074' '#1055#1072#1088#1091#1089
+      TabOrder = 0
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000000000000000000000000000000000000FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF000000FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF000000FF000000FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF000000C0C0C000FFFFFF00FF00
+        0000FF000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF000000FF000000FFFFFF00FFFFFF00C0C0
+        C000FF000000FF000000FF000000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF000000FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FF000000FF000000FF000000FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00C0C0C000FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00C0C0C000FF000000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00C0C0C000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF0080808000FF000000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF000000FF000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FF00
+        0000FF000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00000080808000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF000000C0C0C000FFFFFF00FFFFFF0080000000FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF000000FFFFFF00C0C0C000FF000000FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF000000FF00000080000000FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF000000FF000000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF0080000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
+    end
+    object GroupBox1: TGroupBox
+      Left = 7
+      Top = 5
+      Width = 434
+      Height = 62
+      Caption = ' '#1048#1084#1087#1086#1088#1090' '#1074' '#1055#1072#1088#1091#1089' '
+      TabOrder = 1
+      object Label1: TLabel
+        Left = 7
+        Top = 14
+        Width = 130
+        Height = 13
+        Caption = #1050#1072#1090#1072#1083#1086#1075' '#1074#1093#1086#1076#1085#1099#1093' '#1092#1072#1081#1083#1086#1074':'
+      end
+      object edPath: TDirectoryEdit
+        Left = 4
+        Top = 32
+        Width = 313
+        Height = 21
+        DialogText = #1042#1099#1073#1080#1088#1080#1090#1077' '#1076#1080#1088#1077#1082#1090#1086#1088#1080#1102
+        NumGlyphs = 1
+        TabOrder = 0
+      end
+      object BitBtn1: TBitBtn
+        Left = 321
+        Top = 30
+        Width = 100
+        Height = 25
+        Action = acFilter
+        Caption = #1054#1090#1082#1088#1099#1090#1100
+        TabOrder = 1
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000000000000000000000000000000000000FF00FF00FF00
+          FF00FF00FF00FF00FF0000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FF00FF00FF00FF00FF00
+          FF00FF00FF00FF00FF0000000000FFFFFF00FFFFFF008080800080808000FFFF
+          FF00FFFFFF008080800080808000808080008080800000000000FF00FF00FF00
+          FF00FF00FF00FF00FF00000000000000000000000000FFFFFF00FFFFFF00FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000FF00FF00FF00
+          FF00FF00FF00FF00FF000000000000000000FFFFFF008080800000000000FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000FF00FF00FF00
+          FF00FF00FF00FF00FF000000000000000000FFFFFF008080800080800000FFFF
+          FF00FFFFFF000000FF000000FF00808080008080800000000000FF00FF00FF00
+          FF00FF00FF00FF00FF000000000000000000FFFFFF008080800080800000FFFF
+          FF00FFFFFF000000FF000000FF00808080008080800000000000FF00FF00FF00
+          FF00FF00FF00FF00FF000000000000000000FFFFFF008080800080800000FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000FF00FF00FF00
+          FF00FF00FF00FF00FF000000000000000000FFFFFF008080800080800000FFFF
+          FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000FF00FF00FF00
+          FF00FF00FF00FF00FF008000000000000000FFFFFF0080808000808000008000
+          0000800000008000000080000000800000008000000080000000FF00FF00FF00
+          FF00FF00FF00FF00FF008000000000000000FFFFFF0080808000808000008000
+          0000800000008000000080000000800000008000000080000000FF00FF00FF00
+          FF00FF00FF00FF00FF008000000080800000FFFFFF0080808000808000000000
+          0000800000008000000080000000800000008000000080000000FF00FF00FF00
+          FF00FF00FF000000000080800000FFFFFF00FFFFFF00C0C0C000C0C0C0008080
+          000080800000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+          FF00FF00FF008080000080800000FFFFFF00FFFFFF00C0C0C000C0C0C0008080
+          80008080000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF000000
+          00008080000080808000C0C0C000FFFFFF00FFFFFF00C0C0C000C0C0C000C0C0
+          C000808080008080000080800000FF00FF00FF00FF00FF00FF00FF00FF008080
+          000080800000C0C0C000C0C0C000FFFFFF00FFFFFF00C0C0C000C0C0C000C0C0
+          C000C0C0C000808000008080000000000000FF00FF00FF00FF00FF00FF000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000000000000000000000000000000000000000FF00FF00}
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 188
+    Top = 73
+    Width = 622
+    Height = 487
+    Align = alClient
+    TabOrder = 1
+    object Splitter1: TSplitter
+      Left = 1
+      Top = 217
+      Width = 620
+      Height = 3
+      Cursor = crVSplit
+      Align = alTop
+    end
+    object dbgTTN17_cond: TDBGridEh
+      Left = 1
+      Top = 1
+      Width = 620
+      Height = 216
+      Align = alTop
+      AllowedOperations = []
+      DataSource = dsTTN
+      Flat = False
+      FooterColor = clWindow
+      FooterFont.Charset = DEFAULT_CHARSET
+      FooterFont.Color = clWindowText
+      FooterFont.Height = -11
+      FooterFont.Name = 'MS Sans Serif'
+      FooterFont.Style = []
+      OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghFitRowHeightToText, dghRowHighlight]
+      ReadOnly = True
+      RowHeight = 4
+      RowLines = 1
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+    end
+    object dbgTTN17_new: TDBGridEh
+      Left = 1
+      Top = 220
+      Width = 620
+      Height = 263
+      Align = alClient
+      AllowedOperations = []
+      DataSource = dsTTN17specs
+      Flat = False
+      FooterColor = clWindow
+      FooterFont.Charset = DEFAULT_CHARSET
+      FooterFont.Color = clWindowText
+      FooterFont.Height = -11
+      FooterFont.Name = 'MS Sans Serif'
+      FooterFont.Style = []
+      OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghFitRowHeightToText, dghRowHighlight]
+      ReadOnly = True
+      RowHeight = 4
+      RowLines = 1
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 73
+    Width = 185
+    Height = 487
+    Align = alLeft
+    TabOrder = 2
+    object Splitter4: TSplitter
+      Left = 1
+      Top = 321
+      Width = 183
+      Height = 3
+      Cursor = crVSplit
+      Align = alTop
+    end
+    object mLog: TMemo
+      Left = 1
+      Top = 324
+      Width = 183
+      Height = 159
+      Align = alClient
+      TabOrder = 0
+      WordWrap = False
+    end
+    object DBGridEh1: TDBGridEh
+      Left = 1
+      Top = 1
+      Width = 183
+      Height = 320
+      Align = alTop
+      AllowedOperations = []
+      AutoFitColWidths = True
+      DataSource = dsCatalog
+      Flat = True
+      FooterColor = clWindow
+      FooterFont.Charset = DEFAULT_CHARSET
+      FooterFont.Color = clWindowText
+      FooterFont.Height = -11
+      FooterFont.Name = 'MS Sans Serif'
+      FooterFont.Style = []
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+      OptionsEh = [dghFixed3D, dghHighlightFocus, dghRowHighlight, dghDialogFind]
+      ReadOnly = True
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      Columns = <
+        item
+          EditButtons = <>
+          FieldName = 'NAME'
+          Footers = <>
+          ImageList = frmMain.ImageList2
+          ShowImageAndText = True
+          Width = 206
+        end>
+    end
+  end
+  object ActionManager1: TActionManager
+    Left = 720
+    Top = 152
+    StyleName = 'XP Style'
+    object acFilter: TAction
+      Caption = #1054#1090#1082#1088#1099#1090#1100
+      ImageIndex = 0
+      OnExecute = acFilterExecute
+    end
+    object acLoad: TAction
+      Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100' '#1074' '#1055#1072#1088#1091#1089
+      ImageIndex = 2
+      OnExecute = acLoadExecute
+    end
+  end
+  object oraParus: TOracleSession
+    Left = 452
+    Top = 148
+  end
+  object oraCatalog: TOracleDataSet
+    SQL.Strings = (
+      'select * from v_acatalog where unitcode='#39'AZSREPORTLST'#39)
+    QBEDefinition.QBEFieldDefs = {
+      040000000800000002000000524E0100000000000300000043524E0100000000
+      00040000004E414D4501000000000008000000554E4954434F44450100000000
+      000700000056455253494F4E01000000000007000000434F4D50414E59010000
+      0000000400000050524956010000000000050000005349474E53010000000000}
+    ReadOnly = True
+    Session = oraParus
+    Left = 564
+    Top = 100
+  end
+  object dsCatalog: TDataSource
+    DataSet = mteCatalog
+    Left = 564
+    Top = 148
+  end
+  object dsTTN: TDataSource
+    DataSet = tTTN
+    Left = 280
+    Top = 160
+  end
+  object dsTTN17specs: TDataSource
+    DataSet = tTTNspecs
+    Left = 280
+    Top = 376
+  end
+  object oraInvIns: TOracleQuery
+    SQL.Strings = (
+      'begin'
+      'P_AZSSREPORTMAIN_INSERT'
+      '( :nCRN,'
+      '  :nCOMPANY,'
+      '  :sAZS_NUMBER,'
+      '  :sAZS_SMENA,'
+      '  :sAZS_PBE,'
+      '  :dDATE_SMENA,'
+      '  :nCHECKED,'
+      '  :sF_MOL,'
+      '  :sS_MOL,'
+      '  :sT_MOL,'
+      '  :nRN,'
+      '  :nBEG_MONEY);'
+      'end;')
+    Session = oraParus
+    Variables.Data = {
+      030000000C000000090000003A4E434F4D50414E590300000000000000000000
+      00050000003A4E43524E030000000000000000000000040000003A4E524E0500
+      000000000000000000000C0000003A53415A535F4E554D424552050000000000
+      0000000000000B0000003A53415A535F534D454E410500000000000000000000
+      00090000003A53415A535F5042450500000000000000000000000C0000003A44
+      444154455F534D454E410C0000000000000000000000090000003A4E43484543
+      4B4544030000000000000000000000070000003A53465F4D4F4C050000000000
+      000000000000070000003A53535F4D4F4C050000000000000000000000070000
+      003A53545F4D4F4C0500000000000000000000000B0000003A4E4245475F4D4F
+      4E4559040000000000000000000000}
+    Left = 460
+    Top = 345
+  end
+  object oraInvsIns: TOracleQuery
+    SQL.Strings = (
+      'begin'
+      'P_AZSREPOUT_INSERT'
+      '( :nCOMPANY,'
+      '  :nPRN,'
+      '  :sTIME,'
+      '  :sNOMEN,'
+      '  :sOUTTYPE,'
+      '  :sPAYTYPE,'
+      '  :sSHIPTYPE,'
+      '  :sMUNIT,'
+      '  :sFACEACC,'
+      '  :sCARD,'
+      '  :sMECH,'
+      '  :nTEMPERATURE,'
+      '  :nPL,'
+      '  :nVOLUME,'
+      '  :nMASSA,'
+      '  :nPRICE,'
+      '  :nSUMM,'
+      '  :nRN);'
+      'end;')
+    Session = oraParus
+    Variables.Data = {
+      0300000012000000090000003A4E434F4D50414E590300000000000000000000
+      00050000003A4E50524E050000000000000000000000070000003A534E4F4D45
+      4E050000000000000000000000070000003A4E50524943450400000000000000
+      00000000060000003A4E53554D4D040000000000000000000000040000003A4E
+      524E050000000000000000000000060000003A5354494D450500000000000000
+      00000000090000003A534F555454595045050000000000000000000000090000
+      003A53504159545950450500000000000000000000000A0000003A5353484950
+      54595045050000000000000000000000070000003A534D554E49540500000000
+      00000000000000090000003A5346414345414343050000000000000000000000
+      060000003A5343415244050000000000000000000000060000003A534D454348
+      0500000000000000000000000D0000003A4E54454D5045524154555245040000
+      000000000000000000040000003A4E504C040000000000000000000000080000
+      003A4E564F4C554D45040000000000000000000000070000003A4E4D41535341
+      040000000000000000000000}
+    Left = 580
+    Top = 345
+  end
+  object tTTN: TADODataSet
+    Connection = adoMain
+    CursorType = ctStatic
+    CommandText = 
+      'select * from "c:\borland\projs\parus\pech\input\transinvcust.db' +
+      'f"'
+    Parameters = <>
+    Prepared = True
+    Left = 280
+    Top = 112
+  end
+  object tTTNspecs: TADODataSet
+    Connection = adoMain
+    CursorType = ctStatic
+    CommandText = 'select * from transinvcustspecs'
+    DataSource = dsTTN
+    IndexFieldNames = 'nprn'
+    MasterFields = 'nrn'
+    Parameters = <>
+    Left = 280
+    Top = 328
+  end
+  object oraFind: TOracleQuery
+    SQL.Strings = (
+      'SELECT /*+ RULE */ nrn FROM V_AZSSREPORTMAIN v'
+      'WHERE v.SAZS_NUMBER=:sazs'
+      'AND v.DDATE_SMENA=:ddate'
+      'AND v.SAZS_PBE=:spbe'
+      'AND v.SAZS_SMENA=:ssmena')
+    Session = oraParus
+    Variables.Data = {
+      0300000004000000050000003A53415A53050000000000000000000000060000
+      003A44444154450C0000000000000000000000050000003A5350424505000000
+      0000000000000000070000003A53534D454E41050000000000000000000000}
+    Left = 524
+    Top = 403
+  end
+  object adoMain: TADOConnection
+    LoginPrompt = False
+    Left = 452
+    Top = 101
+  end
+  object PropStorageEh1: TPropStorageEh
+    Section = 'Pechora'
+    StorageManager = RegPropStorageManEh1
+    StoredProps.Strings = (
+      'Panel1.GroupBox1.edPath.<P>.Text')
+    Left = 720
+    Top = 248
+  end
+  object RegPropStorageManEh1: TRegPropStorageManEh
+    Path = 'igma'
+    Left = 720
+    Top = 200
+  end
+  object mteCatalog: TMemTableEh
+    FetchAllOnOpen = True
+    Params = <>
+    DataDriver = dsdCatalog
+    Left = 632
+    Top = 96
+    object mteCatalogRN: TFloatField
+      FieldName = 'RN'
+      Required = True
+    end
+    object mteCatalogCRN: TFloatField
+      FieldName = 'CRN'
+    end
+    object mteCatalogNAME: TStringField
+      DisplayLabel = #1050#1072#1090#1072#1083#1086#1075
+      FieldName = 'NAME'
+      Required = True
+      Size = 160
+    end
+  end
+  object dsdCatalog: TDataSetDriverEh
+    ProviderDataSet = oraCatalog
+    ResolveToDataSet = False
+    Left = 696
+    Top = 96
+  end
+end

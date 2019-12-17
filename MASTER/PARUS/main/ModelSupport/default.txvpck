@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="3q1g6v8bh_v">
+    <property name="$name" value="default" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="design:view:::0f24wjc4o_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:ttn_igma.TfrmTTNigma" />
+    </reference>
+    <reference referencedUin="design:view:::9c2kfbb9h_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:mStoreOper.TfrmStoreOper" />
+    </reference>
+    <reference referencedUin="design:view:::bd21sptji_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:MAIN.TfrmMain" />
+    </reference>
+    <reference referencedUin="design:view:::1c233jxkm_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:ttn17c_pech.TfrmTTN17c" />
+    </reference>
+    <reference referencedUin="design:view:::hf262e5rq_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:ins17load.TfrmINS17" />
+    </reference>
+    <reference referencedUin="design:view:::ee2q6yq6s_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:usl17load.TfrmUSL17" />
+    </reference>
+    <reference referencedUin="design:view:::wc2d7zhie_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:cordload.TfrmCord" />
+    </reference>
+    <reference referencedUin="design:view:::2f2t70x2o_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:depordload.TfrmDepord" />
+    </reference>
+    <reference referencedUin="design:view:::rd28449np_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:ttn_kos.TfrmTTNKos" />
+    </reference>
+    <reference referencedUin="design:view:::b02avx3lg_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:pr17load.TfrmPR17" />
+    </reference>
+    <reference referencedUin="design:view:::oc263ckwo_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:ttn17load.TfrmTTN17" />
+    </reference>
+    <reference referencedUin="design:view:::4d2w3f3ah_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:ttnd_igma.TfrmIgmaTTND" />
+    </reference>
+    <reference referencedUin="design:view:::lb2l7a32f_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:dord_igma.TfrmIgmaDord" />
+    </reference>
+    <reference referencedUin="design:view:::xf29coa9j_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:links.TfrmLinks" />
+    </reference>
+    <reference referencedUin="design:view:::pf2wd932q_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:what.TfrmWhat" />
+    </reference>
+    <reference referencedUin="design:view:::db20iwqrt_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:sr_igma.TfrmSRigma" />
+    </reference>
+    <reference referencedUin="design:view:::7e27jddjk_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:payord.TfrmPayOrd" />
+    </reference>
+    <reference referencedUin="design:view:::tb2u0605p_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:cord_igma.TfrmIgmaCord" />
+    </reference>
+    <reference referencedUin="design:view:::ue2pgqelf_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:zast.TfrmInfo" />
+    </reference>
+    <reference referencedUin="design:view:::me29o90mp_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:gd17load.TfrmGD17" />
+    </reference>
+    <reference referencedUin="design:view:::jd2t1yi0q_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:ttn17dload.TfrmTTN17d" />
+    </reference>
+    <reference referencedUin="design:view:::zd28kt3sp_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:ttnd_kos.TfrmTTNdKos" />
+    </reference>
+    <reference referencedUin="design:view:::s52rioeim_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:voznload.TfrmVZ17" />
+    </reference>
+    <reference referencedUin="design:view:::gc2natkoj_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:Load:partyprice.TfrmPP" />
+    </reference>
+  </view>
+</nodeSet>

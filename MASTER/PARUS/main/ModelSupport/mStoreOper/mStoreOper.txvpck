@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="9c2kfbb9h_v">
+    <property name="$name" value="mStoreOper" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="delphi:e_class:src:Load:mStoreOper.TfrmStoreOper">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.Panel1" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.Panel2" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.GroupBox1" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.Label2" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.Label3" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.Label1" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.deBeg" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.deEnd" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.BitBtn1" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.edPath" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.edStore" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.Label4" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.BitBtn3" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.ActionManager1" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.oraParus" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.ex" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.oraStoreOper" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.dsStoreOper" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.DBGridEh1" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.acFilter" />
+      <reference referencedUin="delphi:e_field:src:Load:mStoreOper.TfrmStoreOper.acUnload" />
+      <reference referencedUin="delphi:e_method:src:Load:mStoreOper.TfrmStoreOper.FormCreate" />
+      <reference referencedUin="delphi:e_method:src:Load:mStoreOper.TfrmStoreOper.FormClose" />
+      <reference referencedUin="delphi:e_method:src:Load:mStoreOper.TfrmStoreOper.acUnloadExecute" />
+      <reference referencedUin="delphi:e_method:src:Load:mStoreOper.TfrmStoreOper.acFilterExecute" />
+    </reference>
+  </view>
+</nodeSet>

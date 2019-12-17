@@ -1,0 +1,104 @@
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Tue, 22 Jun 2010 13:19:22 +0300
+  1.2 Name/Description: TankService.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+----------------------------------------------------
+  2.1 Date   : Tue, 22 Jun 2010 13:19:22 +0300
+  2.2 Address: 0044F849
+  2.3 Module : TankService.exe
+  2.4 Type   : Exception
+  2.5 Message: Only one data module per application.
+
+Computer:
+----------------------------
+  4.1 Name        : VTAUBIN
+  4.2 User        : vtaubin
+  4.3 Total Memory: 1004 Mb
+  4.4 Free Memory : 345 Mb
+  4.5 Total Disk  : 73.24 Gb
+  4.6 Free Disk   : 20.47 Gb
+
+Operating System:
+----------------------------------
+  5.1 Type    : Microsoft Windows 
+  5.2 Build # : 6002
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский (Россия)
+
+Call Stack Information:
+-------------------------------------------------------------------------
+|Address |Module         |Unit           |Class|Procedure/Method   |Line|
+-------------------------------------------------------------------------
+|005AC906|TankService.exe|TankService.dpr|     |                   |19  |
+|7585D0E7|kernel32.dll   |               |     |BaseThreadInitThunk|    |
+-------------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name           |Description                                                   |Version         |Size   |Path                                                                                                          |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|TankService.exe|                                                              |                |1971200|C:\01\SOAP\TankService1                                                                                       |
+|73190000|wsock32.dll    |Windows Socket 32-Bit DLL                                     |6.0.6001.18000  |15360  |C:\Windows\system32                                                                                           |
+|736C0000|comctl32.dll   |Библиотека общих элементов управления                         |5.82.6001.18000 |531968 |C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.6001.18000_none_886786f450a74a05|
+|74780000|comctl32.dll   |Библиотека элементов управления взаимодействия с пользователем|6.10.6002.18005 |1686016|C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.6002.18005_none_5cb72f96088b0de0 |
+|74960000|uxtheme.dll    |Библиотека тем UxTheme (Microsoft)                            |6.0.6001.18000  |240128 |C:\Windows\system32                                                                                           |
+|74ED0000|version.dll    |Version Checking and File Installation Libraries              |6.0.6002.18005  |20480  |C:\Windows\system32                                                                                           |
+|75770000|PSAPI.DLL      |Process Status Helper                                         |6.0.6000.16386  |12288  |C:\Windows\system32                                                                                           |
+|75810000|kernel32.dll   |Библиотека клиента Windows NT BASE API                        |6.0.6002.18005  |891392 |C:\Windows\system32                                                                                           |
+|758F0000|IMM32.DLL      |Multi-User Windows IMM32 API Client DLL                       |6.0.6002.18005  |114688 |C:\Windows\system32                                                                                           |
+|75990000|ADVAPI32.dll   |Расширенная библиотека API Windows 32                         |6.0.6002.18005  |800768 |C:\Windows\system32                                                                                           |
+|75A60000|RPCRT4.dll     |Библиотека удаленного вызова процедур                         |6.0.6002.18024  |784896 |C:\Windows\system32                                                                                           |
+|75B80000|SHLWAPI.dll    |Библиотека небольших программ оболочки                        |6.0.6002.18005  |353280 |C:\Windows\system32                                                                                           |
+|766F0000|MSCTF.dll      |Серверная библиотека MSCTF                                    |6.0.6002.18005  |807424 |C:\Windows\system32                                                                                           |
+|767C0000|WS2_32.dll     |32-разрядная библиотека Windows Socket 2.0                    |6.0.6001.18000  |179200 |C:\Windows\system32                                                                                           |
+|767F0000|user32.dll     |Многопользовательская библиотека клиента USER API Windows     |6.0.6002.18005  |627712 |C:\Windows\system32                                                                                           |
+|76890000|oleaut32.dll   |                                                              |6.0.6002.18005  |563712 |C:\Windows\system32                                                                                           |
+|76920000|wininet.dll    |Расширения Интернета для Win32                                |8.0.6001.18928  |916480 |C:\Windows\system32                                                                                           |
+|76A10000|iertutil.dll   |Run time utility for Internet Explorer                        |8.0.6001.18928  |1985536|C:\Windows\system32                                                                                           |
+|76C90000|msvcrt.dll     |Windows NT CRT DLL                                            |7.0.6002.18005  |679936 |C:\Windows\system32                                                                                           |
+|76D40000|ole32.dll      |Microsoft OLE для  Windows                                    |6.0.6002.18005  |1316864|C:\Windows\system32                                                                                           |
+|76E90000|urlmon.dll     |Расширения OLE32 для Win32                                    |8.0.6001.18928  |1209344|C:\Windows\system32                                                                                           |
+|77160000|ntdll.dll      |Системная библиотека NT                                       |6.0.6002.18005  |1202168|C:\Windows\system32                                                                                           |
+|77290000|LPK.DLL        |Language Pack                                                 |6.0.6002.18051  |23552  |C:\Windows\system32                                                                                           |
+|772A0000|NSI.dll        |NSI User-mode interface DLL                                   |6.0.6001.18000  |8192   |C:\Windows\system32                                                                                           |
+|772E0000|USP10.dll      |Uniscribe Unicode script processor                            |1.626.6002.18005|502272 |C:\Windows\system32                                                                                           |
+|77360000|Normaliz.dll   |Unicode Normalization DLL                                     |6.0.6000.16386  |2560   |C:\Windows\system32                                                                                           |
+|77370000|GDI32.dll      |GDI Client DLL                                                |6.0.6002.18005  |297472 |C:\Windows\system32                                                                                           |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012FF70: 005AC909   0044F849: E8 FA 51 FB FF C3 90 53 A1 E4 1F 5B 00 83 38 00  ..Q....S...[..8.
+0012FF74: 7FFD7000   0044F859: 74 0A 8B 1D E4 1F 5B 00 8B 1B FF D3 5B C3 90 C3  t.....[.....[...
+0012FF78: 00000000   0044F869: 8D 40 00 55 8B EC 33 C0 55 68 91 F8 44 00 64 FF  .@.U..3.Uh..D.d.
+0012FF7C: 0012FFC4   0044F879: 30 64 89 20 FF 05 34 41 5B 00 33 C0 5A 59 59 64  0d. ..4A[.3.ZYYd
+0012FF80: 00404BAC   0044F889: 89 10 68 98 F8 44 00 C3 E9 B6 50 FB FF EB F8 5D  ..h..D....P....]
+0012FF84: 0012FF88   0044F899: C3 8B C0 83 2D 34 41 5B 00 01 C3 F0 F8 44 00 00  ....-4A[.....D..
+0012FF88: 0012FF94   0044F8A9: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012FF8C: 7585D0E9   0044F8B9: 00 00 00 00 00 00 00 00 00 00 00 F0 F8 44 00 0C  .............D..
+0012FF90: 7FFD7000   0044F8C9: 00 00 00 FC 90 40 00 40 44 40 00 4C 44 40 00 50  .....@.@D@.LD@.P
+0012FF94: 0012FFD4   0044F8D9: 44 40 00 54 44 40 00 48 44 40 00 6C 41 40 00 88  D@.TD@.HD@.lA@..
+0012FF98: 771A19BB   0044F8E9: 41 40 00 C4 41 40 00 11 45 49 6E 69 46 69 6C 65  A@..A@..EIniFile
+0012FF9C: 7FFD7000   0044F8F9: 45 78 63 65 70 74 69 6F 6E 8B C0 50 F9 44 00 00  Exception..P.D..
+0012FFA0: 72E4F9BC   0044F909: 00 00 00 00 00 00 00 A8 F9 44 00 00 00 00 00 00  .........D......
+0012FFA4: 00000000   0044F919: 00 00 00 00 00 00 00 00 00 00 00 BA F9 44 00 08  .............D..
+0012FFA8: 00000000   0044F929: 00 00 00 18 12 40 00 40 44 40 00 4C 44 40 00 50  .....@.@D@.LD@.P
+0012FFAC: 7FFD7000   0044F939: 44 40 00 54 44 40 00 48 44 40 00 6C 41 40 00 88  D@.TD@.HD@.lA@..
+
+
+
+
+

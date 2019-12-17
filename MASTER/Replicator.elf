@@ -1,0 +1,170 @@
+EurekaLog 4.5.1
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Mon, 27 Dec 2004 18:02:10 +0300
+  1.2 Name/Description: Replicator.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+-------------------------------------------------------------------
+  2.1 Date   : Mon, 27 Dec 2004 18:02:12 +0300
+  2.2 Address: 004EA6C2
+  2.3 Module : Replicator.exe
+  2.4 Type   : EOracleError
+  2.5 Message: ORA-01017: invalid username/password; logon denied .
+
+Active Controls:
+----------------------------------
+  3.1 Form Class   : ExploreWClass
+  3.2 Form Text    : MASTER
+  3.3 Control Class: 
+  3.4 Control Text : 
+
+Computer:
+---------------------------
+  4.1 Name        : ACHUMAK
+  4.2 User        : achumak
+  4.3 Total Memory: 254 Mb
+  4.4 Free Memory : 96 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 3,83 Gb
+
+Operating System:
+--------------------------------------
+  5.1 Type    : Microsoft Windows 2000
+  5.2 Build # : 2195
+  5.3 Update  : Service Pack 4
+  5.4 Language: Русский
+
+Call Stack Information:
+-----------------------------------------------------------------------------------
+|Address |Module         |Unit          |Class  |Procedure/Method            |Line|
+-----------------------------------------------------------------------------------
+|77F8C274|ntdll.dll      |              |       |RtlReleasePebLock           |    |
+|77F8C268|ntdll.dll      |              |       |RtlReleasePebLock           |    |
+|77F91B2F|ntdll.dll      |              |       |RtlDosPathNameToNtPathName_U|    |
+|6111D8BB|oracore9.dll   |              |       |slzgetevar                  |    |
+|6111D8BB|oracore9.dll   |              |       |slzgetevar                  |    |
+|610C6BC0|oracore9.dll   |              |       |ldxlxt                      |    |
+|610C9049|oracore9.dll   |              |       |ldxsnf                      |    |
+|77F89134|ntdll.dll      |              |       |RtlLeaveCriticalSection     |    |
+|78010DEF|MSVCRT.DLL     |              |       |_strnicmp                   |    |
+|010200B4|orageneric9.dll|              |       |kghalo                      |    |
+|0102019C|orageneric9.dll|              |       |kghalo                      |    |
+|78014A3F|MSVCRT.DLL     |              |       |strtol                      |    |
+|6111F480|oracore9.dll   |              |       |ssgetosver                  |    |
+|6111D0E1|oracore9.dll   |              |       |sltsmnr                     |    |
+|6111F480|oracore9.dll   |              |       |ssgetosver                  |    |
+|6111D0E1|oracore9.dll   |              |       |sltsmnr                     |    |
+|6111F480|oracore9.dll   |              |       |ssgetosver                  |    |
+|6111D0E1|oracore9.dll   |              |       |sltsmnr                     |    |
+|6111F480|oracore9.dll   |              |       |ssgetosver                  |    |
+|6111D0E1|oracore9.dll   |              |       |sltsmnr                     |    |
+|60679090|OraClient9.Dll |              |       |kpugdr                      |    |
+|60601FB8|OraClient9.Dll |              |       |OCIErrorGet                 |    |
+|005C9C01|Replicator.exe |main.pas      |Tf_main|FormCreate                  |130 |
+|77E1382E|user32.dll     |              |       |KillTimer                   |    |
+|005C978C|Replicator.exe |main.pas      |Tf_main|TimerStartTimer             |60  |
+|77E151DA|user32.dll     |              |       |IsWindowVisible             |    |
+|77E15778|user32.dll     |              |       |DispatchMessageA            |    |
+|77E15772|user32.dll     |              |       |DispatchMessageA            |    |
+|005CA607|Replicator.exe |Replicator.dpr|       |                            |18  |
+-----------------------------------------------------------------------------------
+
+Modules Information:
+-------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name            |Description                                          |Version       |Size   |Path                              |
+-------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|Replicator.exe  |                                                     |              |2248704|U:\MASTER                         |
+|00FE0000|oci.dll         |Oracle Call Interface                                |              |114688 |C:\oracle\ora92\bin               |
+|01000000|orageneric9.dll |Oracle RDBMS Generic Library                         |              |2445584|C:\oracle\ora92\bin               |
+|10000000|MsgPlusH.dll    |Hook DLL                                             |2.21.0.55     |757760 |C:\Program Files\Messenger Plus! 2|
+|60500000|oracommon9.dll  |Oracle RDBMS Common Library                          |              |590096 |C:\oracle\ora92\bin               |
+|60600000|OraClient9.Dll  |Oracle RDBMS Client Library                          |              |1536272|C:\oracle\ora92\bin               |
+|60800000|oravsn9.dll     |Oracle RDBMS Version Library                         |              |24848  |C:\oracle\ora92\bin               |
+|60810000|orawtc9.dll     |Oracle RDBMS WTC Library                             |              |24848  |C:\oracle\ora92\bin               |
+|60A00000|orapls9.dll     |Oracle PLS runtime Library                           |              |3223824|C:\oracle\ora92\bin               |
+|610A0000|oracore9.dll    |Oracle CORE Library                                  |              |647440 |C:\oracle\ora92\bin               |
+|612A0000|oranls9.dll     |Oracle NLS Runtime Library                           |              |491792 |C:\oracle\ora92\bin               |
+|61350000|orasnls9.dll    |Oracle SNLS Runtime Library                          |              |65808  |C:\oracle\ora92\bin               |
+|613A0000|oraunls9.dll    |Oracle UNLS Runtime Library                          |              |69904  |C:\oracle\ora92\bin               |
+|61400000|oranl9.dll      |Oracle SQL*Net ORANL9 DLL                            |              |180496 |C:\oracle\ora92\bin               |
+|61480000|oran9.dll       |Oracle SQL*Net ORAN9 DLL                             |              |733456 |C:\oracle\ora92\bin               |
+|615A0000|orannzsbb9.dll  |Oracle SQL*Net ORANNZSBB9 DLL                        |              |561424 |C:\oracle\ora92\bin               |
+|616A0000|orancds9.dll    |Oracle SQL*Net ORANCDS9 DLL                          |              |24848  |C:\oracle\ora92\bin               |
+|616B0000|orancrypt9.dll  |Oracle SQL*Net ORANCRYPT9 DLL                        |              |94480  |C:\oracle\ora92\bin               |
+|61730000|oranro9.dll     |Oracle SQL*Net ORANRO9 DLL                           |              |221456 |C:\oracle\ora92\bin               |
+|617C0000|oranhost9.dll   |Oracle SQL*Net ORANHOST9 DLL                         |              |24848  |C:\oracle\ora92\bin               |
+|617D0000|oranoname9.dll  |Oracle SQL*Net ORANONAME9 DLL                        |              |24848  |C:\oracle\ora92\bin               |
+|61820000|orantns9.dll    |Oracle SQL*Net ORANTNS9 DLL                          |              |28944  |C:\oracle\ora92\bin               |
+|61910000|orantcp9.dll    |Oracle SQL*Net ORANTCP9 DLL                          |              |49424  |C:\oracle\ora92\bin               |
+|61960000|oranldap9.dll   |Oracle SQL*Net ORANLDAP9 DLL                         |              |69904  |C:\oracle\ora92\bin               |
+|62000000|oraldapclnt9.dll|Oracle Internet Directory Client Library             |              |147728 |C:\oracle\ora92\bin               |
+|62300000|ORATRACE9.dll   |                                                     |              |246032 |C:\oracle\ora92\bin               |
+|62500000|oraslax9.dll    |Oracle SLAX runtime Library                          |              |28944  |C:\oracle\ora92\bin               |
+|62600000|orasql9.dll     |Oracle SQL Runtime Library                           |              |475408 |C:\oracle\ora92\bin               |
+|62FC0000|oraxml9.dll     |                                                     |              |512272 |C:\oracle\ora92\bin               |
+|630F0000|oraxsd9.dll     |                                                     |              |127248 |C:\oracle\ora92\bin               |
+|64000000|oranms.dll      |Oracle SNMP Library                                  |              |28944  |C:\oracle\ora92\bin               |
+|64020000|oranmsp.dll     |Oracle SNMP Peer adaptor Library                     |              |65808  |C:\oracle\ora92\bin               |
+|68F80000|PSAPI.DLL       |Process Status Helper                                |5.0.2134.1    |28944  |C:\WINNT\system32                 |
+|6E380000|INDICDLL.dll    |Keyboard Language Indicator Shell Hook Extension     |5.0.2920.0    |11536  |C:\WINNT\system32                 |
+|74F60000|msafd.dll       |Microsoft Windows Sockets 2.0 Service Provider       |5.0.2195.6602 |108816 |C:\WINNT\system32                 |
+|74FA0000|wshtcpip.dll    |Windows Sockets Helper DLL                           |5.0.2195.6601 |17680  |C:\WINNT\System32                 |
+|74FB0000|WS2HELP.DLL     |Модуль поддержки Windows Socket 2.0 для Windows NT   |5.0.2134.1    |18192  |C:\WINNT\system32                 |
+|74FC0000|WS2_32.DLL      |Windows Socket 2.0 32-Bit DLL                        |5.0.2195.6601 |69904  |C:\WINNT\system32                 |
+|74FE0000|wsock32.dll     |32-разрядная библиотека Windows Socket               |5.0.2195.6603 |23824  |C:\WINNT\system32                 |
+|75950000|LZ32.DLL        |LZ Expand/Compress API DLL                           |5.0.2195.6611 |10000  |C:\WINNT\system32                 |
+|75E00000|imm32.dll       |Windows 2000 IMM32 API Client DLL                    |5.0.2195.6655 |96528  |C:\WINNT\system32                 |
+|76AE0000|comdlg32.dll    |Библиотека общих диалоговых окон                     |5.0.3700.6693 |242960 |C:\WINNT\system32                 |
+|770F0000|RPCRT4.DLL      |Remote Procedure Call Runtime                        |5.0.2195.6701 |454416 |C:\WINNT\system32                 |
+|77520000|winmm.dll       |MCI API DLL                                          |5.0.2161.1    |190224 |C:\WINNT\system32                 |
+|77560000|shell32.dll     |Общая библиотека оболочки Windows                    |5.0.3700.6705 |2389776|C:\WINNT\system32                 |
+|777D0000|winspool.drv    |Драйвер диспетчера очереди Windows                   |5.0.2195.6659 |114448 |C:\WINNT\system32                 |
+|777F0000|version.dll     |Version Checking and File Installation Libraries     |5.0.2195.6623 |16144  |C:\WINNT\system32                 |
+|779B0000|oleaut32.dll    |                                                     |2.40.4522.0   |626960 |C:\WINNT\system32                 |
+|77A50000|ole32.dll       |Microsoft OLE для  Windows                           |5.0.2195.6692 |996112 |C:\WINNT\system32                 |
+|77B50000|comctl32.dll    |Common Controls Library                              |5.81.3502.6601|550672 |C:\WINNT\system32                 |
+|77C70000|SHLWAPI.DLL     |Библиотека небольших программ оболочки               |5.0.3502.6601 |289552 |C:\WINNT\system32                 |
+|77E10000|user32.dll      |Библиотека клиента USER API Windows 2000             |5.0.2195.6688 |403216 |C:\WINNT\system32                 |
+|77F40000|GDI32.DLL       |GDI Client DLL                                       |5.0.2195.6660 |233744 |C:\WINNT\system32                 |
+|77F80000|ntdll.dll       |Системная библиотека NT                              |5.0.2195.6685 |496400 |C:\WINNT\system32                 |
+|78000000|MSVCRT.DLL      |Microsoft (R) C Runtime Library                      |6.1.9844.0    |286773 |C:\WINNT\system32                 |
+|780A0000|MSVCIRT.dll     |Microsoft (R) C++ Runtime Library                    |6.1.8637.0    |77878  |C:\WINNT\system32                 |
+|79060000|advapi32.dll    |Расширенная библиотека API Windows 32                |5.0.2195.6710 |387344 |C:\WINNT\system32                 |
+|793A0000|kernel32.dll    |Библиотека клиента Windows NT BASE API               |5.0.2195.6688 |746768 |C:\WINNT\system32                 |
+|79470000|MPR.DLL         |Библиотека маршрутизации для нескольких служб доступа|5.0.2195.6611 |55056  |C:\WINNT\system32                 |
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00402576
+EBX: 00000001   ESI: 0040257D
+ECX: 00E63028   ESP: 00000000
+EDX: 0041D2F4   EIP: 00402853
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012EA1C: 77F98191   004EA6C2: E8 E1 9D F1 FF 81 C4 A8 0F 00 00 5F 5E 5B C3 00  ..........._^[..
+0012EA20: 77F91C58   004EA6D2: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EA24: FFFFFFFF   004EA6E2: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EA28: 0012ECDC   004EA6F2: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EA2C: 0000021A   004EA702: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EA30: 00000008   004EA712: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EA34: 0012ECDC   004EA722: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EA38: 77F8C277   004EA732: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EA3C: 77FCF170   004EA742: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EA40: 77F91B5C   004EA752: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EA44: 77F91B34   004EA762: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EA48: 7FFDEC00   004EA772: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EA4C: 00000000   004EA782: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EA50: 013C9C68   004EA792: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EA54: 00000000   004EA7A2: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EA58: 00000000   004EA7B2: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+
+
+
+
+

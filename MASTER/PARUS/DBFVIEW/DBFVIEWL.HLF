@@ -1,0 +1,83 @@
+.Language=English,English
+.PluginContents=DBF file view
+
+@View
+$ #DBF file view#
+
+ #Left/Right#   - prev/next field
+ #Home/End#     - first/last field
+ #Up/Down#      - line up/down
+ #PgUp/PgDn#    - page up/down
+
+ #Ctrl+Left#    - move field to the left
+ #Ctrl+Right#   - move field to the right
+
+ #Shift+Left#   - decreasee field width
+ #Shift+Right#  - increase field width
+
+ #Shift+Del#    - hide field
+ #Shift+Ins#    - show field
+ #Shift+Enter#  - change field name
+
+ #F4 или Enter# - edit rec
+ #Shift+F4#     - add rec
+ #Delete#       - delete rec
+ #F3#           - view memo
+
+ #F7#           - search
+ #Shift+F7#     - next search
+ #Alt+F8#       - go to line num
+
+ #F2#           - show file struct
+ #Ctrl+Ins#     - copy current field to the clipboard
+
+ #F9#           - configuration
+ #Shift+F9#     - save template
+ #Ctrl+F9#      - clear template
+
+ #Ins#          - mark/unmark line
+ #Alt+N#        - go to next mark line
+ #Alt+P#        - go to prev mark line
+ #Ctrl+F#       - select mark lines
+ #Ctrl+A#       - show all recs
+ #Ctrl+Gray minus# - clear list of mark recs
+
+ #Ctrl+C#       - calc all number fields
+
+@Configure
+$ #Configuration#
+
+ #Show line num# - add column with line num
+ #Show del mark# - add column with delete mark ('*')
+ #Show column divider#
+
+ #Date field format# - setup format for date fields
+
+ Valid chars is:
+   dD - day
+   mM - month
+   yY - year
+   for example
+   "dd.mm.yy" "mm.yy"
+
+ #Open as DBF#    - list of file extensions, that will be open as DBF files
+ for example
+   db0,db1
+
+@Contents
+$ #Message#
+
+@Export
+$ #Export#
+
+ #File name#       - export file name
+ #File format#     - export file format
+ #Encode table#    - encode table for export file
+
+ #Export fields name#
+                   - export fields names to the export file
+                     (not use for DBF format)
+
+ #Top file#        - file name that will be written prior export file
+ #Bottom file#     - file name that will be written after export file
+

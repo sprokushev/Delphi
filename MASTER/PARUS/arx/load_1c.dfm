@@ -1,0 +1,141 @@
+object frm1cLoad: Tfrm1cLoad
+  Left = 225
+  Top = 390
+  Width = 830
+  Height = 244
+  Caption = #1047#1072#1082#1072#1095#1082#1080
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object fd: TFilenameEdit
+    Left = 288
+    Top = 40
+    Width = 201
+    Height = 21
+    Filter = 'txt|*.txt'
+    NumGlyphs = 1
+    TabOrder = 0
+  end
+  object re: TRichEdit
+    Left = 16
+    Top = 72
+    Width = 793
+    Height = 121
+    Lines.Strings = (
+      're')
+    ReadOnly = True
+    TabOrder = 1
+    WordWrap = False
+  end
+  object BitBtn1: TBitBtn
+    Left = 544
+    Top = 16
+    Width = 75
+    Height = 25
+    Action = acRead
+    Caption = #1055#1088#1086#1095#1080#1090#1072#1090#1100
+    TabOrder = 2
+  end
+  object BitBtn2: TBitBtn
+    Left = 648
+    Top = 16
+    Width = 113
+    Height = 25
+    Action = acVypLoad
+    Caption = #1047#1072#1075#1088#1091#1079#1082#1072' '#1074#1099#1087#1080#1089#1082#1080
+    TabOrder = 3
+  end
+  object BitBtn3: TBitBtn
+    Left = 648
+    Top = 43
+    Width = 113
+    Height = 25
+    Action = acTTN
+    Caption = #1047#1072#1075#1088#1091#1079#1082#1072' '#1058#1058#1053
+    TabOrder = 4
+  end
+  object oraSesMain: TOracleSession
+    LogonUsername = 'pvz'
+    LogonDatabase = 'PTEST'
+    Left = 16
+    Top = 8
+  end
+  object oraVyp: TOracleQuery
+    SQL.Strings = (
+      
+        'INSERT INTO RUI_VYPISKA (DATE_VYP, NUM_VYP, ACC_VYP, OP_VYP, SUM' +
+        '_VYP, REM_VYP, SC1, SC2, SC3,id_vyp) '
+      
+        'VALUES (:DATE_VYP, :NUM_VYP, :ACC_VYP, :OP_VYP, :SUM_VYP, :REM_V' +
+        'YP, :SC1, :SC2, :SC3,:id_vyp)')
+    Session = oraSesMain
+    Variables.Data = {
+      030000000A000000090000003A444154455F5659500C00000000000000000000
+      00080000003A4E554D5F565950050000000000000000000000080000003A4143
+      435F565950050000000000000000000000070000003A4F505F56595003000000
+      0000000000000000080000003A53554D5F565950040000000000000000000000
+      080000003A52454D5F565950050000000000000000000000040000003A534331
+      050000000000000000000000040000003A534332050000000000000000000000
+      040000003A534333050000000000000000000000070000003A49445F56595005
+      0000000000000000000000}
+    Left = 64
+    Top = 8
+  end
+  object ActionManager1: TActionManager
+    Left = 168
+    Top = 8
+    StyleName = 'XP Style'
+    object acRead: TAction
+      Caption = #1055#1088#1086#1095#1080#1090#1072#1090#1100
+      OnExecute = acReadExecute
+    end
+    object acVypLoad: TAction
+      Caption = #1047#1072#1075#1088#1091#1079#1082#1072' '#1074#1099#1087#1080#1089#1082#1080
+      OnExecute = acVypLoadExecute
+    end
+    object acTTN: TAction
+      Caption = #1047#1072#1075#1088#1091#1079#1082#1072' '#1058#1058#1053
+      OnExecute = acTTNExecute
+    end
+  end
+  object oraQ: TOracleQuery
+    Session = oraSesMain
+    Left = 104
+    Top = 16
+  end
+  object oraTTN: TOracleQuery
+    SQL.Strings = (
+      'INSERT INTO RUI_ARX_TTN (TTN_ID, TTN_DATE, TTN_NUMB, '
+      #9#9#9'       TTN_PBE, TTN_STORE, TTN_AGN,'
+      #9#9#9'       TTN_FIFO, TTN_NOMEN, TTN_EI,'
+      #9#9#9'       TTN_QUAN, TTN_KOEF, TTN_PRICE,'
+      #9#9#9'       TTN_SUMWON, TTN_NDS, TTN_SUMWN)'
+      'VALUES (:TTN_ID, :TTN_DATE, :TTN_NUMB, :TTN_PBE, :TTN_STORE, '
+      #9':TTN_AGN,:TTN_FIFO, :TTN_NOMEN, :TTN_EI,:TTN_QUAN, '
+      #9':TTN_KOEF, :TTN_PRICE, :TTN_SUMWON, :TTN_NDS, :TTN_SUMWN)')
+    Session = oraSesMain
+    Variables.Data = {
+      030000000F000000070000003A54544E5F494405000000000000000000000009
+      0000003A54544E5F444154450C0000000000000000000000090000003A54544E
+      5F4E554D42050000000000000000000000080000003A54544E5F504245050000
+      0000000000000000000A0000003A54544E5F53544F5245050000000000000000
+      000000080000003A54544E5F41474E050000000000000000000000090000003A
+      54544E5F4649464F0500000000000000000000000A0000003A54544E5F4E4F4D
+      454E050000000000000000000000070000003A54544E5F454905000000000000
+      0000000000090000003A54544E5F5155414E0400000000000000000000000900
+      00003A54544E5F4B4F45460400000000000000000000000A0000003A54544E5F
+      50524943450400000000000000000000000B0000003A54544E5F53554D574F4E
+      040000000000000000000000080000003A54544E5F4E44530400000000000000
+      000000000A0000003A54544E5F53554D574E040000000000000000000000}
+    Left = 224
+    Top = 8
+  end
+end

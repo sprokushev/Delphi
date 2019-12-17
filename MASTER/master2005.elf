@@ -1,0 +1,613 @@
+EurekaLog 5.0
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Thu, 19 May 2005 17:25:13 +0400
+  1.2 Name/Description: master2005.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+  1.5 Compilation Date: Thu, 19 May 2005 17:13:38 +0400
+
+Exception:
+------------------------------------------------------------------------
+  2.1 Date   : Thu, 19 May 2005 17:25:49 +0400
+  2.2 Address: 00511A1E
+  2.3 Module : master2005.exe
+  2.4 Type   : EOracleError
+  2.5 Message: ORA-20906: Оба связанных заказа созданы НЕ автоматически!
+ORA-06512    : на  "MASTER.FOR_ZAKAZ", line 7
+ORA-06512    : на  "MASTER.FOR_ZAKAZ", line 1188
+ORA-06512    : на  "MASTER.FOR_ZAKAZ", line 1016
+ORA-06512    : на  line 2
+              .
+
+Active Controls:
+---------------------------------------------------
+  3.1 Form Class   : Tf_main
+  3.2 Form Text    : Master - [Заказы потребителей]
+  3.3 Control Class: TDBGridEh
+  3.4 Control Text : 
+
+Computer:
+-------------------------------------------------------
+  4.1 Name          : SPROKUSHEV2
+  4.2 User          : SProkushev
+  4.3 Total Memory  : 495 Mb
+  4.4 Free Memory   : 82 Mb
+  4.5 Total Disk    : 12 Gb
+  4.6 Free Disk     : 1.94 Gb
+  4.7 System Up Time: 00:09:07:06
+  4.8 Processor     : Intel(R) Pentium(R) 4 CPU 2.26GHz
+  4.9 Display Mode  : 1280 x 1024 x 16
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 1
+  5.4 Language: Русский
+
+Network:
+-------------------------
+  6.1 IP Address: 0.0.0.0
+  6.2 Submask   : 0.0.0.0
+  6.3 Gateway   : 
+  6.4 DNS 1     : 
+  6.5 DNS 2     : 
+  6.6 DHCP      : ON
+
+Call Stack Information:
+-------------------------------------------------------------------------------------
+|Address |Module         |Unit        |Class          |Procedure/Method       |Line |
+-------------------------------------------------------------------------------------
+| Running Thread: ID=3092; Priority=0; Class=; [Main]                               |
+|-----------------------------------------------------------------------------------|
+|77D35F82|user32.dll     |            |               |CallWindowProcA        |     |
+|77D35F6E|user32.dll     |            |               |CallWindowProcA        |     |
+|77C632CD|GDI32.dll      |            |               |TextOutW               |     |
+|77D37847|user32.dll     |            |               |UserLpkPSMTextOut      |     |
+|77C6375D|GDI32.dll      |            |               |CreateCompatibleBitmap |     |
+|77C631D8|GDI32.dll      |            |               |GetTextExtentPointW    |     |
+|77C6346A|GDI32.dll      |            |               |GetTextMetricsW        |     |
+|77C63478|GDI32.dll      |            |               |GetTextMetricsW        |     |
+|77C63CD8|GDI32.dll      |            |               |BitBlt                 |     |
+|77D37E67|user32.dll     |            |               |CallNextHookEx         |     |
+|77D34629|user32.dll     |            |               |PtInRect               |     |
+|77D35F82|user32.dll     |            |               |CallWindowProcA        |     |
+|77D35F6E|user32.dll     |            |               |CallWindowProcA        |     |
+|005B9300|master2005.exe |DBGridEh.pas|TCustomDBGridEh|UpdateAction           |16157|
+|77D39C0E|user32.dll     |            |               |GetFocus               |     |
+|77D39C0C|user32.dll     |            |               |GetFocus               |     |
+|77E7E003|kernel32.dll   |            |               |LCMapStringW           |     |
+|77D34BD5|user32.dll     |            |               |CharUpperBuffW         |     |
+|77D34D35|user32.dll     |            |               |CharUpperBuffA         |     |
+|77F75690|ntdll.dll      |            |               |RtlLeaveCriticalSection|     |
+|012B6284|orageneric9.dll|            |               |kghalo                 |     |
+|012B6362|orageneric9.dll|            |               |kghalo                 |     |
+|77C0D318|MSVCRT.DLL     |            |               |strtol                 |     |
+|60683F00|OraClient9.Dll |            |               |kpugemh                |     |
+|606830B0|OraClient9.Dll |            |               |kpusebh                |     |
+|60682150|OraClient9.Dll |            |               |kpugdr                 |     |
+|6065AED0|OraClient9.Dll |            |               |kpugattr               |     |
+|606022AB|OraClient9.Dll |            |               |OCIAttrGet             |     |
+|008A7300|master2005.exe |zakaz.pas   |Tf_Zakaz       |acZakazHistWordExecute |2413 |
+|006B0905|master2005.exe |TB2Item.pas |TTBCustomItem  |Click                  |1450 |
+|006B0807|master2005.exe |TB2Item.pas |TTBCustomItem  |ClickWndProc           |1403 |
+|77D34387|user32.dll     |            |               |DispatchMessageA       |     |
+|77D34381|user32.dll     |            |               |DispatchMessageA       |     |
+|008C7A5F|master2005.exe |master.dpr  |               |                       |154  |
+|77F764A4|ntdll.dll      |            |               |ZwSetInformationThread |     |
+-------------------------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name            |Description                                                                |Version        |Size   |Modified           |Path                                                                                           |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00320000|SHLWAPI.dll     |Библиотека небольших программ оболочки                                     |6.0.2800.1106  |401920 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|00400000|master2005.exe  |                                                                           |               |7538688|2005-05-19 17:13:40|U:\MASTER                                                                                      |
+|01270000|oci.dll         |Oracle Call Interface                                                      |               |114688 |2002-05-01 20:40:34|C:\oracle\ora92\bin                                                                            |
+|01290000|orageneric9.dll |Oracle RDBMS Generic Library                                               |9.2.0.4        |2638096|2005-04-21 10:00:06|C:\oracle\ora92\bin                                                                            |
+|01520000|MSVCIRT.dll     |Windows NT IOStreams DLL                                                   |7.0.2600.0     |50688  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|01530000|oranms.dll      |Oracle SNMP Library                                                        |               |49628  |2003-07-22 12:07:00|C:\oracle\ora92\bin                                                                            |
+|01540000|oranmsp.dll     |Oracle SNMP Peer adaptor Library                                           |               |232552 |2003-07-22 12:07:02|C:\oracle\ora92\bin                                                                            |
+|10000000|MsgPlusH.dll    |Hook DLL                                                                   |3.25.0.106     |1365128|2005-01-10 13:52:12|C:\Program Files\Messenger Plus! 3                                                             |
+|58F10000|Wship6.dll      |IPv6 Helper DLL                                                            |5.1.2600.1106  |13312  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|5B260000|uxtheme.dll     |Библиотека тем UxTheme (Microsoft)                                         |6.0.2800.1106  |204288 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|5F2F0000|olepro32.dll    |Microsoft (R) OLE Property Support DLL                                     |5.0.5014.0     |106496 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|60500000|oracommon9.dll  |Oracle RDBMS Common Library                                                |9.2.0.4        |594192 |2005-04-21 10:00:24|C:\oracle\ora92\bin                                                                            |
+|60600000|OraClient9.Dll  |Oracle RDBMS Client Library                                                |9.2.0.4        |1601808|2005-04-21 10:00:30|C:\oracle\ora92\bin                                                                            |
+|60800000|oravsn9.dll     |Oracle RDBMS Version Library                                               |9.2.0.4        |24848  |2003-08-08 12:40:10|C:\oracle\ora92\bin                                                                            |
+|60810000|orawtc9.dll     |Oracle RDBMS WTC Library                                                   |9.2.0.4        |24848  |2003-08-08 12:40:20|C:\oracle\ora92\bin                                                                            |
+|60A00000|orapls9.dll     |Oracle PLS runtime Library                                                 |9.2.0.4        |3240208|2005-04-21 10:00:30|C:\oracle\ora92\bin                                                                            |
+|610A0000|oracore9.dll    |Oracle CORE Library                                                        |9.2.0.4        |647440 |2005-04-21 10:00:26|C:\oracle\ora92\bin                                                                            |
+|612A0000|oranls9.dll     |Oracle NLS Runtime Library                                                 |9.2.0.4        |499984 |2005-04-21 10:00:14|C:\oracle\ora92\bin                                                                            |
+|61350000|orasnls9.dll    |Oracle SNLS Runtime Library                                                |9.2.0.4        |65808  |2003-07-31 19:31:28|C:\oracle\ora92\bin                                                                            |
+|613A0000|oraunls9.dll    |Oracle UNLS Runtime Library                                                |9.2.0.4        |69904  |2003-07-31 19:31:24|C:\oracle\ora92\bin                                                                            |
+|61400000|oranl9.dll      |Oracle SQL*Net ORANL9 DLL                                                  |9.2.0.4        |180496 |2003-08-07 12:16:14|C:\oracle\ora92\bin                                                                            |
+|61480000|oran9.dll       |Oracle SQL*Net ORAN9 DLL                                                   |9.2.0.4        |737552 |2005-04-21 10:00:14|C:\oracle\ora92\bin                                                                            |
+|615A0000|orannzsbb9.dll  |Oracle SQL*Net ORANNZSBB9 DLL                                              |9.2.0.4        |561424 |2005-04-21 10:01:00|C:\oracle\ora92\bin                                                                            |
+|616A0000|orancds9.dll    |Oracle SQL*Net ORANCDS9 DLL                                                |9.2.0.4        |24848  |2003-08-07 12:17:34|C:\oracle\ora92\bin                                                                            |
+|616B0000|orancrypt9.dll  |Oracle SQL*Net ORANCRYPT9 DLL                                              |9.2.0.4        |98576  |2003-08-07 12:16:44|C:\oracle\ora92\bin                                                                            |
+|61730000|oranro9.dll     |Oracle SQL*Net ORANRO9 DLL                                                 |9.2.0.4        |221456 |2003-08-07 12:16:10|C:\oracle\ora92\bin                                                                            |
+|617C0000|oranhost9.dll   |Oracle SQL*Net ORANHOST9 DLL                                               |9.2.0.4        |24848  |2003-08-07 12:17:02|C:\oracle\ora92\bin                                                                            |
+|617D0000|oranoname9.dll  |Oracle SQL*Net ORANONAME9 DLL                                              |9.2.0.4        |24848  |2003-08-07 12:17:06|C:\oracle\ora92\bin                                                                            |
+|61820000|orantns9.dll    |Oracle SQL*Net ORANTNS9 DLL                                                |9.2.0.4        |28944  |2003-08-07 12:16:58|C:\oracle\ora92\bin                                                                            |
+|61910000|orantcp9.dll    |Oracle SQL*Net ORANTCP9 DLL                                                |9.2.0.4        |49424  |2003-08-07 12:16:18|C:\oracle\ora92\bin                                                                            |
+|61960000|oranldap9.dll   |Oracle SQL*Net ORANLDAP9 DLL                                               |9.2.0.4        |69904  |2005-04-21 10:00:18|C:\oracle\ora92\bin                                                                            |
+|62000000|oraldapclnt9.dll|Oracle Internet Directory Client Library                                   |9.2.0.4        |147728 |2003-07-29 15:13:04|C:\oracle\ora92\bin                                                                            |
+|62300000|ORATRACE9.dll   |                                                                           |               |246032 |2002-04-29 15:04:08|C:\oracle\ora92\bin                                                                            |
+|62500000|oraslax9.dll    |Oracle SLAX runtime Library                                                |               |28944  |2002-04-26 18:18:00|C:\oracle\ora92\bin                                                                            |
+|62600000|orasql9.dll     |Oracle SQL Runtime Library                                                 |9.2.0.3        |479504 |2003-08-01 03:46:42|C:\oracle\ora92\bin                                                                            |
+|62FC0000|oraxml9.dll     |Oracle XML Library                                                         |9.2.0.6        |516368 |2003-08-01 08:41:08|C:\oracle\ora92\bin                                                                            |
+|630F0000|oraxsd9.dll     |Oracle Schema Validator Library                                            |9.2.0.6        |168208 |2003-08-01 08:41:18|C:\oracle\ora92\bin                                                                            |
+|71A30000|mswsock.dll     |Расширение поставщика службы API Microsoft Windows Sockets 2.0             |5.1.2600.0     |230400 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|71A70000|wshtcpip.dll    |Windows Sockets Helper DLL                                                 |5.1.2600.0     |17408  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|71A80000|WS2HELP.dll     |Модуль поддержки Windows Socket 2.0 для Windows NT                         |5.1.2600.0     |18944  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|71A90000|WS2_32.dll      |Windows Socket 2.0 32-Bit DLL                                              |5.1.2600.0     |75264  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|71AB0000|wsock32.dll     |32-разрядная библиотека Windows Socket                                     |5.1.2600.0     |23552  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|71B00000|mpr.dll         |Библиотека маршрутизации для нескольких служб доступа                      |5.1.2600.0     |55808  |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|72FC0000|winspool.drv    |Драйвер диспетчера очереди Windows                                         |5.1.2600.1106  |132608 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|746E0000|MSCTF.dll       |Библиотека (DLL) MSCTF-сервера                                             |5.1.2600.1106  |266752 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76360000|imm32.dll       |Windows XP IMM32 API Client DLL                                            |5.1.2600.1106  |103936 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76380000|comdlg32.dll    |Библиотека общих диалоговых окон                                           |6.0.2800.1106  |260096 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|763D0000|msi.dll         |Windows Installer                                                          |2.0.2600.1106  |2086400|2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76B20000|winmm.dll       |MCI API DLL                                                                |5.1.2600.1106  |172544 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76BE0000|PSAPI.DLL       |Process Status Helper                                                      |5.1.2600.1106  |17408  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76D50000|iphlpapi.dll    |API модуля поддержки IP                                                    |5.1.2600.2     |83968  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76F10000|DNSAPI.dll      |DNS Client API DLL                                                         |5.1.2600.1106  |139264 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76F50000|WLDAP32.dll     |Win32 LDAP API DLL                                                         |5.1.2600.1106  |168960 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|76F80000|Secur32.dll     |Security Support Provider Interface                                        |5.1.2600.1106  |52224  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76FA0000|winrnr.dll      |LDAP RnR Provider DLL                                                      |5.1.2600.0     |14848  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76FB0000|rasadhlp.dll    |Remote Access AutoDial Helper                                              |5.1.2600.0     |6144   |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76FC0000|CLBCATQ.DLL     |                                                                           |2001.12.4414.42|468480 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|77040000|COMRes.dll      |                                                                           |2001.12.4414.42|797696 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|77110000|oleaut32.dll    |Microsoft OLE 3.50  for Windows NT(TM) and Windows 95(TM) Operating Systems|3.50.5016.0    |569344 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|771A0000|OLE32.DLL       |Microsoft OLE для  Windows                                                 |5.1.2600.1106  |1169920|2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77330000|comctl32.dll    |Common Controls Library                                                    |5.82.2800.1106 |557056 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|773C0000|shell32.dll     |Общая библиотека оболочки Windows                                          |6.0.2800.1106  |8353792|2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77BF0000|version.dll     |Version Checking and File Installation Libraries                           |5.1.2600.0     |16384  |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77C00000|MSVCRT.DLL      |Windows NT CRT DLL                                                         |7.0.2600.1106  |323072 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77C60000|GDI32.dll       |GDI Client DLL                                                             |5.1.2600.1106  |250368 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77D30000|user32.dll      |Библиотека клиента USER API Windows XP                                     |5.1.2600.1106  |560640 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77DC0000|ADVAPI32.dll    |Расширенная библиотека API Windows 32                                      |5.1.2600.1106  |628224 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77E60000|kernel32.dll    |Библиотека клиента Windows NT BASE API                                     |5.1.2600.1106  |936448 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77F50000|ntdll.dll       |Системная библиотека NT                                                    |5.1.2600.1106  |672768 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|78000000|RPCRT4.dll      |Remote Procedure Call Runtime                                              |5.1.2600.1106  |530432 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|78090000|comctl32.dll    |User Experience Controls Library                                           |6.0.2800.1106  |921600 |2003-05-29 16:00:00|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.10.0_x-ww_f7fb5805|
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 0110BE98   EDI: 01830B6C
+EBX: 0180DE74   ESI: 01972780
+ECX: 0110BE00   ESP: 0012ECCC
+EDX: 00511A23   EIP: 00511A1E
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012ECCC: 0012ECEC   00511A1E: E8 11 30 EF FF 81 C4 A8 0F 00 00 5F 5E 5B C3 00  ..0........_^[..
+0012ECD0: 77D33B4B   00511A2E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECD4: 00000020   00511A3E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECD8: 77340667   00511A4E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECDC: 0012EF3C   00511A5E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECE0: 00000000   00511A6E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECE4: 00000000   00511A7E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECE8: 00000000   00511A8E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECEC: 00000014   00511A9E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECF0: 00000002   00511AAE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECF4: 00000002   00511ABE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECF8: 00000000   00511ACE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECFC: 00000010   00511ADE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ED00: 00000000   00511AEE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ED04: 00000000   00511AFE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ED08: 0012ECD4   00511B0E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+
+
+
+EurekaLog 5.0
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Thu, 19 May 2005 17:25:13 +0400
+  1.2 Name/Description: master2005.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+  1.5 Compilation Date: Thu, 19 May 2005 17:13:38 +0400
+
+Exception:
+------------------------------------------------------------------------
+  2.1 Date   : Thu, 19 May 2005 17:25:59 +0400
+  2.2 Address: 00511A1E
+  2.3 Module : master2005.exe
+  2.4 Type   : EOracleError
+  2.5 Message: ORA-20906: Оба связанных заказа созданы НЕ автоматически!
+ORA-06512    : на  "MASTER.FOR_ZAKAZ", line 7
+ORA-06512    : на  "MASTER.FOR_ZAKAZ", line 1188
+ORA-06512    : на  "MASTER.FOR_ZAKAZ", line 1016
+ORA-06512    : на  line 2
+              .
+
+Active Controls:
+---------------------------------------------------
+  3.1 Form Class   : Tf_main
+  3.2 Form Text    : Master - [Заказы потребителей]
+  3.3 Control Class: TDBGridEh
+  3.4 Control Text : 
+
+Computer:
+-------------------------------------------------------
+  4.1 Name          : SPROKUSHEV2
+  4.2 User          : SProkushev
+  4.3 Total Memory  : 495 Mb
+  4.4 Free Memory   : 81 Mb
+  4.5 Total Disk    : 12 Gb
+  4.6 Free Disk     : 1.94 Gb
+  4.7 System Up Time: 00:09:07:16
+  4.8 Processor     : Intel(R) Pentium(R) 4 CPU 2.26GHz
+  4.9 Display Mode  : 1280 x 1024 x 16
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 1
+  5.4 Language: Русский
+
+Network:
+-------------------------
+  6.1 IP Address: 0.0.0.0
+  6.2 Submask   : 0.0.0.0
+  6.3 Gateway   : 
+  6.4 DNS 1     : 
+  6.5 DNS 2     : 
+  6.6 DHCP      : ON
+
+Call Stack Information:
+---------------------------------------------------------------------------------
+|Address |Module         |Unit       |Class        |Procedure/Method       |Line|
+---------------------------------------------------------------------------------
+| Running Thread: ID=3092; Priority=0; Class=; [Main]                           |
+|-------------------------------------------------------------------------------|
+|77D35F82|user32.dll     |           |             |CallWindowProcA        |    |
+|77D35F6E|user32.dll     |           |             |CallWindowProcA        |    |
+|77C632CD|GDI32.dll      |           |             |TextOutW               |    |
+|77D37847|user32.dll     |           |             |UserLpkPSMTextOut      |    |
+|77C6375D|GDI32.dll      |           |             |CreateCompatibleBitmap |    |
+|77C631D8|GDI32.dll      |           |             |GetTextExtentPointW    |    |
+|77C6346A|GDI32.dll      |           |             |GetTextMetricsW        |    |
+|77C63478|GDI32.dll      |           |             |GetTextMetricsW        |    |
+|77C63CD8|GDI32.dll      |           |             |BitBlt                 |    |
+|77D37E67|user32.dll     |           |             |CallNextHookEx         |    |
+|77D34629|user32.dll     |           |             |PtInRect               |    |
+|012B6284|orageneric9.dll|           |             |kghalo                 |    |
+|012B6362|orageneric9.dll|           |             |kghalo                 |    |
+|6066A0A0|OraClient9.Dll |           |             |kpuhhalo               |    |
+|012C0247|orageneric9.dll|           |             |kghfre                 |    |
+|012B6284|orageneric9.dll|           |             |kghalo                 |    |
+|012B6362|orageneric9.dll|           |             |kghalo                 |    |
+|6050BACA|oracommon9.dll |           |             |ttcclr                 |    |
+|77C0D318|MSVCRT.DLL     |           |             |strtol                 |    |
+|60683F00|OraClient9.Dll |           |             |kpugemh                |    |
+|606830B0|OraClient9.Dll |           |             |kpusebh                |    |
+|60682150|OraClient9.Dll |           |             |kpugdr                 |    |
+|6065AED0|OraClient9.Dll |           |             |kpugattr               |    |
+|606022AB|OraClient9.Dll |           |             |OCIAttrGet             |    |
+|77F75690|ntdll.dll      |           |             |RtlLeaveCriticalSection|    |
+|008A7300|master2005.exe |zakaz.pas  |Tf_Zakaz     |acZakazHistWordExecute |2413|
+|006B0905|master2005.exe |TB2Item.pas|TTBCustomItem|Click                  |1450|
+|006B0807|master2005.exe |TB2Item.pas|TTBCustomItem|ClickWndProc           |1403|
+|77D34387|user32.dll     |           |             |DispatchMessageA       |    |
+|77D34381|user32.dll     |           |             |DispatchMessageA       |    |
+|008C7A5F|master2005.exe |master.dpr |             |                       |154 |
+|77F764A4|ntdll.dll      |           |             |ZwSetInformationThread |    |
+---------------------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name            |Description                                                                |Version        |Size   |Modified           |Path                                                                                           |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00320000|SHLWAPI.dll     |Библиотека небольших программ оболочки                                     |6.0.2800.1106  |401920 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|00400000|master2005.exe  |                                                                           |               |7538688|2005-05-19 17:13:40|U:\MASTER                                                                                      |
+|01270000|oci.dll         |Oracle Call Interface                                                      |               |114688 |2002-05-01 20:40:34|C:\oracle\ora92\bin                                                                            |
+|01290000|orageneric9.dll |Oracle RDBMS Generic Library                                               |9.2.0.4        |2638096|2005-04-21 10:00:06|C:\oracle\ora92\bin                                                                            |
+|01520000|MSVCIRT.dll     |Windows NT IOStreams DLL                                                   |7.0.2600.0     |50688  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|01530000|oranms.dll      |Oracle SNMP Library                                                        |               |49628  |2003-07-22 12:07:00|C:\oracle\ora92\bin                                                                            |
+|01540000|oranmsp.dll     |Oracle SNMP Peer adaptor Library                                           |               |232552 |2003-07-22 12:07:02|C:\oracle\ora92\bin                                                                            |
+|10000000|MsgPlusH.dll    |Hook DLL                                                                   |3.25.0.106     |1365128|2005-01-10 13:52:12|C:\Program Files\Messenger Plus! 3                                                             |
+|58F10000|Wship6.dll      |IPv6 Helper DLL                                                            |5.1.2600.1106  |13312  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|5B260000|uxtheme.dll     |Библиотека тем UxTheme (Microsoft)                                         |6.0.2800.1106  |204288 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|5F2F0000|olepro32.dll    |Microsoft (R) OLE Property Support DLL                                     |5.0.5014.0     |106496 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|60500000|oracommon9.dll  |Oracle RDBMS Common Library                                                |9.2.0.4        |594192 |2005-04-21 10:00:24|C:\oracle\ora92\bin                                                                            |
+|60600000|OraClient9.Dll  |Oracle RDBMS Client Library                                                |9.2.0.4        |1601808|2005-04-21 10:00:30|C:\oracle\ora92\bin                                                                            |
+|60800000|oravsn9.dll     |Oracle RDBMS Version Library                                               |9.2.0.4        |24848  |2003-08-08 12:40:10|C:\oracle\ora92\bin                                                                            |
+|60810000|orawtc9.dll     |Oracle RDBMS WTC Library                                                   |9.2.0.4        |24848  |2003-08-08 12:40:20|C:\oracle\ora92\bin                                                                            |
+|60A00000|orapls9.dll     |Oracle PLS runtime Library                                                 |9.2.0.4        |3240208|2005-04-21 10:00:30|C:\oracle\ora92\bin                                                                            |
+|610A0000|oracore9.dll    |Oracle CORE Library                                                        |9.2.0.4        |647440 |2005-04-21 10:00:26|C:\oracle\ora92\bin                                                                            |
+|612A0000|oranls9.dll     |Oracle NLS Runtime Library                                                 |9.2.0.4        |499984 |2005-04-21 10:00:14|C:\oracle\ora92\bin                                                                            |
+|61350000|orasnls9.dll    |Oracle SNLS Runtime Library                                                |9.2.0.4        |65808  |2003-07-31 19:31:28|C:\oracle\ora92\bin                                                                            |
+|613A0000|oraunls9.dll    |Oracle UNLS Runtime Library                                                |9.2.0.4        |69904  |2003-07-31 19:31:24|C:\oracle\ora92\bin                                                                            |
+|61400000|oranl9.dll      |Oracle SQL*Net ORANL9 DLL                                                  |9.2.0.4        |180496 |2003-08-07 12:16:14|C:\oracle\ora92\bin                                                                            |
+|61480000|oran9.dll       |Oracle SQL*Net ORAN9 DLL                                                   |9.2.0.4        |737552 |2005-04-21 10:00:14|C:\oracle\ora92\bin                                                                            |
+|615A0000|orannzsbb9.dll  |Oracle SQL*Net ORANNZSBB9 DLL                                              |9.2.0.4        |561424 |2005-04-21 10:01:00|C:\oracle\ora92\bin                                                                            |
+|616A0000|orancds9.dll    |Oracle SQL*Net ORANCDS9 DLL                                                |9.2.0.4        |24848  |2003-08-07 12:17:34|C:\oracle\ora92\bin                                                                            |
+|616B0000|orancrypt9.dll  |Oracle SQL*Net ORANCRYPT9 DLL                                              |9.2.0.4        |98576  |2003-08-07 12:16:44|C:\oracle\ora92\bin                                                                            |
+|61730000|oranro9.dll     |Oracle SQL*Net ORANRO9 DLL                                                 |9.2.0.4        |221456 |2003-08-07 12:16:10|C:\oracle\ora92\bin                                                                            |
+|617C0000|oranhost9.dll   |Oracle SQL*Net ORANHOST9 DLL                                               |9.2.0.4        |24848  |2003-08-07 12:17:02|C:\oracle\ora92\bin                                                                            |
+|617D0000|oranoname9.dll  |Oracle SQL*Net ORANONAME9 DLL                                              |9.2.0.4        |24848  |2003-08-07 12:17:06|C:\oracle\ora92\bin                                                                            |
+|61820000|orantns9.dll    |Oracle SQL*Net ORANTNS9 DLL                                                |9.2.0.4        |28944  |2003-08-07 12:16:58|C:\oracle\ora92\bin                                                                            |
+|61910000|orantcp9.dll    |Oracle SQL*Net ORANTCP9 DLL                                                |9.2.0.4        |49424  |2003-08-07 12:16:18|C:\oracle\ora92\bin                                                                            |
+|61960000|oranldap9.dll   |Oracle SQL*Net ORANLDAP9 DLL                                               |9.2.0.4        |69904  |2005-04-21 10:00:18|C:\oracle\ora92\bin                                                                            |
+|62000000|oraldapclnt9.dll|Oracle Internet Directory Client Library                                   |9.2.0.4        |147728 |2003-07-29 15:13:04|C:\oracle\ora92\bin                                                                            |
+|62300000|ORATRACE9.dll   |                                                                           |               |246032 |2002-04-29 15:04:08|C:\oracle\ora92\bin                                                                            |
+|62500000|oraslax9.dll    |Oracle SLAX runtime Library                                                |               |28944  |2002-04-26 18:18:00|C:\oracle\ora92\bin                                                                            |
+|62600000|orasql9.dll     |Oracle SQL Runtime Library                                                 |9.2.0.3        |479504 |2003-08-01 03:46:42|C:\oracle\ora92\bin                                                                            |
+|62FC0000|oraxml9.dll     |Oracle XML Library                                                         |9.2.0.6        |516368 |2003-08-01 08:41:08|C:\oracle\ora92\bin                                                                            |
+|630F0000|oraxsd9.dll     |Oracle Schema Validator Library                                            |9.2.0.6        |168208 |2003-08-01 08:41:18|C:\oracle\ora92\bin                                                                            |
+|71A30000|mswsock.dll     |Расширение поставщика службы API Microsoft Windows Sockets 2.0             |5.1.2600.0     |230400 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|71A70000|wshtcpip.dll    |Windows Sockets Helper DLL                                                 |5.1.2600.0     |17408  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|71A80000|WS2HELP.dll     |Модуль поддержки Windows Socket 2.0 для Windows NT                         |5.1.2600.0     |18944  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|71A90000|WS2_32.dll      |Windows Socket 2.0 32-Bit DLL                                              |5.1.2600.0     |75264  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|71AB0000|wsock32.dll     |32-разрядная библиотека Windows Socket                                     |5.1.2600.0     |23552  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|71B00000|mpr.dll         |Библиотека маршрутизации для нескольких служб доступа                      |5.1.2600.0     |55808  |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|72FC0000|winspool.drv    |Драйвер диспетчера очереди Windows                                         |5.1.2600.1106  |132608 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|746E0000|MSCTF.dll       |Библиотека (DLL) MSCTF-сервера                                             |5.1.2600.1106  |266752 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76360000|imm32.dll       |Windows XP IMM32 API Client DLL                                            |5.1.2600.1106  |103936 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76380000|comdlg32.dll    |Библиотека общих диалоговых окон                                           |6.0.2800.1106  |260096 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|763D0000|msi.dll         |Windows Installer                                                          |2.0.2600.1106  |2086400|2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76B20000|winmm.dll       |MCI API DLL                                                                |5.1.2600.1106  |172544 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76BE0000|PSAPI.DLL       |Process Status Helper                                                      |5.1.2600.1106  |17408  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76D50000|iphlpapi.dll    |API модуля поддержки IP                                                    |5.1.2600.2     |83968  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76F10000|DNSAPI.dll      |DNS Client API DLL                                                         |5.1.2600.1106  |139264 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76F50000|WLDAP32.dll     |Win32 LDAP API DLL                                                         |5.1.2600.1106  |168960 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|76F80000|Secur32.dll     |Security Support Provider Interface                                        |5.1.2600.1106  |52224  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76FA0000|winrnr.dll      |LDAP RnR Provider DLL                                                      |5.1.2600.0     |14848  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76FB0000|rasadhlp.dll    |Remote Access AutoDial Helper                                              |5.1.2600.0     |6144   |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76FC0000|CLBCATQ.DLL     |                                                                           |2001.12.4414.42|468480 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|77040000|COMRes.dll      |                                                                           |2001.12.4414.42|797696 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|77110000|oleaut32.dll    |Microsoft OLE 3.50  for Windows NT(TM) and Windows 95(TM) Operating Systems|3.50.5016.0    |569344 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|771A0000|OLE32.DLL       |Microsoft OLE для  Windows                                                 |5.1.2600.1106  |1169920|2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77330000|comctl32.dll    |Common Controls Library                                                    |5.82.2800.1106 |557056 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|773C0000|shell32.dll     |Общая библиотека оболочки Windows                                          |6.0.2800.1106  |8353792|2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77BF0000|version.dll     |Version Checking and File Installation Libraries                           |5.1.2600.0     |16384  |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77C00000|MSVCRT.DLL      |Windows NT CRT DLL                                                         |7.0.2600.1106  |323072 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77C60000|GDI32.dll       |GDI Client DLL                                                             |5.1.2600.1106  |250368 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77D30000|user32.dll      |Библиотека клиента USER API Windows XP                                     |5.1.2600.1106  |560640 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77DC0000|ADVAPI32.dll    |Расширенная библиотека API Windows 32                                      |5.1.2600.1106  |628224 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77E60000|kernel32.dll    |Библиотека клиента Windows NT BASE API                                     |5.1.2600.1106  |936448 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77F50000|ntdll.dll       |Системная библиотека NT                                                    |5.1.2600.1106  |672768 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|78000000|RPCRT4.dll      |Remote Procedure Call Runtime                                              |5.1.2600.1106  |530432 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|78090000|comctl32.dll    |User Experience Controls Library                                           |6.0.2800.1106  |921600 |2003-05-29 16:00:00|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.10.0_x-ww_f7fb5805|
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 017F3C6C   EDI: 01830B6C
+EBX: 0180DE74   ESI: 01972780
+ECX: 017F3C00   ESP: 0012ECCC
+EDX: 00511A23   EIP: 00511A1E
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012ECCC: 0012ECEC   00511A1E: E8 11 30 EF FF 81 C4 A8 0F 00 00 5F 5E 5B C3 00  ..0........_^[..
+0012ECD0: 77D33B4B   00511A2E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECD4: 00000020   00511A3E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECD8: 77340667   00511A4E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECDC: 0012EF3C   00511A5E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECE0: 00000000   00511A6E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECE4: 00000000   00511A7E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECE8: 00000000   00511A8E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECEC: 00000014   00511A9E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECF0: 00000002   00511AAE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECF4: 00000002   00511ABE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECF8: 00000000   00511ACE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECFC: 00000010   00511ADE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ED00: 00000000   00511AEE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ED04: 00000000   00511AFE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ED08: 0012ECD4   00511B0E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+
+
+
+EurekaLog 5.0
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Thu, 19 May 2005 17:25:13 +0400
+  1.2 Name/Description: master2005.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+  1.5 Compilation Date: Thu, 19 May 2005 17:13:38 +0400
+
+Exception:
+------------------------------------------------------------------------
+  2.1 Date   : Thu, 19 May 2005 17:27:33 +0400
+  2.2 Address: 00511A1E
+  2.3 Module : master2005.exe
+  2.4 Type   : EOracleError
+  2.5 Message: ORA-20906: Оба связанных заказа созданы НЕ автоматически!
+ORA-06512    : на  "MASTER.FOR_ZAKAZ", line 7
+ORA-06512    : на  "MASTER.FOR_ZAKAZ", line 1188
+ORA-06512    : на  "MASTER.FOR_ZAKAZ", line 1016
+ORA-06512    : на  line 2
+              .
+
+Active Controls:
+---------------------------------------------------
+  3.1 Form Class   : Tf_main
+  3.2 Form Text    : Master - [Заказы потребителей]
+  3.3 Control Class: TDBGridEh
+  3.4 Control Text : 
+
+Computer:
+-------------------------------------------------------
+  4.1 Name          : SPROKUSHEV2
+  4.2 User          : SProkushev
+  4.3 Total Memory  : 495 Mb
+  4.4 Free Memory   : 102 Mb
+  4.5 Total Disk    : 12 Gb
+  4.6 Free Disk     : 1.94 Gb
+  4.7 System Up Time: 00:09:08:50
+  4.8 Processor     : Intel(R) Pentium(R) 4 CPU 2.26GHz
+  4.9 Display Mode  : 1280 x 1024 x 16
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 1
+  5.4 Language: Русский
+
+Network:
+-------------------------
+  6.1 IP Address: 0.0.0.0
+  6.2 Submask   : 0.0.0.0
+  6.3 Gateway   : 
+  6.4 DNS 1     : 
+  6.5 DNS 2     : 
+  6.6 DHCP      : ON
+
+Call Stack Information:
+------------------------------------------------------------------------------------
+|Address |Module        |Unit        |Class          |Procedure/Method       |Line |
+------------------------------------------------------------------------------------
+| Running Thread: ID=3092; Priority=0; Class=; [Main]                              |
+|----------------------------------------------------------------------------------|
+|77D35F82|user32.dll    |            |               |CallWindowProcA        |     |
+|77D35F6E|user32.dll    |            |               |CallWindowProcA        |     |
+|77C632CD|GDI32.dll     |            |               |TextOutW               |     |
+|77D37847|user32.dll    |            |               |UserLpkPSMTextOut      |     |
+|77C6375D|GDI32.dll     |            |               |CreateCompatibleBitmap |     |
+|77C631D8|GDI32.dll     |            |               |GetTextExtentPointW    |     |
+|77C6346A|GDI32.dll     |            |               |GetTextMetricsW        |     |
+|77C63478|GDI32.dll     |            |               |GetTextMetricsW        |     |
+|77C63CD8|GDI32.dll     |            |               |BitBlt                 |     |
+|77D37E67|user32.dll    |            |               |CallNextHookEx         |     |
+|77D34629|user32.dll    |            |               |PtInRect               |     |
+|77D35F82|user32.dll    |            |               |CallWindowProcA        |     |
+|77D35F6E|user32.dll    |            |               |CallWindowProcA        |     |
+|005B9300|master2005.exe|DBGridEh.pas|TCustomDBGridEh|UpdateAction           |16157|
+|77D39C0E|user32.dll    |            |               |GetFocus               |     |
+|77D39C0C|user32.dll    |            |               |GetFocus               |     |
+|77E7E003|kernel32.dll  |            |               |LCMapStringW           |     |
+|77D34BD5|user32.dll    |            |               |CharUpperBuffW         |     |
+|77D34D35|user32.dll    |            |               |CharUpperBuffA         |     |
+|77C0D318|MSVCRT.DLL    |            |               |strtol                 |     |
+|60683F00|OraClient9.Dll|            |               |kpugemh                |     |
+|606830B0|OraClient9.Dll|            |               |kpusebh                |     |
+|60682150|OraClient9.Dll|            |               |kpugdr                 |     |
+|6065AED0|OraClient9.Dll|            |               |kpugattr               |     |
+|606022AB|OraClient9.Dll|            |               |OCIAttrGet             |     |
+|77F75690|ntdll.dll     |            |               |RtlLeaveCriticalSection|     |
+|008A7300|master2005.exe|zakaz.pas   |Tf_Zakaz       |acZakazHistWordExecute |2413 |
+|006B0905|master2005.exe|TB2Item.pas |TTBCustomItem  |Click                  |1450 |
+|006B0807|master2005.exe|TB2Item.pas |TTBCustomItem  |ClickWndProc           |1403 |
+|77D34387|user32.dll    |            |               |DispatchMessageA       |     |
+|77D34381|user32.dll    |            |               |DispatchMessageA       |     |
+|008C7A5F|master2005.exe|master.dpr  |               |                       |154  |
+|77F764A4|ntdll.dll     |            |               |ZwSetInformationThread |     |
+------------------------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name            |Description                                                                |Version        |Size   |Modified           |Path                                                                                           |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00320000|SHLWAPI.dll     |Библиотека небольших программ оболочки                                     |6.0.2800.1106  |401920 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|00400000|master2005.exe  |                                                                           |               |7538688|2005-05-19 17:13:40|U:\MASTER                                                                                      |
+|01270000|oci.dll         |Oracle Call Interface                                                      |               |114688 |2002-05-01 20:40:34|C:\oracle\ora92\bin                                                                            |
+|01290000|orageneric9.dll |Oracle RDBMS Generic Library                                               |9.2.0.4        |2638096|2005-04-21 10:00:06|C:\oracle\ora92\bin                                                                            |
+|01520000|MSVCIRT.dll     |Windows NT IOStreams DLL                                                   |7.0.2600.0     |50688  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|01530000|oranms.dll      |Oracle SNMP Library                                                        |               |49628  |2003-07-22 12:07:00|C:\oracle\ora92\bin                                                                            |
+|01540000|oranmsp.dll     |Oracle SNMP Peer adaptor Library                                           |               |232552 |2003-07-22 12:07:02|C:\oracle\ora92\bin                                                                            |
+|10000000|MsgPlusH.dll    |Hook DLL                                                                   |3.25.0.106     |1365128|2005-01-10 13:52:12|C:\Program Files\Messenger Plus! 3                                                             |
+|58F10000|Wship6.dll      |IPv6 Helper DLL                                                            |5.1.2600.1106  |13312  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|5B260000|uxtheme.dll     |Библиотека тем UxTheme (Microsoft)                                         |6.0.2800.1106  |204288 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|5F2F0000|olepro32.dll    |Microsoft (R) OLE Property Support DLL                                     |5.0.5014.0     |106496 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|60500000|oracommon9.dll  |Oracle RDBMS Common Library                                                |9.2.0.4        |594192 |2005-04-21 10:00:24|C:\oracle\ora92\bin                                                                            |
+|60600000|OraClient9.Dll  |Oracle RDBMS Client Library                                                |9.2.0.4        |1601808|2005-04-21 10:00:30|C:\oracle\ora92\bin                                                                            |
+|60800000|oravsn9.dll     |Oracle RDBMS Version Library                                               |9.2.0.4        |24848  |2003-08-08 12:40:10|C:\oracle\ora92\bin                                                                            |
+|60810000|orawtc9.dll     |Oracle RDBMS WTC Library                                                   |9.2.0.4        |24848  |2003-08-08 12:40:20|C:\oracle\ora92\bin                                                                            |
+|60A00000|orapls9.dll     |Oracle PLS runtime Library                                                 |9.2.0.4        |3240208|2005-04-21 10:00:30|C:\oracle\ora92\bin                                                                            |
+|610A0000|oracore9.dll    |Oracle CORE Library                                                        |9.2.0.4        |647440 |2005-04-21 10:00:26|C:\oracle\ora92\bin                                                                            |
+|612A0000|oranls9.dll     |Oracle NLS Runtime Library                                                 |9.2.0.4        |499984 |2005-04-21 10:00:14|C:\oracle\ora92\bin                                                                            |
+|61350000|orasnls9.dll    |Oracle SNLS Runtime Library                                                |9.2.0.4        |65808  |2003-07-31 19:31:28|C:\oracle\ora92\bin                                                                            |
+|613A0000|oraunls9.dll    |Oracle UNLS Runtime Library                                                |9.2.0.4        |69904  |2003-07-31 19:31:24|C:\oracle\ora92\bin                                                                            |
+|61400000|oranl9.dll      |Oracle SQL*Net ORANL9 DLL                                                  |9.2.0.4        |180496 |2003-08-07 12:16:14|C:\oracle\ora92\bin                                                                            |
+|61480000|oran9.dll       |Oracle SQL*Net ORAN9 DLL                                                   |9.2.0.4        |737552 |2005-04-21 10:00:14|C:\oracle\ora92\bin                                                                            |
+|615A0000|orannzsbb9.dll  |Oracle SQL*Net ORANNZSBB9 DLL                                              |9.2.0.4        |561424 |2005-04-21 10:01:00|C:\oracle\ora92\bin                                                                            |
+|616A0000|orancds9.dll    |Oracle SQL*Net ORANCDS9 DLL                                                |9.2.0.4        |24848  |2003-08-07 12:17:34|C:\oracle\ora92\bin                                                                            |
+|616B0000|orancrypt9.dll  |Oracle SQL*Net ORANCRYPT9 DLL                                              |9.2.0.4        |98576  |2003-08-07 12:16:44|C:\oracle\ora92\bin                                                                            |
+|61730000|oranro9.dll     |Oracle SQL*Net ORANRO9 DLL                                                 |9.2.0.4        |221456 |2003-08-07 12:16:10|C:\oracle\ora92\bin                                                                            |
+|617C0000|oranhost9.dll   |Oracle SQL*Net ORANHOST9 DLL                                               |9.2.0.4        |24848  |2003-08-07 12:17:02|C:\oracle\ora92\bin                                                                            |
+|617D0000|oranoname9.dll  |Oracle SQL*Net ORANONAME9 DLL                                              |9.2.0.4        |24848  |2003-08-07 12:17:06|C:\oracle\ora92\bin                                                                            |
+|61820000|orantns9.dll    |Oracle SQL*Net ORANTNS9 DLL                                                |9.2.0.4        |28944  |2003-08-07 12:16:58|C:\oracle\ora92\bin                                                                            |
+|61910000|orantcp9.dll    |Oracle SQL*Net ORANTCP9 DLL                                                |9.2.0.4        |49424  |2003-08-07 12:16:18|C:\oracle\ora92\bin                                                                            |
+|61960000|oranldap9.dll   |Oracle SQL*Net ORANLDAP9 DLL                                               |9.2.0.4        |69904  |2005-04-21 10:00:18|C:\oracle\ora92\bin                                                                            |
+|62000000|oraldapclnt9.dll|Oracle Internet Directory Client Library                                   |9.2.0.4        |147728 |2003-07-29 15:13:04|C:\oracle\ora92\bin                                                                            |
+|62300000|ORATRACE9.dll   |                                                                           |               |246032 |2002-04-29 15:04:08|C:\oracle\ora92\bin                                                                            |
+|62500000|oraslax9.dll    |Oracle SLAX runtime Library                                                |               |28944  |2002-04-26 18:18:00|C:\oracle\ora92\bin                                                                            |
+|62600000|orasql9.dll     |Oracle SQL Runtime Library                                                 |9.2.0.3        |479504 |2003-08-01 03:46:42|C:\oracle\ora92\bin                                                                            |
+|62FC0000|oraxml9.dll     |Oracle XML Library                                                         |9.2.0.6        |516368 |2003-08-01 08:41:08|C:\oracle\ora92\bin                                                                            |
+|630F0000|oraxsd9.dll     |Oracle Schema Validator Library                                            |9.2.0.6        |168208 |2003-08-01 08:41:18|C:\oracle\ora92\bin                                                                            |
+|71A30000|mswsock.dll     |Расширение поставщика службы API Microsoft Windows Sockets 2.0             |5.1.2600.0     |230400 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|71A70000|wshtcpip.dll    |Windows Sockets Helper DLL                                                 |5.1.2600.0     |17408  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|71A80000|WS2HELP.dll     |Модуль поддержки Windows Socket 2.0 для Windows NT                         |5.1.2600.0     |18944  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|71A90000|WS2_32.dll      |Windows Socket 2.0 32-Bit DLL                                              |5.1.2600.0     |75264  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|71AB0000|wsock32.dll     |32-разрядная библиотека Windows Socket                                     |5.1.2600.0     |23552  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|71B00000|mpr.dll         |Библиотека маршрутизации для нескольких служб доступа                      |5.1.2600.0     |55808  |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|72FC0000|winspool.drv    |Драйвер диспетчера очереди Windows                                         |5.1.2600.1106  |132608 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|746E0000|MSCTF.dll       |Библиотека (DLL) MSCTF-сервера                                             |5.1.2600.1106  |266752 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76360000|imm32.dll       |Windows XP IMM32 API Client DLL                                            |5.1.2600.1106  |103936 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76380000|comdlg32.dll    |Библиотека общих диалоговых окон                                           |6.0.2800.1106  |260096 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|763D0000|msi.dll         |Windows Installer                                                          |2.0.2600.1106  |2086400|2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76B20000|winmm.dll       |MCI API DLL                                                                |5.1.2600.1106  |172544 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76BE0000|PSAPI.DLL       |Process Status Helper                                                      |5.1.2600.1106  |17408  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76D50000|iphlpapi.dll    |API модуля поддержки IP                                                    |5.1.2600.2     |83968  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76F10000|DNSAPI.dll      |DNS Client API DLL                                                         |5.1.2600.1106  |139264 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76F50000|WLDAP32.dll     |Win32 LDAP API DLL                                                         |5.1.2600.1106  |168960 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|76F80000|Secur32.dll     |Security Support Provider Interface                                        |5.1.2600.1106  |52224  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76FA0000|winrnr.dll      |LDAP RnR Provider DLL                                                      |5.1.2600.0     |14848  |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76FB0000|rasadhlp.dll    |Remote Access AutoDial Helper                                              |5.1.2600.0     |6144   |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|76FC0000|CLBCATQ.DLL     |                                                                           |2001.12.4414.42|468480 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|77040000|COMRes.dll      |                                                                           |2001.12.4414.42|797696 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|77110000|oleaut32.dll    |Microsoft OLE 3.50  for Windows NT(TM) and Windows 95(TM) Operating Systems|3.50.5016.0    |569344 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|771A0000|OLE32.DLL       |Microsoft OLE для  Windows                                                 |5.1.2600.1106  |1169920|2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77330000|comctl32.dll    |Common Controls Library                                                    |5.82.2800.1106 |557056 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|773C0000|shell32.dll     |Общая библиотека оболочки Windows                                          |6.0.2800.1106  |8353792|2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77BF0000|version.dll     |Version Checking and File Installation Libraries                           |5.1.2600.0     |16384  |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77C00000|MSVCRT.DLL      |Windows NT CRT DLL                                                         |7.0.2600.1106  |323072 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77C60000|GDI32.dll       |GDI Client DLL                                                             |5.1.2600.1106  |250368 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77D30000|user32.dll      |Библиотека клиента USER API Windows XP                                     |5.1.2600.1106  |560640 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77DC0000|ADVAPI32.dll    |Расширенная библиотека API Windows 32                                      |5.1.2600.1106  |628224 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77E60000|kernel32.dll    |Библиотека клиента Windows NT BASE API                                     |5.1.2600.1106  |936448 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|77F50000|ntdll.dll       |Системная библиотека NT                                                    |5.1.2600.1106  |672768 |2003-05-29 16:00:00|C:\WINDOWS\System32                                                                            |
+|78000000|RPCRT4.dll      |Remote Procedure Call Runtime                                              |5.1.2600.1106  |530432 |2003-05-29 16:00:00|C:\WINDOWS\system32                                                                            |
+|78090000|comctl32.dll    |User Experience Controls Library                                           |6.0.2800.1106  |921600 |2003-05-29 16:00:00|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.10.0_x-ww_f7fb5805|
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 0112CDC4   EDI: 01830B6C
+EBX: 0180DE74   ESI: 01972780
+ECX: 0112CD00   ESP: 0012ECCC
+EDX: 00511A23   EIP: 00511A1E
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012ECCC: 0012ECEC   00511A1E: E8 11 30 EF FF 81 C4 A8 0F 00 00 5F 5E 5B C3 00  ..0........_^[..
+0012ECD0: 77D33B4B   00511A2E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECD4: 00000020   00511A3E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECD8: 77340667   00511A4E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECDC: 0012EF3C   00511A5E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECE0: 00000000   00511A6E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECE4: 00000000   00511A7E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECE8: 00000000   00511A8E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECEC: 00000014   00511A9E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECF0: 00000002   00511AAE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECF4: 00000002   00511ABE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECF8: 00000000   00511ACE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECFC: 00000010   00511ADE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ED00: 00000000   00511AEE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ED04: 00000000   00511AFE: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ED08: 0012ECD4   00511B0E: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+
+
+

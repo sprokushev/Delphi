@@ -1,0 +1,7 @@
+open 172.31.24.82
+unp
+1r9s%QLb
+bin
+cd passport
+mput SH013*.csv 
+bye

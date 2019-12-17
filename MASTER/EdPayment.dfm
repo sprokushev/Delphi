@@ -1,0 +1,917 @@
+object f_EdPayment: Tf_EdPayment
+  Left = 315
+  Top = 190
+  Width = 728
+  Height = 522
+  Caption = #1055#1083#1072#1090#1077#1078
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 43
+    Width = 720
+    Height = 371
+    Align = alClient
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    TabOrder = 0
+    object Panel2: TPanel
+      Left = 2
+      Top = 2
+      Width = 279
+      Height = 367
+      Align = alLeft
+      BevelOuter = bvNone
+      TabOrder = 0
+      object gbRekv: TGroupBox
+        Left = 0
+        Top = 0
+        Width = 279
+        Height = 145
+        Align = alTop
+        Caption = ' '#1056#1077#1082#1074#1080#1079#1080#1090#1099' '#1087#1083#1072#1090#1077#1078#1072' '
+        TabOrder = 0
+        DesignSize = (
+          279
+          145)
+        object Label1: TLabel
+          Left = 67
+          Top = 21
+          Width = 31
+          Height = 13
+          Caption = #8470' '#1087'/'#1087
+        end
+        object Label2: TLabel
+          Left = 72
+          Top = 44
+          Width = 26
+          Height = 13
+          Caption = #1044#1072#1090#1072
+        end
+        object Label3: TLabel
+          Left = 64
+          Top = 119
+          Width = 34
+          Height = 13
+          Caption = #1057#1091#1084#1084#1072
+        end
+        object Label8: TLabel
+          Left = 22
+          Top = 71
+          Width = 77
+          Height = 13
+          Caption = #1060#1086#1088#1084#1072' '#1086#1087#1083#1072#1090#1099
+        end
+        object Label9: TLabel
+          Left = 6
+          Top = 95
+          Width = 93
+          Height = 13
+          Caption = #1044#1072#1090#1072' '#1087#1086#1089#1090#1091#1087#1083#1077#1085#1080#1103
+        end
+        object eNum_plat: TEdit
+          Left = 103
+          Top = 16
+          Width = 168
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          TabOrder = 0
+        end
+        object eDate_Plat: TDateTimePicker
+          Left = 103
+          Top = 41
+          Width = 89
+          Height = 21
+          Date = 38353.363891608790000000
+          Time = 38353.363891608790000000
+          TabOrder = 1
+        end
+        object eSumma: TCurrencyEdit
+          Left = 103
+          Top = 116
+          Width = 168
+          Height = 21
+          AutoSize = False
+          Anchors = [akLeft, akTop, akRight]
+          TabOrder = 2
+          ZeroEmpty = False
+        end
+        object lc_payform: TRxDBLookupCombo
+          Left = 103
+          Top = 66
+          Width = 170
+          Height = 22
+          DropDownCount = 8
+          DropDownWidth = 200
+          EscapeClear = False
+          Anchors = [akLeft, akTop, akRight]
+          LookupField = 'ID'
+          LookupDisplay = 'PAYFORM_NAME'
+          LookupSource = dsPayForm
+          TabOrder = 3
+          TabStop = False
+        end
+        object eDate_Post: TDateTimePicker
+          Left = 103
+          Top = 91
+          Width = 89
+          Height = 21
+          Date = 38353.363891608790000000
+          Time = 38353.363891608790000000
+          TabOrder = 4
+        end
+      end
+      object GroupBox3: TGroupBox
+        Left = 0
+        Top = 145
+        Width = 279
+        Height = 104
+        Align = alTop
+        Caption = ' '#1041#1072#1085#1082#1086#1074#1089#1082#1080#1077' '#1088#1077#1082#1074#1080#1079#1080#1090#1099' '#1087#1083#1072#1090#1077#1083#1100#1097#1080#1082#1072' '
+        TabOrder = 1
+        DesignSize = (
+          279
+          104)
+        object Label5: TLabel
+          Left = 6
+          Top = 23
+          Width = 80
+          Height = 13
+          Caption = #1056#1072#1089#1095#1077#1090#1085#1099#1081' '#1089#1095#1077#1090
+        end
+        object Label6: TLabel
+          Left = 7
+          Top = 43
+          Width = 86
+          Height = 13
+          Caption = #1041#1072#1085#1082' / '#1050#1086#1088#1088' '#1089#1095#1077#1090
+        end
+        object sb_Bank: TRxSpeedButton
+          Left = 251
+          Top = 58
+          Width = 22
+          Height = 22
+          Anchors = [akTop, akRight]
+          Glyph.Data = {
+            42020000424D4202000000000000420000002800000010000000100000000100
+            1000030000000002000000000000000000000000000000000000007C0000E003
+            00001F0000001F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C
+            1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C
+            1F7C1F7C1F7C000000000000000000001F7C1F7C1F7C1F7C1F7C000000000000
+            000000001F7C0000FF7F0000000000001F7C1F7C1F7C1F7C1F7C0000FF7F0000
+            000000001F7C0000FF7F0000000000001F7C1F7C1F7C1F7C1F7C0000FF7F0000
+            000000001F7C00000000000000000000000000001F7C00000000000000000000
+            000000001F7C00000000FF7F000000000000000000000000FF7F000000000000
+            000000001F7C00000000FF7F0000000000001F7C00000000FF7F000000000000
+            000000001F7C00000000FF7F0000000000001F7C00000000FF7F000000000000
+            000000001F7C1F7C000000000000000000000000000000000000000000000000
+            00001F7C1F7C1F7C1F7C0000FF7F0000000000001F7C0000FF7F000000000000
+            1F7C1F7C1F7C1F7C1F7C000000000000000000001F7C00000000000000000000
+            1F7C1F7C1F7C1F7C1F7C1F7C0000000000001F7C1F7C1F7C0000000000001F7C
+            1F7C1F7C1F7C1F7C1F7C1F7C0000FF7F00001F7C1F7C1F7C0000FF7F00001F7C
+            1F7C1F7C1F7C1F7C1F7C1F7C0000000000001F7C1F7C1F7C0000000000001F7C
+            1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C1F7C
+            1F7C1F7C1F7C}
+          OnClick = sb_BankClick
+        end
+        object DBText3: TDBText
+          Left = 7
+          Top = 84
+          Width = 265
+          Height = 14
+          Anchors = [akLeft, akTop, akRight]
+          DataField = 'BANK_NAME'
+          DataSource = ds_Banks
+        end
+        object eRS: TEdit
+          Left = 98
+          Top = 19
+          Width = 174
+          Height = 21
+          Anchors = [akLeft, akTop, akRight]
+          MaxLength = 20
+          TabOrder = 0
+        end
+        object lc_Bank: TRxDBLookupCombo
+          Left = 7
+          Top = 59
+          Width = 242
+          Height = 22
+          DropDownCount = 8
+          DropDownWidth = 550
+          EscapeClear = False
+          Anchors = [akLeft, akTop, akRight]
+          LookupField = 'ID'
+          LookupDisplay = 'KORS;BIK;BANK_NAME'
+          LookupDisplayIndex = 1
+          LookupSource = ds_Banks
+          TabOrder = 1
+          TabStop = False
+        end
+      end
+      object GroupBox5: TGroupBox
+        Left = 0
+        Top = 249
+        Width = 279
+        Height = 48
+        Align = alTop
+        Caption = #1053#1072#1079#1085#1072#1095#1077#1085#1080#1077
+        TabOrder = 2
+        DesignSize = (
+          279
+          48)
+        object lc_Dest: TRxDBLookupCombo
+          Left = 7
+          Top = 19
+          Width = 266
+          Height = 22
+          DropDownCount = 8
+          DropDownWidth = 550
+          EscapeClear = False
+          Anchors = [akLeft, akTop, akRight]
+          LookupField = 'ID'
+          LookupDisplay = 'NAME'
+          LookupDisplayIndex = 1
+          LookupSource = ds_Dest
+          TabOrder = 0
+          TabStop = False
+          OnChange = lc_DestChange
+        end
+      end
+      object GroupBox6: TGroupBox
+        Left = 0
+        Top = 297
+        Width = 279
+        Height = 70
+        Align = alClient
+        Caption = ' '#1041#1072#1085#1082#1086#1074#1089#1082#1080#1077' '#1088#1077#1082#1074#1080#1079#1080#1090#1099' '#1087#1086#1083#1091#1095#1072#1090#1077#1083#1103' '
+        TabOrder = 3
+        DesignSize = (
+          279
+          70)
+        object Label11: TLabel
+          Left = 7
+          Top = 19
+          Width = 80
+          Height = 13
+          Caption = #1056#1072#1089#1095#1077#1090#1085#1099#1081' '#1089#1095#1077#1090
+        end
+        object lc_RSUNP: TRxDBLookupCombo
+          Left = 7
+          Top = 35
+          Width = 242
+          Height = 22
+          DropDownCount = 8
+          DropDownWidth = 242
+          EscapeClear = False
+          Anchors = [akLeft, akTop, akRight]
+          LookupField = 'ID'
+          LookupDisplay = 'RS'
+          LookupDisplayIndex = 1
+          LookupSource = ds_RS
+          TabOrder = 0
+          TabStop = False
+        end
+      end
+    end
+    object PageControl1: TPageControl
+      Left = 281
+      Top = 2
+      Width = 437
+      Height = 367
+      ActivePage = TabSheet1
+      Align = alClient
+      TabOrder = 1
+      object TabSheet1: TTabSheet
+        Caption = #1055#1088#1080#1074#1103#1079#1082#1072' '#1082' '#1089#1095#1077#1090#1072#1084'-'#1092#1072#1082#1090#1091#1088#1072#1084
+        object Panel4: TPanel
+          Left = 0
+          Top = 318
+          Width = 429
+          Height = 21
+          Align = alBottom
+          BevelOuter = bvNone
+          TabOrder = 0
+          object Label7: TLabel
+            Left = 8
+            Top = 4
+            Width = 141
+            Height = 13
+            Caption = #1057#1091#1084#1084#1072' '#1087#1086' '#1089#1095#1077#1090#1072#1084' '#1092#1072#1082#1090#1091#1088#1072#1084
+          end
+          object DBText2: TDBText
+            Left = 160
+            Top = 2
+            Width = 129
+            Height = 15
+            Alignment = taRightJustify
+            DataField = 'SUMMA_DOK'
+            DataSource = ds_PayBillSum
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = [fsBold]
+            ParentFont = False
+          end
+        end
+        object grBills: TDBGridEh
+          Left = 0
+          Top = 0
+          Width = 429
+          Height = 318
+          Align = alClient
+          DataSource = ds_Payment_BIlls
+          Flat = False
+          FooterColor = clWindow
+          FooterFont.Charset = DEFAULT_CHARSET
+          FooterFont.Color = clWindowText
+          FooterFont.Height = -11
+          FooterFont.Name = 'MS Sans Serif'
+          FooterFont.Style = []
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghAutoSortMarking, dghMultiSortMarking, dghIncSearch, dghDialogFind]
+          PopupMenu = pm_grBills
+          ReadOnly = True
+          TabOrder = 1
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          UseMultiTitle = True
+          OnDblClick = grBillsDblClick
+          OnSortMarkingChanged = grBillsSortMarkingChanged
+          Columns = <
+            item
+              Checkboxes = True
+              EditButtons = <>
+              FieldName = 'CHECKED'
+              Footers = <>
+              KeyList.Strings = (
+                '1'
+                '0')
+              Title.TitleButton = True
+              Width = 26
+            end
+            item
+              EditButtons = <>
+              FieldName = 'NOM_SF'
+              Footers = <>
+              Title.TitleButton = True
+              Width = 69
+            end
+            item
+              EditButtons = <>
+              FieldName = 'DATE_VYP_SF'
+              Footers = <>
+              Title.TitleButton = True
+              Width = 76
+            end
+            item
+              EditButtons = <>
+              FieldName = 'SUMMA_DOK'
+              Footers = <>
+              Title.TitleButton = True
+              Width = 90
+            end
+            item
+              EditButtons = <>
+              FieldName = 'PROD_NAME'
+              Footers = <>
+              Title.TitleButton = True
+              Width = 122
+            end>
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = #1055#1088#1080#1074#1103#1079#1082#1072' '#1082' '#1085#1086#1084#1077#1085#1082#1083#1072#1090#1091#1088#1077
+        Enabled = False
+        ImageIndex = 1
+        object grProd: TDBGridEh
+          Left = 0
+          Top = 0
+          Width = 429
+          Height = 346
+          Align = alClient
+          DataSource = ds_Payment_Prod
+          Flat = False
+          FooterColor = clWindow
+          FooterFont.Charset = DEFAULT_CHARSET
+          FooterFont.Color = clWindowText
+          FooterFont.Height = -11
+          FooterFont.Name = 'MS Sans Serif'
+          FooterFont.Style = []
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          OptionsEh = [dghFixed3D, dghHighlightFocus, dghClearSelection, dghAutoSortMarking, dghMultiSortMarking, dghIncSearch, dghDialogFind]
+          PopupMenu = pm_grProd
+          ReadOnly = True
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          UseMultiTitle = True
+          OnDblClick = grProdDblClick
+          OnSortMarkingChanged = grProdSortMarkingChanged
+          Columns = <
+            item
+              Checkboxes = True
+              EditButtons = <>
+              FieldName = 'CHECKED'
+              Footers = <>
+              KeyList.Strings = (
+                '1'
+                '0')
+              Title.TitleButton = True
+              Width = 26
+            end
+            item
+              EditButtons = <>
+              FieldName = 'PROD_NAME'
+              Footers = <>
+              Title.TitleButton = True
+              Width = 347
+            end>
+        end
+      end
+    end
+  end
+  object Panel5: TPanel
+    Left = 0
+    Top = 414
+    Width = 720
+    Height = 74
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 1
+    DesignSize = (
+      720
+      74)
+    object Label4: TLabel
+      Left = 3
+      Top = 2
+      Width = 185
+      Height = 13
+      Caption = #1053#1072#1079#1085#1072#1095#1077#1085#1080#1077' '#1087#1083#1072#1090#1077#1078#1072' ('#1080#1079' '#1076#1086#1082#1091#1084#1077#1085#1090#1072')'
+    end
+    object BitBtn1: TBitBtn
+      Left = 205
+      Top = 44
+      Width = 110
+      Height = 25
+      Caption = 'OK'
+      Default = True
+      TabOrder = 0
+      OnClick = BitBtn1Click
+      Glyph.Data = {
+        DE010000424DDE01000000000000760000002800000024000000120000000100
+        0400000000006801000000000000000000001000000000000000000000000000
+        80000080000000808000800000008000800080800000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333333333333333330000333333333333333333333333F33333333333
+        00003333344333333333333333388F3333333333000033334224333333333333
+        338338F3333333330000333422224333333333333833338F3333333300003342
+        222224333333333383333338F3333333000034222A22224333333338F338F333
+        8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+        33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+        0000333333333A222433333333333338F338F33300003333333333A222433333
+        333333338F338F33000033333333333A222433333333333338F338F300003333
+        33333333A222433333333333338F338F00003333333333333A22433333333333
+        3338F38F000033333333333333A223333333333333338F830000333333333333
+        333A333333333333333338330000333333333333333333333333333333333333
+        0000}
+      NumGlyphs = 2
+    end
+    object BitBtn2: TBitBtn
+      Left = 321
+      Top = 44
+      Width = 110
+      Height = 25
+      TabOrder = 1
+      Kind = bkCancel
+    end
+    object eNazn_Plat: TEdit
+      Left = 3
+      Top = 16
+      Width = 712
+      Height = 21
+      Anchors = [akLeft, akTop, akRight]
+      MaxLength = 500
+      TabOrder = 2
+    end
+  end
+  object GroupBox1: TGroupBox
+    Left = 0
+    Top = 0
+    Width = 720
+    Height = 43
+    Align = alTop
+    Caption = ' '#1044#1086#1075#1086#1074#1086#1088'/'#1087#1083#1072#1090#1077#1083#1100#1097#1080#1082' '
+    TabOrder = 2
+    DesignSize = (
+      720
+      43)
+    object DBText1: TDBText
+      Left = 152
+      Top = 19
+      Width = 561
+      Height = 14
+      Anchors = [akLeft, akTop, akRight]
+      DataField = 'PREDPR_NAME'
+      DataSource = ds_Dog
+    end
+    object lc_Dog: TRxDBLookupCombo
+      Left = 8
+      Top = 15
+      Width = 137
+      Height = 22
+      DropDownCount = 8
+      DropDownWidth = 550
+      EscapeClear = False
+      LookupField = 'ID'
+      LookupDisplay = 'DOG_NUMBER;PREDPR_NAME'
+      LookupSource = ds_Dog
+      TabOrder = 0
+      TabStop = False
+      OnChange = lc_DogChange
+    end
+  end
+  object q_Dog: TOracleDataSet
+    SQL.Strings = (
+      'SELECT'
+      '  kls_dog.id,'
+      '  kls_dog.dog_number,'
+      '  kls_predpr.predpr_name,'
+      '  kls_predpr.banks_id, kls_predpr.rs'
+      'FROM kls_dog,kls_predpr'
+      
+        'WHERE kls_dog.predpr_id=kls_predpr.id and kls_dog.dog_year>=2004' +
+        ' and agent_id in (8,4175)'
+      'ORDER BY dog_number')
+    QBEDefinition.QBEFieldDefs = {
+      04000000050000000200000049440100000000000A000000444F475F4E554D42
+      45520100000000000B0000005052454450525F4E414D45010000000000080000
+      0042414E4B535F4944010000000000020000005253010000000000}
+    Session = f_main.ora_Session
+    Left = 348
+    Top = 112
+    object q_DogID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object q_DogDOG_NUMBER: TStringField
+      FieldName = 'DOG_NUMBER'
+      Required = True
+      Size = 30
+    end
+    object q_DogPREDPR_NAME: TStringField
+      FieldName = 'PREDPR_NAME'
+      Required = True
+      Size = 60
+    end
+    object q_DogBANKS_ID: TFloatField
+      FieldName = 'BANKS_ID'
+    end
+    object q_DogRS: TStringField
+      FieldName = 'RS'
+    end
+  end
+  object ds_Dog: TDataSource
+    DataSet = q_Dog
+    Left = 348
+    Top = 140
+  end
+  object q_Banks: TOracleDataSet
+    SQL.Strings = (
+      'SELECT'
+      '  *'
+      'FROM kls_banks'
+      'ORDER BY kors')
+    QBEDefinition.QBEFieldDefs = {
+      0400000006000000020000004944010000000000040000004B4F525301000000
+      00000300000042494B0100000000000900000042414E4B5F4E414D4501000000
+      000009000000504F5354494E4445580100000000000700000041444452455353
+      010000000000}
+    Session = f_main.ora_Session
+    Left = 316
+    Top = 112
+    object q_BanksID: TFloatField
+      FieldName = 'ID'
+      Required = True
+    end
+    object q_BanksKORS: TStringField
+      FieldName = 'KORS'
+      Required = True
+    end
+    object q_BanksBIK: TStringField
+      FieldName = 'BIK'
+      Size = 9
+    end
+    object q_BanksBANK_NAME: TStringField
+      FieldName = 'BANK_NAME'
+      Required = True
+      Size = 100
+    end
+    object q_BanksPOSTINDEX: TStringField
+      FieldName = 'POSTINDEX'
+      Size = 6
+    end
+    object q_BanksADDRESS: TStringField
+      FieldName = 'ADDRESS'
+      Size = 100
+    end
+  end
+  object ds_Banks: TDataSource
+    DataSet = q_Banks
+    Left = 316
+    Top = 140
+  end
+  object q_Payment_BIlls: TOracleDataSet
+    SQL.Strings = (
+      'SELECT'
+      '  DECODE(A.NOM_DOK,null,0,1) AS checked,'
+      '  b.nom_sf, c.abbr_npr as prod_name,'
+      '  b.date_vyp_sf,'
+      '  b.nom_dok,'
+      '  b.summa_dok'
+      'FROM bills B, kls_prod C,'
+      '(SELECT * FROM PAYMENTS_TO_BILLS WHERE PAYMENTS_ID=0) A'
+      'WHERE b.prod_id_npr=C.id_npr and b.nom_dok=A.nom_dok(+) '
+      ''
+      ''
+      ''
+      '')
+    QBEDefinition.QBEFieldDefs = {
+      0400000006000000060000004E4F4D5F53460100000000000B00000044415445
+      5F5659505F534601000000000007000000434845434B45440100000000000700
+      00004E4F4D5F444F4B0100000000000900000053554D4D415F444F4B01000000
+      00000900000050524F445F4E414D45010000000000}
+    AutoCalcFields = False
+    QueryAllRecords = False
+    Session = f_main.ora_Session
+    BeforeOpen = q_Payment_BIllsBeforeOpen
+    OnFilterRecord = q_Payment_BIllsFilterRecord
+    Left = 379
+    Top = 112
+    object q_Payment_BIllsCHECKED: TFloatField
+      DisplayLabel = '+'
+      FieldName = 'CHECKED'
+    end
+    object q_Payment_BIllsNOM_SF: TIntegerField
+      DisplayLabel = #8470' '#1057#1060
+      FieldName = 'NOM_SF'
+      Required = True
+    end
+    object q_Payment_BIllsDATE_VYP_SF: TDateTimeField
+      DisplayLabel = #1044#1072#1090#1072' '#1057#1060
+      FieldName = 'DATE_VYP_SF'
+      Required = True
+    end
+    object q_Payment_BIllsSUMMA_DOK: TFloatField
+      DisplayLabel = #1057#1091#1084#1084#1072
+      FieldName = 'SUMMA_DOK'
+      Required = True
+      DisplayFormat = '#0.00'
+    end
+    object q_Payment_BIllsPROD_NAME: TStringField
+      DisplayLabel = #1053'/'#1087#1088' '#1080#1083#1080' '#1091#1089#1083#1091#1075#1072
+      FieldName = 'PROD_NAME'
+    end
+    object q_Payment_BIllsNOM_DOK: TFloatField
+      FieldName = 'NOM_DOK'
+      Required = True
+    end
+  end
+  object ds_Payment_BIlls: TDataSource
+    DataSet = q_Payment_BIlls
+    Left = 379
+    Top = 140
+  end
+  object q_cmn: TOracleQuery
+    Left = 286
+    Top = 112
+  end
+  object q_PayBillSum: TOracleDataSet
+    SQL.Strings = (
+      'SELECT'
+      '  SUM(b.summa_dok) AS summa_dok'
+      'FROM bills B,'
+      'PAYMENTS_TO_BILLS A'
+      'WHERE b.nom_dok=A.nom_dok'
+      ''
+      '')
+    QBEDefinition.QBEFieldDefs = {04000000010000000900000053554D4D415F444F4B010000000000}
+    AutoCalcFields = False
+    QueryAllRecords = False
+    Session = f_main.ora_Session
+    BeforeOpen = q_PayBillSumBeforeOpen
+    Left = 411
+    Top = 112
+    object q_PayBillSumSUMMA_DOK: TFloatField
+      FieldName = 'SUMMA_DOK'
+      DisplayFormat = '### ### ##0.00'
+    end
+  end
+  object ds_PayBillSum: TDataSource
+    DataSet = q_PayBillSum
+    Left = 411
+    Top = 140
+  end
+  object q_PayForm: TOracleDataSet
+    SQL.Strings = (
+      'SELECT'
+      '  *'
+      'FROM kls_payform'
+      '')
+    QBEDefinition.QBEFieldDefs = {
+      04000000030000000200000049440100000000000C000000504159464F524D5F
+      4E414D450100000000000D000000504159464F524D5F47525F49440100000000
+      00}
+    Session = f_main.ora_Session
+    Left = 468
+    Top = 112
+    object q_PayFormID: TIntegerField
+      FieldName = 'ID'
+      Required = True
+    end
+    object q_PayFormPAYFORM_NAME: TStringField
+      FieldName = 'PAYFORM_NAME'
+      Required = True
+    end
+    object q_PayFormPAYFORM_GR_ID: TFloatField
+      FieldName = 'PAYFORM_GR_ID'
+      Required = True
+    end
+  end
+  object dsPayForm: TDataSource
+    DataSet = q_PayForm
+    Left = 460
+    Top = 140
+  end
+  object pm_grBills: TTBPopupMenu
+    Images = f_main.img_Common
+    Left = 376
+    Top = 208
+    object TBItem48: TTBItem
+      Caption = #1060#1080#1083#1100#1090#1088
+    end
+    object TBEditItem2: TTBEditItem
+      Caption = #1060#1080#1083#1100#1090#1088
+      OnAcceptText = TBEditItem2AcceptText
+    end
+    object TBItem49: TTBItem
+      Caption = #1060#1080#1083#1100#1090#1088' '#1087#1086' '#1074#1099#1076#1077#1083#1077#1085#1085#1086#1084#1091
+      OnClick = TBItem49Click
+    end
+    object TBItem50: TTBItem
+      Caption = #1054#1095#1080#1089#1090#1080#1090#1100' '#1092#1080#1083#1100#1090#1088
+      OnClick = TBItem50Click
+    end
+  end
+  object q_Dest: TOracleDataSet
+    SQL.Strings = (
+      'SELECT'
+      '  ID,DEST_NAME as NAME'
+      'FROM kls_bill_pos_type'
+      'WHERE DEST_NAME IS NOT NULL'
+      '')
+    QBEDefinition.QBEFieldDefs = {
+      0400000002000000020000004944010000000000040000004E414D4501000000
+      0000}
+    Session = f_main.ora_Session
+    Left = 452
+    Top = 208
+  end
+  object ds_Dest: TDataSource
+    DataSet = q_Dest
+    Left = 460
+    Top = 252
+  end
+  object ds_RS: TDataSource
+    DataSet = q_RS
+    Left = 508
+    Top = 140
+  end
+  object q_RS: TOracleDataSet
+    SQL.Strings = (
+      'SELECT'
+      '  *'
+      'FROM kls_rs'
+      'ORDER BY rs')
+    QBEDefinition.QBEFieldDefs = {
+      0400000003000000020000004944010000000000020000005253010000000000
+      0700000052535F4E414D45010000000000}
+    Session = f_main.ora_Session
+    Left = 508
+    Top = 112
+    object q_RSID: TFloatField
+      FieldName = 'ID'
+      Required = True
+    end
+    object q_RSRS: TStringField
+      FieldName = 'RS'
+      Required = True
+    end
+    object q_RSRS_NAME: TStringField
+      FieldName = 'RS_NAME'
+      Size = 50
+    end
+  end
+  object q_Payment_Prod: TOracleDataSet
+    SQL.Strings = (
+      'SELECT'
+      '  DECODE(A.PROD_ID_NPR,null,0,1) AS checked,'
+      '  c.abbr_npr as prod_name,'
+      '  c.id_npr as PROD_ID_NPR'
+      'FROM kls_prod C,'
+      '(SELECT * FROM PAYMENTS_PROD WHERE PAYMENTS_ID=0) A'
+      'WHERE c.id_npr=A.PROD_ID_NPR(+) AND c.BILL_POS IS NOT NULL'
+      ''
+      'ORDER BY c.id_npr'
+      ''
+      ''
+      '')
+    QBEDefinition.QBEFieldDefs = {
+      040000000300000007000000434845434B45440100000000000900000050524F
+      445F4E414D450100000000000B00000050524F445F49445F4E50520100000000
+      00}
+    AutoCalcFields = False
+    QueryAllRecords = False
+    Session = f_main.ora_Session
+    BeforeOpen = q_Payment_ProdBeforeOpen
+    OnFilterRecord = q_Payment_ProdFilterRecord
+    Left = 339
+    Top = 256
+    object q_Payment_ProdCHECKED: TFloatField
+      DisplayLabel = '+'
+      FieldName = 'CHECKED'
+    end
+    object q_Payment_ProdPROD_NAME: TStringField
+      DisplayLabel = #1053'/'#1087#1088' '#1080#1083#1080' '#1091#1089#1083#1091#1075#1072
+      FieldName = 'PROD_NAME'
+    end
+    object q_Payment_ProdPROD_ID_NPR: TStringField
+      FieldName = 'PROD_ID_NPR'
+      Required = True
+      Size = 5
+    end
+  end
+  object ds_Payment_Prod: TDataSource
+    DataSet = q_Payment_Prod
+    Left = 339
+    Top = 284
+  end
+  object pm_grProd: TTBPopupMenu
+    Images = f_main.img_Common
+    Left = 560
+    Top = 216
+    object TBItem1: TTBItem
+      Caption = #1060#1080#1083#1100#1090#1088
+    end
+    object TBEditItem1: TTBEditItem
+      Caption = #1060#1080#1083#1100#1090#1088
+      OnAcceptText = TBEditItem1AcceptText
+    end
+    object TBItem2: TTBItem
+      Caption = #1060#1080#1083#1100#1090#1088' '#1087#1086' '#1074#1099#1076#1077#1083#1077#1085#1085#1086#1084#1091
+      OnClick = TBItem2Click
+    end
+    object TBItem3: TTBItem
+      Caption = #1054#1095#1080#1089#1090#1080#1090#1100' '#1092#1080#1083#1100#1090#1088
+      OnClick = TBItem3Click
+    end
+  end
+  object q_PayOnBillSum: TOracleDataSet
+    SQL.Strings = (
+      'SELECT'
+      '  SUM(a.summa) AS summa'
+      'FROM PAYMENTS_ON_BILLS A'
+      'WHERE A.PAYMENTS_ID=0'
+      ''
+      '')
+    QBEDefinition.QBEFieldDefs = {04000000010000000500000053554D4D41010000000000}
+    AutoCalcFields = False
+    QueryAllRecords = False
+    Session = f_main.ora_Session
+    BeforeOpen = q_PayOnBillSumBeforeOpen
+    AfterOpen = q_PayOnBillSumAfterOpen
+    Left = 587
+    Top = 112
+    object q_PayOnBillSumSUMMA: TFloatField
+      FieldName = 'SUMMA'
+    end
+  end
+end

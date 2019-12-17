@@ -1,0 +1,119 @@
+POPUP "&Dateien"
+  MENUITEM "&Dateiattribute ändern...", cm_SetAttrib
+  MENUITEM "&Packen...\tALT+F5", cm_PackFiles
+  MENUITEM "&Entpacken...\tALT+F9", cm_UnpackFiles
+  MENUITEM "&Teste Archiv(e)...\tALT+UMSCH+F9", 518
+  MENUITEM "&Vergleich nach Inhalt...", 2022
+  MENUITEM "Ver&knüpfen...", cm_associate
+  MENUITEM "Eigen&schaften...\tALT+ENTER", cm_versioninfo
+  MENUITEM "Speicher&bedarf ermitteln...", cm_GetFileSpace
+  MENUITEM "&Mehrfach-Umbenenn-Tool...\tSTRG+T", 2400
+  MENUITEM "Komme&ntar bearbeiten...\tSTRG+Z", 2700
+  POPUP "Dr&ucken"
+    MENUITEM "Datei&liste...", 2027
+    MENUITEM "Dateiliste mit &Unterverzeichnissen...", 2028
+    MENUITEM "&Datei-Inhalt\tCtrl+F9", cm_PrintFile
+  END_POPUP
+  MENUITEM SEPARATOR
+  MENUITEM "Datei &aufspalten...", 560
+  MENUITEM "Dateien &zusammenfügen...", 561
+  MENUITEM "Datei &codieren (MIME,UUE,XXE)...", 562
+  MENUITEM "Datei dec&odieren (MIME,UUE,XXE,BinHex)...", 563
+  MENUITEM "Erzeu&ge CRC-Quersummen (im SFV-Format)...", 564
+  MENUITEM "Verifiziere CRC-&Quersummen (aus SFV-Dateien)", 565
+  MENUITEM SEPARATOR
+  MENUITEM "E&xit\tALT+F4", cm_Exit
+END_POPUP
+
+POPUP "&Markieren"
+  MENUITEM "&Gruppe markieren...\tNUM +", cm_spreadselection
+  MENUITEM "Gruppenauswahl &rückgängig...\tNUM -", cm_shrinkselection
+  MENUITEM "Alle Dateien markieren\tSTRG NUM +", cm_selectall
+  MENUITEM "Keine Datei markieren\tSTRG NUM -", cm_Clearall
+  MENUITEM "Aus&wahl umkehren\tNUM *", cm_ExchangeSelection
+  MENUITEM "Auswahl wieder&herstellen\tNUM /", 529
+  MENUITEM SEPARATOR
+  MENUITEM "&Verzeichnisse vergleichen\tUmsch+F2", cm_CompareDirs
+  MENUITEM "Neue &markieren, gleiche verstecken", cm_DirMatch
+END_POPUP
+
+POPUP "&Befehle"
+  MENUITEM "&CD-Verzeichnisbaum...\tALT+F10", cm_CDtree
+  MENUITEM "&Suchen...\tALT+F7", cm_searchfor
+  MENUITEM "Daten&träger benennen...", cm_VolumeId
+  MENUITEM "System-&Information...", cm_sysinfo
+  MENUITEM "Verzeichnisse s&ynchronisieren...", 2020
+  MENUITEM "&Verzeichnisliste\tSTRG+D", 526
+  MENUITEM "&Zurück\tALT+Pfeil links", 570
+  MENUITEM SEPARATOR
+  MENUITEM "&DOS starten", cm_ExecuteDOS
+  MENUITEM SEPARATOR
+  MENUITEM "Zweigansicht (mit &Unterverzeichnissen)\tCtrl+B", 2026
+  MENUITEM "&Öffne Desktop-Verzeichnis", 2121
+  MENUITEM "Hintergrund-Transfermanager...",559
+  MENUITEM SEPARATOR
+  MENUITEM "&Fenster tauschen\tSTRG+U", cm_exchange
+  MENUITEM "Fenster &angleichen", cm_matchsrc
+END_POPUP
+
+POPUP "&Netz"
+  MENUITEM "Netzlauf&werke verbinden...", cm_NetConnect
+  MENUITEM "Netzlaufwerke t&rennen...", cm_NetDisconnect
+  MENUITEM "Frei&geben als...", cm_NetShareDir
+  MENUITEM "Freigabe &beenden...", cm_NetUnshareDir
+  MENUITEM "Zeige administrative Freigaben", 2204
+  MENUITEM SEPARATOR
+  MENUITEM "FT&P Verbinden...\tSTRG+F", 550
+  MENUITEM "FTP &Neue Verbindung...\tSTRG+N", 551
+  MENUITEM "FTP Verbindung tr&ennen\tSTRG+UMSCH+F", 552
+  MENUITEM "FTP Verstec&kte Dateien anzeigen", 553
+  MENUITEM "FTP Dateien aus &Liste herunterladen", 558
+  MENUITEM "P&ORT-Verbindung zu anderem PC...", 2300
+END_POPUP
+
+POPUP "&Ansicht"
+  MENUITEM "&Kurz\tSTRG+F1", cm_srcshort
+  MENUITEM "&Lang\tSTRG+F2", cm_srclong
+  MENUITEM "K&ommentare\tSTRG+Umsch+F2", 300
+  MENUITEM "&Verzeichnisbaum\tSTRG+F8", cm_srcTree
+  MENUITEM "S&chnellansicht\tSTRG+Q", 304
+  MENUITEM "Ve&rtikale Anordnung", 305
+  MENUITEM SEPARATOR
+  MENUITEM "&Alles\tSTRG+F10", cm_srcallfiles
+  MENUITEM "&Programme\tSTRG+F11", cm_srcexecs
+  MENUITEM "*.*", cm_srcuserspec
+  MENUITEM "&Benutzerdefiniert...\tSTRG+F12", cm_srcuserdef
+  MENUITEM "Nur &markierte Dateien", 2023
+  MENUITEM SEPARATOR
+  MENUITEM "Nach &Name\tSTRG+F3", cm_srcbyname
+  MENUITEM "Nach &Erweiterung\tSTRG+F4", cm_srcbyext
+  MENUITEM "Nach &Datum/Zeit\tSTRG+F5", cm_srcbydatetime
+  MENUITEM "Nach &Grösse\tSTRG+F6", cm_srcbysize
+  MENUITEM "&Unsortiert\tSTRG+F7", cm_srcunsorted
+  MENUITEM SEPARATOR
+  MENUITEM "Ab&steigend sortiert", cm_srcnegorder
+  MENUITEM SEPARATOR
+  MENUITEM "&Quelle neu einlesen\tSTRG+R", cm_rereadsource
+END_POPUP
+
+POPUP "&Konfigurieren"
+  MENUITEM "&Einstellungen...", cm_config
+  MENUITEM "B&uttonbar ändern...", cm_ButtonConfig
+  MENUITEM "Einstellungs&dateien direkt ändern...", 581
+  MENUITEM "P&osition speichern", cm_configSavepos
+  MENUITEM "Einstellungen &speichern", 580
+END_POPUP
+
+STARTMENU
+HELP_BREAK
+
+POPUP "&Hilfe"
+  MENUITEM "&Index\tF1", cm_HelpIndex
+  MENUITEM "&Tastatur", cm_keyboard
+  MENUITEM "&Registrier-Info", cm_register
+  MENUITEM "&Homepage von Totalcmd besuchen", 640
+  MENUITEM SEPARATOR
+  MENUITEM "&Über Total Commander...", cm_About
+END_POPUP
+
+

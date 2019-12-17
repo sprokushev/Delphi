@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2005.07.04 10:51:23.250.pas,C:\Borland\projs\cb\newVers\loader.pas=</Transaction>
+    <Transaction>2005.07.04 10:51:23.250.dfm,C:\Borland\projs\cb\newVers\loader.dfm=</Transaction>
+    <Transaction>2005.07.04 10:51:25.250.txvpck,C:\Borland\projs\cb\newVers\ModelSupport\loader\loader.txvpck=</Transaction>
+    <Transaction>2005.07.04 10:51:26.062.txvpck,C:\Borland\projs\cb\newVers\ModelSupport\default.txvpck=</Transaction>
+  </Transactions>
+</BorlandProject>

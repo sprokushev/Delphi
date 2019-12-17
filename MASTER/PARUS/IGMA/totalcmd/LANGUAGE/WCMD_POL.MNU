@@ -1,0 +1,120 @@
+POPUP "Pli&ki"
+  MENUITEM "&ZmieÒ atrybuty...", cm_SetAttrib
+  MENUITEM "S&pakuj...\tALT+F5", cm_PackFiles
+  MENUITEM "&Rozpakuj...\tALT+F9", cm_UnpackFiles
+  MENUITEM "Testuj archiwum(a)\tALT+SHIFT+F9",518
+  MENUITEM "PorÛw&naj wg zawartoúci...", 2022
+  MENUITEM "&Skojarz z...", cm_associate
+  MENUITEM "&W≥aúciwoúci...\tALT+ENTER", cm_versioninfo
+  MENUITEM "&Oblicz zajmowanπ przestrzeÒ...", cm_GetFileSpace
+  MENUITEM "NarzÍdzie W&ielokr. Zamiany...\tCtrl+T", 2400
+  MENUITEM "Edycja ko&mentarz...\tCtrl+Z", 2700
+  POPUP "&Drukuj"
+    MENUITEM "Pliki &lista...",2027
+    MENUITEM "Pliki lista z &podkatalogami...", 2028
+    MENUITEM "Plik zawar&toúÊ\tCtrl+F9", cm_Printfile
+  MENUITEM "&Drukuj\tCTRL+F9", cm_PrintFile
+  END_POPUP
+  MENUITEM SEPARATOR
+  MENUITEM "Podzie&l plik...", 560
+  MENUITEM "Sc&alaj pliki...", 561
+  MENUITEM "Za&koduj plik(i) (MIME,UUE,XXE)...", 562
+  MENUITEM "D&ekoduj plik(i) (MIME,UUE,XXE,BinHex)...", 563
+  MENUITEM "UtwÛrz sumy kontrolne CRC (SFV format)...", 564
+  MENUITEM "Wer&yfikuj sumy kontrolne CRC (z plikÛw SFV)", 565
+  MENUITEM SEPARATOR
+  MENUITEM "ZakoÒ&cz\tALT+F4", 24340
+END_POPUP
+
+POPUP "&Zaznacz"
+  MENUITEM "Zaznacz &grupÍ...\tSzary +", cm_spreadselection
+  MENUITEM "Odznacz grupÍ...\tSzary -", cm_shrinkselection
+  MENUITEM "Zaznacz wszystko\tCTRL Szary +", cm_selectall
+  MENUITEM "Odznacz wszystko\tCTRL Szary -", cm_Clearall
+  MENUITEM "&OdwrÛÊ zaznaczenie\tSzary *", cm_ExchangeSelection
+  MENUITEM "P&rzywrÛÊ wybÛr\tSzary /", 529
+  MENUITEM SEPARATOR
+  MENUITEM "&PorÛwnaj katalogi\tShift+F2", cm_CompareDirs
+  MENUITEM "&Zaznacz nowe, ukryj te same pliki", cm_DirMatch
+END_POPUP
+
+POPUP "Pol&ecenia"
+  MENUITEM "CD &drzewo...\tALT+F10", cm_CDtree
+  MENUITEM "&Szukaj...\tALT+F7", cm_searchfor
+  MENUITEM "&Etykieta dysku...", cm_VolumeId
+  MENUITEM "&Informacja o systemie...", cm_sysinfo
+  MENUITEM "S&ynchronizuj katalogi...", 2020
+  MENUITEM "Aktualna lista &katalogÛw\tCTRL+D", 526
+  MENUITEM "W&rÛÊ\tALT+Lewa Strza≥ka", 570
+  MENUITEM SEPARATOR
+  MENUITEM "Uruchom &Tryb MS-DOS", cm_ExecuteDOS
+  MENUITEM SEPARATOR
+  MENUITEM "Widok g&a≥Ízi (z podkatalogami)\tCtrl+B", 2026
+  MENUITEM "&OtwÛrz folder Pulpit", 2121
+  MENUITEM "&Menadøer wysy≥ania w tle...",559
+  MENUITEM SEPARATOR
+  MENUITEM "èrÛd≥owy&<->Docelowy\tCTRL+U", cm_exchange
+  MENUITEM "èrÛd≥owy&=Docelowy", cm_matchsrc
+END_POPUP
+
+POPUP "&SieÊ"
+  MENUITEM "&Po≥πczenia sieciowe...", cm_NetConnect
+  MENUITEM "Od≥πc&z dyski sieciowe...", cm_NetDisconnect
+  MENUITEM "UdostÍpnij a&ktualny katalog...", cm_NetShareDir
+  MENUITEM "Z&akoÒcz udostÍpnianie...", cm_NetUnshareDir
+  MENUITEM "Pokaø wspÛ≥dzielone admina", 2204
+  MENUITEM SEPARATOR
+  MENUITEM "&FTP Po≥πczenie...\tCTRL+F", 550
+  MENUITEM "FTP &Nowe po≥πczenie...\tCTRL+N", 551
+  MENUITEM "FTP &Roz≥πcz\tCTRL+SHIFT+F", 552
+  MENUITEM "FTP P&okaø ukryte pliki", 553
+  MENUITEM "FTP åciπgnij z listy...", 558
+  MENUITEM "PORT pod≥πczenie do innego PC...", 2300
+END_POPUP
+
+POPUP "P&odglπd"
+  MENUITEM "&KrÛtki\tCTRL+F1", cm_srcshort
+  MENUITEM "&Pe≥ny\tCTRL+F2", cm_srclong
+  MENUITEM "Ko&mentarz\tCtrl+Shift+F2", 300
+  MENUITEM "&Drzewo\tCTRL+F8", cm_srcTree
+  MENUITEM "Szybki podglπd\tCTRL+Q",304
+  MENUITEM "Pionow&e u≥oøenie", 305
+  MENUITEM SEPARATOR
+  MENUITEM "W&szystkie pliki\tCTRL+F10", cm_srcallfiles
+  MENUITEM "P&rogramy\tCTRL+F11", cm_srcexecs
+  MENUITEM "*.*", cm_srcuserspec
+  MENUITEM "&Uøytkownika...\tCTRL+F12", cm_srcuserdef
+  MENUITEM "Tylk&o wybrane pliki", 2023
+  MENUITEM SEPARATOR
+  MENUITEM "&Nazwa\tCTRL+F3", cm_srcbyname
+  MENUITEM "Ro&zszerzenie\tCTRL+F4", cm_srcbyext
+  MENUITEM "Cz&as\tCTRL+F5", cm_srcbydatetime
+  MENUITEM "&WielkoúÊ\tCTRL+F6", cm_srcbysize
+  MENUITEM "N&ie posortowane\tCTRL+F7", cm_srcunsorted
+  MENUITEM SEPARATOR
+  MENUITEM "Odwro&tny porzπdek", cm_srcnegorder
+  MENUITEM SEPARATOR
+  MENUITEM "Od&czytaj ponownie ürÛd≥owy\tCTRL+R", cm_rereadsource
+END_POPUP
+
+POPUP "Kon&figuracja"
+  MENUITEM "&Ustawienia g≥Ûwne...", cm_config
+  MENUITEM "ZmieÒ pa&sek narzÍdzi...", cm_ButtonConfig
+  MENUITEM "ZmieÒ &bezpoúrednie ustawienia plikÛw...", 581
+  MENUITEM "&Zachowaj", cm_configSavepos
+  MENUITEM "Za&pisz Ustawienia", 580
+END_POPUP
+
+STARTMENU
+
+HELP_BREAK
+
+POPUP "Pomo&c"
+  MENUITEM "&Indeks\tF1", cm_HelpIndex
+  MENUITEM "&Klawiatura", cm_keyboard
+  MENUITEM "&Rejestracja programu", cm_register
+  MENUITEM "&Odwiedü stronÍ sieciowπ Totalcmd", 640
+  MENUITEM SEPARATOR
+  MENUITEM "O &Total Commanderze...", cm_About
+END_POPUP
+

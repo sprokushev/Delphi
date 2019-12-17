@@ -1,0 +1,15 @@
+program mtrload;
+
+uses
+  ExceptionLog,
+  Forms,
+  mtrmain in 'MTR\mtrmain.pas' {f_mtrload},
+  mtredit in 'MTR\mtredit.pas' {F_mtredit};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(Tf_mtrload, f_mtrload);
+  Application.Run;
+end.

@@ -1,0 +1,149 @@
+Reading INI.
+An error has occurred during program execution.
+Please read the following information for further details.
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Wed, 21 Mar 2012 10:39:37 +0400
+  1.2 Name/Description: Exp2isu.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+----------------------------------------------
+  2.1 Date   : Wed, 21 Mar 2012 10:39:38 +0400
+  2.2 Address: 4002F63A
+  2.3 Module : rtl70.bpl
+  2.4 Type   : EListError
+  2.5 Message: List index out of bounds (1).
+
+Computer:
+-----------------------------------
+  4.1 Name        : UHT-PROKUSHEVSV
+  4.2 User        : sprokushev
+  4.3 Total Memory: 2048 Mb
+  4.4 Free Memory : 1094 Mb
+  4.5 Total Disk  : 200,99 Gb
+  4.6 Free Disk   : 32,87 Gb
+
+Operating System:
+----------------------------------
+  5.1 Type    : Microsoft Windows 
+  5.2 Build # : 7601
+  5.3 Update  : Service Pack 1
+  5.4 Language: Русский (Россия)
+
+Call Stack Information:
+---------------------------------------------------------------------
+|Address |Module      |Unit       |Class      |Procedure/Method|Line|
+---------------------------------------------------------------------
+|4002F50C|rtl70.bpl   |Classes.pas|TList      |Error           |    |
+|4002F571|rtl70.bpl   |Classes.pas|TList      |Error           |    |
+|4002F544|rtl70.bpl   |Classes.pas|TList      |Error           |    |
+|4002F63A|rtl70.bpl   |Classes.pas|TList      |Get             |    |
+|4002F620|rtl70.bpl   |Classes.pas|TList      |Get             |    |
+|40030F57|rtl70.bpl   |Classes.pas|TCollection|GetItem         |    |
+|40030F4C|rtl70.bpl   |Classes.pas|TCollection|GetItem         |    |
+|407DADFC|adortl70.bpl|Adodb.pas  |TParameters|GetItem         |    |
+|00423460|Exp2isu.exe |Exp2isu.dpr|           |                |132 |
+|75DAED6A|kernel32.dll|           |           |GetDriveTypeW   |    |
+---------------------------------------------------------------------
+
+Modules Information:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name                |Description                                                   |Version           |Size   |Path                                                                                                          |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|Exp2isu.exe         |                                                              |                  |197632 |U:\MASTER\Experion2ISU\SQLversion\Experion2ISU                                                                |
+|40000000|rtl70.bpl           |Borland Component Package                                     |7.0.8.1           |783360 |U:\MASTER\Experion2ISU\SQLversion\Experion2ISU                                                                |
+|40330000|dbrtl70.bpl         |Borland Database Component Package                            |7.0.8.2           |258560 |U:\MASTER\Experion2ISU\SQLversion\Experion2ISU                                                                |
+|407D0000|adortl70.bpl        |Borland ADO DB Component Package                              |7.0.4.453         |148992 |U:\MASTER\Experion2ISU\SQLversion\Experion2ISU                                                                |
+|542A0000|msado15.dll         |ActiveX Data Objects                                          |6.1.7601.17514    |1019904|C:\Program Files\Common Files\System\ado                                                                      |
+|543B0000|sqloledb.dll        |OLE DB Provider for SQL Server                                |6.1.7601.17514    |921600 |C:\Program Files\Common Files\System\Ole DB                                                                   |
+|55600000|FwcWsp.dll          |Microsoft Firewall Client Windows Sockets 2 Service Provider  |4.0.3442.654      |197440 |C:\Program Files\Microsoft Firewall Client 2004                                                               |
+|590C0000|comsvcs.dll         |COM+ Services                                                 |2001.12.8530.16385|1242112|C:\Windows\system32                                                                                           |
+|59200000|DBNETLIB.DLL        |Winsock Oriented Net DLL for SQL Clients                      |6.1.7600.16385    |135168 |C:\Windows\system32                                                                                           |
+|59A40000|oledb32.dll         |OLE DB Core Services                                          |6.1.7601.17514    |864256 |C:\Program Files\Common Files\System\Ole DB                                                                   |
+|68DC0000|MSDATL3.dll         |OLE DB Implementation Support Routines                        |6.1.7600.16385    |98304  |C:\Program Files\Common Files\System\Ole DB                                                                   |
+|692C0000|OLEDB32R.DLL        |Ресурсы основных служб OLE DB                                 |6.1.7600.16385    |81920  |C:\Program Files\Common Files\System\Ole DB                                                                   |
+|6BD20000|MSDART.DLL          |OLE DB Runtime Routines                                       |6.1.7600.16385    |126976 |C:\Windows\system32                                                                                           |
+|6E600000|mpr.dll             |Библиотека маршрутизации для нескольких служб доступа         |6.1.7600.16385    |64000  |C:\Windows\system32                                                                                           |
+|6F230000|comctl32.dll        |Библиотека общих элементов управления                         |5.82.7601.17514   |530432 |C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.17514_none_ec83dffa859149af|
+|6FE80000|security.dll        |Security Support Provider Interface                           |6.1.7600.16385    |4608   |C:\Windows\system32                                                                                           |
+|700C0000|ntdsapi.dll         |Active Directory Domain Services API                          |6.1.7600.16385    |90112  |C:\Windows\system32                                                                                           |
+|70690000|wsock32.dll         |Windows Socket 32-Bit DLL                                     |6.1.7600.16385    |15360  |C:\Windows\system32                                                                                           |
+|737F0000|wkscli.dll          |Workstation Service Client DLL                                |6.1.7601.17514    |47104  |C:\Windows\system32                                                                                           |
+|73800000|NETAPI32.dll        |Net Win32 API DLL                                             |6.1.7601.17514    |56832  |C:\Windows\system32                                                                                           |
+|73B40000|ATL.DLL             |ATL Module for Windows XP (Unicode)                           |3.5.2284.0        |70144  |C:\Windows\system32                                                                                           |
+|740A0000|uxtheme.dll         |Библиотека тем UxTheme (Microsoft)                            |6.1.7600.16385    |249856 |C:\Windows\system32                                                                                           |
+|740E0000|Comctl32.dll        |Библиотека элементов управления взаимодействия с пользователем|6.10.7601.17514   |1680896|C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_41e6975e2bd6f2b2 |
+|74980000|wshtcpip.dll        |Библиотека DLL помощника службы Winsock2 (TL/IPv4)            |6.1.7600.16385    |9216   |C:\Windows\System32                                                                                           |
+|74990000|version.dll         |Version Checking and File Installation Libraries              |6.1.7600.16385    |21504  |C:\Windows\system32                                                                                           |
+|74B50000|bcryptprimitives.dll|Windows Cryptographic Primitives Library                      |6.1.7600.16385    |249680 |C:\Windows\system32                                                                                           |
+|74BF0000|credssp.dll         |Credential Delegation Security Package                        |6.1.7601.17514    |17408  |C:\Windows\system32                                                                                           |
+|74C10000|rsaenh.dll          |Microsoft Enhanced Cryptographic Provider                     |6.1.7600.16385    |242936 |C:\Windows\system32                                                                                           |
+|74C80000|schannel.DLL        |TLS / SSL Security Provider                                   |6.1.7601.17725    |224768 |C:\Windows\system32                                                                                           |
+|74DD0000|msv1_0.DLL          |Microsoft Authentication Package v1.0                         |6.1.7601.17514    |257024 |C:\Windows\system32                                                                                           |
+|74E30000|mswsock.dll         |Расширение поставщика службы API Microsoft Windows Sockets 2.0|6.1.7601.17514    |232448 |C:\Windows\system32                                                                                           |
+|74E80000|netutils.dll        |Net Win32 API Helpers DLL                                     |6.1.7601.17514    |22528  |C:\Windows\system32                                                                                           |
+|74E90000|srvcli.dll          |Server Service Client DLL                                     |6.1.7601.17514    |90112  |C:\Windows\system32                                                                                           |
+|74F10000|CRYPTSP.dll         |Cryptographic Service Provider API                            |6.1.7600.16385    |78848  |C:\Windows\system32                                                                                           |
+|74FC0000|SECUR32.DLL         |Security Support Provider Interface                           |6.1.7601.17725    |22016  |C:\Windows\system32                                                                                           |
+|75030000|bcrypt.dll          |Windows Cryptographic Primitives Library                      |6.1.7600.16385    |80384  |C:\Windows\system32                                                                                           |
+|75050000|ncrypt.dll          |Криптографическая библиотека (Windows)                        |6.1.7600.16385    |219136 |C:\Windows\system32                                                                                           |
+|75110000|cryptdll.dll        |Cryptography Manager                                          |6.1.7600.16385    |58880  |C:\Windows\system32                                                                                           |
+|752F0000|SSPICLI.DLL         |Security Support Provider Interface                           |6.1.7601.17725    |100352 |C:\Windows\system32                                                                                           |
+|75360000|CRYPTBASE.dll       |Base cryptographic API DLL                                    |6.1.7600.16385    |36864  |C:\Windows\system32                                                                                           |
+|75400000|RpcRtRemote.dll     |Remote RPC Extension                                          |6.1.7601.17514    |46080  |C:\Windows\system32                                                                                           |
+|75410000|profapi.dll         |User Profile Basic API                                        |6.1.7600.16385    |31744  |C:\Windows\system32                                                                                           |
+|75480000|MSASN1.dll          |ASN.1 Runtime APIs                                            |6.1.7601.17514    |34304  |C:\Windows\system32                                                                                           |
+|75570000|KERNELBASE.dll      |Библиотека клиента Windows NT BASE API                        |6.1.7601.17651    |290816 |C:\Windows\system32                                                                                           |
+|755C0000|CRYPT32.dll         |API32 криптографии                                            |6.1.7601.17514    |1154048|C:\Windows\system32                                                                                           |
+|75710000|user32.dll          |Многопользовательская библиотека клиента USER API Windows     |6.1.7601.17514    |811520 |C:\Windows\system32                                                                                           |
+|75900000|LPK.dll             |Language Pack                                                 |6.1.7600.16385    |26624  |C:\Windows\system32                                                                                           |
+|75910000|IMM32.DLL           |Multi-User Windows IMM32 API Client DLL                       |6.1.7601.17514    |118272 |C:\Windows\system32                                                                                           |
+|75930000|RPCRT4.dll          |Библиотека удаленного вызова процедур                         |6.1.7601.17514    |653312 |C:\Windows\system32                                                                                           |
+|759E0000|WS2_32.dll          |32-разрядная библиотека Windows Socket 2.0                    |6.1.7601.17514    |206848 |C:\Windows\system32                                                                                           |
+|75A80000|GDI32.dll           |GDI Client DLL                                                |6.1.7601.17514    |304640 |C:\Windows\system32                                                                                           |
+|75B00000|oleaut32.dll        |                                                              |6.1.7601.17676    |571904 |C:\Windows\system32                                                                                           |
+|75CB0000|msvcrt.dll          |Windows NT CRT DLL                                            |7.0.7600.16385    |690688 |C:\Windows\system32                                                                                           |
+|75D60000|kernel32.dll        |Библиотека клиента Windows NT BASE API                        |6.1.7601.17651    |868352 |C:\Windows\system32                                                                                           |
+|75E40000|CLBCatQ.DLL         |COM+ Configuration Catalog                                    |2001.12.8530.16385|522240 |C:\Windows\system32                                                                                           |
+|76160000|SHLWAPI.dll         |Библиотека небольших программ оболочки                        |6.1.7601.17514    |350208 |C:\Windows\system32                                                                                           |
+|761C0000|MSCTF.dll           |Серверная библиотека MSCTF                                    |6.1.7600.16385    |828928 |C:\Windows\system32                                                                                           |
+|76430000|USP10.dll           |Uniscribe Unicode script processor                            |1.626.7601.17514  |626176 |C:\Windows\system32                                                                                           |
+|77120000|ole32.dll           |Microsoft OLE для  Windows                                    |6.1.7601.17514    |1414144|C:\Windows\system32                                                                                           |
+|77280000|ntdll.dll           |Системная библиотека NT                                       |6.1.7601.17725    |1288472|C:\Windows\SYSTEM32                                                                                           |
+|773D0000|NSI.dll             |NSI User-mode interface DLL                                   |6.1.7600.16385    |8704   |C:\Windows\system32                                                                                           |
+|773E0000|sechost.dll         |Host for SCM/SDDL/LSA Lookup APIs                             |6.1.7600.16385    |92160  |C:\Windows\SYSTEM32                                                                                           |
+|77400000|PSAPI.DLL           |Process Status Helper                                         |6.1.7600.16385    |6144   |C:\Windows\system32                                                                                           |
+|77410000|advapi32.dll        |Расширенная библиотека API Windows 32                         |6.1.7601.17514    |640512 |C:\Windows\system32                                                                                           |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012FBD4: 00000001   4002F63A: E8 05 FF FF FF 8B 43 04 8B 04 B0 89 04 24 8B 04  ......C......$..
+0012FBD8: 0012FB00   4002F64A: 24 5A 5E 5B C3 90 8B 50 0C 83 FA 40 7E 0E 8B CA  $Z^[...P...@~...
+0012FBDC: 00000001   4002F65A: 85 C9 79 03 83 C1 03 C1 F9 02 EB 11 83 FA 08 7E  ..y............~
+0012FBE0: 400259C0   4002F66A: 07 B9 10 00 00 00 EB 05 B9 04 00 00 00 03 CA 8B  ................
+0012FBE4: 4002F576   4002F67A: D1 E8 AC 01 00 00 C3 8D 40 00 53 33 C9 EB 01 41  ........@.S3...A
+0012FBE8: 0012FC30   4002F68A: 3B 48 08 7D 08 8B 58 04 3B 14 8B 75 F2 3B 48 08  ;H.}..X.;..u.;H.
+0012FBEC: 4002F58C   4002F69A: 75 03 83 C9 FF 8B C1 5B C3 90 53 56 57 8B F9 8B  u......[..SVW...
+0012FBF0: 0012FC00   4002F6AA: F2 8B D8 85 F6 7C 05 3B 73 08 7E 0F 8B 15 FC 61  .....|.;s.~....a
+0012FBF4: 00000001   4002F6BA: 07 40 8B CE 8B 03 E8 7F FE FF FF 8B 43 08 3B 43  .@..........C.;C
+0012FBF8: 01221398   4002F6CA: 0C 75 06 8B C3 8B 10 FF 12 8B 43 08 3B F0 7D 19  .u........C.;.}.
+0012FBFC: 01223B54   4002F6DA: 2B C6 8B C8 C1 E1 02 8B 43 04 8D 54 B0 04 8B 43  +.......C..T...C
+0012FC00: 0012FF88   4002F6EA: 04 8D 04 B0 E8 B9 41 FD FF 8B 43 04 89 3C B0 FF  ......A...C..<..
+0012FC04: 4002F63F   4002F6FA: 43 08 85 FF 74 0B 33 C9 8B D7 8B C3 8B 18 FF 53  C...t.3........S
+0012FC08: 00000000   4002F70A: 04 5F 5E 5B C3 90 53 51 8B D8 8B 53 08 4A 8B C3  ._^[..SQ...S.J..
+0012FC0C: 00000001   4002F71A: E8 01 FF FF FF 89 04 24 8B 04 24 5A 5B C3 53 56  .......$..$Z[.SV
+0012FC10: 01221374   4002F72A: 57 51 8B F1 8B FA 8B D8 3B F7 74 49 85 F6 7C 05  WQ......;.tI..|.
+

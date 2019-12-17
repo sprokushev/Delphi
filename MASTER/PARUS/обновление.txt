@@ -1,0 +1,2 @@
+—жимаетс€ load.exe и копируетс€ в u:\master\parus
+пользователю из папки tmp удалить load.exe

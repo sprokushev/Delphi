@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="0f24wjc4o_v">
+    <property name="$name" value="ttn_igma" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="delphi:e_class:src:Load:ttn_igma.TfrmTTNigma">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.Panel1" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.Panel2" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.dbgTTN17_cond" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.ActionManager1" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.acFilter" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.acLoad" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.BitBtn2" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.qLink" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.Panel3" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.Splitter3" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.oraParus" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.oraCatalog" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.dsCatalog" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.dsTTN" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.dsTTN17specs" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.Splitter1" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.dbgTTN17_new" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.oraInvIns" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.oraInvsIns" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.Splitter4" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.mLog" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.tTTN" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.tTTNspecs" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.qLinkIn" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.qLinkOut" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.qInS" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.oraFindPack" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.adoMain" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.PropStorageEh1" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.RegPropStorageManEh1" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.GroupBox1" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.Label1" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.edPath" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.BitBtn1" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.oraS" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.mteCatalog" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.mteCatalogRN" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.mteCatalogCRN" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.mteCatalogNAME" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.dsdCatalog" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_igma.TfrmTTNigma.DBGridEh1" />
+      <reference referencedUin="delphi:e_method:src:Load:ttn_igma.TfrmTTNigma.DBGridEh1Columns0GetCellParams" />
+      <reference referencedUin="delphi:e_method:src:Load:ttn_igma.TfrmTTNigma.acFilterExecute" />
+      <reference referencedUin="delphi:e_method:src:Load:ttn_igma.TfrmTTNigma.FormCreate" />
+      <reference referencedUin="delphi:e_method:src:Load:ttn_igma.TfrmTTNigma.FormClose" />
+      <reference referencedUin="delphi:e_method:src:Load:ttn_igma.TfrmTTNigma.acLoadExecute" />
+      <reference referencedUin="delphi:e_method:src:Load:ttn_igma.TfrmTTNigma.tvCatalogGetImageIndex" />
+      <reference referencedUin="delphi:e_method:src:Load:ttn_igma.TfrmTTNigma.LoadParus" />
+    </reference>
+  </view>
+</nodeSet>

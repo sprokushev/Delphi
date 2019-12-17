@@ -1,0 +1,12 @@
+[System]
+Name=ТЕС
+Description=Тестовая система
+Client=400
+[User]
+Name=VTAUBIN
+Language=RU
+[Function]
+Title=Ввод ТТН и реестров отгрузки
+Command=ZTTN
+[Configuration]
+WorkDir=C:\Documents and Settings\vtaubin.SNP\SapWorkDir

@@ -1,0 +1,492 @@
+unit MO_UvedVozNew;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Oracle, ActnList, XPStyleActnCtrls, ActnMan, DB, OracleData,
+  ComCtrls, StdCtrls, Buttons, ToolWin, ActnCtrls, Grids, DBGridEh, DateUtils,
+  PropFilerEh, PropStorageEh, TB2Item, Menus,DBGridEhImpExp,RxShell,
+  RxLookup, EhLibDOA, MO_UVED, SvedIn, GridsEh;
+
+
+type
+  Tf_UvedVozNew = class(TForm)
+    GridVagons: TDBGridEh;
+    ActionToolBar1: TActionToolBar;
+    GroupBox1: TGroupBox;
+    Label2: TLabel;
+    Label1: TLabel;
+    btSetNum: TSpeedButton;
+    edNum: TEdit;
+    edDate: TDateTimePicker;
+    q_temp_uved: TOracleDataSet;
+    q_temp_uvedUVED_POS: TFloatField;
+    q_temp_uvedREESTR_ID: TFloatField;
+    q_temp_uvedNOM_ZD: TStringField;
+    q_temp_uvedSTAN_NAME: TStringField;
+    q_temp_uvedPOLUCH_NAME: TStringField;
+    q_temp_uvedNUM_CIST: TStringField;
+    q_temp_uvedVAGOWNER_NAME: TStringField;
+    q_temp_uvedVES: TFloatField;
+    q_temp_uvedDATE_OFORML: TDateTimeField;
+    q_temp_uvedPROD_NAME: TStringField;
+    q_temp_uvedSVED_NUM: TFloatField;
+    q_temp_uvedPOD_NUM: TFloatField;
+    q_temp_uvedVETKA_OTP_NAME: TStringField;
+    q_temp_uvedSVED_POS: TFloatField;
+    q_temp_uvedSVED_DATE: TDateTimeField;
+    q_temp_uvedPASP_NUM: TStringField;
+    q_temp_uvedVAG_STATUS: TStringField;
+    q_temp_uvedNAKL_NUM: TFloatField;
+    q_temp_uvedVES_ALL: TFloatField;
+    q_temp_uvedVES_CIST: TFloatField;
+    q_temp_uvedVES_UPAK: TFloatField;
+    ds_temp_uved: TDataSource;
+    pkgFor_uved_voz: TOraclePackage;
+    amUved: TActionManager;
+    acUvedAdd: TAction;
+    acUvedSave: TAction;
+    acUvedDel: TAction;
+    acExit: TAction;
+    pkgFor_documents: TOraclePackage;
+    q_uved: TOracleDataSet;
+    q_uvedID: TFloatField;
+    q_uvedUVED_NUM: TFloatField;
+    q_uvedUVED_DATE: TDateTimeField;
+    q_uvedLOAD_TYPE_ID: TFloatField;
+    q_uvedMESTO_ID: TFloatField;
+    q_uvedLUKOMA_NUM: TFloatField;
+    q_uvedMPS_NUM: TFloatField;
+    q_uvedCHER_NUM: TFloatField;
+    q_uvedVETL_NUM: TFloatField;
+    PropStorageEh1: TPropStorageEh;
+    PopupVagons: TTBPopupMenu;
+    TBItem2: TTBItem;
+    TBSeparatorItem1: TTBSeparatorItem;
+    TBItem1: TTBItem;
+    SaveDialog1: TSaveDialog;
+    q_reestr: TOracleDataSet;
+    q_reestrID: TFloatField;
+    q_reestrSVED_IN_ID: TStringField;
+    q_reestrMESTO_ID: TIntegerField;
+    q_reestrTEX_PD_ID: TFloatField;
+    q_reestrGROTP_ID: TFloatField;
+    q_reestrSTAN_OTP_ID: TFloatField;
+    q_reestrFORMNAKL_ID: TIntegerField;
+    q_reestrNUM_KVIT: TFloatField;
+    q_reestrDATE_KVIT: TDateTimeField;
+    q_reestrPASP_NUM_KVIT: TStringField;
+    q_reestrREZ_NUM_KVIT: TStringField;
+    q_reestrPASP_DATE_KVIT: TDateTimeField;
+    q_reestrVZLIV_KVIT: TIntegerField;
+    q_reestrTEMPER_KVIT: TFloatField;
+    q_reestrPL_KVIT: TFloatField;
+    q_reestrVES_KVIT: TFloatField;
+    q_reestrTARIF: TFloatField;
+    q_reestrTARIF_GUARD: TFloatField;
+    q_reestrDATE_IN_STAN: TDateTimeField;
+    q_reestrDATE_OTGR: TDateTimeField;
+    q_reestrNUM_CIST: TStringField;
+    q_reestrVAGONTYPE_ID: TIntegerField;
+    q_reestrKALIBR_ID: TStringField;
+    q_reestrVES_CIST: TFloatField;
+    q_reestrVAGOWNER_ID: TIntegerField;
+    q_reestrCAPACITY: TStringField;
+    q_reestrPLOMBA1: TStringField;
+    q_reestrPLOMBA2: TStringField;
+    q_reestrVZLIV: TIntegerField;
+    q_reestrTEMPER: TFloatField;
+    q_reestrFAKT_PL: TFloatField;
+    q_reestrVES: TFloatField;
+    q_reestrVES_NETTO: TFloatField;
+    q_reestrDATE_VOZ: TDateTimeField;
+    q_reestrKVIT_VOZ: TStringField;
+    q_reestrSUM_VOZ: TFloatField;
+    q_reestrSTAN_VOZ_ID: TFloatField;
+    q_reestrSVED_POS: TIntegerField;
+    q_reestrEMPTY_VOZ: TIntegerField;
+    q_reestrVOLUME: TFloatField;
+    q_reestrVOLUME15: TFloatField;
+    q_reestrCTLV: TFloatField;
+    q_reestrGOST_ID: TIntegerField;
+    q_reestrZPU_TYPE1: TFloatField;
+    q_reestrZPU_TYPE2: TFloatField;
+    q_reestrBAD_NUM: TIntegerField;
+    q_reestrNAKL_ID: TFloatField;
+    q_reestrNAKL_POS: TIntegerField;
+    q_reestrPROD_ID_NPR: TStringField;
+    Label5: TLabel;
+    lc_operator: TRxDBLookupCombo;
+    DBGridEh1: TDBGridEh;
+    ds_operator: TDataSource;
+    q_operator: TOracleDataSet;
+    q_uvedOPERSGS_ID: TFloatField;
+    q_uvedPROD_ID_NPR: TStringField;
+    q_reestrOSTAT: TIntegerField;
+    q_reestrUVED_ID: TIntegerField;
+    q_reestrUVED_POS: TIntegerField;
+    Button1: TButton;
+    acUvedPrint: TAction;
+    acAktPrint: TAction;
+    procedure FormActivate(Sender: TObject);
+    procedure acUvedDelExecute(Sender: TObject);
+    procedure acExitExecute(Sender: TObject);
+    procedure acUvedSaveExecute(Sender: TObject);
+    procedure acUvedAddExecute(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure CheckUvedDate(Sender: TObject);
+    procedure btSetNumClick(Sender: TObject);
+    procedure edNumChange(Sender: TObject);
+    procedure TBItem2Click(Sender: TObject);
+    procedure TBItem1Click(Sender: TObject);
+    procedure q_temp_uvedAfterPost(DataSet: TDataSet);
+    procedure Button1Click(Sender: TObject);
+    procedure acUvedPrintExecute(Sender: TObject);
+    procedure acAktPrintExecute(Sender: TObject);
+  private
+    { Private declarations }
+    CurrentDate:TDateTime;
+    ProdIdNpr:string;
+    IsSaved:boolean;
+  public
+    { Public declarations }
+    ParentFormName:string;
+    ParentFormUved: Tf_Uved;
+    ParentFormSved: Tf_SvedIn;
+    { Public declarations }
+    DocMestoId:integer; // Место отгрузки
+    DocLoadTypeId:integer; // Тип транспортировки
+    DocType:integer; // Тип документа
+    DocMode:integer; // 1-Первоначальный ввод, 2-Раскредитовывание
+
+    EditId:double;
+    ReestrId:double;
+    EditMode:integer; // режим 0-добавление, 1-редактирование, 2-просмотр
+  end;
+
+var
+  f_UvedVozNew: Tf_UvedVozNew;
+
+implementation
+
+{$R *.dfm}
+uses KlsMisc2, ForSESS, main, ForSystem, MO_NaklAddVagon, ForDB, ForTemp,
+  ForFiles;
+
+procedure Tf_UvedVozNew.FormActivate(Sender: TObject);
+begin
+  // Сессия
+  ParentFormSved:=Tf_SvedIn(owner);
+  ParentFormUved:=Tf_Uved(owner);
+  if ParentFormName='UVED' then
+  Begin
+    pkgFOR_DOCUMENTS.Session:=ParentFormUved.ora_Session;
+    pkgFOR_UVED_VOZ.Session:=ParentFormUved.ora_Session;
+    q_uved.Session:=ParentFormUved.ora_Session;
+    q_temp_uved.Session:=ParentFormUved.ora_Session;
+    q_reestr.Session:=ParentFormUved.ora_Session;
+    q_operator.Session:=ParentFormUved.ora_Session;
+  end
+  else
+  Begin
+    pkgFOR_DOCUMENTS.Session:=ParentFormSved.ora_Session;
+    pkgFOR_UVED_VOZ.Session:=ParentFormSved.ora_Session;
+    q_uved.Session:=ParentFormSved.ora_Session;
+    q_temp_uved.Session:=ParentFormSved.ora_Session;
+    q_reestr.Session:=ParentFormSved.ora_Session;
+    q_operator.Session:=ParentFormSved.ora_Session;
+  end;
+
+  CurrentDate:=Now-1;
+//Открытие датасетов
+  f_db.ReQuery(q_operator,false);
+
+  q_reestr.Close;
+  q_reestr.SetVariable('ID',ReestrID);
+  f_db.ReQuery(q_reestr,false);
+
+  if not q_reestr.IsEmpty then
+  Begin
+    ProdIdNpr:=q_reestrPROD_ID_NPR.AsString;
+  end;
+
+  lc_operator.KeyValue := F_ForSystem.StrToReal(F_main.GetApplVari('LAST_MASTER_SGS'));
+
+  // Активация
+  if EditMode=0 then
+  Begin
+    Caption:='Формирование нового уведомления';
+    edDate.DateTime:=DateOf(Now);
+  end;
+
+  if EditMode=1 then
+  Begin
+    Caption:='Редактирование уведомления';
+    q_uved.Close;
+    q_uved.SetVariable('UVED_ID',EditID);
+    f_db.ReQuery(q_uved,false);
+
+    edNum.Text:=q_uvedUVED_NUM.AsString;
+    edDate.DateTime:=DateOf(q_uvedUVED_DATE.Value);
+
+    lc_operator.KeyValue:=q_uvedOPERSGS_ID.AsFloat;
+    ProdIdNpr:=q_uvedPROD_ID_NPR.AsString;
+  end;
+
+  if EditMode=2 then
+  Begin
+    Caption:='Просмотр уведомления';
+    q_uved.Close;
+    q_uved.SetVariable('UVED_ID',EditID);
+    f_db.ReQuery(q_uved,false);
+
+    edNum.Text:=q_uvedUVED_NUM.AsString;
+    edDate.DateTime:=DateOf(q_uvedUVED_DATE.Value);
+
+    lc_operator.KeyValue:=q_uvedOPERSGS_ID.AsFloat;
+    ProdIdNpr:=q_uvedPROD_ID_NPR.AsString;
+  end;
+
+  //заполним список вагонов
+  q_temp_uved.Close;
+  try
+    pkgFor_uved_voz.CallProcedure('fill_temp_uved',[EditId,ReestrId,DocMestoId,DocLoadTypeId]);
+  except
+    on E: Exception do
+    Begin
+      // Отобразим ошибку
+      f_main.ApplSession.WriteToLog(amFull,'UvedVozNew',sesError,E.Message,0,'');
+      exit;
+    end;
+  end;
+  f_db.ReQuery(q_temp_uved,false);
+
+  // Проверка даты
+  CheckUvedDate(Sender);
+
+  f_db.SetUserGrants(amUved);
+
+  IsSaved:=true;
+end;
+
+procedure Tf_UvedVozNew.acUvedDelExecute(Sender: TObject);
+var NextId:double;
+begin
+  if Application.MessageBox('Удалить запись?','Внимание!',MB_YESNO)=IDYES then
+  Begin
+    try
+      q_temp_uved.DisableControls;
+      pkgFor_uved_voz.CallProcedure('del_temp_uved',[q_temp_uvedReestr_id.Value]);
+      q_temp_uved.Next;
+      IsSaved:=false;
+    except
+      on E: Exception do
+      Begin
+        // Отобразим ошибку
+        f_main.ApplSession.WriteToLog(amFull,'UvedVozNew',sesError,E.Message,0,'');
+      end;
+    end;
+    NextID:=q_temp_uved.FieldByName('REESTR_ID').AsFloat;
+    f_db.ReQuery(q_temp_uved,false);
+    q_temp_uved.Locate('REESTR_ID',NextId,[]);
+    q_temp_uved.EnableControls;
+  end;
+end;
+
+procedure Tf_UvedVozNew.acExitExecute(Sender: TObject);
+begin
+  ModalResult:=mrCancel;
+end;
+
+procedure Tf_UvedVozNew.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  if not IsSaved then
+  if Application.MessageBox('Сохранить изменения в уведомлении?','Внимание!',MB_YESNO)=IDYES then
+  Begin
+    acUvedSave.Execute;
+  end;
+
+  try
+    // Очищаем список резервирования номеров текущего пользователя
+    pkgFOR_DOCUMENTS.CallProcedure('CLEAR_RESERV',[DocType,DocMestoId]);
+  except
+  End;
+  q_temp_uved.Close;
+  q_reestr.Close;
+  q_uved.Close;
+end;
+
+procedure Tf_UvedVozNew.acUvedSaveExecute(Sender: TObject);
+var
+ pUVED_NUM:double;
+ pUVED_DATE:TDateTime;
+begin
+  IsSaved:=false;
+
+  // Сохранение номера
+  if EditMode=0 then
+  try
+    pkgFOR_DOCUMENTS.CallProcedure('SET_NUM',[DocType,DocMestoId,EditId,'',StrToInt(edNum.Text),DateOf(edDate.DateTime)]);
+  except
+    on E: Exception do
+    Begin
+      // Отобразим ошибку
+      f_main.ApplSession.WriteToLog(amFull,'UvedVozNew',sesError,E.Message,0,'');
+      q_uved.Session.Rollback;
+      exit;
+    end;
+  End;
+
+  pUVED_NUM:=F_ForSystem.StrToReal(edNum.text);
+  pUVED_DATE:=DateOf(edDate.DateTime);
+  try
+    EditId:=pkgFor_uved_voz.CallFloatFunction('addtitle',[1,EditId,DocMestoId,DocLoadTypeId,pUVED_NUM,pUVED_DATE,null, null,
+            null, null,lc_operator.KeyValue,ProdIdNpr]);
+  except
+    on E: Exception do
+    Begin
+      // Отобразим ошибку
+      f_main.ApplSession.WriteToLog(amFull,'UvedVozNew',sesError,E.Message,0,'');
+      q_uved.Session.Rollback;
+      exit;
+    end;
+  end;
+
+  if VarType(lc_operator.KeyValue)<>varNull then
+    F_main.SetApplVari('LAST_MASTER_SGS',F_ForSystem.RealToStr(lc_operator.KeyValue))
+  else
+    F_main.SetApplVari('LAST_MASTER_SGS','0');
+  ModalResult:=mrOk;
+  IsSaved:=true;
+
+end;
+
+procedure Tf_UvedVozNew.CheckUvedDate(Sender: TObject);
+begin
+  if (EditMode=0) and (CurrentDate<>DateOf(edDate.DateTime)) then
+  Begin
+    try
+      // Если документ новый и меняется дата,
+      // заново получим номер документа (на случай если номер зависит от даты)
+      edNum.Text:=pkgFOR_DOCUMENTS.CallFloatFunction('GET_NEXT_NUM',[DocType,DocMestoId,'',DateOf(edDate.DateTime)]);
+    except
+      on E: Exception do
+      Begin
+        // Отобразим ошибку
+        f_main.ApplSession.WriteToLog(amFull,'UvedVozNew',sesError,E.Message,0,'');
+        edNum.Text:='0';
+      end;
+    End;
+  end;
+  CurrentDate:=DateOf(edDate.DateTime);
+end;
+
+procedure Tf_UvedVozNew.btSetNumClick(Sender: TObject);
+begin
+  CurrentDate:=CurrentDate-1;
+  CheckUvedDate(Sender);
+end;
+
+procedure Tf_UvedVozNew.acUvedAddExecute(Sender: TObject);
+begin
+  with Tf_NakladdVagon.Create(self) do
+  begin
+    ParentFormName:='Z';
+    q_vag_uvedvoz.Session:=q_uved.Session;
+    LOAD_TYPE_ID:=DocLoadTypeId;
+    MESTO_ID:=DocMestoId;
+    PROD_ID_NPR:=ProdIdNpr;
+    DOC_ID:=EditId;
+    Caption:='Добавить вагоны в уведомление';
+    ShowModal;
+    free;
+    IsSaved:=false;
+  end;
+  F_DB.ReQuery(q_temp_uved,true);
+end;
+
+procedure Tf_UvedVozNew.edNumChange(Sender: TObject);
+begin
+  // Номер только числовой
+  try
+    edNum.Text:=IntToStr(StrToInt(edNum.Text));
+  except
+    edNum.Text:='0';
+  end;
+end;
+
+procedure Tf_UvedVozNew.TBItem2Click(Sender: TObject);
+begin
+  if SaveDialog1.Execute then
+    if not FileExists(SaveDialog1.FileName) then
+      begin
+        SaveDBGridEhToExportFile(TDBGridEhExportAsXLS,GridVagons,SaveDialog1.FileName,True);
+        FileExecute(SaveDialog1.FileName,'','',esMaximized);
+      end
+    else
+      if MessageDlg('Файл уже существует! Переписать?',
+         mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+        begin
+          SaveDBGridEhToExportFile(TDBGridEhExportAsXLS,GridVagons,SaveDialog1.FileName,True);
+          FileExecute(SaveDialog1.FileName,'','',esMaximized);
+        end;
+end;
+
+procedure Tf_UvedVozNew.TBItem1Click(Sender: TObject);
+begin
+  F_DB.GridSQL(Self,gridVagons,q_temp_uved.SQL.Text,q_temp_uved);
+end;
+
+procedure Tf_UvedVozNew.q_temp_uvedAfterPost(DataSet: TDataSet);
+begin
+  IsSaved:=false;
+end;
+
+procedure Tf_UvedVozNew.Button1Click(Sender: TObject);
+begin
+  if q_temp_uved.Active and (q_temp_uved.State<>dsBrowse) then q_temp_uved.Post;
+  f_db.ReQuery(q_temp_uved,true);
+end;
+
+procedure Tf_UvedVozNew.acUvedPrintExecute(Sender: TObject);
+begin
+  acUvedSave.Execute;
+  if IsSaved then
+  Begin
+    // сохранить ID уведомления
+    TempVari.SetVariNum('UVED_ID', EditId, 'MASTER', 'MO_UVED');
+    if VarType(lc_operator.KeyValue)<>varNull then
+      TempVari.SetVariNum('UVED_OPERNALIV_ID', lc_operator.KeyValue, 'MASTER', 'MO_UVED')
+    else
+      TempVari.SetVariNum('UVED_OPERNALIV_ID', 0, 'MASTER', 'MO_UVED');
+
+    // скопировать XLS во временный каталог
+    F_FileUtils.CheckReport('MO_uved_sliv.XLS',f_main.TempNetPath+'MO_uved_sliv.XLS');
+    // Открыть Excel
+    F_FileUtils.OpenWorkbook(f_main.TempNetPath+'MO_uved_sliv.XLS');
+
+  end;
+end;
+
+procedure Tf_UvedVozNew.acAktPrintExecute(Sender: TObject);
+begin
+  acUvedSave.Execute;
+  if IsSaved then
+  Begin
+    // сохранить ID уведомления
+    TempVari.SetVariNum('UVED_ID', EditId, 'MASTER', 'MO_UVED');
+    if VarType(lc_operator.KeyValue)<>varNull then
+      TempVari.SetVariNum('UVED_OPERNALIV_ID', lc_operator.KeyValue, 'MASTER', 'MO_UVED')
+    else
+      TempVari.SetVariNum('UVED_OPERNALIV_ID', 0, 'MASTER', 'MO_UVED');
+
+    // скопировать XLS во временный каталог
+    F_FileUtils.CheckReport('MO_AKT_SLIV.XLS',f_main.TempNetPath+'MO_AKT_SLIV.XLS');
+    // Открыть Excel
+    F_FileUtils.OpenWorkbook(f_main.TempNetPath+'MO_AKT_SLIV.XLS');
+
+  end;
+end;
+
+end.

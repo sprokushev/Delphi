@@ -1,0 +1,117 @@
+POPUP "&Soubory"
+  MENUITEM "&Zmìna atributù...", cm_SetAttrib
+  MENUITEM "&Komprese...\tAlt+F5", cm_PackFiles
+  MENUITEM "&Dekomprese...\tAlt+F9", cm_UnpackFiles
+  MENUITEM "&Test archívu...\tAlt+Shift+F9", 518
+  MENUITEM "&Porovnat podle obsahu...", 2022
+  MENUITEM "&Asociovat s...", cm_associate
+  MENUITEM "&Vlastnosti...\tAlt+Enter", cm_versioninfo
+  MENUITEM "&Obsazenı prostor...", cm_GetFileSpace
+  MENUITEM "Pø&ejmenovat více poloek...\tCtrl+T", 2400
+  MENUITEM "Zmì&nit popis...\tCtrl+Z", 2700
+  POPUP "T&isk"
+    MENUITEM "&Seznam souborù...", 2027
+    MENUITEM "Seznam souborù s &podadresáøi...", 2028
+    MENUITEM "&Obsah souboru\tCtrl+F9", cm_PrintFile
+  END_POPUP
+  MENUITEM SEPARATOR
+  MENUITEM "&Rozdìlit soubor...", 560
+  MENUITEM "&Slouèit soubory...", 561
+  MENUITEM "Zakódovat so&ubor (MIME,UUE,XXE)...", 562
+  MENUITEM "Rozkódovat sou&bor (MIME,UUE,XXE,BinHex)...", 563
+  MENUITEM "Vytvoøit kontrolní sou&èty CRC (ve formátu SFV)...", 564
+  MENUITEM "Ovì&øit kontrolní souèty CRC (podle SFV souborù)", 565
+  MENUITEM SEPARATOR
+  MENUITEM "Kone&c\tAlt+F4", cm_Exit
+END_POPUP
+
+POPUP "&Oznaèení"
+  MENUITEM "&Oznaèit skupinu...\tNUM +", cm_spreadselection
+  MENUITEM "O&doznaèit skupinu...\tNUM -", cm_shrinkselection
+  MENUITEM "Oznaèit &vše\tCtrl NUM +", cm_selectall
+  MENUITEM "Odo&znaèit vše\tCtrl NUM -", cm_Clearall
+  MENUITEM "O&brátit vıbìr\tNUM *", cm_ExchangeSelection
+  MENUITEM "Obnov&it vıbìr\tGray /", 529
+  MENUITEM SEPARATOR
+  MENUITEM "&Porovnat adresáøe\tShift+F2", cm_CompareDirs
+  MENUITEM "Oznaèit &novìjší, skrıt stejné", cm_DirMatch
+END_POPUP
+
+POPUP "&Pøíkazy"
+  MENUITEM "&Strom...\tAlt+F10", cm_CDtree
+  MENUITEM "&Vyhledat...\tAlt+F7", cm_searchfor
+  MENUITEM "&Název disku...", cm_VolumeId
+  MENUITEM "&Informace o systému...", cm_sysinfo
+  MENUITEM "S&ynchronizovat adresáøe...", 2020
+  MENUITEM "O&blíbené adresáøe\tCTRL+D", cm_DirectoryHotlist
+  MENUITEM "Pøedc&hozí adresáø\tALT+šipka vlevo", cm_GotoPreviousDir
+  MENUITEM SEPARATOR
+  MENUITEM "Spustit &DOS", cm_ExecuteDOS
+  MENUITEM SEPARATOR
+  MENUITEM "&Zobrazit i soubory z podadresáøù\tCtrl+B", 2026
+  MENUITEM "Otev&øít adresáø Plocha", 2121
+  MENUITEM "Spr&ávce pøenosù na pozadí...",559
+  MENUITEM SEPARATOR
+  MENUITEM "P&rohodit adresáøová okna\tCtrl+U", cm_exchange
+  MENUITEM "&Cíl = zdroj", cm_matchsrc
+END_POPUP
+
+POPUP "S&í"
+  MENUITEM "&Pøipojit síovou jednotku...", cm_NetConnect
+  MENUITEM "&Odpojit síovou jednotku...", cm_NetDisconnect
+  MENUITEM "Sdílet &adresáø...", cm_NetShareDir
+  MENUITEM "Ukonèit sdíl&ení adresáøe...", cm_NetUnshareDir
+  MENUITEM "Zobrazit administrátorská sdílení", 2204
+  MENUITEM SEPARATOR
+  MENUITEM "&FTP - pøipojit se...\tCTRL+F", 550
+  MENUITEM "F&TP - nové pøipojení...\tCTRL+N", 551
+  MENUITEM "FTP - odpo&jit se\tCTRL+SHIFT+F", 552
+  MENUITEM "FTP - &ukázat skryté soubory", 553
+  MENUITEM "FTP - staení ze se&znamu...", 558
+  MENUITEM "Spojení s jinım PC pøes &LPT...", 2300
+END_POPUP
+
+POPUP "&Zobrazení"
+  MENUITEM "&Struèné\tCtrl+F1", cm_srcshort
+  MENUITEM "Deta&ily\tCtrl+F2", cm_srclong
+  MENUITEM "&Popisy\tCtrl+Shift+F2", 300
+  MENUITEM "S&trom\tCtrl+F8", cm_srcTree
+  MENUITEM "&Náhled\tCtrl+Q",304
+  MENUITEM "O&kna pod sebou", 305
+  MENUITEM SEPARATOR
+  MENUITEM "&Všechny soubory\tCtrl+F10", cm_srcallfiles
+  MENUITEM "P&rogramy\tCtrl+F11", cm_srcexecs
+  MENUITEM "*.*", cm_srcuserspec
+  MENUITEM "V&lastní filtr...\tCtrl+F12", cm_srcuserdef
+  MENUITEM "Jen v&ybrané soubory", 2023
+  MENUITEM SEPARATOR
+  MENUITEM "&Jméno\tCtrl+F3", cm_srcbyname
+  MENUITEM "Pøíp&ona\tCtrl+F4", cm_srcbyext
+  MENUITEM "È&as\tCtrl+F5", cm_srcbydatetime
+  MENUITEM "V&elikost\tCtrl+F6", cm_srcbysize
+  MENUITEM "Netøí&dìno\tCtrl+F7", cm_srcunsorted
+  MENUITEM SEPARATOR
+  MENUITEM "O&brácené poøadí", cm_srcnegorder
+  MENUITEM SEPARATOR
+  MENUITEM "&Znovunaètení zdroje\tCtrl+R", cm_rereadsource
+END_POPUP
+
+POPUP "&Konfigurace"
+  MENUITEM "&Nastavení...", cm_config
+  MENUITEM "&Tlaèítková lišta...", cm_ButtonConfig
+  MENUITEM "Mìnit konfiguraèní soubory &pøímo...", 581
+  MENUITEM "Ul&oit pozici okna", cm_configSavepos
+  MENUITEM "&Uloit nastavení", 580
+END_POPUP
+
+STARTMENU
+
+HELP_BREAK
+POPUP "&Nápovìda"
+  MENUITEM "&Index\tF1", cm_HelpIndex
+  MENUITEM "&Klávesové zkratky", cm_keyboard
+  MENUITEM "&Registrace", cm_register
+  MENUITEM "&Návštìva internetové stránky Totalcmd", 640
+  MENUITEM SEPARATOR
+  MENUITEM "&O programu Total Commander...", cm_About
+END_POPUP

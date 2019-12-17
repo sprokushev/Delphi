@@ -1,0 +1,813 @@
+unit Month;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, MdiForm, ExtCtrls, TB2Item, TB2Dock, TB2Toolbar, ActnList,
+  ActnMan, ComCtrls, Grids, DBGridEh, DBCtrls, StdCtrls,
+  RXCtrls, RxLookup, Mask, ToolEdit, DB, OracleData, XPStyleActnCtrls,
+  GridsEh;
+
+type
+  Tf_Month = class(Tf_MDIForm)
+    ActionManager1: TActionManager;
+    acMonth_NewMonth: TAction;
+    pageTabs: TPageControl;
+    tabR3: TTabSheet;
+    tabSpecif: TTabSheet;
+    tabMonth: TTabSheet;
+    TBDock2: TTBDock;
+    TBToolbar1: TTBToolbar;
+    TBItem1: TTBItem;
+    TBDock1: TTBDock;
+    TBToolbar2: TTBToolbar;
+    TBItem14: TTBItem;
+    TBDock3: TTBDock;
+    TBToolbar3: TTBToolbar;
+    TBItem2: TTBItem;
+    Action2: TAction;
+    Action3: TAction;
+    Panel2: TPanel;
+    Label2: TLabel;
+    ed_BeginDate: TDateTimePicker;
+    ed_EndDate: TDateTimePicker;
+    Label3: TLabel;
+    RxSpeedButton1: TRxSpeedButton;
+    acMonthRefresh: TAction;
+    dbNav: TDBNavigator;
+    gridR3: TDBGridEh;
+    Panel1: TPanel;
+    Panel3: TPanel;
+    Panel4: TPanel;
+    gridMonth: TDBGridEh;
+    gridSpecif: TDBGridEh;
+    ed_Dog: TComboEdit;
+    cb_Prod: TCheckBox;
+    lc_Prod: TRxDBLookupCombo;
+    q_R3_VBAK: TOracleDataSet;
+    ds_R3_VBAK: TDataSource;
+    q_R3_Materials: TOracleDataSet;
+    ds_R3_Materials: TDataSource;
+    q_R3_MaterialsVBAP_MATNR: TStringField;
+    q_R3_MaterialsMAKTX: TStringField;
+    q_R3_VBAKVBELN: TStringField;
+    q_R3_VBAKNOM_ZD: TStringField;
+    q_R3_VBAKDATE_RAZN: TDateTimeField;
+    q_R3_VBAKLOCK_STATUS: TStringField;
+    q_R3_VBAKVBAP_MATNR: TStringField;
+    q_R3_VBAKPROD_NAME_NPR: TStringField;
+    q_R3_VBAKPROD_ID_NPR: TStringField;
+    q_R3_VBAKVBAK_VSBED: TStringField;
+    q_R3_VBAKLOAD_NAME: TStringField;
+    q_R3_VBAKVBKD_TRATY: TStringField;
+    q_R3_VBAKVAGONTYPE_NAME: TStringField;
+    q_R3_VBAKLOAD_TYPE_ID: TFloatField;
+    q_R3_VBAKLOAD_ABBR: TStringField;
+    q_R3_VBAKIS_EXP: TFloatField;
+    q_R3_VBAKLUK_DOG_NUMBER: TStringField;
+    q_R3_VBAKVBAK_AUART: TStringField;
+    q_R3_VBAKNP_OWNER: TStringField;
+    q_R3_VBAKOWNER_NAME: TStringField;
+    q_R3_VBAKNP_PRODR: TStringField;
+    q_R3_VBAKPRODR_NAME: TStringField;
+    q_R3_VBAKLGOBE: TStringField;
+    q_R3_VBAKPRIM: TStringField;
+    q_R3_VBAKOSN_8: TFloatField;
+    q_R3_VBAKGR4: TStringField;
+    q_R3_VBAKVETKA_NAME: TStringField;
+    q_R3_VBAKTARIF_CODE: TStringField;
+    q_R3_VBAKTRANSP_NUM: TStringField;
+    q_R3_VBAKPOLUCH_GD_KOD: TStringField;
+    q_R3_VBAKOT_LIFNR: TStringField;
+    q_R3_VBAKGROTP_NAME: TStringField;
+    q_R3_VBAKSH_KUNNR: TStringField;
+    q_R3_VBAKPOLUCH_NAME: TStringField;
+    q_R3_VBAKVBPA_KUNNR: TStringField;
+    q_R3_VBAKPLAT_NAME: TStringField;
+    q_R3_VBAKKVERM: TStringField;
+    q_R3_VBAKPOTREB_NAME: TStringField;
+    q_R3_VBAKVBKD_VSART: TStringField;
+    q_R3_VBAKVAGOWNER_NAME: TStringField;
+    q_R3_VBAKVBAP_ROUTE: TStringField;
+    q_R3_VBAKROUTE_NAME: TStringField;
+    q_R3_VBAKKNANF: TStringField;
+    q_R3_VBAKKNEND: TStringField;
+    q_R3_VBAKCONTRACTOR_ATTR: TIntegerField;
+    q_R3_VBAKTONN_DECLARED: TFloatField;
+    q_R3_VBAKTONN_ALLOW: TFloatField;
+    ed_GrOtp: TComboEdit;
+    ed_poluch: TComboEdit;
+    ed_Plat: TComboEdit;
+    ed_StanKod: TEdit;
+    ed_Stan: TComboEdit;
+    q_Specif: TOracleDataSet;
+    ds_Specif: TDataSource;
+    q_SpecifID: TFloatField;
+    q_SpecifBEGIN_DATE: TDateTimeField;
+    q_SpecifEND_DATE: TDateTimeField;
+    q_SpecifUPDATE_DATE: TDateTimeField;
+    q_SpecifPROD_ID_NPR: TStringField;
+    q_SpecifNAME_NPR: TStringField;
+    q_SpecifVES_M: TFloatField;
+    q_SpecifVES_KV: TFloatField;
+    q_SpecifVES_ALL: TFloatField;
+    q_SpecifLOAD_ABBR: TStringField;
+    q_SpecifLOAD_NAME: TStringField;
+    q_SpecifLOAD_TYPE_ID: TIntegerField;
+    q_SpecifTYPE_OTGR_NAME: TStringField;
+    q_SpecifLUK_DOG_ID: TIntegerField;
+    q_SpecifLUK_DOG_NUMBER: TStringField;
+    q_SpecifPRIM: TStringField;
+    q_SpecifGR4: TStringField;
+    q_SpecifVETKA_ID: TIntegerField;
+    q_SpecifVETKA_NAME: TStringField;
+    q_SpecifPOLUCH_ID: TIntegerField;
+    q_SpecifPOLUCH_NAME: TStringField;
+    q_SpecifPLAT_ID: TIntegerField;
+    q_SpecifPLAT_NAME: TStringField;
+    q_SpecifDOG_ID: TIntegerField;
+    q_SpecifDOG_NUMBER: TStringField;
+    q_SpecifPOTREB_ID: TIntegerField;
+    q_SpecifPOTREB_NAME: TStringField;
+    q_SpecifSTANOTP_ID: TFloatField;
+    q_SpecifSTANOTP_KOD: TIntegerField;
+    q_SpecifSTANOTP_NAME: TStringField;
+    q_SpecifSTAN_ID: TFloatField;
+    q_SpecifSTAN_KOD: TIntegerField;
+    q_SpecifSTAN_NAME: TStringField;
+    q_Month: TOracleDataSet;
+    ds_Month: TDataSource;
+    q_MonthNOM_ZD: TStringField;
+    q_MonthVBELN: TStringField;
+    q_MonthIS_EXP: TIntegerField;
+    q_MonthDATE_PLAN: TDateTimeField;
+    q_MonthDATE_RAZN: TDateTimeField;
+    q_MonthUPDATE_DATE: TDateTimeField;
+    q_MonthPROD_ID_NPR: TStringField;
+    q_MonthPROD_NAME_NPR: TStringField;
+    q_MonthTONN_DECLARED: TFloatField;
+    q_MonthTONN_R: TFloatField;
+    q_MonthTONN_LOADED: TFloatField;
+    q_MonthCIST_DECLARED: TIntegerField;
+    q_MonthCIST_R: TIntegerField;
+    q_MonthCIST_LOADED: TIntegerField;
+    q_MonthDOG_ID: TIntegerField;
+    q_MonthDOG_NUMBER: TStringField;
+    q_MonthUSL_NUMBER: TIntegerField;
+    q_MonthPLAT_ID: TIntegerField;
+    q_MonthPLAT_NAME: TStringField;
+    q_MonthLUK_DOG_NUMBER: TStringField;
+    q_MonthNPO_DOG_NUMBER: TStringField;
+    q_MonthOSN_8: TIntegerField;
+    q_MonthSLIV_V: TIntegerField;
+    q_MonthOBOGR: TIntegerField;
+    q_MonthFORMA_2: TFloatField;
+    q_MonthFORMA_2_NAME: TStringField;
+    q_MonthPRIM: TStringField;
+    q_MonthGR4: TStringField;
+    q_MonthDATE_CEN: TDateTimeField;
+    q_MonthCENA: TFloatField;
+    q_MonthCENA_OTP: TFloatField;
+    q_MonthSUM_ZD: TFloatField;
+    q_MonthTARIF_CODE: TStringField;
+    q_MonthTRANSP_NUM: TStringField;
+    q_MonthTARIF1TONN: TFloatField;
+    q_MonthNAZN_OTG_ID: TIntegerField;
+    q_MonthNAZN_OTG_NAME: TStringField;
+    q_MonthLOAD_ABBR: TStringField;
+    q_MonthLOAD_NAME: TStringField;
+    q_MonthLOAD_TYPE_ID: TIntegerField;
+    q_MonthTYPE_OTGR_NAME: TStringField;
+    q_MonthOWNER_ID: TIntegerField;
+    q_MonthOWNER_NAME: TStringField;
+    q_MonthSUPPLIER_ID: TIntegerField;
+    q_MonthSUPPLIER_NAME: TStringField;
+    q_MonthGROTP_ID: TIntegerField;
+    q_MonthGROTP_NAME: TStringField;
+    q_MonthPOLUCH_ID: TIntegerField;
+    q_MonthPOLUCH_NAME: TStringField;
+    q_MonthPOTREB_ID: TIntegerField;
+    q_MonthPOTREB_NAME: TStringField;
+    q_MonthVETKA_ID: TIntegerField;
+    q_MonthVETKA_NAME: TStringField;
+    q_MonthGOSPROG_ID: TIntegerField;
+    q_MonthGOSPROG_NAME: TStringField;
+    q_MonthGP_NAPR_ID: TFloatField;
+    q_MonthGP_NAPR_NAME: TStringField;
+    q_MonthPLANSTRU_ID: TFloatField;
+    q_MonthPLANSTRU_NAME: TStringField;
+    q_MonthSTANOTP_ID: TFloatField;
+    q_MonthSTANOTP_KOD: TIntegerField;
+    q_MonthSTANOTP_NAME: TStringField;
+    q_MonthSTAN_ID: TFloatField;
+    q_MonthSTAN_KOD: TIntegerField;
+    q_MonthSTAN_NAME: TStringField;
+    ed_potreb: TComboEdit;
+    lc_Plan: TRxDBLookupCombo;
+    cb_Plan: TCheckBox;
+    q_Plan: TOracleDataSet;
+    ds_Plan: TDataSource;
+    q_PlanID: TFloatField;
+    q_PlanNAME: TStringField;
+    q_Prod: TOracleDataSet;
+    ds_prod: TDataSource;
+    q_R3_VBAKDOG_NUMBER: TStringField;
+    q_R3_VBAKSTANOTP_KOD: TIntegerField;
+    q_R3_VBAKSTAN_KOD: TIntegerField;
+    q_MonthID: TStringField;
+    q_MonthLOCK_STATUS: TStringField;
+    q_MonthIS_EXP_NAME: TStringField;
+    q_MonthVBAK_VSBED: TStringField;
+    q_MonthVBKD_TRATY: TStringField;
+    q_MonthVAGONTYPE_NAME: TStringField;
+    q_MonthVBAP_MATNR: TStringField;
+    q_MonthLUK_DOG_ID: TFloatField;
+    q_MonthNPO_DOG_ID: TIntegerField;
+    q_MonthVBPA_KUNNR: TStringField;
+    q_MonthOT_LIFNR: TStringField;
+    q_MonthVBAP_ROUTE: TStringField;
+    q_MonthROUTE_NAME: TStringField;
+    q_MonthKNANF: TStringField;
+    q_MonthKNEND: TStringField;
+    q_MonthSH_KUNNR: TStringField;
+    q_MonthPOLUCH_GD_KOD: TStringField;
+    q_MonthOWNERSHIP_ID: TFloatField;
+    q_MonthVBAK_AUART: TStringField;
+    q_MonthCONTRACTOR_ATTR: TIntegerField;
+    q_MonthNP_OWNER: TStringField;
+    q_MonthNP_PRODR: TStringField;
+    q_MonthPRODR_NAME: TStringField;
+    q_MonthPRODR_ID: TFloatField;
+    q_MonthLGOBE: TStringField;
+    q_MonthDOP_CIST: TIntegerField;
+    q_MonthVBKD_VSART: TStringField;
+    q_MonthVAGOWNER_NAME: TStringField;
+    q_MonthTONN_ALLOW: TFloatField;
+    q_MonthCIST_ALLOW: TFloatField;
+    q_MonthTONN_MIN: TFloatField;
+    q_MonthCIST_MIN: TFloatField;
+    q_MonthUPDATE_FILE: TStringField;
+    cb_Dog: TCheckBox;
+    cb_GrOtp: TCheckBox;
+    cb_Poluch: TCheckBox;
+    cb_potreb: TCheckBox;
+    cb_Plat: TCheckBox;
+    cb_Stan: TCheckBox;
+    cb_NOT_Filter: TCheckBox;
+    cb_FilterKind: TComboBox;
+    ed_Filter: TEdit;
+    ed_Owner: TComboEdit;
+    cbOwner: TCheckBox;
+    q_MonthTEX_PD_ID: TFloatField;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure ed_DogButtonClick(Sender: TObject);
+    procedure acMonth_NewMonthExecute(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure cb_ProdClick(Sender: TObject);
+    procedure acMonthRefreshExecute(Sender: TObject);
+    procedure gridR3Columns0GetCellParams(Sender: TObject;
+      EditMode: Boolean; Params: TColCellParamsEh);
+    procedure gridR3GetCellParams(Sender: TObject; Column: TColumnEh;
+      AFont: TFont; var Background: TColor; State: TGridDrawState);
+    procedure ed_GrOtpButtonClick(Sender: TObject);
+    procedure ed_poluchButtonClick(Sender: TObject);
+    procedure ed_PlatButtonClick(Sender: TObject);
+    procedure ed_StanButtonClick(Sender: TObject);
+    procedure ed_StanKodKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure ed_StanKodExit(Sender: TObject);
+    procedure gridSpecifColumns0GetCellParams(Sender: TObject;
+      EditMode: Boolean; Params: TColCellParamsEh);
+    procedure ed_potrebButtonClick(Sender: TObject);
+    procedure cb_PlanClick(Sender: TObject);
+    procedure gridMonthColumns0GetCellParams(Sender: TObject;
+      EditMode: Boolean; Params: TColCellParamsEh);
+    procedure gridR3SortMarkingChanged(Sender: TObject);
+    procedure gridSpecifSortMarkingChanged(Sender: TObject);
+    procedure gridMonthSortMarkingChanged(Sender: TObject);
+    procedure q_R3_VBAKBeforeOpen(DataSet: TDataSet);
+    procedure q_SpecifBeforeOpen(DataSet: TDataSet);
+    procedure q_MonthBeforeOpen(DataSet: TDataSet);
+    procedure cb_DogClick(Sender: TObject);
+    procedure cb_GrOtpClick(Sender: TObject);
+    procedure cb_PoluchClick(Sender: TObject);
+    procedure cb_potrebClick(Sender: TObject);
+    procedure cb_PlatClick(Sender: TObject);
+    procedure cb_StanClick(Sender: TObject);
+    procedure tabR3Show(Sender: TObject);
+    procedure tabMonthShow(Sender: TObject);
+    procedure tabSpecifShow(Sender: TObject);
+    procedure ed_OwnerButtonClick(Sender: TObject);
+  private
+    { Private declarations }
+    CurrentGrOtpId:string;
+    CurrentPoluchId:string;
+    CurrentPotrebId:string;
+    CurrentPlatId:string;
+    CurrentDogId:string;
+    CurrentStanId:string;
+    CurrentOwnerId:string;
+  public
+    { Public declarations }
+  end;
+
+var
+  f_Month: Tf_Month;
+
+implementation
+
+uses ForDB, DateUtils, {NewMonth,} KlsMisc2, NewMonth;
+
+{$R *.dfm}
+
+procedure Tf_Month.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  inherited;
+  Action:=caFree;
+end;
+
+procedure Tf_Month.ed_DogButtonClick(Sender: TObject);
+begin
+  inherited;
+  if pageTabs.ActivePage=tabR3 then
+    KlsMisc2.SetKLSParam('R3_CC','CHOOSE',fsNormal,CurrentDogId,'',true,ed_BeginDate.Date,ed_EndDate.Date)
+  else
+    KlsMisc2.SetKLSParam('KLS_DOG','CHOOSE',fsNormal,CurrentDogId,'',true,ed_BeginDate.Date,ed_EndDate.Date);
+
+  with TF_KlsMisc.Create(Self) do
+  begin
+    if ShowModal=mrOk then
+    begin
+      ed_Dog.Text:=KlsMisc2.ResultName;
+      CurrentDogId:=KlsMisc2.vIdToSeek;
+    end;
+    Free;
+  end;
+end;
+
+procedure Tf_Month.acMonth_NewMonthExecute(Sender: TObject);
+begin
+  inherited;
+  if NOT q_r3_vbak.Eof then
+  Begin
+    NewMonth.AKindAdd:='R3';
+    NewMonth.AIdToSeek:=q_r3_vbakVBELN.AsString;
+    with TF_NewMonth.Create(Self) do
+    begin
+      if ShowModal=mrOk then
+      begin
+      end;
+      Free;
+    end;
+  end;
+end;
+
+procedure Tf_Month.FormShow(Sender: TObject);
+begin
+  inherited;
+  ed_BeginDate.Date:=StartOfTheMonth(Now-15);
+  ed_EndDate.Date:=EndOfTheMonth(IncMonth(Now-15,1));
+  acMonthRefreshExecute(Sender);
+end;
+
+procedure Tf_Month.FormCreate(Sender: TObject);
+begin
+  inherited;
+  q_R3_Materials.Open;
+end;
+
+procedure Tf_Month.cb_ProdClick(Sender: TObject);
+begin
+  inherited;
+  lc_Prod.Enabled:=cb_Prod.Checked;
+end;
+
+procedure Tf_Month.acMonthRefreshExecute(Sender: TObject);
+begin
+  inherited;
+  if pageTabs.ActivePage=tabR3 then
+    with q_R3_VBAK do
+    try
+      f_db.ReQuery(q_R3_VBAK,True);
+    finally
+      if Self.Active then gridR3.SetFocus;
+    end
+  else
+    if pageTabs.ActivePage=tabSpecif then
+      with q_Specif do
+      try
+        f_db.ReQuery(q_Specif,True);
+      finally
+        if Self.Active then gridSpecif.SetFocus;
+      end
+    else
+      with q_Month do
+      try
+        f_db.ReQuery(q_Month,True);
+      finally
+        if Self.Active then gridMonth.SetFocus;
+      end;
+end;
+
+procedure Tf_Month.gridR3Columns0GetCellParams(Sender: TObject;
+  EditMode: Boolean; Params: TColCellParamsEh);
+begin
+  inherited;
+  Params.Text:=IntToStr(q_R3_VBAK.RecNo);
+end;
+
+procedure Tf_Month.gridR3GetCellParams(Sender: TObject; Column: TColumnEh;
+  AFont: TFont; var Background: TColor; State: TGridDrawState);
+begin
+  inherited;
+  if q_R3_VBAK.FieldValues['LOCK_STATUS']<>'0010' then
+  If q_R3_VBAK.FieldByName('VBAP_MATNR').IsNull then
+    Background:=clRed
+  else
+    Background:=clFuchsia;
+end;
+
+procedure Tf_Month.ed_GrOtpButtonClick(Sender: TObject);
+begin
+  inherited;
+  if pageTabs.ActivePage=tabR3 then
+    KlsMisc2.SetKLSParam('R3_VENDORS','CHOOSE',fsNormal,CurrentGrOtpId,'',true)
+  else
+    KlsMisc2.SetKLSParam('KLS_PREDPR_OTPR','CHOOSE',fsNormal,CurrentGrOtpId,'',true);
+
+  with TF_KlsMisc.Create(Self) do
+  begin
+    if ShowModal=mrOk then
+    begin
+      ed_GrOtp.Text:=KlsMisc2.ResultName;
+      CurrentGrOtpId:=KlsMisc2.vIdToSeek;
+    end;
+    Free;
+  end;
+end;
+
+procedure Tf_Month.ed_poluchButtonClick(Sender: TObject);
+begin
+  inherited;
+  if pageTabs.ActivePage=tabR3 then
+    KlsMisc2.SetKLSParam('R3_CUSTOMERS','CHOOSE',fsNormal,CurrentPoluchId,'',true)
+  else
+    KlsMisc2.SetKLSParam('KLS_PREDPR_POLUCH','CHOOSE',fsNormal,CurrentPoluchId,'',true);
+
+  with TF_KlsMisc.Create(Self) do
+  begin
+    if ShowModal=mrOk then
+    begin
+      ed_Poluch.Text:=KlsMisc2.ResultName;
+      CurrentPoluchId:=KlsMisc2.vIdToSeek;
+    end;
+    Free;
+  end;
+end;
+
+procedure Tf_Month.ed_PlatButtonClick(Sender: TObject);
+begin
+  inherited;
+  if pageTabs.ActivePage=tabR3 then
+    KlsMisc2.SetKLSParam('R3_CUSTOMERS','CHOOSE',fsNormal,CurrentPlatId,'',true)
+  else
+    KlsMisc2.SetKLSParam('KLS_PREDPR_PLAT','CHOOSE',fsNormal,CurrentPlatId,'',true);
+
+  with TF_KlsMisc.Create(Self) do
+  begin
+    if ShowModal=mrOk then
+    begin
+      ed_Plat.Text:=KlsMisc2.ResultName;
+      CurrentPlatId:=KlsMisc2.vIdToSeek;
+    end;
+    Free;
+  end;
+end;
+
+procedure Tf_Month.ed_StanButtonClick(Sender: TObject);
+begin
+  inherited;
+  KlsMisc2.SetKLSParam('KLS_STAN','CHOOSE',fsNormal,CurrentStanId,'',true);
+
+  with TF_KlsMisc.Create(Self) do
+  begin
+    if ShowModal=mrOk then
+    begin
+      ed_Stan.Text:=KlsMisc2.ResultName;
+      ed_StanKod.Text:=KlsMisc2.ResultName2;
+      CurrentStanId:=KlsMisc2.vIdToSeek;
+    end;
+    Free;
+  end;
+end;
+
+procedure Tf_Month.ed_StanKodKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  inherited;
+  if Key=VK_RETURN then ed_Stan.Text:='';
+end;
+
+procedure Tf_Month.ed_StanKodExit(Sender: TObject);
+begin
+  inherited;
+  if (ed_stankod.Text='') then ed_stan.Text:='';
+end;
+
+procedure Tf_Month.gridSpecifColumns0GetCellParams(Sender: TObject;
+  EditMode: Boolean; Params: TColCellParamsEh);
+begin
+  inherited;
+  Params.Text:=IntToStr(q_Specif.RecNo);
+end;
+
+procedure Tf_Month.ed_potrebButtonClick(Sender: TObject);
+begin
+  inherited;
+  if pageTabs.ActivePage=tabR3 then
+    KlsMisc2.SetKLSParam('R3_CUSTOMERS','CHOOSE',fsNormal,CurrentPotrebId,'',true)
+  else
+    KlsMisc2.SetKLSParam('KLS_PREDPR_POLUCH','CHOOSE',fsNormal,CurrentPotrebId,'',true);
+
+  with TF_KlsMisc.Create(Self) do
+  begin
+    if ShowModal=mrOk then
+    begin
+      ed_Potreb.Text:=KlsMisc2.ResultName;
+      CurrentPotrebId:=KlsMisc2.vIdToSeek;
+    end;
+    Free;
+  end;
+end;
+
+procedure Tf_Month.cb_PlanClick(Sender: TObject);
+begin
+  inherited;
+  lc_Plan.Enabled:=cb_Plan.Checked;
+end;
+
+procedure Tf_Month.gridMonthColumns0GetCellParams(Sender: TObject;
+  EditMode: Boolean; Params: TColCellParamsEh);
+begin
+  inherited;
+  Params.Text:=IntToStr(q_Month.RecNo);
+end;
+
+procedure Tf_Month.gridR3SortMarkingChanged(Sender: TObject);
+begin
+  inherited;
+  f_db.SortInGrid(q_R3_VBAK,q_R3_VBAK.SQL.Count-1,gridR3);
+end;
+
+procedure Tf_Month.gridSpecifSortMarkingChanged(Sender: TObject);
+begin
+  inherited;
+  f_db.SortInGrid(q_Specif,q_Specif.SQL.Count-1,gridSpecif);
+end;
+
+procedure Tf_Month.gridMonthSortMarkingChanged(Sender: TObject);
+begin
+  inherited;
+  f_db.SortInGrid(q_Month,q_month.SQL.Count-1,gridMonth);
+end;
+
+procedure Tf_Month.q_R3_VBAKBeforeOpen(DataSet: TDataSet);
+var s:string;
+begin
+  inherited;
+  with q_R3_VBAK do
+  Begin
+    SQL[2]:=' WHERE A.DATE_RAZN>TO_DATE('''+FormatDateTime('dd.mm.yyyy',ed_BeginDate.Date)+''',''dd.mm.yyyy'')-1';
+    SQL[3]:=' AND A.DATE_RAZN<TO_DATE('''+FormatDateTime('dd.mm.yyyy',ed_EndDate.Date)+''',''dd.mm.yyyy'')+1';
+    s:='';
+    IF cb_Dog.Checked AND (ed_Dog.Text<>'') Then
+      s:=s+' AND (A.LUK_DOG_NUMBER='''+AnsiUpperCase(ed_Dog.Text)+''' OR A.NPO_DOG_NUMBER='''+AnsiUpperCase(ed_Dog.Text)+''' OR A.DOG_NUMBER='''+AnsiUpperCase(ed_Dog.Text)+''')';
+    IF cb_GrOtp.Checked AND (ed_GrOtp.Text<>'') Then
+      s:=s+' AND (A.OT_LIFNR='''+CurrentGrOtpId+''')';
+    IF cb_poluch.Checked AND (ed_Poluch.Text<>'') Then
+      s:=s+' AND (A.SH_KUNNR='''+CurrentPoluchId+''')';
+    IF cb_plat.Checked AND (ed_Plat.Text<>'') Then
+      s:=s+' AND (A.VBPA_KUNNR='''+CurrentPlatId+''')';
+    IF cb_Stan.Checked AND (ed_StanKod.Text<>'') Then
+      s:=s+' AND (A.STAN_KOD='+ed_StanKod.Text+')';
+    If cb_Prod.Checked then
+      s:=s+' AND (A.VBAP_MATNR IS NULL OR A.VBAP_MATNR='''+lc_Prod.KeyValue+''') ';
+    if s<>'' then SQL[4]:=s
+    else SQL[4]:=' AND 1=1 ';
+  end;
+end;
+
+procedure Tf_Month.q_SpecifBeforeOpen(DataSet: TDataSet);
+var s:string;
+begin
+  inherited;
+  with q_Specif do
+  Begin
+    SQL[35]:=' AND A.END_DATE>TO_DATE('''+FormatDateTime('dd.mm.yyyy',ed_BeginDate.Date)+''',''dd.mm.yyyy'')-1';
+    SQL[36]:=' AND A.BEGIN_DATE<TO_DATE('''+FormatDateTime('dd.mm.yyyy',ed_EndDate.Date)+''',''dd.mm.yyyy'')+1';
+    s:='';
+    IF cb_Dog.Checked AND (ed_Dog.Text<>'') Then
+      s:=s+' AND (KLS_DOG.DOG_NUMBER='''+AnsiUpperCase(ed_Dog.Text)+''' OR LUK_DOG.DOG_NUMBER='''+AnsiUpperCase(ed_Dog.Text)+''')';
+    IF cb_poluch.Checked AND (ed_Poluch.Text<>'') Then
+      s:=s+' AND (poluch.ID='+CurrentPoluchId+')';
+    IF cb_potreb.Checked AND (ed_Potreb.Text<>'') Then
+      s:=s+' AND (potreb.ID='+CurrentPotrebId+')';
+    IF cb_plat.Checked AND (ed_Plat.Text<>'') Then
+      s:=s+' AND (plat.ID='+CurrentPlatId+')';
+    IF cb_Stan.Checked AND (ed_StanKod.Text<>'') Then
+      s:=s+' AND (STAN.STAN_KOD='+ed_StanKod.Text+')';
+    If cb_Prod.Checked then
+      s:=s+' AND (KLS_PROD.ID_NPR='''+lc_Prod.KeyValue+''') ';
+    if s<>'' then SQL[37]:=s
+    else SQL[37]:=' AND 1=1 ';
+  end;
+end;
+
+procedure Tf_Month.q_MonthBeforeOpen(DataSet: TDataSet);
+var s:string;
+begin
+  inherited;
+  with q_Month do
+  Begin
+    SQL[2]:=' WHERE A.DATE_RAZN>TO_DATE('''+FormatDateTime('dd.mm.yyyy',ed_BeginDate.Date)+''',''dd.mm.yyyy'')-1';
+    SQL[3]:=' AND A.DATE_RAZN<TO_DATE('''+FormatDateTime('dd.mm.yyyy',ed_EndDate.Date)+''',''dd.mm.yyyy'')+1';
+    s:='';
+    IF cb_Dog.Checked AND (ed_Dog.Text<>'') Then
+      s:=s+' AND (A.DOG_NUMBER='''+AnsiUpperCase(ed_Dog.Text)+''' OR A.LUK_DOG_NUMBER='''+AnsiUpperCase(ed_Dog.Text)+''' OR A.NPO_DOG_NUMBER='''+AnsiUpperCase(ed_Dog.Text)+''')';
+    IF cb_GrOtp.Checked AND (ed_GrOtp.Text<>'') Then
+      s:=s+' AND (A.grotp_ID='+CurrentGrOtpId+')';
+    IF cb_poluch.Checked AND (ed_Poluch.Text<>'') Then
+      s:=s+' AND (A.poluch_ID='+CurrentPoluchId+')';
+    IF cb_potreb.Checked AND (ed_Potreb.Text<>'') Then
+      s:=s+' AND (A.potreb_ID='+CurrentPotrebId+')';
+    IF cb_plat.Checked AND (ed_Plat.Text<>'') Then
+      s:=s+' AND (A.plat_ID='+CurrentPlatId+')';
+    IF cb_Stan.Checked AND (ed_StanKod.Text<>'') Then
+      s:=s+' AND (A.STAN_KOD='+ed_StanKod.Text+')';
+    If cb_Prod.Checked then
+      s:=s+' AND (A.PROD_ID_NPR='''+lc_Prod.KeyValue+''') ';
+    If cb_Plan.Checked then
+      s:=s+' AND (A.PLANSTRU.ID='+lc_Plan.KeyValue+') ';
+    if s<>'' then SQL[4]:=s
+    else SQL[4]:=' AND 1=1 ';
+  end;
+end;
+
+procedure Tf_Month.cb_DogClick(Sender: TObject);
+begin
+  inherited;
+  ed_Dog.Enabled:=cb_Dog.Checked;
+end;
+
+procedure Tf_Month.cb_GrOtpClick(Sender: TObject);
+begin
+  inherited;
+  ed_GrOtp.Enabled:=cb_GrOtp.Checked;
+end;
+
+procedure Tf_Month.cb_PoluchClick(Sender: TObject);
+begin
+  inherited;
+  ed_Poluch.Enabled:=cb_Poluch.Checked;
+end;
+
+procedure Tf_Month.cb_potrebClick(Sender: TObject);
+begin
+  inherited;
+  ed_Potreb.Enabled:=cb_Potreb.Checked;
+end;
+
+procedure Tf_Month.cb_PlatClick(Sender: TObject);
+begin
+  inherited;
+  ed_Plat.Enabled:=cb_Plat.Checked;
+end;
+
+procedure Tf_Month.cb_StanClick(Sender: TObject);
+begin
+  inherited;
+  ed_StanKod.Enabled:=cb_Stan.Checked;
+  ed_Stan.Enabled:=cb_Stan.Checked;
+end;
+
+procedure Tf_Month.tabR3Show(Sender: TObject);
+begin
+  inherited;
+  CurrentGrOtpId:='';
+  ed_GrOtp.Text:='';
+  CurrentPoluchId:='';
+  ed_poluch.Text:='';
+  CurrentPlatId:='';
+  ed_Plat.Text:='';
+  CurrentPotrebId:='';
+  ed_Potreb.Text:='';
+
+  dbNav.DataSource:=ds_R3_VBAK;
+  q_R3_MATERIALS.Close;
+  q_prod.Close;
+  q_plan.Close;
+  lc_Prod.LookupSource:=nil;
+  lc_prod.LookupField:='VBAP_MATNR';
+  lc_Prod.LookupDisplay:='MAKTX';
+  lc_Prod.LookupSource:=ds_R3_Materials;
+  cb_Prod.Checked:=false;
+  cb_Potreb.Enabled:=false;
+  ed_Potreb.Enabled:=false;
+  cb_GrOtp.Enabled:=true;
+  ed_GrOtp.Enabled:=true;
+  cb_GrOtp.Checked:=false;
+  cb_plan.checked:=false;
+  cb_plan.enabled:=false;
+  q_R3_MATERIALS.Open;
+  if NOT q_R3_VBAK.Active then q_R3_VBAK.Open;
+end;
+
+procedure Tf_Month.tabMonthShow(Sender: TObject);
+begin
+  inherited;
+  CurrentGrOtpId:='';
+  ed_GrOtp.Text:='';
+  CurrentPoluchId:='';
+  ed_poluch.Text:='';
+  CurrentPlatId:='';
+  ed_Plat.Text:='';
+  CurrentPotrebId:='';
+  ed_Potreb.Text:='';
+
+  dbNav.DataSource:=ds_Month;
+  q_R3_MATERIALS.Close;
+  q_prod.Close;
+  q_plan.Close;
+  lc_Prod.LookupSource:=nil;
+  lc_prod.LookupField:='ID_NPR';
+  lc_Prod.LookupDisplay:='NAME_NPR';
+  lc_Prod.LookupSource:=ds_Prod;
+  cb_Prod.Checked:=false;
+  ed_Potreb.Enabled:=true;
+  cb_Potreb.Enabled:=true;
+  cb_Potreb.Checked:=false;
+  ed_GrOtp.Enabled:=true;
+  cb_GrOtp.Enabled:=true;
+  cb_GrOtp.Checked:=false;
+  cb_plan.checked:=false;
+  cb_plan.enabled:=true;
+  q_prod.Open;
+  q_plan.SQL[2]:=' AND END_DATE>TO_DATE('''+FormatDateTime('dd.mm.yyyy',ed_BeginDate.Date)+''',''dd.mm.yyyy'')-1';
+  q_plan.SQL[3]:=' AND BEGIN_DATE<TO_DATE('''+FormatDateTime('dd.mm.yyyy',ed_EndDate.Date)+''',''dd.mm.yyyy'')+1';
+  q_plan.Open;
+end;
+
+procedure Tf_Month.tabSpecifShow(Sender: TObject);
+begin
+  inherited;
+  CurrentGrOtpId:='';
+  ed_GrOtp.Text:='';
+  CurrentPoluchId:='';
+  ed_poluch.Text:='';
+  CurrentPlatId:='';
+  ed_Plat.Text:='';
+  CurrentPotrebId:='';
+  ed_Potreb.Text:='';
+
+  dbNav.DataSource:=ds_Specif;
+  q_R3_MATERIALS.Close;
+  q_prod.Close;
+  q_plan.Close;
+  lc_Prod.LookupSource:=nil;
+  lc_prod.LookupField:='ID_NPR';
+  lc_Prod.LookupDisplay:='NAME_NPR';
+  lc_Prod.LookupSource:=ds_Prod;
+  cb_Prod.Checked:=false;
+  ed_Potreb.Enabled:=true;
+  cb_Potreb.Enabled:=true;
+  cb_Potreb.Checked:=false;
+  ed_GrOtp.Enabled:=false;
+  cb_GrOtp.Enabled:=false;
+  cb_plan.checked:=false;
+  cb_plan.enabled:=false;
+  q_prod.Open;
+  if NOT q_Specif.Active then q_Specif.Open;
+end;
+
+procedure Tf_Month.ed_OwnerButtonClick(Sender: TObject);
+begin
+  inherited;
+  if pageTabs.ActivePage=tabR3 then
+    KlsMisc2.SetKLSParam('R3_VENDORS','CHOOSE',fsNormal,CurrentOwnerId,'',true)
+  else
+    KlsMisc2.SetKLSParam('KLS_PREDPR_PLAT','CHOOSE',fsNormal,CurrentOwnerId,'',true);
+
+  with TF_KlsMisc.Create(Self) do
+  begin
+    if ShowModal=mrOk then
+    begin
+      ed_Owner.Text:=KlsMisc2.ResultName;
+      CurrentOwnerId:=KlsMisc2.vIdToSeek;
+    end;
+    Free;
+  end;
+end;
+
+end.

@@ -1,0 +1,74 @@
+POLYLINE
+AddCoord( -29000.1, 36666.2);
+AddCoord( -29009.7, 35283.9);
+AddCoord( -25556.5, 35283.9);
+AddCoord( -25899.2, 35537.2);
+AddCoord( -26320.3, 35850.2);
+AddCoord( -26957.1, 36222.6);
+AddCoord( -27508.4, 36461.0);
+AddCoord(-27985.2, 36595.1);
+AddCoord(-28506.7, 36669.6);
+AddCoord(-29000.1, 36666.2);
+
+POLYLINE
+AddCoord( -28639.8, 36666.2);
+AddCoord( -28630.2, 35283.9);
+AddCoord( -32083.4, 35283.9);
+AddCoord( -31740.7, 35537.2);
+AddCoord( -31319.6, 35850.2);
+AddCoord( -30682.8, 36222.6);
+AddCoord( -30131.5, 36461.0);
+AddCoord( -29654.7, 36595.1);
+AddCoord( -29133.2, 36669.6);
+AddCoord( -28639.8, 36666.2);
+
+POLYLINE
+AddCoord( -29768.9, 33012.7);
+AddCoord( -29313.8, 33350.7);
+AddCoord( -28745.5, 33674.2);
+AddCoord( -28033.7, 33852.4);
+AddCoord( -27345.0, 33853.5);
+AddCoord( -26789.7, 33785.7);
+AddCoord( -26145.3, 33654.1);
+AddCoord( -25544.4, 33632.1);
+AddCoord( -24983.7, 33791.6);
+AddCoord( -24310.6, 34120.0);
+AddCoord( -24846.6, 33550.0);
+AddCoord( -25343.3, 33257.3);
+AddCoord( -25801.2, 33103.9);
+AddCoord( -26240.6, 33019.5);
+AddCoord( -26789.7, 32970.9);
+AddCoord( -27533.7, 33013.7);
+AddCoord( -28207.0, 33159.8);
+AddCoord( -28552.9, 33228.0);
+AddCoord( -28975.3, 33232.1);
+AddCoord( -29306.0, 33169.5);
+AddCoord( -29768.9, 33012.7);
+
+POLYLINE
+AddCoord( -32357.4, 35076.7);
+AddCoord( -31317.0, 35076.7);
+AddCoord( -31143.6, 30607.4);
+AddCoord( -30172.5, 30590.0);
+AddCoord( -30172.5, 32816.0);
+AddCoord( -29218.8, 32816.0);
+AddCoord( -29218.8, 30590.0);
+AddCoord( -24086.0, 30590.0);
+AddCoord( -24086.1, 25790.2);
+AddCoord( -32877.6, 25790.2);
+AddCoord( -32357.4, 35076.7);
+
+POLYLINE
+AddCoord( -31041.2, 30080.6);
+AddCoord( -24485.3, 30080.6);
+AddCoord( -24485.3, 26289.5);
+AddCoord( -30950.0, 26312.0);
+AddCoord( -31108.5, 30373.4);
+AddCoord( -31041.2, 30080.6);
+
+POLYLINE
+AddCoord( -33081.4, 37065.9);
+AddCoord( -33060.8, 25431.3);
+AddCoord( -23552.0, 25383.5);
+AddCoord( -23474.2, 37084.5);
+AddCoord( -33081.4, 37065.9);

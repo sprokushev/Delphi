@@ -1,0 +1,672 @@
+unit Export2Pererabotka;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Oracle, DB, ActnList, XPStyleActnCtrls, ActnMan, OracleData,
+  ComCtrls, StdCtrls, Mask, DBCtrlsEh, ExtCtrls, ToolWin, ActnCtrls, Grids,
+  DateUtils,RxShell,DBGrids,ADODB,ComObj, GridsEh,CustomDBGridEhImpExp,
+  DBGridEh;
+
+type
+  Tf_Export2Pererabotka = class(TForm)
+    DBGridEh1: TDBGridEh;
+    ActionToolBar1: TActionToolBar;
+    Panel1: TPanel;
+    StatusBar1: TStatusBar;
+    qTTN: TOracleDataSet;
+    dsSource: TDataSource;
+    SaveDialog: TSaveDialog;
+    pkgFOR_R3: TOraclePackage;
+    ora_Session: TOracleSession;
+    OpenDlg: TOpenDialog;
+    adoDogovor: TADOTable;
+    adoDogovorF1: TStringField;
+    adoDogovorF2: TStringField;
+    qUpdateDogovor: TOracleQuery;
+    qSetBusyStatus: TOracleQuery;
+    MemoSQL: TMemo;
+    qPlan: TOracleDataSet;
+    qOBR: TOracleDataSet;
+    amR3: TActionManager;
+    acExportTo: TAction;
+    acRefresh: TAction;
+    acClose: TAction;
+    acImportRaznar: TAction;
+    acImportRC: TAction;
+    acDel_SAP: TAction;
+    acOpenSAP: TAction;
+    acShowSQL: TAction;
+    acImportXLS: TAction;
+    qLoadStatus: TOracleQuery;
+    qControl: TOracleDataSet;
+    qContragent: TOracleDataSet;
+    GroupBox1: TGroupBox;
+    edBegin: TDBDateTimeEditEh;
+    Label1: TLabel;
+    edEnd: TDBDateTimeEditEh;
+    Label2: TLabel;
+    rgNapr_post: TRadioGroup;
+    GroupBox2: TGroupBox;
+    Label3: TLabel;
+    Label5: TLabel;
+    Label4: TLabel;
+    edNumDog: TEdit;
+    edNum_kvit: TEdit;
+    cbUpload: TComboBox;
+    btnDog: TButton;
+    btnKvit: TButton;
+    edOtherCondition: TEdit;
+    Label6: TLabel;
+    edDate_kvit: TDBDateTimeEditEh;
+    Label7: TLabel;
+    qIs_loaded: TOracleQuery;
+    Action1: TAction;
+    qKvit_sf: TOracleQuery;
+    Action2: TAction;
+    qProvoz: TOracleQuery;
+    qSf_RGD: TOracleDataSet;
+    qNPO_zayav: TOracleDataSet;
+    procedure cbUploadChange(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure acExportToExecute(Sender: TObject);
+    procedure acRefreshExecute(Sender: TObject);
+    procedure acCloseExecute(Sender: TObject);
+    procedure acImportRaznarExecute(Sender: TObject);
+    procedure acImportRCExecute(Sender: TObject);
+    procedure acOpenSAPExecute(Sender: TObject);
+    procedure acShowSQLExecute(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure acImportXLSExecute(Sender: TObject);
+    procedure DBGridEh1GetCellParams(Sender: TObject; Column: TColumnEh;
+      AFont: TFont; var Background: TColor; State: TGridDrawState);
+    procedure btnKvitClick(Sender: TObject);
+    procedure btnDogClick(Sender: TObject);
+    procedure AddFilter(Source:TOracleDataSet);
+    procedure acDel_SAPExecute(Sender: TObject);
+    procedure Action1Execute(Sender: TObject);
+    procedure Action2Execute(Sender: TObject);
+  private
+    { Private declarations }
+    PrefixFile,FieldVes:string;
+//переменные предназначены для сохранения всех условий Запроса qTTN для того чтоб потом проставлять статус
+//только у тех записей которые отобраны в запросе и загружены в R3
+    BegDateParam,EndDateParam,NDogParam,ConditionParam:string;
+    function GetDateAsString:string;
+  public
+    { Public declarations }
+  end;
+
+var
+  f_Export2Pererabotka: Tf_Export2Pererabotka;
+
+implementation
+
+{$R *.dfm}
+uses main,ForSESS,ForDB, ForFiles, Funcs, ForSystem;
+
+function Tf_Export2Pererabotka.GetDateAsString:string;
+var
+   yyyy,dd,mm,hh,min,ss,ms:word;
+   sYear,sMonth,sDay,sHour,sMin,sSec:string;
+begin
+  DecodeDateTime(Now,yyyy, mm, dd, hh, min, ss, ms);
+  sYear:=IntTostr(yyyy);
+  sMonth:=IntTostr(mm);
+  sDay:=IntTostr(dd);
+  sHour:=IntTostr(hh);
+  sMin:=IntTostr(min);
+  sSec:=IntTostr(ss);
+  if Length(sMonth)=1 then sMonth:='0'+sMonth;
+  if Length(sDay)=1 then sDay:='0'+sDay;
+  if Length(sHour)=1 then sHour:='0'+sHour;
+  if Length(sMin)=1 then sMin:='0'+sMin;
+  if Length(sSec)=1 then sSec:='0'+sSec;
+  Result:=sYear+sMonth+sDay+'_'+sHour+sMin+sSec;
+end;
+
+procedure Tf_Export2Pererabotka.cbUploadChange(Sender: TObject);
+begin
+  case cbUpload.ItemIndex of
+    0:begin
+        ActionToolBar1.Enabled:=True;
+        BegDateParam:=qTTN.GetVariable(':Beg_Date');
+        EndDateParam:=qTTN.GetVariable(':Beg_Date');;
+        AddFilter(qTTN);
+        MemoSQL.Lines:=qTTN.SQL;
+        dsSource.DataSet:=qTTN;
+        PrefixFile:='2300_SD004_';
+        FieldVes:='VES';
+
+      end;
+      1:begin
+          ActionToolBar1.Enabled:=True;
+          qPlan.SetVariable(':Beg_Date',edBegin.Value);
+          qPlan.SetVariable(':End_Date',edEnd.Value);
+          if edNumDog.Text<>EmptyStr then qPlan.SQL[53]:='AND isu_kod_dog='+QuotedStr(trim(edNumDog.Text))
+          else qPlan.SQL[53]:='--AND 1=1';
+          dsSource.DataSet:=qPlan;
+          PrefixFile:='2300_SD001_';
+          FieldVes:='';
+        end;
+      2:begin
+          ActionToolBar1.Enabled:=True;
+          qOBR.SetVariable(':Beg_Date',edBegin.Value);
+          qOBR.SetVariable(':End_Date',edEnd.Value);
+          if edNumDog.Text<>EmptyStr then qOBR.SQL[55]:='AND isu_kod_dog='+QuotedStr(trim(edNumDog.Text))
+          else qOBR.SQL[55]:='--AND 1=1';
+          dsSource.DataSet:=qOBR;
+          PrefixFile:='2300_SD001_';
+          FieldVes:='';
+      end;
+      3:begin
+          ActionToolBar1.Enabled:=True;
+          qControl.SetVariable(':Beg_Date',edBegin.Value);
+          qControl.SetVariable(':End_Date',edEnd.Value);
+          AddFilter(qControl);
+          MemoSQL.Lines:=qControl.SQL;
+          dsSource.DataSet:=qControl;
+          PrefixFile:='2300_SD004_';
+          FieldVes:='VES';
+      end;
+      4:begin
+          ActionToolBar1.Enabled:=True;
+          dsSource.DataSet.Close;
+          if edOtherCondition.Text<>EmptyStr then
+            qContragent.SQL[12]:='contr.ksss_predpr_id in ('+trim(edOtherCondition.Text)+')'
+          else qContragent.SQL[12]:='--1=1';
+//          MemoSQL.Lines:=qContragent.SQL;
+          dsSource.DataSet:=qContragent;
+          PrefixFile:='2300_SD002_';
+          FieldVes:='';
+      end;
+      5:begin
+          ActionToolBar1.Enabled:=True;
+          qSf_rgd.SetVariable(':Beg_Date',edBegin.Value);
+          qSf_rgd.SetVariable(':End_Date',edEnd.Value);
+          MemoSQL.Lines:=qSf_rgd.SQL;
+          dsSource.DataSet:=qSf_rgd;
+          PrefixFile:='2300_SD006_';
+          FieldVes:='';
+      end;
+      6:begin
+          ActionToolBar1.Enabled:=True;
+          qNPO_zayav.SetVariable(':date_plan',edBegin.Value);
+          qNPO_zayav.SetVariable(':input_date',edEnd.Value);
+          if edOtherCondition.Text='' then qNPO_zayav.SQL[47]:='--AND 1=1'
+          else qNPO_zayav.SQL[47]:=' AND zakaz_hist.ID in ('+edOtherCondition.Text+')';
+
+          MemoSQL.Lines:=qNPO_zayav.SQL;
+          dsSource.DataSet:=qNPO_zayav;
+
+          PrefixFile:='2300_SH007_';
+          FieldVes:='';
+      end;
+  end;
+end;
+
+procedure Tf_Export2Pererabotka.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  Action:=caFree;
+end;
+
+procedure Tf_Export2Pererabotka.acExportToExecute(Sender: TObject);
+var ExpClass:TDBGridEhExportClass;
+    Ext:String;
+    BoxOutDir,SendName,TmpFile:string;
+    SendOk:boolean;
+    NumFile:string;
+begin
+  if not dsSource.DataSet.Active then acRefreshExecute(Sender);
+
+  if cbUpload.ItemIndex<>4 then
+    BoxOutDir:=AnsiUpperCase(F_FileUtils.FillFilePath(F_main.GetApplVari('ISU_BOX_IN'),false))
+  else
+    BoxOutDir:=AnsiUpperCase(F_FileUtils.FillFilePath(F_main.GetApplVari('ISU_BOX_CONTR'),false));
+
+  SaveDialog.InitialDir:=BoxOutDir;
+  SaveDialog.FilterIndex:=2;
+  //скроем титул чтоб он не выгружался в файл
+  DBGridEh1.Options:=[dgEditing,dgIndicator,dgColumnResize,dgColLines,dgRowLines,dgTabs,dgConfirmDelete,dgCancelOnExit];
+  //Определим № файла
+{  try
+    NumFile:=IntToStr(pkgFOR_R3.CallIntegerFunction('GET_SEQ_OF',[]));
+  except
+    NumFile:='0';
+  End;}
+//Определим имя файла в по формату <Код Сбытовой Организации>_SD_004_YYYYMMDD_HHMMSS.csv,
+//где YYYYMMDD - дата создания файла и HHMMSS - время создания файла.
+
+  SaveDialog.Filename:=PrefixFile+GetDateAsString+'.CSV';
+
+  ExpClass := nil;
+  Ext := '';
+
+  if SaveDialog.Execute then
+  Begin
+    BoxOutDir:=ExtractFilePath(SaveDialog.FileName);
+    if cbUpload.ItemIndex<>4 then
+      F_main.SetApplVari('ISU_BOX_IN',BoxOutDir)
+    else F_main.SetApplVari('ISU_BOX_CONTR',BoxOutDir);
+    try
+      case SaveDialog.FilterIndex of
+        1: begin ExpClass := TDBGridEhExportAsText; Ext := 'txt'; end;
+        2: begin ExpClass := TDBGridEhExportAsCSV; Ext := 'csv'; end;
+        3: begin ExpClass := TDBGridEhExportAsHTML; Ext := 'htm'; end;
+        4: begin ExpClass := TDBGridEhExportAsRTF; Ext := 'rtf'; end;
+        5: begin ExpClass := TDBGridEhExportAsXLS; Ext := 'xls';end
+        else begin ExpClass := nil; Ext := '';end
+      end
+    except
+    end;
+    if ExpClass <> nil then
+    begin
+      if UpperCase(Copy(SaveDialog.FileName,Length(SaveDialog.FileName)-2,3)) <>UpperCase(Ext) then
+          SaveDialog.FileName := SaveDialog.FileName + '.' + Ext;
+      SaveDBGridEhToExportFile(ExpClass,DBGridEh1,SaveDialog.FileName,True);
+      ShowMessage('Сформирован файл '+SaveDialog.Filename);
+{      if Application.MessageBox(pchar('Сформирован файл '+SaveDialog.Filename+' Скопировать имя в буфер обмена?'),'Внимание!',MB_YESNO)=IDYES then
+      Begin
+
+      End;}
+    end;
+    //вернем титул обратно
+    DBGridEh1.Options:=[dgEditing,dgTitles,dgIndicator,dgColumnResize,dgColLines,dgRowLines,dgTabs,
+                        dgConfirmDelete,dgCancelOnExit];
+
+  end;
+end;
+
+procedure Tf_Export2Pererabotka.acRefreshExecute(Sender: TObject);
+var
+  SumVes:double;
+  CntTtn:integer;
+  sVes,sTtn:string;
+begin
+  cbUploadChange(Sender);
+  dsSource.DataSet.Close;
+  dsSource.DataSet.Open;
+//посчитаем сумму по весу
+  if FieldVes<>'' then
+  Begin
+    CntTtn:=0;
+    with TOracleDataSet(dsSource.DataSet) do
+    begin
+      try
+        First;
+        DisableControls;
+        SumVes:=0;
+        if not EOF then
+        begin
+          sTtn:=FieldByName('ttn_id').AsString;
+          CntTtn:=1;
+        end;
+        while not eof do
+        Begin
+          SumVes:=SumVes+FieldByName(FieldVes).AsFloat;
+          if sTtn<>FieldByName('ttn_id').AsString then
+          begin
+            sTtn:=FieldByName('ttn_id').AsString;
+            inc(CntTtn);
+          end;
+          Next;
+        end;
+        First;
+      finally
+        EnableControls;
+      end;
+    end;
+//обновим информацию в статус баре
+    with StatusBar1 do
+    begin
+       Panels.BeginUpdate;
+      try
+        Panels.Items[0].Text :='Всего записей:'+IntToStr(dsSource.DataSet.RecordCount)+' / '+IntToStr(CntTtn)+' квитанций';
+        Str(SumVes:20:3,sVes);
+        Panels.Items[1].Text :='Общий вес:'+sVes+'т';
+      finally
+        Panels.EndUpdate;
+      end;
+    end;
+  end;
+//  if Self.Visible then
+//  begin
+    DBGridEh1.SetFocus;
+//  end;
+end;
+
+procedure Tf_Export2Pererabotka.acCloseExecute(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure Tf_Export2Pererabotka.acImportRaznarExecute(Sender: TObject);
+begin
+  dsSource.DataSet.Close;
+  dsSource.DataSet:=adoDogovor;
+  dsSource.DataSet.Active:=True;
+end;
+
+procedure Tf_Export2Pererabotka.acImportRCExecute(Sender: TObject);
+begin
+adoDogovor.First;
+while not adoDogovor.Eof do
+begin
+  qUpdateDogovor.SetVariable(':KOD_DOG',trim(adoDogovor['F2']));
+  qUpdateDogovor.SetVariable(':ISU_KOD',trim(adoDogovor['F1']));
+  try
+    qUpdateDogovor.Execute;
+    except
+    on E: Exception do
+    Begin
+      // Отобразим ошибку
+      f_main.ApplSession.WriteToLog(amFull,'Export2Pererabotka',sesError,E.Message,0,'');
+      ora_Session.Rollback;
+      exit;
+    end;
+  end;
+  adoDogovor.Next;
+end;
+ora_Session.Commit;
+end;
+
+procedure Tf_Export2Pererabotka.acOpenSAPExecute(Sender: TObject);
+begin
+//можно запустить SAP из Мастера
+  FileExecute('U:\master\r3\csv\zttn.sap','','',esNormal);
+end;
+
+procedure Tf_Export2Pererabotka.acShowSQLExecute(Sender: TObject);
+begin
+  MemoSQL.Visible:=not MemoSQL.Visible
+end;
+
+procedure Tf_Export2Pererabotka.FormCreate(Sender: TObject);
+var
+  FileName:String;
+begin
+  edBegin.Value:=DateOf(Now)-1;
+  edEnd.Value:=DateOf(Now);
+//удаляем файл протокола который может мешать загрузке если он есть
+  FileName:='U:\ISU\PROTOCOL\delivery_fact_result.csv';
+  if FileExists(FileName) then DeleteFile(FileName);
+  f_db.LogonMasterSession(ora_Session);
+  cbUpload.ItemIndex:=0;
+//  cbUploadChange(Sender);
+end;
+
+procedure Tf_Export2Pererabotka.acImportXLSExecute(Sender: TObject);
+var
+  ExcelApp:variant;
+  WBk : OleVariant;
+  SaveChanges: OleVariant;
+  StrPath,strCell:string;
+  Param1,Param2,Param3:variant;
+  i:integer;
+  BoxInDir,ReceiveName,TmpFile:string;
+begin
+  BoxInDir:=AnsiUpperCase(F_FileUtils.FillFilePath(F_main.GetApplVari('ISU_BOX_OUT'),false));
+  OpenDlg.InitialDir:=BoxInDir;
+  // открытие Excel
+  if OpenDlg.Execute then
+  Begin
+    BoxInDir:=ExtractFilePath(OpenDlg.FileName);
+    F_main.SetApplVari('ISU_BOX_OUT',BoxInDir);
+    BoxInDir:=F_FileUtils.FillFilePath(BoxInDir+'\',True);
+    F_FileUtils.FillFilePath(BoxInDir+'\ARCHIVE\',True);
+    ReceiveName:=AnsiUpperCase(ExtractFileName(OpenDlg.FileName));
+    if not FileExists(BoxInDir+ReceiveName) then
+    begin
+      ShowMessage('Файл '+ReceiveName+' с соответствиями поставок отсутствует в каталоге приема!');
+      exit;
+    end;
+    //рефрешим форму для удаления артефактов
+    Self.Refresh;
+    try
+      Screen.Cursor:=crSQLWait;
+      // Скопировать полученный файл
+      TmpFile:=f_main.TempLocalPath+ReceiveName;
+      F_FileUtils.SafeCopyFile(BoxInDir+ReceiveName,TmpFile);
+
+      ExcelApp := CreateOleObject('Excel.Application');
+      WBk:=ExcelApp.Workbooks.Open(TmpFile);
+      i:=8;
+      strCell:=VarToStr(WBk.ActiveSheet.Cells.Item[i, 2].Value);
+      While strCell<>'' do
+      begin
+        Param1:=WBk.ActiveSheet.Cells.Item[i, 2].Value;
+        Param2:=WBk.ActiveSheet.Cells.Item[i, 3].Value;
+        Param3:=WBk.ActiveSheet.Cells.Item[i, 7].Value;
+        //внесем записи в Oracle
+        try
+          qIs_loaded.SetVariable(':KVIT',Param1);
+          qIs_loaded.SetVariable(':CIST',Param2);
+          qIs_loaded.SetVariable(':DATA',Param3);
+          qIs_loaded.Execute;
+        except
+          on E: Exception do
+            Begin
+              // Отобразим ошибку
+              f_main.ApplSession.WriteToLog(amFull,'Export2Pererabotka',sesError,E.Message,0,'');
+              ora_Session.Rollback;
+              exit;
+            end;
+        End;
+        inc(i);
+        strCell:=VarToStr(WBk.ActiveSheet.Cells.Item[i, 2].Value);
+      end;
+      // Переносим в архив
+      F_FileUtils.SafeCopyFile(TmpFile,BoxInDir+'\ARCHIVE\'+FormatDateTime('YY_MM_DD_HH_NN_',Now)+ReceiveName);
+      // удаляем полученный файл
+      DeleteFile(BoxInDir+ReceiveName);
+      // удаляем временный файл
+      DeleteFile(TmpFile);
+      Screen.Cursor:=crDefault;
+      with StatusBar1 do
+      begin
+        Panels.BeginUpdate;
+        try
+          Panels.Items[1].Text :='Загружено:'+IntToStr(i-8)+'';
+        finally
+          Panels.EndUpdate;
+        end;
+      end;
+      ShowMessage('Файл загружен успешно!');
+    finally
+      WBk.Close(SaveChanges := False);
+      ExcelApp.Quit;
+      ora_Session.Commit;
+      Screen.Cursor:=crDefault;
+      //обновим информацию в статус баре
+    end;
+  end;//if
+end;
+
+procedure Tf_Export2Pererabotka.DBGridEh1GetCellParams(Sender: TObject;
+  Column: TColumnEh; AFont: TFont; var Background: TColor;
+  State: TGridDrawState);
+  var
+  t1,t2:double;
+  v:integer;
+  exp:string;
+begin
+  inherited;
+  if cbUpload.ItemIndex<>0 then exit;
+  if not qTTN.Active then exit;
+  t1:=qTTN.FieldByName('tarif').AsFloat;
+  t2:=qTTN.FieldByName('doptarif').AsFloat;
+  v:=qTTN.FieldByName('vagowner_type').AsInteger;
+  exp:=qTTN.FieldByName('kod_napr').AsString;
+  if (t1>0) AND (v=2) AND (t2=0) AND (exp<>'08') Then
+    Background:=clRed;
+end;
+
+procedure Tf_Export2Pererabotka.btnKvitClick(Sender: TObject);
+begin
+  if btnKvit.Caption='=' then btnKvit.Caption:='<>' else btnKvit.Caption:='=';
+end;
+
+procedure Tf_Export2Pererabotka.btnDogClick(Sender: TObject);
+begin
+  if btnDog.Caption='=' then btnDog.Caption:='<>' else btnDog.Caption:='=';
+end;
+
+procedure Tf_Export2Pererabotka.AddFilter(Source:TOracleDataSet);
+const
+ //номер первой строки условия
+  CONDITION_ROW_NUMBER=156;
+var
+  znak:string;
+
+begin
+  with Source do
+  begin
+    Close;
+    SetVariable(':Beg_Date',edBegin.Value);
+    SetVariable(':End_Date',edEnd.Value);
+    if edNumDog.Text<>EmptyStr then SQL[CONDITION_ROW_NUMBER]:='AND isu_kod_dog'+btnDog.Caption+QuotedStr(trim(edNumDog.Text))
+    else SQL[CONDITION_ROW_NUMBER]:='--AND 1=1';
+    if edOtherCondition.Text<>EmptyStr then SQL[CONDITION_ROW_NUMBER+1]:=trim(edOtherCondition.Text)
+    else SQL[CONDITION_ROW_NUMBER+1]:='--AND 1=1';
+    if btnKvit.Caption='=' then znak:=' in ' else znak:=' not in ';
+    if edNum_kvit.Text<>EmptyStr then SQL[CONDITION_ROW_NUMBER+2]:='AND num_kvit'+znak+'('+trim(edNum_kvit.Text)+')'
+    else SQL[CONDITION_ROW_NUMBER+2]:='--AND 1=1';
+    case rgNapr_post.ItemIndex of
+      0:SQL[CONDITION_ROW_NUMBER+3]:='--AND 1=1';
+      1:SQL[CONDITION_ROW_NUMBER+3]:='AND kod_napr='+QuotedStr('02');
+      2:SQL[CONDITION_ROW_NUMBER+3]:='AND kod_napr<>'+QuotedStr('02');
+    end;
+  end;
+end;
+
+procedure Tf_Export2Pererabotka.acDel_SAPExecute(Sender: TObject);
+begin
+  if (edNum_kvit.text=EmptyStr) or (edDate_kvit.Value=null) then
+  begin
+    ShowMessage('Введите НОМЕР и ДАТУ КВИТАНЦИИ для удаления!');
+    exit;
+  end;
+  if Application.MessageBox(PChar('Очистить поставки SAP R/3 по квитанции №'+edNum_kvit.Text+'?'),'Внимание!',MB_YESNO)=IDYES then
+  begin
+     try
+      qLoadStatus.SetVariable(':KVIT',F_ForSystem.StrToInteger(edNum_kvit.Text));
+      qLoadStatus.SetVariable(':DATE_KV',edDate_kvit.Value);
+      qLoadStatus.Execute;
+      ora_Session.Commit;
+     except
+      on E: Exception do
+        Begin
+          // Отобразим ошибку
+          f_main.ApplSession.WriteToLog(amFull,'Export2Pererabotka',sesError,E.Message,0,'');
+          ora_Session.Rollback;
+          exit;
+        end;
+      End;
+  end;
+end;
+
+procedure Tf_Export2Pererabotka.Action1Execute(Sender: TObject);
+var
+  ExcelApp:variant;
+  WBk : OleVariant;
+  SaveChanges: OleVariant;
+  StrPath,strCell:string;
+  Param1,Param2,Param3:variant;
+  i:integer;
+  TmpFile:string;
+begin
+    try
+      Screen.Cursor:=crSQLWait;
+      // Скопировать полученный файл
+      TmpFile:='c:\kvit_sf.xls';
+      ExcelApp := CreateOleObject('Excel.Application');
+      WBk:=ExcelApp.Workbooks.Open(TmpFile);
+      i:=1;
+      strCell:=VarToStr(WBk.ActiveSheet.Cells.Item[i, 1].Value);
+      While strCell<>'' do
+      begin
+        Param1:=WBk.ActiveSheet.Cells.Item[i, 1].Value;
+        Param2:=WBk.ActiveSheet.Cells.Item[i, 2].Value;
+        Param3:=WBk.ActiveSheet.Cells.Item[i, 3].Value;
+        //внесем записи в Oracle
+        try
+          qKvit_sf.SetVariable(':SF',Param1);
+          qKvit_sf.SetVariable(':KVIT',Param2);
+          qKvit_sf.SetVariable(':DT',Param3);
+          qKvit_sf.Execute;
+        except
+          on E: Exception do
+            Begin
+              // Отобразим ошибку
+              f_main.ApplSession.WriteToLog(amFull,'Export2Pererabotka',sesError,E.Message,0,'');
+              ora_Session.Rollback;
+              exit;
+            end;
+        End;
+        inc(i);
+        strCell:=VarToStr(WBk.ActiveSheet.Cells.Item[i, 1].Value);
+      end;
+      Screen.Cursor:=crDefault;
+    finally
+      WBk.Close(SaveChanges := False);
+      ExcelApp.Quit;
+      ora_Session.Commit;
+      //обновим информацию в статус баре
+    end;
+end;
+
+procedure Tf_Export2Pererabotka.Action2Execute(Sender: TObject);
+var
+  ExcelApp:variant;
+  WBk : OleVariant;
+  SaveChanges: OleVariant;
+  StrPath,strCell:string;
+  Param1,Param2,Param3,Param4:variant;
+  i:integer;
+  TmpFile:string;
+begin
+    try
+      Screen.Cursor:=crSQLWait;
+      // Скопировать полученный файл
+      TmpFile:='c:\provoz.xls';
+      ExcelApp := CreateOleObject('Excel.Application');
+      WBk:=ExcelApp.Workbooks.Open(TmpFile);
+      i:=1;
+      strCell:=VarToStr(WBk.ActiveSheet.Cells.Item[i, 1].Value);
+      While strCell<>'' do
+      begin
+        Param1:=WBk.ActiveSheet.Cells.Item[i, 1].Value;
+        Param2:=WBk.ActiveSheet.Cells.Item[i, 2].Value;
+        Param3:=WBk.ActiveSheet.Cells.Item[i, 3].Value;
+        Param4:=WBk.ActiveSheet.Cells.Item[i, 5].Value;
+        //внесем записи в Oracle
+        try
+          qProvoz.SetVariable(':KVIT',Param1);
+          qProvoz.SetVariable(':DT',Param2);
+          qProvoz.SetVariable(':CIST',Param3);
+          qProvoz.SetVariable(':NDS',Param4);
+          qProvoz.Execute;
+        except
+          on E: Exception do
+            Begin
+              // Отобразим ошибку
+              f_main.ApplSession.WriteToLog(amFull,'Export2Pererabotka',sesError,E.Message,0,'');
+              ora_Session.Rollback;
+              exit;
+            end;
+        End;
+        inc(i);
+        strCell:=VarToStr(WBk.ActiveSheet.Cells.Item[i, 1].Value);
+      end;
+      Screen.Cursor:=crDefault;
+    finally
+      WBk.Close(SaveChanges := False);
+      ExcelApp.Quit;
+      ora_Session.Commit;
+      //обновим информацию в статус баре
+    end;
+end;
+
+end.

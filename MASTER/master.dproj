@@ -1,0 +1,656 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{6215A55E-AF7F-447D-A326-76B9812BB077}</ProjectGuid>
+			<MainSource>master.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_MapFile>3</DCC_MapFile>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_UNSAFE_TYPE>true</DCC_UNSAFE_TYPE>
+			<DCC_UsePackage>Vcl50;Vclx50;VclSmp50;Vcldb50;vclado50;ibevnt50;Vclbde50;vcldbx50;Qrpt50;TeeUI50;TeeDB50;Tee50;Dss50;TeeQR50;VCLIB50;Vclmid50;vclie50;Inetdb50;Inet50;NMFast50;webmid50;dclocx50;dclaxserver50;RxDB5;RxCtl5;RxBDE5;ProLibDB50;ProLib50</DCC_UsePackage>
+			<DCC_DependencyCheckOutputName>c:\tmp\master.exe</DCC_DependencyCheckOutputName>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_ExeOutput>c:\tmp</DCC_ExeOutput>
+			<DCC_Define>EUREKALOG;$(DCC_Define)</DCC_Define>
+			<DCC_K>false</DCC_K>
+			<DCC_F>false</DCC_F>
+			<DCC_S>false</DCC_S>
+			<DCC_N>true</DCC_N>
+			<DCC_E>false</DCC_E>
+			<DCC_UNSAFE_CAST>true</DCC_UNSAFE_CAST>
+			<DCC_UNSAFE_CODE>true</DCC_UNSAFE_CODE>
+			<DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+			<DCC_WriteableConstants>true</DCC_WriteableConstants>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="master.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<None Include="master.todo"/>
+			<DCCReference Include="main.pas">
+				<Form>f_main</Form>
+			</DCCReference>
+			<DCCReference Include="AddGdTime.pas">
+				<Form>f_AddGdTime</Form>
+			</DCCReference>
+			<DCCReference Include="PLANPOST\AddPlanStru.pas">
+				<Form>F_AddPlanStru</Form>
+			</DCCReference>
+			<DCCReference Include="PLANPOST\AddPlnIz.pas">
+				<Form>F_AddPlanIzm</Form>
+			</DCCReference>
+			<DCCReference Include="PLANPOST\AddPlnPer.pas">
+				<Form>F_AddPlanPer</Form>
+			</DCCReference>
+			<DCCReference Include="PLANPOST\AddPlPst.pas">
+				<Form>F_AddPlanPost</Form>
+			</DCCReference>
+			<DCCReference Include="AllRep.pas">
+				<Form>f_Rep</Form>
+			</DCCReference>
+			<DCCReference Include="NARIAD\AskPeriod.pas">
+				<Form>F_AskPeriod</Form>
+			</DCCReference>
+			<DCCReference Include="AZC\azc.pas">
+				<Form>f_forAZCRealiz</Form>
+			</DCCReference>
+			<DCCReference Include="Oup\azsEff.pas">
+				<Form>f_azsEff</Form>
+			</DCCReference>
+			<DCCReference Include="Oup\azsMonth.pas">
+				<Form>Form1</Form>
+			</DCCReference>
+			<DCCReference Include="AZC\azc_filter.pas">
+				<Form>f_azc_filter</Form>
+			</DCCReference>
+			<DCCReference Include="AZC\azc_object.pas">
+				<Form>f_forAZC_object</Form>
+			</DCCReference>
+			<DCCReference Include="AZC\azc_object_add.pas">
+				<Form>f_forAZC_object_add</Form>
+			</DCCReference>
+			<DCCReference Include="AZC\azc_oper_all.pas">
+				<Form>f_forAZC_oper_all</Form>
+			</DCCReference>
+			<DCCReference Include="AZC\azc_perevod.pas">
+				<Form>f_forAZC_perevod</Form>
+			</DCCReference>
+			<DCCReference Include="AZC\azc_remove.pas">
+				<Form>f_forAZCRemove</Form>
+			</DCCReference>
+			<DCCReference Include="AZC\azc_rezerv.pas">
+				<Form>f_forAZC_Obj_rez</Form>
+			</DCCReference>
+			<DCCReference Include="AZC\azc_sprav.pas">
+				<Form>f_forAZCSprav</Form>
+			</DCCReference>
+			<DCCReference Include="AZC\azc_from_parus.pas">
+				<Form>f_AzcFromParus</Form>
+			</DCCReference>
+			<DCCReference Include="AZC\azc_tarif.pas">
+				<Form>f_forAZC_tarif</Form>
+			</DCCReference>
+			<DCCReference Include="Calls.pas">
+				<Form>f_Calls</Form>
+			</DCCReference>
+			<DCCReference Include="CatCen.pas">
+				<Form>f_CatCen</Form>
+			</DCCReference>
+			<DCCReference Include="CatCenGr.pas">
+				<Form>f_CatCenGroup</Form>
+			</DCCReference>
+			<DCCReference Include="CChart.pas">
+				<Form>f_CounterChart</Form>
+			</DCCReference>
+			<DCCReference Include="CDetail.pas">
+				<Form>f_DetailInfo</Form>
+			</DCCReference>
+			<DCCReference Include="ChCounter.pas">
+				<Form>f_ChooseCounter</Form>
+			</DCCReference>
+			<DCCReference Include="Counter.pas">
+				<Form>f_Counter</Form>
+			</DCCReference>
+			<DCCReference Include="Arhangelsk\contr.pas">
+				<Form>frm1cParAgn</Form>
+			</DCCReference>
+			<DCCReference Include="PF\disprep.pas">
+				<Form>f_disprep</Form>
+			</DCCReference>
+			<DCCReference Include="PF\disprep1.pas">
+				<Form>f_disprep1</Form>
+			</DCCReference>
+			<DCCReference Include="DocStream.pas">
+				<Form>f_DocStream</Form>
+			</DCCReference>
+			<DCCReference Include="NARIAD\Dover.pas">
+				<Form>F_Dover</Form>
+			</DCCReference>
+			<DCCReference Include="EdCatCen.pas">
+				<Form>f_EdCatCen</Form>
+			</DCCReference>
+			<DCCReference Include="NARIAD\EdDover.pas">
+				<Form>F_EdDover</Form>
+			</DCCReference>
+			<DCCReference Include="NARIAD\EdNariad.pas">
+				<Form>F_EdNariad</Form>
+			</DCCReference>
+			<DCCReference Include="EdPayment.pas">
+				<Form>f_EdPayment</Form>
+			</DCCReference>
+			<DCCReference Include="R3\End_DT.pas">
+				<Form>f_EndDateFOX2R3</Form>
+			</DCCReference>
+			<DCCReference Include="PLANFACT\f42.pas">
+				<Form>f_f42</Form>
+			</DCCReference>
+			<DCCReference Include="PLANFACT\f42_prch.pas">
+				<Form>f_f42_prich</Form>
+			</DCCReference>
+			<DCCReference Include="NARIAD\FindDov.pas">
+				<Form>F_FindDov</Form>
+			</DCCReference>
+			<DCCReference Include="ForDB.pas"/>
+			<DCCReference Include="ForFiles.pas"/>
+			<DCCReference Include="ForReport.pas">
+				<Form>f_forReport</Form>
+			</DCCReference>
+			<DCCReference Include="ForSystem.pas"/>
+			<DCCReference Include="ForTemp.pas"/>
+			<DCCReference Include="ForSESS.pas">
+				<Form>ApplSession</Form>
+			</DCCReference>
+			<DCCReference Include="ENVIRONMENT\ForEnv.pas"/>
+			<DCCReference Include="ForODBC.pas">
+				<Form>F_ODBC</Form>
+			</DCCReference>
+			<DCCReference Include="NARIAD\Funcs.pas"/>
+			<DCCReference Include="GdTime.pas">
+				<Form>f_GdTime</Form>
+			</DCCReference>
+			<DCCReference Include="GDPLan4Anton.pas">
+				<Form>f_GDPLan4Anton</Form>
+			</DCCReference>
+			<DCCReference Include="Identify.pas">
+				<Form>f_identify</Form>
+			</DCCReference>
+			<DCCReference Include="obu\in1.pas">
+				<Form>frm_OBU_sbcard</Form>
+			</DCCReference>
+			<DCCReference Include="INF2PBAL\INF2PBAL.pas">
+				<Form>f_Inf2Pbal</Form>
+			</DCCReference>
+			<DCCReference Include="JKCOMMIT\JKC_New.pas">
+				<Form>F_JKCommit</Form>
+			</DCCReference>
+			<DCCReference Include="KlsAdd.pas">
+				<Form>f_KlsAdd</Form>
+			</DCCReference>
+			<DCCReference Include="KlsLinks.pas">
+				<Form>f_KlsLinks</Form>
+			</DCCReference>
+			<DCCReference Include="KlsListLinks.pas">
+				<Form>f_KlsListLinks</Form>
+			</DCCReference>
+			<DCCReference Include="klsmisc2.pas">
+				<Form>f_KlsMisc</Form>
+			</DCCReference>
+			<DCCReference Include="KlsStruEd.pas">
+				<Form>f_KlsStruEd</Form>
+			</DCCReference>
+			<DCCReference Include="KlsUnivers.pas">
+				<Form>f_KlsUnivers</Form>
+			</DCCReference>
+			<DCCReference Include="R3\Kvit2R3.pas">
+				<Form>f_Kvit2R3</Form>
+			</DCCReference>
+			<DCCReference Include="LOAD_FIL\LoadFilList.pas">
+				<Form>f_LoadFilList</Form>
+			</DCCReference>
+			<DCCReference Include="PARUS\cb\loader.pas">
+				<Form>cb2parus</Form>
+			</DCCReference>
+			<DCCReference Include="LOAD_FIL\LoadFil.pas">
+				<Form>f_LoadFil</Form>
+			</DCCReference>
+			<DCCReference Include="LoadReeSMN.pas">
+				<Form>f_LoadReeSMN_1</Form>
+			</DCCReference>
+			<DCCReference Include="MemoEdit.pas">
+				<Form>f_MemoEdit</Form>
+			</DCCReference>
+			<DCCReference Include="MetaPlan\MetaPlanMain.pas">
+				<Form>f_MetaPlanSetup</Form>
+			</DCCReference>
+			<DCCReference Include="MdiForm.pas">
+				<Form>f_MDIForm</Form>
+			</DCCReference>
+			<DCCReference Include="Month.pas">
+				<Form>f_Month</Form>
+			</DCCReference>
+			<DCCReference Include="request\month_all.pas">
+				<Form>frmMonthAll</Form>
+			</DCCReference>
+			<DCCReference Include="NARIAD\Nariad.pas">
+				<Form>F_Nariad</Form>
+			</DCCReference>
+			<DCCReference Include="NARIAD\NarToDBF.pas">
+				<Form>F_NarToDbf</Form>
+			</DCCReference>
+			<DCCReference Include="NewMonth.pas">
+				<Form>f_NewMonth</Form>
+			</DCCReference>
+			<DCCReference Include="NewSFAsker.pas">
+				<Form>f_NewSFAsker</Form>
+			</DCCReference>
+			<DCCReference Include="request\ZakazNew.pas">
+				<Form>f_ZakazNew</Form>
+			</DCCReference>
+			<DCCReference Include="oper_zayav.pas">
+				<Form>f_oper_zayav</Form>
+			</DCCReference>
+			<DCCReference Include="opreeflt.pas">
+				<Form>f_OperReeFilter</Form>
+			</DCCReference>
+			<DCCReference Include="OraToDbf.pas">
+				<Form>f_OraToDbf</Form>
+			</DCCReference>
+			<DCCReference Include="Payments.pas">
+				<Form>f_Payments</Form>
+			</DCCReference>
+			<DCCReference Include="OneSF.pas">
+				<Form>f_OneSF</Form>
+			</DCCReference>
+			<DCCReference Include="ParusLog.pas">
+				<Form>f_ParusLog</Form>
+			</DCCReference>
+			<DCCReference Include="oper_ree.pas">
+				<Form>f_oper_ree</Form>
+			</DCCReference>
+			<DCCReference Include="PLANFACT\plnp.pas">
+				<Form>f_plnp</Form>
+			</DCCReference>
+			<DCCReference Include="PLANFACT\plnp_dbf.pas">
+				<Form>f_plnpdbf</Form>
+			</DCCReference>
+			<DCCReference Include="PLANPOST\planpost.pas">
+				<Form>f_PlanPost</Form>
+			</DCCReference>
+			<DCCReference Include="PLANPOST\planstru.pas">
+				<Form>f_PlanStru</Form>
+			</DCCReference>
+			<DCCReference Include="Requests\plan_request.pas">
+				<Form>f_LoadPlanRequest</Form>
+			</DCCReference>
+			<DCCReference Include="Predpr.pas">
+				<Form>f_Predpr</Form>
+			</DCCReference>
+			<DCCReference Include="PLANFACT\prichin.pas">
+				<Form>FormPrichin</Form>
+			</DCCReference>
+			<DCCReference Include="PARUS\price\PriceNPO.pas">
+				<Form>frmPrice</Form>
+			</DCCReference>
+			<DCCReference Include="PrintSF.pas">
+				<Form>f_PrintSF</Form>
+			</DCCReference>
+			<DCCReference Include="PLANFACT\pfdbf.pas">
+				<Form>f_pfdbf</Form>
+			</DCCReference>
+			<DCCReference Include="EXPORT\PrichExp.pas">
+				<Form>f_PrichExp</Form>
+			</DCCReference>
+			<DCCReference Include="post_realiz\pr_view.pas">
+				<Form>frmPRView</Form>
+			</DCCReference>
+			<DCCReference Include="post_realiz\pp_new.pas">
+				<Form>frmPPNew</Form>
+			</DCCReference>
+			<DCCReference Include="post_realiz\pp_view.pas">
+				<Form>frmPPView</Form>
+			</DCCReference>
+			<DCCReference Include="post_realiz\pr_new.pas">
+				<Form>frmPRNew</Form>
+			</DCCReference>
+			<DCCReference Include="ReplDep.pas">
+				<Form>f_ReplDep</Form>
+			</DCCReference>
+			<DCCReference Include="SutReeList.pas">
+				<Form>f_SutReeList</Form>
+			</DCCReference>
+			<DCCReference Include="Plan_Resource\ResourceProizv.pas">
+				<Form>frmResourceProizv</Form>
+			</DCCReference>
+			<DCCReference Include="RunQuery.pas">
+				<Form>f_Query</Form>
+			</DCCReference>
+			<DCCReference Include="SFNumbers.pas">
+				<Form>f_SFNumbers</Form>
+			</DCCReference>
+			<DCCReference Include="MetaPlan\selectRoot.pas">
+				<Form>SelectRootDlg</Form>
+			</DCCReference>
+			<DCCReference Include="ScriptGen.pas">
+				<Form>f_ScriptGen</Form>
+			</DCCReference>
+			<DCCReference Include="sqlReport.pas">
+				<Form>f_forReportSQL</Form>
+			</DCCReference>
+			<DCCReference Include="EXPORT\SoobExp.pas">
+				<Form>f_SoobExp</Form>
+			</DCCReference>
+			<DCCReference Include="PLANFACT\SvodPF.pas">
+				<Form>f_SvodPF</Form>
+			</DCCReference>
+			<DCCReference Include="smn_ree.pas">
+				<Form>f_smn_ree</Form>
+			</DCCReference>
+			<DCCReference Include="Requests\selectSheet.pas">
+				<Form>f_selectSheet</Form>
+			</DCCReference>
+			<DCCReference Include="AZC\tarif_adds.pas">
+				<Form>f_forAZC_tarifadd</Form>
+			</DCCReference>
+			<DCCReference Include="UserRite.pas">
+				<Form>f_UserRights</Form>
+			</DCCReference>
+			<DCCReference Include="loadreesmn_2.pas">
+				<Form>f_LoadReeSMN_2</Form>
+			</DCCReference>
+			<DCCReference Include="request\dlgWindow.pas">
+				<Form>frmDlgWindow</Form>
+			</DCCReference>
+			<DCCReference Include="SutRee.pas">
+				<Form>f_SutRee</Form>
+			</DCCReference>
+			<DCCReference Include="RepDbfItogs.pas">
+				<Form>f_Rep_Dbf_Itogs</Form>
+			</DCCReference>
+			<DCCReference Include="RepDbfGrp.pas">
+				<Form>f_Rep_Dbf_Grp</Form>
+			</DCCReference>
+			<DCCReference Include="REPL\ReplInit.pas">
+				<Form>f_ReplInit</Form>
+			</DCCReference>
+			<DCCReference Include="request\month_all_row.pas">
+				<Form>f_MonthAllRow</Form>
+			</DCCReference>
+			<DCCReference Include="alfa\alfa2month.pas">
+				<Form>frmAlfaLoadRequest</Form>
+			</DCCReference>
+			<DCCReference Include="request\zakaz.pas">
+				<Form>f_Zakaz</Form>
+			</DCCReference>
+			<DCCReference Include="request\ZakazFilter.pas">
+				<Form>f_ZakazFilter</Form>
+			</DCCReference>
+			<DCCReference Include="request\nmonth_all.pas">
+				<Form>frm_MonthNew</Form>
+			</DCCReference>
+			<DCCReference Include="request\ZakazHistNew.pas">
+				<Form>f_ZakazHistNew</Form>
+			</DCCReference>
+			<DCCReference Include="OtpCen.pas">
+				<Form>f_OtpCen</Form>
+			</DCCReference>
+			<DCCReference Include="RepDbf.pas">
+				<Form>f_Rep_Dbf</Form>
+			</DCCReference>
+			<DCCReference Include="RezReport.pas">
+				<Form>f_RezReport</Form>
+			</DCCReference>
+			<DCCReference Include="AZC\trk_eff.pas">
+				<Form>f_trkEff</Form>
+			</DCCReference>
+			<DCCReference Include="EdOtpCen.pas">
+				<Form>f_EdOtpCen</Form>
+			</DCCReference>
+			<DCCReference Include="OneSFNoOtgr.pas">
+				<Form>f_OneSFNoOtgr</Form>
+			</DCCReference>
+			<DCCReference Include="OBU\exp2inf.pas">
+				<Form>frmExp2INFIN</Form>
+			</DCCReference>
+			<DCCReference Include="disp_azs.pas">
+				<Form>f_dispazs</Form>
+			</DCCReference>
+			<DCCReference Include="selectDep.pas">
+				<Form>f_selectDep</Form>
+			</DCCReference>
+			<DCCReference Include="extGrid.pas"/>
+			<DCCReference Include="oper_sf_new.pas">
+				<Form>f_oper_sf</Form>
+			</DCCReference>
+			<DCCReference Include="gu12\U_zayav.pas">
+				<Form>f_zayav</Form>
+			</DCCReference>
+			<DCCReference Include="gu12\U_glob_var.pas"/>
+			<DCCReference Include="gu12\U_reis.pas">
+				<Form>f_reis</Form>
+			</DCCReference>
+			<DCCReference Include="gu12\U_add_razb.pas">
+				<Form>f_add_razb</Form>
+			</DCCReference>
+			<DCCReference Include="gu12\U_otkaz.pas">
+				<Form>f_otkaz</Form>
+			</DCCReference>
+			<DCCReference Include="gu12\U_period.pas">
+				<Form>f_period</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_SvedNew.pas">
+				<Form>f_SvedNew</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_VedOsmotr.pas">
+				<Form>f_VedOsmotr</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_VedOsmotrNew.pas">
+				<Form>f_VedOsmotrNew</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_nakl.pas">
+				<Form>f_Nakl</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\SvedIn.pas">
+				<Form>f_SvedIn</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\SvedInNew.pas">
+				<Form>f_SvedInNew</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_Podacha.pas">
+				<Form>f_Podacha</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_PodachaNew.pas">
+				<Form>f_PodachaNew</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_PaspBrowse.pas">
+				<Form>f_PaspBrowse</Form>
+			</DCCReference>
+			<DCCReference Include="AZC\cardHistory.pas">
+				<Form>f_cardHistory</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_SvedAddVagon.pas">
+				<Form>f_AddVagon</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_PodachaAddVedOsm.pas">
+				<Form>f_PodachaAddVedOsm</Form>
+			</DCCReference>
+			<DCCReference Include="SelectableTree.pas">
+				<Form>tree with checkboxes</Form>
+			</DCCReference>
+			<DCCReference Include="FrameNariad.pas">
+				<Form>frmNariad</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_SvedAddress.pas">
+				<Form>f_SvedAddress</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\Raspor.pas">
+				<Form>f_Raspor</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\RasporNew.pas">
+				<Form>f_RasporNew</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_Sved.pas">
+				<Form>f_Sved</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_NaklVozNew.pas">
+				<Form>f_NaklVozNew</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_NaklAddVagon.pas">
+				<Form>f_NaklAddVagon</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_SvedAddVagonVedPod.pas">
+				<Form>f_AddVagonVedPod</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_MoveVagon.pas">
+				<Form>f_MoveVagon</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_Find.pas">
+				<Form>f_FindVagon</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_UVED.pas">
+				<Form>f_Uved</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_UvedNew.pas">
+				<Form>f_UvedNew</Form>
+			</DCCReference>
+			<DCCReference Include="Moveprod\u_moveprod.pas">
+				<Form>f_move</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_Pasp.pas">
+				<Form>f_Pasp</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_TablPok.pas">
+				<Form>f_TablPok</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_PaspAdd.pas">
+				<Form>f_PaspAdd</Form>
+			</DCCReference>
+			<DCCReference Include="Vozvrat\u_repvoz.pas">
+				<Form>f_repvoz</Form>
+			</DCCReference>
+			<DCCReference Include="oper_pod.pas">
+				<Form>f_oper_pod</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_NaklNew.pas">
+				<Form>f_NaklNew</Form>
+			</DCCReference>
+			<DCCReference Include="gu12\U_history.pas">
+				<Form>f_history</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_ShabVoz.pas">
+				<Form>f_ShabVozNew</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_ShabExp.pas">
+				<Form>f_ShabExp</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_ShabExpNew.pas">
+				<Form>f_ShabExpNew</Form>
+			</DCCReference>
+			<DCCReference Include="OTGR\MO_UvedVozNew.pas">
+				<Form>f_UvedVozNew</Form>
+			</DCCReference>
+			<DCCReference Include="R3\Export2R3.pas">
+				<Form>f_Export2R3</Form>
+			</DCCReference>
+			<DCCReference Include="R3\Export2Pererabotka.pas">
+				<Form>f_Export2Pererabotka</Form>
+			</DCCReference>
+			<DCCReference Include="R3\u_sfload.pas">
+				<Form>f_sfload</Form>
+			</DCCReference>
+			<DCCReference Include="UnitTest.pas">
+				<Form>FormTest</Form>
+			</DCCReference>
+			<DCCReference Include="R3\CustomDBGridEhImpExp.pas"/>
+			<DCCReference Include="ARCSIS\ARCSISDataFormUnit.pas">
+				<Form>ARCSISDATAFORM</Form>
+			</DCCReference>
+			<DCCReference Include="ARCSIS\ARSCISGetWay.pas">
+				<Form>f_ARSCISGetWay</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">master.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<Language>
+						<Language Name="ProjectLang">$00000419</Language>
+					</Language>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1049</VersionInfo>
+						<VersionInfo Name="CodePage">1251</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

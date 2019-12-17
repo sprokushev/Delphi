@@ -1,0 +1,869 @@
+//*******************–≈¿À»«¿÷»ﬂ/œ–»’Œƒ/ Œ—“¿“Œ  Õ≈‘“≈œ–Œƒ” “Œ¬************
+
+unit azc;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, MdiForm, TB2Item, TB2Dock, TB2Toolbar, DB, Oracle, OracleData,
+  Grids, DBGridEh, ActnList, XPStyleActnCtrls, ActnMan, ComCtrls, StdCtrls,
+  Mask, ToolEdit, RXCtrls, dateutils, ExtCtrls, RxLookup, strutils,Buttons, DBCtrls;
+
+type
+  Tf_forAZCRealiz = class(Tf_MDIForm)
+    TBToolbar1: TTBToolbar;
+    TBItem4: TTBItem;
+    TBItem5: TTBItem;
+    ODS_azc_realiz: TOracleDataSet;
+    DS_azc_realiz: TDataSource;
+    ActionManager1: TActionManager;
+    ac_AZCOper_all: TAction;
+    ODS_azc_realizID: TFloatField;
+    ODS_azc_realizDATE_OPER: TDateTimeField;
+    ODS_azc_realizDENCITY: TFloatField;
+    ODS_azc_realizVOLUME: TFloatField;
+    ODS_azc_realizVES: TFloatField;
+    ODS_azc_realizNOTE: TStringField;
+    ODS_azc_realizTYPE_OPER_ID: TFloatField;
+    ODS_azc_realizPLACE_SEND_ID: TFloatField;
+    ODS_azc_realizPROD_ID_NPR: TStringField;
+    ODS_azc_realizSOBSTV_ID: TIntegerField;
+    ODS_azc_realizORG_STRU_ID: TFloatField;
+    ODS_azc_realizSUMMA: TFloatField;
+    ODS_azc_realizPRICE: TFloatField;
+    ODS_azc_realizNAME_OPER: TStringField;
+    ODS_azc_realizNAME_1: TStringField;
+    ODS_azc_realizNAME_2: TStringField;
+    ODS_azc_realizNAME_NPR: TStringField;
+    ODS_azc_realizSHORT_NAME: TStringField;
+    ac_AZCOper_all_d: TAction;
+    DS_likard: TDataSource;
+    ODS_likard: TOracleDataSet;
+    OQ_azc_realiz: TOracleQuery;
+    ac_AZCOper_all_e: TAction;
+    TBItem1: TTBItem;
+    ODS_good: TOracleDataSet;
+    DS_good: TDataSource;
+    ODS_likardDATE_OPER: TDateTimeField;
+    ODS_likardDENCITY: TFloatField;
+    ODS_likardVES: TFloatField;
+    ODS_likardVOLUME: TFloatField;
+    ODS_likardNOTE: TStringField;
+    ODS_likardSOBSTV_ID: TIntegerField;
+    ODS_likardSUMMA: TFloatField;
+    ODS_likardPRICE: TFloatField;
+    ODS_likardNAME_1: TStringField;
+    ODS_likardNAME_NPR: TStringField;
+    ODS_likardSHORT_NAME: TStringField;
+    ODS_goodDATE_OPER: TDateTimeField;
+    ODS_goodDENCITY: TFloatField;
+    ODS_goodID: TFloatField;
+    ODS_goodNOTE: TStringField;
+    ODS_goodORG_STRU_ID: TFloatField;
+    ODS_goodPLACE_SEND_ID: TFloatField;
+    ODS_goodSOBSTV_ID: TIntegerField;
+    ODS_goodPROD_ID_NPR: TStringField;
+    ODS_goodVES: TFloatField;
+    ODS_goodVOLUME: TFloatField;
+    ODS_goodNAME_NPR: TStringField;
+    ODS_goodNAME_1: TStringField;
+    ODS_goodNAME_2: TStringField;
+    ODS_goodSHORT_NAME: TStringField;
+    ODS_likardID: TFloatField;
+    ODS_likardPROD_ID_NPR: TStringField;
+    ODS_likardORG_STRU_ID: TFloatField;
+    ODS_itogs: TOracleDataSet;
+    DS_itogs: TDataSource;
+    ODS_itogsORG_STRU_ID: TFloatField;
+    ODS_itogsNAME_1: TStringField;
+    ODS_itogsPROD_ID_NPR: TStringField;
+    ODS_itogsNAME_NPR: TStringField;
+    ODS_itogsSOBSTV_ID: TIntegerField;
+    ODS_itogsSHORT_NAME: TStringField;
+    ODS_itogsVES_SUM: TFloatField;
+    ODS_itogsVOL_SUM: TFloatField;
+    ODS_itogs_op: TOracleDataSet;
+    DS_itogs_op: TDataSource;
+    ODS_itogs_opORG_STRU_ID: TFloatField;
+    ODS_itogs_opNAME_1: TStringField;
+    ODS_itogs_opPROD_ID_NPR: TStringField;
+    ODS_itogs_opNAME_NPR: TStringField;
+    ODS_itogs_opSOBSTV_ID: TIntegerField;
+    ODS_itogs_opSHORT_NAME: TStringField;
+    ODS_itogs_opName_oper: TStringField;
+    ODS_itogs_opVES_SUM: TFloatField;
+    ODS_itogs_opVOL_SUM: TFloatField;
+    ODS_itogs_opMONEYS: TFloatField;
+    ODS_itogs_all: TOracleDataSet;
+    DS_itog_all: TDataSource;
+    ODS_itogs_allNAME_1: TStringField;
+    ODS_itogs_allVES_SUM: TFloatField;
+    ODS_itogs_allVOL_SUM: TFloatField;
+    ODS_itogs_allMONEY: TFloatField;
+    ODS_itogs_allORG_STRU_ID: TFloatField;
+    Label4: TLabel;
+    TBControlItem2: TTBControlItem;
+    CheckBox1: TCheckBox;
+    ODS_azc_realizID_: TFloatField;
+    ODS_azc_realizKIND_OPER: TIntegerField;
+    ODS_azc_realizORG_STRU_2_ID: TFloatField;
+    ODS_likardORG_STRU_2_ID: TFloatField;
+    ODS_goodORG_STRU_2_ID: TFloatField;
+    TBControlItem1: TTBControlItem;
+    SpeedButton1: TSpeedButton;
+    ODS_azc_realizFOR_AZC: TStringField;
+    ODS_likardDISCOUNT: TIntegerField;
+    ODS_azc_realizDISCOUNT: TIntegerField;
+    ODS_azc_realizDISCOUNT_TYPE: TStringField;
+    ODS_likardFOR_AZC: TStringField;
+    ODS_azc_realizDATE_INTO: TDateTimeField;
+    ODS_likardDATE_INTO: TDateTimeField;
+    ODS_goodDATE_INTO: TDateTimeField;
+    TBItem2: TTBItem;
+    ac_AZCOper_all_rem: TAction;
+    ds_Filials: TDataSource;
+    q_Filials: TOracleDataSet;
+    Panel1: TPanel;
+    Label1: TLabel;
+    date_begin: TDateEdit;
+    Label2: TLabel;
+    date_end: TDateEdit;
+    Label5: TLabel;
+    lc_Filial: TDBLookupComboBox;
+    Label3: TLabel;
+    ComboBox1: TComboBox;
+    btRefresh: TButton;
+    PC_operation: TPageControl;
+    TabSheet1: TTabSheet;
+    gr_AZCReal: TDBGridEh;
+    TabSheet2: TTabSheet;
+    DBGridEh1: TDBGridEh;
+    TabSheet3: TTabSheet;
+    DBGridEh2: TDBGridEh;
+    TabSheet4: TTabSheet;
+    DBGridEh3: TDBGridEh;
+    TabSheet5: TTabSheet;
+    DBGridEh4: TDBGridEh;
+    TabSheet6: TTabSheet;
+    Pagec_itogs: TPageControl;
+    TabSheet7: TTabSheet;
+    DBGrid_ostatok_all: TDBGridEh;
+    TabSheet8: TTabSheet;
+    DBGrid_real_all: TDBGridEh;
+    TabSheet9: TTabSheet;
+    DBGrid_prihod_all: TDBGridEh;
+    TabSheet10: TTabSheet;
+    DBGrid_all: TDBGridEh;
+    ComboBox2: TComboBox;
+    StaticText1: TStaticText;
+    ODS_azc_realizAZC_PR_GRP_ID: TFloatField;
+    ODS_azc_realizNOTE_: TStringField;
+    ODS_itogsABBR_NPR: TStringField;
+    ODS_itogsNOTE_: TStringField;
+    ODS_itogs_opABBR_NPR: TStringField;
+    ODS_itogs_opNOTE_: TStringField;
+    acAzcFromParus: TAction;
+    TBItem3: TTBItem;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure ac_AZCOper_allExecute(Sender: TObject);
+    procedure PC_operationChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure TBItem3Click(Sender: TObject);
+    procedure ac_AZCOper_all_dExecute(Sender: TObject);
+    procedure ac_AZCOper_all_eExecute(Sender: TObject);
+    procedure DBGridEh4GetCellParams(Sender: TObject; Column: TColumnEh;
+      AFont: TFont; var Background: TColor; State: TGridDrawState);
+    procedure DBGridEh3GetCellParams(Sender: TObject; Column: TColumnEh;
+      AFont: TFont; var Background: TColor; State: TGridDrawState);
+    procedure DBGridEh2GetCellParams(Sender: TObject; Column: TColumnEh;
+      AFont: TFont; var Background: TColor; State: TGridDrawState);
+    procedure DBGridEh1GetCellParams(Sender: TObject; Column: TColumnEh;
+      AFont: TFont; var Background: TColor; State: TGridDrawState);
+    procedure gr_AZCRealGetCellParams(Sender: TObject; Column: TColumnEh;
+      AFont: TFont; var Background: TColor; State: TGridDrawState);
+    procedure btRefreshClick(Sender: TObject);
+    procedure gr_AZCRealSortMarkingChanged(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure DBGrid_ostatok_allGetCellParams(Sender: TObject; Column: TColumnEh;
+      AFont: TFont; var Background: TColor; State: TGridDrawState);
+    procedure DBGrid_ostatok_allSortMarkingChanged(Sender: TObject);
+    procedure Pagec_itogsChange(Sender: TObject);
+    procedure gr_AZCRealKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure ComboBox1CloseUp(Sender: TObject);
+    procedure DBGridEh1KeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure ComboBox2Change(Sender: TObject);
+    procedure DBGrid_allTitleBtnClick(Sender: TObject; ACol: Integer;
+      Column: TColumnEh);
+    procedure CheckBox1Click(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure ac_AZCOper_all_remExecute(Sender: TObject);
+    procedure acAzcFromParusExecute(Sender: TObject);
+  private
+    procedure ComBox_cretery;
+    { Private declarations }
+  public
+    { Public declarations }
+    PArentObj:TForm;
+    grid_u, grid_un:TDBGridEh;
+    dataset_u , dataset_un:TOracleDataset;
+    tstr_filter: TstringList;
+  end;
+
+var
+    azc_begin_date, azc_end_date: string;
+    CurrentID:integer;
+    index_code:integer;
+    global_str:integer;
+    vs_TAbSheet:String;
+    aa:Pointer;
+  f_forAZCRealiz: Tf_forAZCRealiz;
+  RunModest: string;
+
+
+
+    // ÌÓÏÂ ÒÚÓÍË Ò ORDER BY
+
+  // Á‡ÍÎ‡‰Í‡ ‰Îˇ ÔÂÂÏÂ˘ÂÌËˇ ÏÂÊ‰Û Ú‡·‡ÏË
+
+  // ‰Îˇ checkbox-Ó‚
+
+
+implementation
+
+uses azc_oper_all, azc_filter, azc_remove, azc_from_parus, ForDB, main;
+
+{$R *.dfm}
+
+procedure Tf_forAZCRealiz.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+  var i:integer;
+begin
+  inherited;
+  tstr_filter.Free;
+  dataset_u.close;
+  dataset_un.close;
+  grid_u:=nil;
+  grid_un:=nil;
+  dataset_u:=nil;
+  dataset_un:=nil;
+  grid_u.Free;
+  grid_un.Free;
+  dataset_u.Free;
+  dataset_un.Free;
+  f_main.ac_AZCRealiz.Enabled:= true;
+  self.Free;
+end;
+// ***********ÕŒ¬¿ﬂ Œœ≈–¿÷»ﬂ************
+//TODO -c¿«— -obeatlov: Œœ≈–¿÷»ﬂ ÒÓÁ‰‡ÌËÂ
+procedure Tf_forAZCRealiz.ac_AZCOper_allExecute(Sender: TObject);
+begin
+  inherited;
+
+IF (dataset_u.FieldByName('VOLUME').AsFloat=0) and (dataset_u.FieldByName('VES').AsFloat>0) then
+azc_oper_all.flag_ves_vol:= true
+else
+azc_oper_all.flag_ves_vol:=false;
+
+RunModest:='INSERT';
+with Tf_forAZC_oper_all.create(self) do
+begin
+FormCreate(sender,dataset_u, grid_u);
+if ShowModal=mrOk then
+begin
+
+{ ******** 0  - Œ—“¿“Œ ; 1- œ–»’Œƒ;  2 - –¿—’Œƒ **********}
+ end;
+end;
+end;
+
+////*****************‚˚·Ó “¿B*******************
+////TODO -c¿«— -obeatlov: Œœ≈–¿÷»ﬂ ¬˚·Ó tab (ÔËıÓ‰, Â‡ÎËÁ‡ˆËˇ, ÓÒÚ‡ÚÓÍ?)
+procedure Tf_forAZCRealiz.PC_operationChange(Sender: TObject);
+var
+i:integer;
+begin
+  inherited;
+If (PC_operation.TabIndex<>5) and (Tbtoolbar1.Items[0].Enabled=false)
+then
+for i:=0 to 2 do
+Tbtoolbar1.Items[i].Enabled:=true;
+
+If (PC_operation.TabIndex=5) and (Tbtoolbar1.Items[0].Enabled=true)
+then
+for i:=0 to 2 do
+Tbtoolbar1.Items[i].Enabled:=false;
+
+global_str:= dataset_u.FieldByName('ORG_STRU_ID').Asinteger;
+with PC_operation do begin
+dataset_u.Close;
+ case ActivePageIndex of
+    0:    begin
+    dataset_u:=ODS_azc_realiz;
+    dataset_u.SQL[11]:='and (azc_type_operation.KIND_OPER = 2 or azc_type_operation.KIND_OPER = 5)';
+    dataset_u.SQL[12]:='and azc_operation.DATE_OPER <= TO_DATE('''+azc_end_date+''', ''dd-mm-yy'') ';
+    dataset_u.SQL[13]:='and azc_operation.DATE_OPER >= TO_DATE('''+azc_begin_date+''', ''dd-mm-yy'') ';
+    dataset_u.SQL[14]:='AND EXISTS (SELECT NULL FROM ORG_RELATIONS A WHERE A.org_stru_1_id=AZC_OPERATION.ORG_STRU_ID AND A.org_stru_2_id='+VarToStr(lc_Filial.KeyValue)+')';
+    AZC_oper_all.operation:='–¿—’Œƒ';
+    grid_u:=gr_azcreal;
+    index_code:=15;
+    Combobox1.Enabled:= true;
+    // –≈¿À»«¿÷»ﬂ
+          end;
+    1:begin
+    dataset_u:=ODS_azc_realiz;
+    dataset_u.SQL[11]:='and (azc_type_operation.KIND_OPER = 1 or azc_type_operation.KIND_OPER = 4 or azc_type_operation.KIND_OPER = 6)';
+    dataset_u.SQL[12]:='and azc_operation.DATE_OPER <= TO_DATE('''+azc_end_date+''', ''dd-mm-yy'') ';
+    dataset_u.SQL[13]:='and azc_operation.DATE_OPER >= TO_DATE('''+azc_begin_date+''', ''dd-mm-yy'') ';
+    dataset_u.SQL[14]:='AND EXISTS (SELECT NULL FROM ORG_RELATIONS A WHERE A.org_stru_1_id=AZC_OPERATION.ORG_STRU_ID AND A.org_stru_2_id='+VarToStr(lc_Filial.KeyValue)+')';
+    AZC_oper_all.operation:='œ–»’Œƒ';
+    grid_u:=DBgridEh1;
+    index_code:=15;
+    Combobox1.Enabled:= true;
+  end;
+    2:begin
+    dataset_u:=ODS_azc_realiz;
+    dataset_u.SQL [11]:='and (azc_type_operation.KIND_OPER = 0 or azc_type_operation.KIND_OPER = 3)';
+    dataset_u.SQL[12]:='and azc_operation.DATE_OPER <= TO_DATE('''+azc_end_date+''', ''dd-mm-yy'') ';
+    dataset_u.SQL[13]:='and azc_operation.DATE_OPER >= TO_DATE('''+azc_begin_date+''', ''dd-mm-yy'') ';
+    dataset_u.SQL[14]:='AND EXISTS (SELECT NULL FROM ORG_RELATIONS A WHERE A.org_stru_1_id=AZC_OPERATION.ORG_STRU_ID AND A.org_stru_2_id='+VarToStr(lc_Filial.KeyValue)+')';
+    AZC_oper_all.operation:='Œ—“¿“Œ ';
+    grid_u:=DBgridEh2;
+    index_code:=15;
+    Combobox1.Enabled:= true;
+  end;
+    3:  begin
+    dataset_u:=ODS_likard;
+    AZC_oper_all.operation:='À» ¿–ƒ';
+    dataset_u.SQL[11]:='and azc_realiz_likard.DATE_OPER <= TO_DATE('''+azc_end_date+''', ''dd-mm-yy'') ';
+    dataset_u.SQL[12]:='and azc_realiz_likard.DATE_OPER >= TO_DATE('''+azc_begin_date+''', ''dd-mm-yy'') ';
+    grid_u:=DBgridEh3;
+    index_code:=13;
+    Combobox1.Enabled:= true;
+    end;
+    4: begin
+    dataset_u:=ODS_good;
+    AZC_oper_all.operation:='√–”« ¬ œ”“»';
+    dataset_u.SQL[12]:='and azc_good_in_way.DATE_OPER <= TO_DATE('''+azc_end_date+''', ''dd-mm-yy'') ';
+    dataset_u.SQL[13]:='and azc_good_in_way.DATE_OPER >= TO_DATE('''+azc_begin_date+''', ''dd-mm-yy'') ';
+    dataset_u.SQL[14]:='AND EXISTS (SELECT NULL FROM ORG_RELATIONS A WHERE A.org_stru_1_id=AZC_GOOD_IN_WAY.ORG_STRU_ID AND A.org_stru_2_id='+VarToStr(lc_Filial.KeyValue)+')';
+    grid_u:=DBgridEh4;
+    index_code:=15;
+    Combobox1.Enabled:= true;
+    end;
+    5: begin
+    Combobox1.Enabled:= false;
+    index_code:=13;
+        if dataset_un.Name = '' then
+        begin
+        dataset_u:=ODS_itogs ;
+        grid_u:= DBGrid_ostatok_all;
+        end
+      else
+    begin
+          dataset_u:=dataset_un;
+          grid_u:=grid_un;
+       end;
+        IF Pagec_itogs.TabIndex =0 then
+            begin
+            dataset_u.SQL[1]:= 'FOR_AZC.GET_AZC_OST_Ves(azc_operation.ORG_STRU_ID, azc_operation.PROD_ID_NPR, azc_operation.SOBSTV_ID,TO_DATE('''+azc_end_date+''', ''dd-mm-yy''))as VES_SUM, ';
+            dataset_u.SQL[2]:=  'FOR_AZC.GET_AZC_OST_VOL(azc_operation.ORG_STRU_ID, azc_operation.PROD_ID_NPR, azc_operation.SOBSTV_ID,TO_DATE('''+azc_end_date+''', ''dd-mm-yy'')) as VOL_SUM';
+        end;
+        dataset_u.SQL[5]:='azc_operation.DATE_OPER <= TO_DATE('''+azc_end_date+''', ''dd-mm-yy'') ';
+        dataset_u.SQL[6]:='and azc_operation.DATE_OPER >= TO_DATE('''+azc_begin_date+''', ''dd-mm-yy'') ';
+    end;
+end;
+
+    dataset_u.open;
+    dataset_u.Locate('ORG_STRU_ID',global_str,[]);
+    grid_u.SetFocus;
+    CheckBox1.Checked:=false;
+    SpeedButton1.Enabled:=false;
+end;
+
+//ComBox_cretery();
+end;
+
+
+procedure Tf_forAZCRealiz.FormCreate(Sender: TObject);
+var aa:string;
+begin
+  inherited;
+  ParentObj:= TForm(owner);
+
+  // PSV - ‰Îˇ ÙËÎ¸Ú‡ ÔÓ ÙËÎË‡ÎÛ
+  q_Filials.Session:=f_main.ora_Session;
+  q_Filials.Open;
+  lc_Filial.KeyValue:=31; //œÓ ÛÏÓÎ˜‡ÌË˛ - ”ıÚ‡
+
+  AZC_oper_all.operation:='–¿—’Œƒ';
+  ODS_likard.session:= f_main.ora_session;
+  OQ_AZC_REALIZ.Session:=f_main.ora_session;
+  ODS_good.Session:=f_main.ora_Session;
+  azc_begin_date:=datetostr(StartOfTheMonth(now));
+  azc_end_date:=datetostr(now);
+  date_begin.Text:= azc_begin_date;
+  date_end.text:= azc_end_date;
+  index_code:=15;
+  tstr_filter:= TstringList.Create;
+  dataset_u:=TOracleDataset.Create(self);
+  grid_u:= TDBGridEh.Create(self);
+  dataset_un:= TOracleDataset.Create(self);
+  grid_un:= TDBGridEh.Create(self);
+  dataset_u:=ODS_azc_realiz;
+  grid_u:=gr_azcreal;
+  dataset_u.Open;
+  //main.f_main.ac_AZCRealiz.Enabled:= false;
+
+  f_db.SetUserGrants(ActionManager1);
+end;
+
+//TODO -c¿«—: Œœ≈–¿÷»ﬂ ŒÚÏÂÌ‡
+//***************Œ“Ã≈Õ¿ »«Ã≈Õ≈Õ»ﬂ /Œœ≈–¿÷»» ***********************
+procedure Tf_forAZCRealiz.TBItem3Click(Sender: TObject);
+begin
+  inherited;
+F_MAIN.ora_Session.CancelUpdates([ODS_AZC_REALIZ, ODS_LIKARD]);
+ODS_AZC_REALIZ.Refresh;
+ODS_LIKARD.Refresh;
+end;
+
+//***************”ƒ¿À≈Õ»≈ Œœ≈–¿÷»» ***********************
+//TODO -c¿«— -obeatlov: Œœ≈–¿÷»ﬂ ”ƒ¿À≈Õ»ﬂ
+procedure Tf_forAZCRealiz.ac_AZCOper_all_dExecute(Sender: TObject);
+var oper_bookmark:Tbookmark;
+    name_operation: string;
+    name_ods: TOracleDataSet;
+begin
+  inherited;
+IF Application.MessageBox('¬€ Û‚ÂÂÌÌ˚, ˜ÚÓ ıÓÚËÚÂ Û‰‡ÎËÚ¸ ËÏÂÌÌÓ ˝ÚÛ Á‡ÔËÒ¸?', '¬ÌËÏ‡ÌËÂ', 1) = 1 then
+begin
+
+IF (azc_oper_all.operation <> 'À» ¿–ƒ') and (azc_oper_all.operation <> '√–”« ¬ œ”“»')  then
+ begin
+ name_ods:= ODS_Azc_realiz ;
+ name_operation:= 'AZC_OPERATION';
+ end
+else
+IF azc_oper_all.operation = 'À» ¿–ƒ' then
+ begin
+ name_ods:= ODS_likard;
+ name_operation:= 'AZC_REALIZ_LIKARD';
+ end
+else
+IF azc_oper_all.operation = '√–”« ¬ œ”“»' then
+ begin
+ name_ods:= ODS_good;
+ name_operation:= 'AZC_GOOD_IN_WAY';
+ end;
+
+    with OQ_azc_realiz do begin
+    Oper_bookmark:=NAME_ODS.GetBookmark;
+    sql.CLEAR;
+    sql.Add('DELETE FROM '+ name_operation);
+    sql.Add(' WHERE ID='+NAME_ODS.FIELDBYNAME('id').AsString);
+    EXECUTE;
+    session.Commit;
+    NAME_ODS.Refresh;
+
+with NAME_ODS do
+if BookmarkValid(oper_bookmark) then
+        GotoBookmark(oper_bookmark)
+        else
+    name_ods.Last;
+NAME_ODS.FreeBookmark(oper_bookmark);
+end;
+end;
+end;
+
+//*****************»«Ã≈Õ≈Õ»≈ Œœ≈–¿÷»»********************
+//TODO -c¿«— -obeatlov: Œœ≈–¿÷»ﬂ ËÁÏÂÌÂÌËÂ
+procedure Tf_forAZCRealiz.ac_AZCOper_all_eExecute(Sender: TObject);
+var ix:integer;
+a:integer;
+begin
+  inherited;
+IF (dataset_u.FieldByName('VOLUME').AsFloat=0) and (dataset_u.FieldByName('VES').AsFloat>0) then
+azc_oper_all.flag_ves_vol:= true
+else
+azc_oper_all.flag_ves_vol:=false;
+
+ix:= 0;
+azc.RunModest:='EDIT';
+IF ((azc_oper_all.operation = 'À» ¿–ƒ') and (ODs_likard.CountQueryHits>=1))
+then ix:= 1;
+
+IF ((azc_oper_all.operation = '√–”« ¬ œ”“»') and ( ODs_good.CountQueryHits>=1))
+then ix:=1;
+
+IF  (azc_oper_all.operation <> '√–”« ¬ œ”“»') and (azc_oper_all.operation <> 'À» ¿–ƒ')
+and (ODs_azc_realiz.CountQueryHits>=1) then ix:=1;
+a:=ODs_azc_realiz.CountQueryHits;
+
+if ix=1 then
+with Tf_forAZC_oper_all.create(self) do
+begin
+FormCreate(Sender,dataset_u, grid_u);
+ShowModal
+end
+else
+ShowMessage ('Õ≈“ «¿œ»—≈… ƒÀﬂ –≈ƒ¿ “»–Œ¬¿Õ»ﬂ!!!');
+end;
+
+
+
+procedure Tf_forAZCRealiz.DBGridEh4GetCellParams(Sender: TObject;
+  Column: TColumnEh; AFont: TFont; var Background: TColor;
+  State: TGridDrawState);
+begin
+  inherited;
+
+if ODS_good.RecNo mod 2<>0 then
+    Background:=clInfoBk;
+if gdSelected in State then
+    Background:=clNavy;
+end;
+
+procedure Tf_forAZCRealiz.DBGridEh3GetCellParams(Sender: TObject;
+  Column: TColumnEh; AFont: TFont; var Background: TColor;
+  State: TGridDrawState);
+begin
+  inherited;
+if ODS_likard.RecNo mod 2<>0 then
+    Background:=clInfoBk;
+if gdSelected in State then
+    Background:=clNavy;
+
+end;
+
+procedure Tf_forAZCRealiz.DBGridEh2GetCellParams(Sender: TObject;
+  Column: TColumnEh; AFont: TFont; var Background: TColor;
+  State: TGridDrawState);
+begin
+  inherited;
+if ODS_azc_realiz.RecNo mod 2<>0 then
+    Background:=clInfoBk;
+if gdSelected in State then
+    Background:=clNavy;
+end;
+
+procedure Tf_forAZCRealiz.DBGridEh1GetCellParams(Sender: TObject;
+  Column: TColumnEh; AFont: TFont; var Background: TColor;
+  State: TGridDrawState);
+begin
+  inherited;
+if ODS_azc_realiz.RecNo mod 2<>0 then
+    Background:=clInfoBk;
+if gdSelected in State then
+    Background:=clNavy;
+
+end;
+
+procedure Tf_forAZCRealiz.gr_AZCRealGetCellParams(Sender: TObject;
+  Column: TColumnEh; AFont: TFont; var Background: TColor;
+  State: TGridDrawState);
+begin
+  inherited;
+if ODS_azc_realiz.RecNo mod 2<>0 then
+        Background:=clInfoBk;
+if gdSelected in State then
+    Background:=clNavy;
+if ods_AZC_REALiz.FieldByName('FOR_AZC').AsString<>'¡≈« — »ƒŒ ' then
+   Background:=clSkyBlue	;
+end;
+
+
+procedure Tf_forAZCRealiz.btRefreshClick(Sender: TObject);
+var for_locate:string;
+begin
+  inherited;
+azc_begin_date:=date_begin.Text;
+azc_end_date:=date_end.Text;
+
+for_locate:=dataset_u.FieldByName('NAME_1').AsString;
+
+
+case PC_OPERATION.TabIndex of
+ 0,1,2: with ODS_azc_realiz do
+     begin
+    close;
+    SQL[12]:='and azc_operation.DATE_OPER <= TO_DATE('''+azc_end_date+''', ''dd-mm-yy'') ';
+    SQL[13]:='and azc_operation.DATE_OPER >= TO_DATE('''+azc_begin_date+''', ''dd-mm-yy'') ';
+    SQL[14]:='AND EXISTS (SELECT NULL FROM ORG_RELATIONS A WHERE A.org_stru_1_id=AZC_OPERATION.ORG_STRU_ID AND A.org_stru_2_id='+VarToStr(lc_Filial.KeyValue)+')';
+    open;
+  end;
+    3: with ODS_likard do
+     begin
+    close;
+    SQL[11]:='and azc_realiz_likard.DATE_OPER <= TO_DATE('''+azc_end_date+''', ''dd-mm-yy'') ';
+    SQL[12]:='and azc_realiz_likard.DATE_OPER >= TO_DATE('''+azc_begin_date+''', ''dd-mm-yy'') ';
+    open
+    end;
+    4: with ODS_good do
+    begin
+    close;
+    SQL[12]:='and azc_good_in_way.DATE_OPER <= TO_DATE('''+azc_end_date+''', ''dd-mm-yy'') ';
+    SQL[13]:='and azc_good_in_way.DATE_OPER >= TO_DATE('''+azc_begin_date+''', ''dd-mm-yy'') ';
+    SQL[14]:='AND EXISTS (SELECT NULL FROM ORG_RELATIONS A WHERE A.org_stru_1_id=AZC_GOOD_IN_WAY.ORG_STRU_ID AND A.org_stru_2_id='+VarToStr(lc_Filial.KeyValue)+')';
+    open;
+    end;
+    5: with dataset_u do
+    begin
+    close;
+        IF Pagec_itogs.TabIndex =0 then
+            begin
+            SQL[1]:= 'FOR_AZC.GET_AZC_OST_Ves(azc_operation.ORG_STRU_ID, azc_operation.PROD_ID_NPR, azc_operation.SOBSTV_ID, TO_DATE('''+azc_end_date+''', ''dd-mm-yy''))as ves_sum, ';
+            SQL[2]:=  'FOR_AZC.GET_AZC_OST_VOL(azc_operation.ORG_STRU_ID, azc_operation.PROD_ID_NPR,azc_operation.SOBSTV_ID,  TO_DATE('''+azc_end_date+''', ''dd-mm-yy'')) as vol_sum';
+            end;
+    SQL[5]:='azc_operation.DATE_OPER <= TO_DATE('''+azc_end_date+''', ''dd-mm-yy'') ';
+    SQL[6]:='and azc_operation.DATE_OPER >= TO_DATE('''+azc_begin_date+''', ''dd-mm-yy'') ';
+    open;
+    end;
+ end;
+dataset_u.Locate('NAME_1', for_locate,[]);
+//dataset_u.SQL.SaveToFile('c:\tmp\1.sql');
+grid_u.SetFocus;
+end;
+
+procedure Tf_forAZCRealiz.gr_AZCRealSortMarkingChanged(Sender: TObject);
+begin
+  inherited;
+global_str:= dataset_u.FieldByName('ID').Asinteger;
+f_db.SortInGrid(dataset_u,index_code,grid_u);
+dataset_u.Locate('ID',global_str,[]);
+end;
+
+procedure Tf_forAZCRealiz.FormShow(Sender: TObject);
+begin
+  inherited;
+gr_azcreal.SetFocus;
+end;
+
+procedure Tf_forAZCRealiz.DBGrid_ostatok_allGetCellParams(Sender: TObject;
+  Column: TColumnEh; AFont: TFont; var Background: TColor;
+  State: TGridDrawState);
+begin
+  inherited;
+if dataset_u.RecNo mod 2<>0 then
+    Background:=clInfoBk;
+if gdSelected in State then
+    Background:=clNavy;
+end;
+
+
+procedure Tf_forAZCRealiz.DBGrid_ostatok_allSortMarkingChanged(
+  Sender: TObject);
+begin
+  inherited;
+f_db.SortInGrid(dataset_u,index_code,grid_u);
+end;
+
+procedure Tf_forAZCRealiz.Pagec_itogsChange(Sender: TObject);
+var
+name_org:string;
+begin
+  inherited;
+name_org:= dataset_u.fieldbyname('NAME_1').asstring;
+Case PageC_itogs.TabIndex of
+        0: begin
+        dataset_u:= ODS_itogs ;
+        dataset_u.SQL[8]:='';
+        grid_u:= dbgrid_ostatok_all;
+        end;
+1: begin
+   dataset_u:= ODS_itogs_op;
+   dataset_u.SQL[8]:='';
+   dataset_u.SQL[4]:='and azc_type_operation.KIND_OPER = 2 and';
+   grid_u:= DBGrid_real_all;
+
+   END;
+2:
+   BEGIN
+   dataset_u:= ODS_itogs_op;
+    dataset_u.SQL[8]:='';
+   dataset_u.SQL[4]:='and azc_type_operation.KIND_OPER = 1 and';
+   grid_u:=DBGrid_prihod_all;
+   END;
+3:
+  begin
+   dataset_u:= ODS_itogs_all;
+   dataset_u.SQL[8]:='';
+   grid_u:=DBGrid_all;
+
+  end;
+end;
+dataset_u.SQL[5]:='azc_operation.DATE_OPER >=TO_DATE ('''+azc_begin_date+''',''DD-MM-YY'')';
+dataset_u.SQL[6]:='and azc_operation.DATE_OPER <=TO_DATE('''+azc_end_date+''',''DD-MM-YY'')';
+dataset_un:=dataset_u;
+grid_un:=grid_u;
+dataset_u.open;
+dataset_u.refresh;
+dataset_u.Locate('NAME_1', name_org, []);
+grid_u.SetFocus;
+CheckBox1.Checked:=false;
+SpeedButton1.Enabled:=false;
+end;
+
+procedure Tf_forAZCRealiz.gr_AZCRealKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  inherited;
+IF key = VK_DELETE then TBToolBar1.Items.Items[2].Click;
+IF key = VK_INSERT then TBToolBar1.Items.Items[0].Click;
+
+end;
+
+procedure Tf_forAZCRealiz.ComboBox1CloseUp(Sender: TObject);
+var
+sql_str:string;
+begin
+  inherited;
+sql_str:= 'ORDER BY ID_';
+IF ComboBox1.ItemIndex = 0 then
+dataset_u.SQL[index_code]:=sql_str
+else
+dataset_u.SQL[index_code]:=sql_str+' DESC';
+dataset_u.open;
+dataset_u.Refresh;
+grid_u.SetFocus;
+
+end;
+
+procedure Tf_forAZCRealiz.DBGridEh1KeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  inherited;
+IF key = VK_DELETE then TBToolBar1.Items.Items[2].Click;
+IF key = VK_INSERT then TBToolBar1.Items.Items[0].Click;
+
+end;
+
+procedure Tf_forAZCRealiz.ComboBox2Change(Sender: TObject);
+var
+NewCol:TColumnEh;
+NewField:TField;
+i:integer;
+begin
+  inherited;
+ODS_itogs_all.Close;
+ODS_itogs_all.Fields.Clear;
+IF Combobox2.ItemIndex = 1 then
+begin
+ODS_itogs_all.Close;
+ODS_itogs_all.SQL[0]:='select azc_operation.ORG_STRU_ID,org_structure.NAME as NAME_1,kls_prod.ABBR_NPR,';
+ODS_itogs_all.SQL[12]:= 'GROUP BY azc_operation.ORG_STRU_ID,org_structure.NAME, kls_prod.ID_NPR, kls_prod.ABBR_NPR';
+ODS_itogs_all.SQL[13]:='ORDER BY org_structure.NAME, kls_prod.ABBR_NPR';
+end
+else
+IF Combobox2.ItemIndex =0 then begin
+ODS_itogs_all.Close;
+ODS_itogs_all.SQL[0]:='select azc_operation.ORG_STRU_ID, org_structure.NAME as NAME_1,';
+ODS_itogs_all.SQL[12]:= 'GROUP BY azc_operation.ORG_STRU_ID,org_structure.NAME';
+ODS_itogs_all.SQL[13]:='ORDER BY  org_structure.NAME';
+end
+else
+IF Combobox2.ItemIndex=2 then begin
+ODS_itogs_all.Close;
+ODS_itogs_all.SQL[0]:='select  azc_operation.ORG_STRU_ID, org_structure.NAME as NAME_1,';
+ODS_itogs_all.SQL[12]:= 'GROUP BY azc_operation.ORG_STRU_ID,org_structure.NAME';
+ODS_itogs_all.SQL[13]:='ORDER BY  org_structure.NAME';
+end;
+
+ODS_itogs_all.Open;
+DbGrid_all.Columns.Clear;
+
+for i:=0 to ODS_itogs_all.Fields.Count -1 do
+begin
+NewCol:=DbGrid_all.Columns.Add;
+NewCol.Title.TitleButton:=false;
+DbGrid_all.Columns[i].Title.Caption:= ODS_itogs_all.Fields[i].FieldName;
+DbGrid_all.Columns[i].Field:=ODS_itogs_all.Fields[i];
+IF DbGrid_all.Columns[i].Title.Caption='NAME_1' then
+DbGrid_all.Columns[i].Width:=170;
+with DbGrid_all.Columns[i].Title do begin
+if Caption='NAME_1' then Caption:='Œ·˙ÂÍÚ';
+if Caption='ABBR_NPR' then Caption:='œÓ‰ÛÍÚ';
+if Caption='MONEY' then Caption:='—ÛÏÏ‡';
+if Caption='VES_SUM' then Caption:='¬ÂÒ';
+if Caption='VOL_SUM' then Caption:='Œ·˙ÂÏ';
+end;
+end;
+DBGrid_all.Columns[0].Visible:=false;
+DBGRid_All.SetFocus ;
+end;
+procedure Tf_forAZCRealiz.DBGrid_allTitleBtnClick(Sender: TObject;
+  ACol: Integer; Column: TColumnEh);
+begin
+  inherited;
+  ODS_itogs_all.Close;
+   IF column.Title.SortMarker=smDownEh  then ODS_itogs_all.SQL[11]:='ORDER BY '+Column.FieldName;
+   IF column.Title.SortMarker= smUpEh  then ODS_itogs_all.SQL[11]:='ORDER BY '+Column.FieldName+ ' DESC';
+  ODS_itogs_all.OPEN;
+  DbGrid_all.Focused;
+
+end;
+
+Procedure Tf_forAZCRealiz.ComBox_cretery();
+var
+i:integer;
+begin
+end;
+
+procedure Tf_forAZCRealiz.CheckBox1Click(Sender: TObject);
+var
+i:integer;
+begin
+  inherited;
+If CheckBox1.Checked then
+SpeedButton1.Enabled:=true
+else with dataset_u do
+begin
+SpeedButton1.Enabled:=false;
+close;
+SQL[8]:=' ';
+Tstr_filter.Clear;
+Open;
+Grid_u.SetFocus;
+end;
+end;
+
+procedure Tf_forAZCRealiz.SpeedButton1Click(Sender: TObject);
+begin
+  inherited;
+IF Self.PC_operation.TabIndex<5 then
+vs_TabSheet:=Self.PC_operation.ActivePage.Name
+else vs_TabSheet:=Self.Pagec_itogs.activePage.Name;
+with Tf_azc_filter.create (self) do
+begin
+FormCreate(dataset_u, tstr_filter);
+ShowModal;
+end;
+Grid_U.SetFocus;
+
+end;
+
+procedure Tf_forAZCRealiz.ac_AZCOper_all_remExecute(Sender: TObject);
+begin
+  inherited;
+With Tf_forAZCRemove.create(Self) do
+begin
+end;
+
+end;
+
+procedure Tf_forAZCRealiz.acAzcFromParusExecute(Sender: TObject);
+begin
+  inherited;
+  With Tf_AzcFromParus.create(Self) do
+  begin
+    ShowModal;
+    if ModalResult=mrOk then
+    Begin
+      btRefreshClick(Sender);
+    End;
+  end;
+end;
+
+end.

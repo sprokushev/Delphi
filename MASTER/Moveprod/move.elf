@@ -1,0 +1,378 @@
+EurekaLog 4.5.7
+
+Application:
+------------------------------------------------------
+  1.1 Start Date      : Wed, 9 Nov 2005 15:17:13 +0300
+  1.2 Name/Description: move.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+--------------------------------------------------------
+  2.1 Date   : Wed, 9 Nov 2005 15:17:13 +0300
+  2.2 Address: 004DA216
+  2.3 Module : move.exe
+  2.4 Type   : EOracleError
+  2.5 Message: ORA-01036: illegal variable name/number .
+
+Active Controls:
+--------------------------------------------------------
+  3.1 Form Class   : TTOTAL_CMD
+  3.2 Form Text    : Total Commander 6.52 - Westel 900RT
+  3.3 Control Class: 
+  3.4 Control Text : 
+
+Computer:
+----------------------------
+  4.1 Name        : MYUDINXP
+  4.2 User        : MYudin
+  4.3 Total Memory: 503 Mb
+  4.4 Free Memory : 111 Mb
+  4.5 Total Disk  : 18.49 Gb
+  4.6 Free Disk   : 5.87 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+----------------------------------------------------------------------------------
+|Address |Module      |Unit          |Class          |Procedure/Method      |Line|
+----------------------------------------------------------------------------------
+|7C910856|ntdll.dll   |              |               |RtlImageNtHeader      |    |
+|7C910942|ntdll.dll   |              |               |RtlAcquirePebLock     |    |
+|7C910949|ntdll.dll   |              |               |RtlAcquirePebLock     |    |
+|7C91096D|ntdll.dll   |              |               |RtlReleasePebLock     |    |
+|7C910961|ntdll.dll   |              |               |RtlReleasePebLock     |    |
+|7C910942|ntdll.dll   |              |               |RtlAcquirePebLock     |    |
+|7C910949|ntdll.dll   |              |               |RtlAcquirePebLock     |    |
+|7C90253A|ntdll.dll   |              |               |memmove               |    |
+|7C91096D|ntdll.dll   |              |               |RtlReleasePebLock     |    |
+|7C90E286|ntdll.dll   |              |               |ZwReadFile            |    |
+|01328230|NLSRTL33.dll|              |               |slmsrd                |    |
+|7C90E286|ntdll.dll   |              |               |ZwReadFile            |    |
+|01328230|NLSRTL33.dll|              |               |slmsrd                |    |
+|01310640|NLSRTL33.dll|              |               |lxhmcnv               |    |
+|7C90E286|ntdll.dll   |              |               |ZwReadFile            |    |
+|01307F30|NLSRTL33.dll|              |               |lxgcnv                |    |
+|77C3F95D|msvcrt.dll  |              |               |sprintf               |    |
+|7C90D590|ntdll.dll   |              |               |NtClose               |    |
+|7C809BB5|kernel32.dll|              |               |CloseHandle           |    |
+|013281F9|NLSRTL33.dll|              |               |slmscl                |    |
+|012CB5D0|CORE40.dll  |              |               |ssgetosver            |    |
+|012C7651|CORE40.dll  |              |               |sltsmnr               |    |
+|77D4B24B|user32.dll  |              |               |DefWindowProcW        |    |
+|77D4B24B|user32.dll  |              |               |DefWindowProcW        |    |
+|004C0E52|move.exe    |DBCtrlsEh.pas |TCustomDBEditEh|DefaultHandler        |1783|
+|012CB5D0|CORE40.dll  |              |               |ssgetosver            |    |
+|012C7651|CORE40.dll  |              |               |sltsmnr               |    |
+|011BBDE1|ORA805.dll  |              |               |kpusattr              |    |
+|012CB5D0|CORE40.dll  |              |               |ssgetosver            |    |
+|012C7651|CORE40.dll  |              |               |sltsmnr               |    |
+|012CB5D0|CORE40.dll  |              |               |ssgetosver            |    |
+|012C7651|CORE40.dll  |              |               |sltsmnr               |    |
+|01111770|ORA805.dll  |              |               |xOCIBindByName        |    |
+|012CB5D0|CORE40.dll  |              |               |ssgetosver            |    |
+|012C7651|CORE40.dll  |              |               |sltsmnr               |    |
+|01111B1F|ORA805.dll  |              |               |OCIErrorGet           |    |
+|1000156C|oci.dll     |              |               |OCIErrorGet           |    |
+|0054AED1|move.exe    |u_moveprod.pas|Tf_move        |FormCreate            |69  |
+|0054B32B|move.exe    |move.dpr      |               |                      |14  |
+|7C90E64C|ntdll.dll   |              |               |NtSetInformationThread|    |
+----------------------------------------------------------------------------------
+
+Modules Information:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name        |Description                                                 |Version        |Size   |Path                                                                                                |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|move.exe    |                                                            |               |1620992|c:\Proj_move                                                                                        |
+|010C0000|NL80.dll    |Oracle SQL*Net NL DLL                                       |               |106496 |c:\orant8\bin                                                                                       |
+|010F0000|NNFG80.dll  |Oracle SQL*Net NNFG DLL                                     |               |22016  |c:\orant8\bin                                                                                       |
+|01110000|ORA805.dll  |Oracle RDBMS User-side DLL                                  |               |1583104|c:\orant8\bin                                                                                       |
+|012A0000|CORE40.dll  |Oracle CORE DLL                                             |               |380416 |c:\orant8\bin                                                                                       |
+|01300000|NLSRTL33.dll|Oracle NLS Runtime Library DLL                              |               |237056 |c:\orant8\bin                                                                                       |
+|01340000|OTRACE80.dll|Oracle RDBMS TRACE DLL                                      |               |134656 |c:\orant8\bin                                                                                       |
+|01370000|NS80.dll    |Oracle SQL*Net NS DLL                                       |               |188928 |c:\orant8\bin                                                                                       |
+|013B0000|nasns80.dll |Oracle SQL*Net SNS Stub DLL                                 |               |147456 |c:\orant8\bin                                                                                       |
+|013E0000|nz80.dll    |Oracle SQL*Net OSS DLL                                      |               |274432 |c:\orant8\bin                                                                                       |
+|01430000|NNCI80.dll  |Oracle SQL*Net NNCI DLL                                     |               |32768  |c:\orant8\bin                                                                                       |
+|01440000|NNG80.dll   |Oracle SQL*Net NNG DLL                                      |               |81408  |c:\orant8\bin                                                                                       |
+|01460000|NMP80.dll   |Oracle SQL*Net NMP DLL                                      |               |11264  |c:\orant8\bin                                                                                       |
+|01470000|NPL80.dll   |Oracle SQL*Net NPL DLL                                      |               |13312  |c:\orant8\bin                                                                                       |
+|01480000|NR80.dll    |Oracle SQL*Net NR DLL                                       |               |74240  |c:\orant8\bin                                                                                       |
+|014A0000|NT80.dll    |Oracle SQL*Net NT DLL                                       |               |19456  |c:\orant8\bin                                                                                       |
+|014B0000|NCR80.dll   |Oracle SQL*Net RPC DLL                                      |               |205824 |c:\orant8\bin                                                                                       |
+|014F0000|NMS80.dll   |Oracle SQL*Net NMS DLL                                      |               |6656   |c:\orant8\bin                                                                                       |
+|01500000|NNFD80.dll  |Oracle SQL*Net NNFD DLL                                     |               |4096   |c:\orant8\bin                                                                                       |
+|01510000|NNFN80.dll  |Oracle SQL*Net NetWare Native Naming Adapter DLL            |               |13312  |c:\orant8\bin                                                                                       |
+|01520000|NI80.dll    |Oracle SQL*Net OSN DLL                                      |               |41984  |c:\orant8\bin                                                                                       |
+|01530000|PLS805.dll  |Oracle PL/SQL Userside DLL                                  |               |2030592|c:\orant8\bin                                                                                       |
+|01730000|NDWSI80.DLL |                                                            |               |35840  |c:\orant8\bin                                                                                       |
+|01870000|ntt80.DLL   |Oracle SQL*Net NTT DLL                                      |               |35840  |c:\orant8\bin                                                                                       |
+|10000000|oci.dll     |Oracle Call Interface DLL                                   |               |40448  |c:\orant8\bin                                                                                       |
+|55600000|FwcWsp.dll  |Microsoft Firewall Client Windows Sockets 2 Service Provider|4.0.2161.50    |173400 |C:\Program Files\Microsoft Firewall Client 2004                                                     |
+|5AD70000|uxtheme.dll |Microsoft UxTheme Library                                   |6.0.2900.2180  |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll|Common Controls Library                                     |5.82.2900.2180 |611328 |C:\WINDOWS\system32                                                                                 |
+|629C0000|LPK.DLL     |Language Pack                                               |5.1.2600.2180  |22016  |C:\WINDOWS\system32                                                                                 |
+|662B0000|hnetcfg.dll |Home Networking Configuration Manager                       |5.1.2600.2180  |344064 |C:\WINDOWS\system32                                                                                 |
+|71A50000|mswsock.dll |Microsoft Windows Sockets 2.0 Service Provider              |5.1.2600.2180  |245248 |C:\WINDOWS\System32                                                                                 |
+|71A90000|wshtcpip.dll|Windows Sockets Helper DLL                                  |5.1.2600.2180  |19968  |C:\WINDOWS\System32                                                                                 |
+|71AA0000|WS2HELP.dll |Windows Socket 2.0 Helper for Windows NT                    |5.1.2600.2180  |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll  |Windows Socket 2.0 32-Bit DLL                               |5.1.2600.2180  |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll |Windows Socket 32-Bit DLL                                   |5.1.2600.2180  |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll   |MSCTF Server DLL                                            |5.1.2600.2180  |294400 |C:\WINDOWS\system32                                                                                 |
+|74D90000|USP10.dll   |Uniscribe Unicode script processor                          |1.420.2600.2180|406528 |C:\WINDOWS\system32                                                                                 |
+|755C0000|msctfime.ime|Microsoft Text Frame Work Service IME                       |5.1.2600.2180  |177152 |C:\WINDOWS\system32                                                                                 |
+|76390000|IMM32.DLL   |Windows XP IMM32 API Client DLL                             |5.1.2600.2180  |110080 |C:\WINDOWS\system32                                                                                 |
+|76B40000|WINMM.dll   |MCI API DLL                                                 |5.1.2600.2180  |176128 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL   |Process Status Helper                                       |5.1.2600.2180  |23040  |C:\WINDOWS\system32                                                                                 |
+|76F20000|DNSAPI.dll  |DNS Client API DLL                                          |5.1.2600.2180  |148480 |C:\WINDOWS\system32                                                                                 |
+|76F60000|WLDAP32.dll |Win32 LDAP API DLL                                          |5.1.2600.2180  |172032 |C:\WINDOWS\system32                                                                                 |
+|76FB0000|winrnr.dll  |LDAP RnR Provider DLL                                       |5.1.2600.2180  |16896  |C:\WINDOWS\System32                                                                                 |
+|76FC0000|rasadhlp.dll|Remote Access AutoDial Helper                               |5.1.2600.2180  |8192   |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll|                                                            |5.1.2600.2180  |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll|User Experience Controls Library                            |6.0.2900.2180  |1050624|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2180_x-ww_a84f1ff9|
+|774E0000|ole32.dll   |Microsoft OLE for Windows                                   |5.1.2600.2180  |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll |Version Checking and File Installation Libraries            |5.1.2600.2180  |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll  |Windows NT CRT DLL                                          |7.0.2600.2180  |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll  |Windows XP USER API Client DLL                              |5.1.2600.2180  |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll|Advanced Windows 32 Base API                                |5.1.2600.2180  |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll  |Remote Procedure Call Runtime                               |5.1.2600.2180  |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll   |GDI Client DLL                                              |5.1.2600.2180  |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll |Shell Light-weight Utility Library                          |6.0.2900.2180  |473600 |C:\WINDOWS\system32                                                                                 |
+|77FE0000|Secur32.dll |Security Support Provider Interface                         |5.1.2600.2180  |55808  |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll|Windows NT BASE API Client DLL                              |5.1.2600.2180  |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll   |NT Layer DLL                                                |5.1.2600.2180  |708096 |C:\WINDOWS\system32                                                                                 |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012EC74: 7C910833   004DA216: E8 85 A1 F2 FF 81 C4 A8 0F 00 00 5F 5E 5B C3 00  ..........._^[..
+0012EC78: 0012EDC4   004DA226: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EC7C: 00000000   004DA236: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EC80: 00400000   004DA246: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EC84: 00400100   004DA256: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EC88: 7C910833   004DA266: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EC8C: 0012EDD8   004DA276: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EC90: 00000000   004DA286: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EC94: 00400000   004DA296: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EC98: 00400100   004DA2A6: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012EC9C: 0012EC8C   004DA2B6: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECA0: 00000000   004DA2C6: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECA4: 0012ECC4   004DA2D6: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECA8: 7C910895   004DA2E6: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECAC: 00400000   004DA2F6: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012ECB0: 0000A090   004DA306: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+
+
+
+EurekaLog 4.5.7
+
+Application:
+------------------------------------------------------
+  1.1 Start Date      : Wed, 9 Nov 2005 15:17:13 +0300
+  1.2 Name/Description: move.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+--------------------------------------------------------
+  2.1 Date   : Wed, 9 Nov 2005 15:17:20 +0300
+  2.2 Address: 004DA216
+  2.3 Module : move.exe
+  2.4 Type   : EOracleError
+  2.5 Message: ORA-01036: illegal variable name/number .
+
+Active Controls:
+----------------------------
+  3.1 Form Class   : Tf_main
+  3.2 Form Text    : f_main
+  3.3 Control Class: TBitBtn
+  3.4 Control Text : BitBtn1
+
+Computer:
+----------------------------
+  4.1 Name        : MYUDINXP
+  4.2 User        : MYudin
+  4.3 Total Memory: 503 Mb
+  4.4 Free Memory : 111 Mb
+  4.5 Total Disk  : 18.49 Gb
+  4.6 Free Disk   : 5.87 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+--------------------------------------------------------------------------------
+|Address |Module      |Unit          |Class  |Procedure/Method            |Line|
+--------------------------------------------------------------------------------
+|7C910856|ntdll.dll   |              |       |RtlImageNtHeader            |    |
+|7C910942|ntdll.dll   |              |       |RtlAcquirePebLock           |    |
+|7C910949|ntdll.dll   |              |       |RtlAcquirePebLock           |    |
+|7C91096D|ntdll.dll   |              |       |RtlReleasePebLock           |    |
+|7C910961|ntdll.dll   |              |       |RtlReleasePebLock           |    |
+|7C910942|ntdll.dll   |              |       |RtlAcquirePebLock           |    |
+|7C910949|ntdll.dll   |              |       |RtlAcquirePebLock           |    |
+|7C90253A|ntdll.dll   |              |       |memmove                     |    |
+|7C91096D|ntdll.dll   |              |       |RtlReleasePebLock           |    |
+|7C90E286|ntdll.dll   |              |       |ZwReadFile                  |    |
+|01328230|NLSRTL33.dll|              |       |slmsrd                      |    |
+|7C90E286|ntdll.dll   |              |       |ZwReadFile                  |    |
+|01328230|NLSRTL33.dll|              |       |slmsrd                      |    |
+|01310640|NLSRTL33.dll|              |       |lxhmcnv                     |    |
+|7C90E286|ntdll.dll   |              |       |ZwReadFile                  |    |
+|01307F30|NLSRTL33.dll|              |       |lxgcnv                      |    |
+|77C3F95D|msvcrt.dll  |              |       |sprintf                     |    |
+|7C90D590|ntdll.dll   |              |       |NtClose                     |    |
+|7C809BB5|kernel32.dll|              |       |CloseHandle                 |    |
+|013281F9|NLSRTL33.dll|              |       |slmscl                      |    |
+|012CB5D0|CORE40.dll  |              |       |ssgetosver                  |    |
+|012C7651|CORE40.dll  |              |       |sltsmnr                     |    |
+|7C9010ED|ntdll.dll   |              |       |RtlLeaveCriticalSection     |    |
+|7C9106E6|ntdll.dll   |              |       |RtlAllocateHeap             |    |
+|77D4B24B|user32.dll  |              |       |DefWindowProcW              |    |
+|7C9106E6|ntdll.dll   |              |       |RtlAllocateHeap             |    |
+|012CB5D0|CORE40.dll  |              |       |ssgetosver                  |    |
+|012C7651|CORE40.dll  |              |       |sltsmnr                     |    |
+|012CB5D0|CORE40.dll  |              |       |ssgetosver                  |    |
+|012C7651|CORE40.dll  |              |       |sltsmnr                     |    |
+|01111770|ORA805.dll  |              |       |xOCIBindByName              |    |
+|012CB5D0|CORE40.dll  |              |       |ssgetosver                  |    |
+|012C7651|CORE40.dll  |              |       |sltsmnr                     |    |
+|01111B1F|ORA805.dll  |              |       |OCIErrorGet                 |    |
+|1000156C|oci.dll     |              |       |OCIErrorGet                 |    |
+|0054AED1|move.exe    |u_moveprod.pas|Tf_move|FormCreate                  |69  |
+|77D4B7A6|user32.dll  |              |       |SendMessageW                |    |
+|0054A980|move.exe    |main.pas      |Tf_main|BitBtn1Click                |45  |
+|77D4C76E|user32.dll  |              |       |NotifyWinEvent              |    |
+|77D4C766|user32.dll  |              |       |NotifyWinEvent              |    |
+|7C90F1CB|ntdll.dll   |              |       |RtlMultiByteToUnicodeN      |    |
+|7C90F0A5|ntdll.dll   |              |       |RtlAnsiStringToUnicodeString|    |
+|7C90D9BF|ntdll.dll   |              |       |NtFindAtom                  |    |
+|77D4E34B|user32.dll  |              |       |CallWindowProcA             |    |
+|77D4E34B|user32.dll  |              |       |CallWindowProcA             |    |
+|77D4C531|user32.dll  |              |       |PtInRect                    |    |
+|7C9010ED|ntdll.dll   |              |       |RtlLeaveCriticalSection     |    |
+|77D4B7A6|user32.dll  |              |       |SendMessageW                |    |
+|77D4B762|user32.dll  |              |       |SendMessageW                |    |
+|77D4E361|user32.dll  |              |       |CallWindowProcA             |    |
+|77D4E34B|user32.dll  |              |       |CallWindowProcA             |    |
+|77D4DFCD|user32.dll  |              |       |DefWindowProcA              |    |
+|77D4DFCD|user32.dll  |              |       |DefWindowProcA              |    |
+|7C9010ED|ntdll.dll   |              |       |RtlLeaveCriticalSection     |    |
+|77D494FF|user32.dll  |              |       |GetCapture                  |    |
+|77D4EDA4|user32.dll  |              |       |CallNextHookEx              |    |
+|77D4BCC7|user32.dll  |              |       |DispatchMessageA            |    |
+|77D4BCBD|user32.dll  |              |       |DispatchMessageA            |    |
+|0054B337|move.exe    |move.dpr      |       |                            |15  |
+|7C90E64C|ntdll.dll   |              |       |NtSetInformationThread      |    |
+--------------------------------------------------------------------------------
+
+Modules Information:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name        |Description                                                 |Version        |Size   |Path                                                                                                |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|move.exe    |                                                            |               |1620992|c:\Proj_move                                                                                        |
+|010C0000|NL80.dll    |Oracle SQL*Net NL DLL                                       |               |106496 |c:\orant8\bin                                                                                       |
+|010F0000|NNFG80.dll  |Oracle SQL*Net NNFG DLL                                     |               |22016  |c:\orant8\bin                                                                                       |
+|01110000|ORA805.dll  |Oracle RDBMS User-side DLL                                  |               |1583104|c:\orant8\bin                                                                                       |
+|012A0000|CORE40.dll  |Oracle CORE DLL                                             |               |380416 |c:\orant8\bin                                                                                       |
+|01300000|NLSRTL33.dll|Oracle NLS Runtime Library DLL                              |               |237056 |c:\orant8\bin                                                                                       |
+|01340000|OTRACE80.dll|Oracle RDBMS TRACE DLL                                      |               |134656 |c:\orant8\bin                                                                                       |
+|01370000|NS80.dll    |Oracle SQL*Net NS DLL                                       |               |188928 |c:\orant8\bin                                                                                       |
+|013B0000|nasns80.dll |Oracle SQL*Net SNS Stub DLL                                 |               |147456 |c:\orant8\bin                                                                                       |
+|013E0000|nz80.dll    |Oracle SQL*Net OSS DLL                                      |               |274432 |c:\orant8\bin                                                                                       |
+|01430000|NNCI80.dll  |Oracle SQL*Net NNCI DLL                                     |               |32768  |c:\orant8\bin                                                                                       |
+|01440000|NNG80.dll   |Oracle SQL*Net NNG DLL                                      |               |81408  |c:\orant8\bin                                                                                       |
+|01460000|NMP80.dll   |Oracle SQL*Net NMP DLL                                      |               |11264  |c:\orant8\bin                                                                                       |
+|01470000|NPL80.dll   |Oracle SQL*Net NPL DLL                                      |               |13312  |c:\orant8\bin                                                                                       |
+|01480000|NR80.dll    |Oracle SQL*Net NR DLL                                       |               |74240  |c:\orant8\bin                                                                                       |
+|014A0000|NT80.dll    |Oracle SQL*Net NT DLL                                       |               |19456  |c:\orant8\bin                                                                                       |
+|014B0000|NCR80.dll   |Oracle SQL*Net RPC DLL                                      |               |205824 |c:\orant8\bin                                                                                       |
+|014F0000|NMS80.dll   |Oracle SQL*Net NMS DLL                                      |               |6656   |c:\orant8\bin                                                                                       |
+|01500000|NNFD80.dll  |Oracle SQL*Net NNFD DLL                                     |               |4096   |c:\orant8\bin                                                                                       |
+|01510000|NNFN80.dll  |Oracle SQL*Net NetWare Native Naming Adapter DLL            |               |13312  |c:\orant8\bin                                                                                       |
+|01520000|NI80.dll    |Oracle SQL*Net OSN DLL                                      |               |41984  |c:\orant8\bin                                                                                       |
+|01530000|PLS805.dll  |Oracle PL/SQL Userside DLL                                  |               |2030592|c:\orant8\bin                                                                                       |
+|01730000|NDWSI80.DLL |                                                            |               |35840  |c:\orant8\bin                                                                                       |
+|01870000|ntt80.DLL   |Oracle SQL*Net NTT DLL                                      |               |35840  |c:\orant8\bin                                                                                       |
+|10000000|oci.dll     |Oracle Call Interface DLL                                   |               |40448  |c:\orant8\bin                                                                                       |
+|55600000|FwcWsp.dll  |Microsoft Firewall Client Windows Sockets 2 Service Provider|4.0.2161.50    |173400 |C:\Program Files\Microsoft Firewall Client 2004                                                     |
+|5AD70000|uxtheme.dll |Microsoft UxTheme Library                                   |6.0.2900.2180  |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll|Common Controls Library                                     |5.82.2900.2180 |611328 |C:\WINDOWS\system32                                                                                 |
+|629C0000|LPK.DLL     |Language Pack                                               |5.1.2600.2180  |22016  |C:\WINDOWS\system32                                                                                 |
+|662B0000|hnetcfg.dll |Home Networking Configuration Manager                       |5.1.2600.2180  |344064 |C:\WINDOWS\system32                                                                                 |
+|71A50000|mswsock.dll |Microsoft Windows Sockets 2.0 Service Provider              |5.1.2600.2180  |245248 |C:\WINDOWS\System32                                                                                 |
+|71A90000|wshtcpip.dll|Windows Sockets Helper DLL                                  |5.1.2600.2180  |19968  |C:\WINDOWS\System32                                                                                 |
+|71AA0000|WS2HELP.dll |Windows Socket 2.0 Helper for Windows NT                    |5.1.2600.2180  |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll  |Windows Socket 2.0 32-Bit DLL                               |5.1.2600.2180  |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll |Windows Socket 32-Bit DLL                                   |5.1.2600.2180  |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll   |MSCTF Server DLL                                            |5.1.2600.2180  |294400 |C:\WINDOWS\system32                                                                                 |
+|74D90000|USP10.dll   |Uniscribe Unicode script processor                          |1.420.2600.2180|406528 |C:\WINDOWS\system32                                                                                 |
+|755C0000|msctfime.ime|Microsoft Text Frame Work Service IME                       |5.1.2600.2180  |177152 |C:\WINDOWS\system32                                                                                 |
+|76390000|IMM32.DLL   |Windows XP IMM32 API Client DLL                             |5.1.2600.2180  |110080 |C:\WINDOWS\system32                                                                                 |
+|76B40000|WINMM.dll   |MCI API DLL                                                 |5.1.2600.2180  |176128 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL   |Process Status Helper                                       |5.1.2600.2180  |23040  |C:\WINDOWS\system32                                                                                 |
+|76F20000|DNSAPI.dll  |DNS Client API DLL                                          |5.1.2600.2180  |148480 |C:\WINDOWS\system32                                                                                 |
+|76F60000|WLDAP32.dll |Win32 LDAP API DLL                                          |5.1.2600.2180  |172032 |C:\WINDOWS\system32                                                                                 |
+|76FB0000|winrnr.dll  |LDAP RnR Provider DLL                                       |5.1.2600.2180  |16896  |C:\WINDOWS\System32                                                                                 |
+|76FC0000|rasadhlp.dll|Remote Access AutoDial Helper                               |5.1.2600.2180  |8192   |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll|                                                            |5.1.2600.2180  |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll|User Experience Controls Library                            |6.0.2900.2180  |1050624|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2180_x-ww_a84f1ff9|
+|774E0000|ole32.dll   |Microsoft OLE for Windows                                   |5.1.2600.2180  |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll |Version Checking and File Installation Libraries            |5.1.2600.2180  |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll  |Windows NT CRT DLL                                          |7.0.2600.2180  |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll  |Windows XP USER API Client DLL                              |5.1.2600.2180  |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll|Advanced Windows 32 Base API                                |5.1.2600.2180  |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll  |Remote Procedure Call Runtime                               |5.1.2600.2180  |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll   |GDI Client DLL                                              |5.1.2600.2180  |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll |Shell Light-weight Utility Library                          |6.0.2900.2180  |473600 |C:\WINDOWS\system32                                                                                 |
+|77FE0000|Secur32.dll |Security Support Provider Interface                         |5.1.2600.2180  |55808  |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll|Windows NT BASE API Client DLL                              |5.1.2600.2180  |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll   |NT Layer DLL                                                |5.1.2600.2180  |708096 |C:\WINDOWS\system32                                                                                 |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012E30C: 7C910833   004DA216: E8 85 A1 F2 FF 81 C4 A8 0F 00 00 5F 5E 5B C3 00  ..........._^[..
+0012E310: 0012E45C   004DA226: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012E314: 00000000   004DA236: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012E318: 00400000   004DA246: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012E31C: 00400100   004DA256: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012E320: 7C910833   004DA266: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012E324: 0012E470   004DA276: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012E328: 00000000   004DA286: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012E32C: 00400000   004DA296: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012E330: 00400100   004DA2A6: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012E334: 0012E324   004DA2B6: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012E338: 00000000   004DA2C6: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012E33C: 0012E35C   004DA2D6: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012E340: 7C910895   004DA2E6: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012E344: 00400000   004DA2F6: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+0012E348: 0000A090   004DA306: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+
+
+
+
+

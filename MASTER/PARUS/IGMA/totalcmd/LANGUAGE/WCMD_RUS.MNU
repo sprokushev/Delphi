@@ -1,0 +1,105 @@
+POPUP "Файл"
+  MENUITEM "Изменить aтрибуты...", cm_SetAttrib
+  MENUITEM "Упаковать...\tALT+F5", cm_PackFiles
+  MENUITEM "Распаковать...\tALT+F9", cm_UnpackFiles
+  MENUITEM "Проверить архив(ы)\tALT+SHIFT+F9",518
+  MENUITEM "Сравнить по внутренностям...", 2022
+  MENUITEM "Открыть как...", cm_associate
+  MENUITEM "Свойства файла\tALT+ENTER", cm_versioninfo
+  MENUITEM "Подсчитать скоко весит", cm_GetFileSpace
+  MENUITEM "Групповое переименование...\tCtrl+T", 2400
+  POPUP "Печать"
+    MENUITEM "Список файлов...", 2027
+    MENUITEM "Список с поддеректориями...", 2028
+    MENUITEM "Содержание файла\tCtrl+F9", cm_PrintFile
+  END_POPUP
+  MENUITEM SEPARATOR
+  MENUITEM "Разбить файл...", 560
+  MENUITEM "Собрать файл...", 561
+  MENUITEM "Заkодировать (MIME,UUE,XXE)...", 562
+  MENUITEM "Декодр (MIME,UUE,XXE,BinHex)...", 563
+  MENUITEM SEPARATOR
+  MENUITEM "Выход\tALT+F4", cm_Exit
+END_POPUP
+
+POPUP "Выделение"
+  MENUITEM "Выделить кучку...\tСерый +", cm_spreadselection
+  MENUITEM "Сбросить выделение...\tСерый -", cm_shrinkselection
+  MENUITEM "Выделить усё\tCTRL Серый +", cm_selectall
+  MENUITEM "Сбросить усё выделение\tCTRL Серый -", cm_Clearall
+  MENUITEM "Неготив выделения\tСерый *", cm_ExchangeSelection
+  MENUITEM "Восстановить выделение\tСерый /", 529
+  MENUITEM SEPARATOR
+  MENUITEM "Сравнить каталоги\tSHIFT+F2", cm_CompareDirs
+  MENUITEM "Отметить новые, скрыть одинаковые", cm_DirMatch
+END_POPUP
+
+POPUP "Команды"
+  MENUITEM "Древо каталогов...\tALT+F10", cm_CDtree
+  MENUITEM "ПОИСК файлов...\tALT+F7", cm_searchfor
+  MENUITEM "Метка диска...", cm_VolumeId
+  MENUITEM "Инфа о системе", cm_sysinfo
+  MENUITEM "Синхронизировать каталоги...", 2020
+  MENUITEM "Часто используемые каталоги\tCTRL+D", cm_DirectoryHotlist
+  MENUITEM "Назад\tALT+ курсор влево", 570
+  MENUITEM SEPARATOR
+  MENUITEM "Запустить DOS", cm_ExecuteDOS
+  MENUITEM SEPARATOR
+  MENUITEM "Подключить сетевой диск...", cm_NetConnect
+  MENUITEM "Вырубить сетевой диск...", cm_NetDisconnect
+  MENUITEM "Сделать этот каталог общим...", cm_NetShareDir
+  MENUITEM "Свойства каталога...", cm_NetUnshareDir
+  MENUITEM SEPARATOR
+  MENUITEM &Соедини с FTP-серваком...\tCTRL+F", 550
+  MENUITEM "Новый FTP-коннект...\tCTRL+N", 551
+  MENUITEM "Разорвать FTP-коннект\tCTRL+SHIFT+F", 552
+  MENUITEM "Показ на серваке скрытых файлов", 553
+  MENUITEM "FTP-загрузка из списка...", 558
+  MENUITEM "Коннект с другим компом через порт...", 2300
+  MENUITEM SEPARATOR
+  MENUITEM "Поменять пане&ли местами\tCTRL+U", cm_exchange
+  MENUITEM "Получатель=Источнику", cm_matchsrc
+END_POPUP
+
+POPUP "Вид"
+  MENUITEM "Краткий\tCTRL+F1", cm_srcshort
+  MENUITEM "Подробный\tCTRL+F2", cm_srclong
+  MENUITEM "Древо\tCTRL+F8", cm_srcTree
+  MENUITEM "Быстрый просмотр\tCTRL+Q",304
+  MENUITEM "Горизонтальное окно", 305
+  MENUITEM SEPARATOR
+  MENUITEM "Все файлы\tCTRL+F10", cm_srcallfiles
+  MENUITEM "Только проги\tCTRL+F11", cm_srcexecs
+  MENUITEM "*.*", cm_srcuserspec
+  MENUITEM "Фильтр...\tCTRL+F12", cm_srcuserdef
+  MENUITEM SEPARATOR
+  MENUITEM "По имени\tCTRL+F3", cm_srcbyname
+  MENUITEM "По типу\tCTRL+F4", cm_srcbyext
+  MENUITEM "По времени\tCTRL+F5", cm_srcbydatetime
+  MENUITEM "По весу\tCTRL+F6", cm_srcbysize
+  MENUITEM "Как угодно\tCTRL+F7", cm_srcunsorted
+  MENUITEM SEPARATOR
+  MENUITEM "Файлы наобород", cm_srcnegorder
+  MENUITEM SEPARATOR
+  MENUITEM "Обновить окно\tCTRL+R", cm_rereadsource
+END_POPUP
+
+POPUP "Конфиг"
+  MENUITEM "Настройка...", cm_config
+  MENUITEM "Панель...", cm_ButtonConfig
+  MENUITEM "Запомни позицию", cm_configSavepos
+  MENUITEM "Сейвить конфиг", 580
+END_POPUP
+
+STARTMENU
+
+HELP_BREAK
+
+POPUP "Справочная", HELP
+  MENUITEM "Я познаю Windows Cammander\tF1", cm_HelpIndex
+  MENUITEM "Раскладка Клавы", cm_keyboard
+  MENUITEM "А может Зарегиться", cm_register
+  MENUITEM Windows Commander в &Инэте...", 640
+  MENUITEM SEPARATOR
+  MENUITEM "О прогре...", cm_About
+END_POPUP

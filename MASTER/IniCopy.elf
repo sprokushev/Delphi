@@ -1,0 +1,1620 @@
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Wed, 26 Oct 2005 14:45:38 +0300
+  1.2 Name/Description: IniCopy.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+------------------------------------------------------------------------------------------------------
+  2.1 Date   : Wed, 26 Oct 2005 14:45:38 +0300
+  2.2 Address: 00476ED8
+  2.3 Module : IniCopy.exe
+  2.4 Type   : EAccessViolation
+  2.5 Message: Access violation at address 00476ED8 in module 'IniCopy.exe'. Read of address 78836653.
+
+Active Controls:
+---------------------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Копирование файлов
+  3.3 Control Class: TForm1
+  3.4 Control Text : Копирование файлов
+
+Computer:
+------------------------------
+  4.1 Name        : SPROKUSHEV
+  4.2 User        : SProkushev
+  4.3 Total Memory: 495 Mb
+  4.4 Free Memory : 143 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 0.27 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+----------------------------------------------------------------------
+|Address |Module     |Unit        |Class |Procedure/Method      |Line|
+----------------------------------------------------------------------
+|00476ED8|IniCopy.exe|copymain.pas|TForm1|Timer1Timer           |44  |
+|77D4BCC7|user32.dll |            |      |DispatchMessageA      |    |
+|77D4BCBD|user32.dll |            |      |DispatchMessageA      |    |
+|00477AC3|IniCopy.exe|IniCopy.dpr |      |                      |13  |
+|7C90E64C|ntdll.dll  |            |      |NtSetInformationThread|    |
+----------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name             |Description                                     |Version       |Size   |Path                                                                                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|IniCopy.exe      |                                                |              |577536 |U:\MASTER                                                                                           |
+|10000000|MsgPlusLoader.dll|Messenger Plus! Process Monitor                 |3.50.2.0      |45192  |C:\Program Files\Messenger Plus! 3                                                                  |
+|5AD70000|uxtheme.dll      |Microsoft UxTheme Library                       |6.0.2900.2180 |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll     |Common Controls Library                         |5.82.2900.2527|617472 |C:\WINDOWS\system32                                                                                 |
+|71AA0000|WS2HELP.dll      |Windows Socket 2.0 Helper for Windows NT        |5.1.2600.2180 |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll       |Windows Socket 2.0 32-Bit DLL                   |5.1.2600.2180 |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll      |Windows Socket 32-Bit DLL                       |5.1.2600.2180 |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll        |MSCTF Server DLL                                |5.1.2600.2180 |294400 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL        |Process Status Helper                           |5.1.2600.2180 |23040  |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll     |                                                |5.1.2600.2180 |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll     |User Experience Controls Library                |6.0.2900.2527 |1053696|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2527_x-ww_aa415c8a|
+|774E0000|ole32.dll        |Microsoft OLE for Windows                       |5.1.2600.2180 |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll      |Version Checking and File Installation Libraries|5.1.2600.2180 |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll       |Windows NT CRT DLL                              |7.0.2600.2180 |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll       |Windows XP USER API Client DLL                  |5.1.2600.2180 |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll     |Advanced Windows 32 Base API                    |5.1.2600.2180 |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll       |Remote Procedure Call Runtime                   |5.1.2600.2180 |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll        |GDI Client DLL                                  |5.1.2600.2180 |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll      |Shell Light-weight Utility Library              |6.0.2900.2180 |473600 |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll     |Windows NT BASE API Client DLL                  |5.1.2600.2180 |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll        |NT Layer DLL                                    |5.1.2600.2180 |708096 |C:\WINDOWS\system32                                                                                 |
+|7C9C0000|shell32.dll      |Windows Shell Common Dll                        |6.0.2900.2180 |8384000|C:\WINDOWS\system32                                                                                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F280: 0012F324   00476ED8: FF 13 8B 85 30 F5 FF FF 8D 95 34 F5 FF FF E8 69  ....0.....4....i
+0012F284: 00477650   00476EE8: 1E F9 FF 8B 95 34 F5 FF FF 8D 85 38 F8 FF FF B9  .....4.....8....
+0012F288: 0012FE04   00476EF8: FF 00 00 00 E8 DB DE F8 FF 8D 85 38 F8 FF FF BA  ...........8....
+0012F28C: 004043C8   00476F08: 74 76 47 00 33 C9 8A 08 41 E8 5A C5 F8 FF 74 32  tvG.3...A.Z...t2
+0012F290: 0012FDF4   00476F18: 8D 85 38 F8 FF FF BA 78 76 47 00 33 C9 8A 08 41  ..8....xvG.3...A
+0012F294: 0012FEA0   00476F28: E8 43 C5 F8 FF 74 1B 8D 85 38 F8 FF FF BA 7C 76  .C...t...8....|v
+0012F298: 0044AD14   00476F38: 47 00 33 C9 8A 08 41 E8 2C C5 F8 FF 74 04 33 C0  G.3...A.,...t.3.
+0012F29C: 009A4E74   00476F48: EB 02 B0 01 88 45 EF 80 7D EF 00 75 23 8D 95 2C  .....E..}..u#..,
+0012F2A0: 00000000   00476F58: F5 FF FF 8B 45 FC E8 05 08 00 00 8B 95 2C F5 FF  ....E........,..
+0012F2A4: 00000000   00476F68: FF 8D 45 E8 B9 88 76 47 00 E8 D6 DE F8 FF EB 08  ..E...vG........
+0012F2A8: 00000000   00476F78: 8D 45 E8 E8 A4 DB F8 FF 8B 45 FC 8B 80 FC 02 00  .E.......E......
+0012F2AC: 00000000   00476F88: 00 33 D2 E8 4C 3D FD FF 8B 45 FC 8B 80 F8 02 00  .3..L=...E......
+0012F2B0: 00000000   00476F98: 00 B2 01 E8 20 63 FD FF 8B 45 FC 8B 80 F8 02 00  .... c...E......
+0012F2B4: 00000000   00476FA8: 00 B2 01 E8 4C EF FD FF 8D 95 24 F5 FF FF 33 C0  ....L.....$...3.
+0012F2B8: 00000000   00476FB8: E8 87 BF F8 FF 8B 85 24 F5 FF FF 8D 95 28 F5 FF  .......$.....(..
+0012F2BC: 00000000   00476FC8: FF E8 12 27 F9 FF 8D 85 28 F5 FF FF 50 8D 95 18  ...'....(...P...
+
+
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Wed, 26 Oct 2005 14:45:38 +0300
+  1.2 Name/Description: IniCopy.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+------------------------------------------------------------------------------------------------------
+  2.1 Date   : Wed, 26 Oct 2005 14:45:39 +0300
+  2.2 Address: 00476ED8
+  2.3 Module : IniCopy.exe
+  2.4 Type   : EAccessViolation
+  2.5 Message: Access violation at address 00476ED8 in module 'IniCopy.exe'. Read of address 78836653.
+
+Active Controls:
+---------------------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Копирование файлов
+  3.3 Control Class: TForm1
+  3.4 Control Text : Копирование файлов
+
+Computer:
+------------------------------
+  4.1 Name        : SPROKUSHEV
+  4.2 User        : SProkushev
+  4.3 Total Memory: 495 Mb
+  4.4 Free Memory : 143 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 0.27 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+----------------------------------------------------------------------
+|Address |Module     |Unit        |Class |Procedure/Method      |Line|
+----------------------------------------------------------------------
+|00476ED8|IniCopy.exe|copymain.pas|TForm1|Timer1Timer           |44  |
+|77D4BCC7|user32.dll |            |      |DispatchMessageA      |    |
+|77D4BCBD|user32.dll |            |      |DispatchMessageA      |    |
+|00477AC3|IniCopy.exe|IniCopy.dpr |      |                      |13  |
+|7C90E64C|ntdll.dll  |            |      |NtSetInformationThread|    |
+----------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name             |Description                                     |Version       |Size   |Path                                                                                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|IniCopy.exe      |                                                |              |577536 |U:\MASTER                                                                                           |
+|10000000|MsgPlusLoader.dll|Messenger Plus! Process Monitor                 |3.50.2.0      |45192  |C:\Program Files\Messenger Plus! 3                                                                  |
+|5AD70000|uxtheme.dll      |Microsoft UxTheme Library                       |6.0.2900.2180 |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll     |Common Controls Library                         |5.82.2900.2527|617472 |C:\WINDOWS\system32                                                                                 |
+|71AA0000|WS2HELP.dll      |Windows Socket 2.0 Helper for Windows NT        |5.1.2600.2180 |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll       |Windows Socket 2.0 32-Bit DLL                   |5.1.2600.2180 |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll      |Windows Socket 32-Bit DLL                       |5.1.2600.2180 |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll        |MSCTF Server DLL                                |5.1.2600.2180 |294400 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL        |Process Status Helper                           |5.1.2600.2180 |23040  |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll     |                                                |5.1.2600.2180 |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll     |User Experience Controls Library                |6.0.2900.2527 |1053696|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2527_x-ww_aa415c8a|
+|774E0000|ole32.dll        |Microsoft OLE for Windows                       |5.1.2600.2180 |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll      |Version Checking and File Installation Libraries|5.1.2600.2180 |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll       |Windows NT CRT DLL                              |7.0.2600.2180 |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll       |Windows XP USER API Client DLL                  |5.1.2600.2180 |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll     |Advanced Windows 32 Base API                    |5.1.2600.2180 |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll       |Remote Procedure Call Runtime                   |5.1.2600.2180 |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll        |GDI Client DLL                                  |5.1.2600.2180 |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll      |Shell Light-weight Utility Library              |6.0.2900.2180 |473600 |C:\WINDOWS\system32                                                                                 |
+|77FE0000|Secur32.dll      |Security Support Provider Interface             |5.1.2600.2180 |55808  |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll     |Windows NT BASE API Client DLL                  |5.1.2600.2180 |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll        |NT Layer DLL                                    |5.1.2600.2180 |708096 |C:\WINDOWS\system32                                                                                 |
+|7C9C0000|shell32.dll      |Windows Shell Common Dll                        |6.0.2900.2180 |8384000|C:\WINDOWS\system32                                                                                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F280: 0012F324   00476ED8: FF 13 8B 85 30 F5 FF FF 8D 95 34 F5 FF FF E8 69  ....0.....4....i
+0012F284: 00477650   00476EE8: 1E F9 FF 8B 95 34 F5 FF FF 8D 85 38 F8 FF FF B9  .....4.....8....
+0012F288: 0012FE04   00476EF8: FF 00 00 00 E8 DB DE F8 FF 8D 85 38 F8 FF FF BA  ...........8....
+0012F28C: 004043C8   00476F08: 74 76 47 00 33 C9 8A 08 41 E8 5A C5 F8 FF 74 32  tvG.3...A.Z...t2
+0012F290: 0012FDF4   00476F18: 8D 85 38 F8 FF FF BA 78 76 47 00 33 C9 8A 08 41  ..8....xvG.3...A
+0012F294: 0012FEA0   00476F28: E8 43 C5 F8 FF 74 1B 8D 85 38 F8 FF FF BA 7C 76  .C...t...8....|v
+0012F298: 0044AD14   00476F38: 47 00 33 C9 8A 08 41 E8 2C C5 F8 FF 74 04 33 C0  G.3...A.,...t.3.
+0012F29C: 009A4E74   00476F48: EB 02 B0 01 88 45 EF 80 7D EF 00 75 23 8D 95 2C  .....E..}..u#..,
+0012F2A0: 00000000   00476F58: F5 FF FF 8B 45 FC E8 05 08 00 00 8B 95 2C F5 FF  ....E........,..
+0012F2A4: 00000000   00476F68: FF 8D 45 E8 B9 88 76 47 00 E8 D6 DE F8 FF EB 08  ..E...vG........
+0012F2A8: 00000000   00476F78: 8D 45 E8 E8 A4 DB F8 FF 8B 45 FC 8B 80 FC 02 00  .E.......E......
+0012F2AC: 00000000   00476F88: 00 33 D2 E8 4C 3D FD FF 8B 45 FC 8B 80 F8 02 00  .3..L=...E......
+0012F2B0: 00000000   00476F98: 00 B2 01 E8 20 63 FD FF 8B 45 FC 8B 80 F8 02 00  .... c...E......
+0012F2B4: 00000000   00476FA8: 00 B2 01 E8 4C EF FD FF 8D 95 24 F5 FF FF 33 C0  ....L.....$...3.
+0012F2B8: 00000000   00476FB8: E8 87 BF F8 FF 8B 85 24 F5 FF FF 8D 95 28 F5 FF  .......$.....(..
+0012F2BC: 00000000   00476FC8: FF E8 12 27 F9 FF 8D 85 28 F5 FF FF 50 8D 95 18  ...'....(...P...
+
+
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Wed, 26 Oct 2005 14:45:38 +0300
+  1.2 Name/Description: IniCopy.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+------------------------------------------------------------------------------------------------------
+  2.1 Date   : Wed, 26 Oct 2005 14:45:40 +0300
+  2.2 Address: 00476ED8
+  2.3 Module : IniCopy.exe
+  2.4 Type   : EAccessViolation
+  2.5 Message: Access violation at address 00476ED8 in module 'IniCopy.exe'. Read of address 78836653.
+
+Active Controls:
+---------------------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Копирование файлов
+  3.3 Control Class: TForm1
+  3.4 Control Text : Копирование файлов
+
+Computer:
+------------------------------
+  4.1 Name        : SPROKUSHEV
+  4.2 User        : SProkushev
+  4.3 Total Memory: 495 Mb
+  4.4 Free Memory : 143 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 0.27 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+----------------------------------------------------------------------
+|Address |Module     |Unit        |Class |Procedure/Method      |Line|
+----------------------------------------------------------------------
+|00476ED8|IniCopy.exe|copymain.pas|TForm1|Timer1Timer           |44  |
+|77D4BCC7|user32.dll |            |      |DispatchMessageA      |    |
+|77D4BCBD|user32.dll |            |      |DispatchMessageA      |    |
+|00477AC3|IniCopy.exe|IniCopy.dpr |      |                      |13  |
+|7C90E64C|ntdll.dll  |            |      |NtSetInformationThread|    |
+----------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name             |Description                                     |Version       |Size   |Path                                                                                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|IniCopy.exe      |                                                |              |577536 |U:\MASTER                                                                                           |
+|10000000|MsgPlusLoader.dll|Messenger Plus! Process Monitor                 |3.50.2.0      |45192  |C:\Program Files\Messenger Plus! 3                                                                  |
+|5AD70000|uxtheme.dll      |Microsoft UxTheme Library                       |6.0.2900.2180 |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll     |Common Controls Library                         |5.82.2900.2527|617472 |C:\WINDOWS\system32                                                                                 |
+|71AA0000|WS2HELP.dll      |Windows Socket 2.0 Helper for Windows NT        |5.1.2600.2180 |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll       |Windows Socket 2.0 32-Bit DLL                   |5.1.2600.2180 |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll      |Windows Socket 32-Bit DLL                       |5.1.2600.2180 |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll        |MSCTF Server DLL                                |5.1.2600.2180 |294400 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL        |Process Status Helper                           |5.1.2600.2180 |23040  |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll     |                                                |5.1.2600.2180 |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll     |User Experience Controls Library                |6.0.2900.2527 |1053696|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2527_x-ww_aa415c8a|
+|774E0000|ole32.dll        |Microsoft OLE for Windows                       |5.1.2600.2180 |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll      |Version Checking and File Installation Libraries|5.1.2600.2180 |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll       |Windows NT CRT DLL                              |7.0.2600.2180 |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll       |Windows XP USER API Client DLL                  |5.1.2600.2180 |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll     |Advanced Windows 32 Base API                    |5.1.2600.2180 |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll       |Remote Procedure Call Runtime                   |5.1.2600.2180 |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll        |GDI Client DLL                                  |5.1.2600.2180 |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll      |Shell Light-weight Utility Library              |6.0.2900.2180 |473600 |C:\WINDOWS\system32                                                                                 |
+|77FE0000|Secur32.dll      |Security Support Provider Interface             |5.1.2600.2180 |55808  |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll     |Windows NT BASE API Client DLL                  |5.1.2600.2180 |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll        |NT Layer DLL                                    |5.1.2600.2180 |708096 |C:\WINDOWS\system32                                                                                 |
+|7C9C0000|shell32.dll      |Windows Shell Common Dll                        |6.0.2900.2180 |8384000|C:\WINDOWS\system32                                                                                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F280: 0012F324   00476ED8: FF 13 8B 85 30 F5 FF FF 8D 95 34 F5 FF FF E8 69  ....0.....4....i
+0012F284: 00477650   00476EE8: 1E F9 FF 8B 95 34 F5 FF FF 8D 85 38 F8 FF FF B9  .....4.....8....
+0012F288: 0012FE04   00476EF8: FF 00 00 00 E8 DB DE F8 FF 8D 85 38 F8 FF FF BA  ...........8....
+0012F28C: 004043C8   00476F08: 74 76 47 00 33 C9 8A 08 41 E8 5A C5 F8 FF 74 32  tvG.3...A.Z...t2
+0012F290: 0012FDF4   00476F18: 8D 85 38 F8 FF FF BA 78 76 47 00 33 C9 8A 08 41  ..8....xvG.3...A
+0012F294: 0012FEA0   00476F28: E8 43 C5 F8 FF 74 1B 8D 85 38 F8 FF FF BA 7C 76  .C...t...8....|v
+0012F298: 0044AD14   00476F38: 47 00 33 C9 8A 08 41 E8 2C C5 F8 FF 74 04 33 C0  G.3...A.,...t.3.
+0012F29C: 009A4E74   00476F48: EB 02 B0 01 88 45 EF 80 7D EF 00 75 23 8D 95 2C  .....E..}..u#..,
+0012F2A0: 00000000   00476F58: F5 FF FF 8B 45 FC E8 05 08 00 00 8B 95 2C F5 FF  ....E........,..
+0012F2A4: 00000000   00476F68: FF 8D 45 E8 B9 88 76 47 00 E8 D6 DE F8 FF EB 08  ..E...vG........
+0012F2A8: 00000000   00476F78: 8D 45 E8 E8 A4 DB F8 FF 8B 45 FC 8B 80 FC 02 00  .E.......E......
+0012F2AC: 00000000   00476F88: 00 33 D2 E8 4C 3D FD FF 8B 45 FC 8B 80 F8 02 00  .3..L=...E......
+0012F2B0: 00000000   00476F98: 00 B2 01 E8 20 63 FD FF 8B 45 FC 8B 80 F8 02 00  .... c...E......
+0012F2B4: 00000000   00476FA8: 00 B2 01 E8 4C EF FD FF 8D 95 24 F5 FF FF 33 C0  ....L.....$...3.
+0012F2B8: 00000000   00476FB8: E8 87 BF F8 FF 8B 85 24 F5 FF FF 8D 95 28 F5 FF  .......$.....(..
+0012F2BC: 00000000   00476FC8: FF E8 12 27 F9 FF 8D 85 28 F5 FF FF 50 8D 95 18  ...'....(...P...
+
+
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Wed, 26 Oct 2005 14:45:38 +0300
+  1.2 Name/Description: IniCopy.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+------------------------------------------------------------------------------------------------------
+  2.1 Date   : Wed, 26 Oct 2005 14:45:40 +0300
+  2.2 Address: 00476ED8
+  2.3 Module : IniCopy.exe
+  2.4 Type   : EAccessViolation
+  2.5 Message: Access violation at address 00476ED8 in module 'IniCopy.exe'. Read of address 78836653.
+
+Active Controls:
+---------------------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Копирование файлов
+  3.3 Control Class: TForm1
+  3.4 Control Text : Копирование файлов
+
+Computer:
+------------------------------
+  4.1 Name        : SPROKUSHEV
+  4.2 User        : SProkushev
+  4.3 Total Memory: 495 Mb
+  4.4 Free Memory : 143 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 0.27 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+----------------------------------------------------------------------
+|Address |Module     |Unit        |Class |Procedure/Method      |Line|
+----------------------------------------------------------------------
+|00476ED8|IniCopy.exe|copymain.pas|TForm1|Timer1Timer           |44  |
+|77D4BCC7|user32.dll |            |      |DispatchMessageA      |    |
+|77D4BCBD|user32.dll |            |      |DispatchMessageA      |    |
+|00477AC3|IniCopy.exe|IniCopy.dpr |      |                      |13  |
+|7C90E64C|ntdll.dll  |            |      |NtSetInformationThread|    |
+----------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name             |Description                                     |Version       |Size   |Path                                                                                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|IniCopy.exe      |                                                |              |577536 |U:\MASTER                                                                                           |
+|10000000|MsgPlusLoader.dll|Messenger Plus! Process Monitor                 |3.50.2.0      |45192  |C:\Program Files\Messenger Plus! 3                                                                  |
+|5AD70000|uxtheme.dll      |Microsoft UxTheme Library                       |6.0.2900.2180 |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll     |Common Controls Library                         |5.82.2900.2527|617472 |C:\WINDOWS\system32                                                                                 |
+|71AA0000|WS2HELP.dll      |Windows Socket 2.0 Helper for Windows NT        |5.1.2600.2180 |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll       |Windows Socket 2.0 32-Bit DLL                   |5.1.2600.2180 |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll      |Windows Socket 32-Bit DLL                       |5.1.2600.2180 |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll        |MSCTF Server DLL                                |5.1.2600.2180 |294400 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL        |Process Status Helper                           |5.1.2600.2180 |23040  |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll     |                                                |5.1.2600.2180 |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll     |User Experience Controls Library                |6.0.2900.2527 |1053696|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2527_x-ww_aa415c8a|
+|774E0000|ole32.dll        |Microsoft OLE for Windows                       |5.1.2600.2180 |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll      |Version Checking and File Installation Libraries|5.1.2600.2180 |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll       |Windows NT CRT DLL                              |7.0.2600.2180 |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll       |Windows XP USER API Client DLL                  |5.1.2600.2180 |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll     |Advanced Windows 32 Base API                    |5.1.2600.2180 |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll       |Remote Procedure Call Runtime                   |5.1.2600.2180 |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll        |GDI Client DLL                                  |5.1.2600.2180 |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll      |Shell Light-weight Utility Library              |6.0.2900.2180 |473600 |C:\WINDOWS\system32                                                                                 |
+|77FE0000|Secur32.dll      |Security Support Provider Interface             |5.1.2600.2180 |55808  |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll     |Windows NT BASE API Client DLL                  |5.1.2600.2180 |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll        |NT Layer DLL                                    |5.1.2600.2180 |708096 |C:\WINDOWS\system32                                                                                 |
+|7C9C0000|shell32.dll      |Windows Shell Common Dll                        |6.0.2900.2180 |8384000|C:\WINDOWS\system32                                                                                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F280: 0012F324   00476ED8: FF 13 8B 85 30 F5 FF FF 8D 95 34 F5 FF FF E8 69  ....0.....4....i
+0012F284: 00477650   00476EE8: 1E F9 FF 8B 95 34 F5 FF FF 8D 85 38 F8 FF FF B9  .....4.....8....
+0012F288: 0012FE04   00476EF8: FF 00 00 00 E8 DB DE F8 FF 8D 85 38 F8 FF FF BA  ...........8....
+0012F28C: 004043C8   00476F08: 74 76 47 00 33 C9 8A 08 41 E8 5A C5 F8 FF 74 32  tvG.3...A.Z...t2
+0012F290: 0012FDF4   00476F18: 8D 85 38 F8 FF FF BA 78 76 47 00 33 C9 8A 08 41  ..8....xvG.3...A
+0012F294: 0012FEA0   00476F28: E8 43 C5 F8 FF 74 1B 8D 85 38 F8 FF FF BA 7C 76  .C...t...8....|v
+0012F298: 0044AD14   00476F38: 47 00 33 C9 8A 08 41 E8 2C C5 F8 FF 74 04 33 C0  G.3...A.,...t.3.
+0012F29C: 009A4E74   00476F48: EB 02 B0 01 88 45 EF 80 7D EF 00 75 23 8D 95 2C  .....E..}..u#..,
+0012F2A0: 00000000   00476F58: F5 FF FF 8B 45 FC E8 05 08 00 00 8B 95 2C F5 FF  ....E........,..
+0012F2A4: 00000000   00476F68: FF 8D 45 E8 B9 88 76 47 00 E8 D6 DE F8 FF EB 08  ..E...vG........
+0012F2A8: 00000000   00476F78: 8D 45 E8 E8 A4 DB F8 FF 8B 45 FC 8B 80 FC 02 00  .E.......E......
+0012F2AC: 00000000   00476F88: 00 33 D2 E8 4C 3D FD FF 8B 45 FC 8B 80 F8 02 00  .3..L=...E......
+0012F2B0: 00000000   00476F98: 00 B2 01 E8 20 63 FD FF 8B 45 FC 8B 80 F8 02 00  .... c...E......
+0012F2B4: 00000000   00476FA8: 00 B2 01 E8 4C EF FD FF 8D 95 24 F5 FF FF 33 C0  ....L.....$...3.
+0012F2B8: 00000000   00476FB8: E8 87 BF F8 FF 8B 85 24 F5 FF FF 8D 95 28 F5 FF  .......$.....(..
+0012F2BC: 00000000   00476FC8: FF E8 12 27 F9 FF 8D 85 28 F5 FF FF 50 8D 95 18  ...'....(...P...
+
+
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Wed, 26 Oct 2005 14:45:38 +0300
+  1.2 Name/Description: IniCopy.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+------------------------------------------------------------------------------------------------------
+  2.1 Date   : Wed, 26 Oct 2005 14:45:41 +0300
+  2.2 Address: 00476ED8
+  2.3 Module : IniCopy.exe
+  2.4 Type   : EAccessViolation
+  2.5 Message: Access violation at address 00476ED8 in module 'IniCopy.exe'. Read of address 78836653.
+
+Active Controls:
+---------------------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Копирование файлов
+  3.3 Control Class: TForm1
+  3.4 Control Text : Копирование файлов
+
+Computer:
+------------------------------
+  4.1 Name        : SPROKUSHEV
+  4.2 User        : SProkushev
+  4.3 Total Memory: 495 Mb
+  4.4 Free Memory : 143 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 0.27 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+----------------------------------------------------------------------
+|Address |Module     |Unit        |Class |Procedure/Method      |Line|
+----------------------------------------------------------------------
+|00476ED8|IniCopy.exe|copymain.pas|TForm1|Timer1Timer           |44  |
+|77D4BCC7|user32.dll |            |      |DispatchMessageA      |    |
+|77D4BCBD|user32.dll |            |      |DispatchMessageA      |    |
+|00477AC3|IniCopy.exe|IniCopy.dpr |      |                      |13  |
+|7C90E64C|ntdll.dll  |            |      |NtSetInformationThread|    |
+----------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name             |Description                                     |Version       |Size   |Path                                                                                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|IniCopy.exe      |                                                |              |577536 |U:\MASTER                                                                                           |
+|10000000|MsgPlusLoader.dll|Messenger Plus! Process Monitor                 |3.50.2.0      |45192  |C:\Program Files\Messenger Plus! 3                                                                  |
+|5AD70000|uxtheme.dll      |Microsoft UxTheme Library                       |6.0.2900.2180 |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll     |Common Controls Library                         |5.82.2900.2527|617472 |C:\WINDOWS\system32                                                                                 |
+|71AA0000|WS2HELP.dll      |Windows Socket 2.0 Helper for Windows NT        |5.1.2600.2180 |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll       |Windows Socket 2.0 32-Bit DLL                   |5.1.2600.2180 |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll      |Windows Socket 32-Bit DLL                       |5.1.2600.2180 |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll        |MSCTF Server DLL                                |5.1.2600.2180 |294400 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL        |Process Status Helper                           |5.1.2600.2180 |23040  |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll     |                                                |5.1.2600.2180 |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll     |User Experience Controls Library                |6.0.2900.2527 |1053696|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2527_x-ww_aa415c8a|
+|774E0000|ole32.dll        |Microsoft OLE for Windows                       |5.1.2600.2180 |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll      |Version Checking and File Installation Libraries|5.1.2600.2180 |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll       |Windows NT CRT DLL                              |7.0.2600.2180 |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll       |Windows XP USER API Client DLL                  |5.1.2600.2180 |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll     |Advanced Windows 32 Base API                    |5.1.2600.2180 |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll       |Remote Procedure Call Runtime                   |5.1.2600.2180 |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll        |GDI Client DLL                                  |5.1.2600.2180 |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll      |Shell Light-weight Utility Library              |6.0.2900.2180 |473600 |C:\WINDOWS\system32                                                                                 |
+|77FE0000|Secur32.dll      |Security Support Provider Interface             |5.1.2600.2180 |55808  |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll     |Windows NT BASE API Client DLL                  |5.1.2600.2180 |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll        |NT Layer DLL                                    |5.1.2600.2180 |708096 |C:\WINDOWS\system32                                                                                 |
+|7C9C0000|shell32.dll      |Windows Shell Common Dll                        |6.0.2900.2180 |8384000|C:\WINDOWS\system32                                                                                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F280: 0012F324   00476ED8: FF 13 8B 85 30 F5 FF FF 8D 95 34 F5 FF FF E8 69  ....0.....4....i
+0012F284: 00477650   00476EE8: 1E F9 FF 8B 95 34 F5 FF FF 8D 85 38 F8 FF FF B9  .....4.....8....
+0012F288: 0012FE04   00476EF8: FF 00 00 00 E8 DB DE F8 FF 8D 85 38 F8 FF FF BA  ...........8....
+0012F28C: 004043C8   00476F08: 74 76 47 00 33 C9 8A 08 41 E8 5A C5 F8 FF 74 32  tvG.3...A.Z...t2
+0012F290: 0012FDF4   00476F18: 8D 85 38 F8 FF FF BA 78 76 47 00 33 C9 8A 08 41  ..8....xvG.3...A
+0012F294: 0012FEA0   00476F28: E8 43 C5 F8 FF 74 1B 8D 85 38 F8 FF FF BA 7C 76  .C...t...8....|v
+0012F298: 0044AD14   00476F38: 47 00 33 C9 8A 08 41 E8 2C C5 F8 FF 74 04 33 C0  G.3...A.,...t.3.
+0012F29C: 009A4E74   00476F48: EB 02 B0 01 88 45 EF 80 7D EF 00 75 23 8D 95 2C  .....E..}..u#..,
+0012F2A0: 00000000   00476F58: F5 FF FF 8B 45 FC E8 05 08 00 00 8B 95 2C F5 FF  ....E........,..
+0012F2A4: 00000000   00476F68: FF 8D 45 E8 B9 88 76 47 00 E8 D6 DE F8 FF EB 08  ..E...vG........
+0012F2A8: 00000000   00476F78: 8D 45 E8 E8 A4 DB F8 FF 8B 45 FC 8B 80 FC 02 00  .E.......E......
+0012F2AC: 00000000   00476F88: 00 33 D2 E8 4C 3D FD FF 8B 45 FC 8B 80 F8 02 00  .3..L=...E......
+0012F2B0: 00000000   00476F98: 00 B2 01 E8 20 63 FD FF 8B 45 FC 8B 80 F8 02 00  .... c...E......
+0012F2B4: 00000000   00476FA8: 00 B2 01 E8 4C EF FD FF 8D 95 24 F5 FF FF 33 C0  ....L.....$...3.
+0012F2B8: 00000000   00476FB8: E8 87 BF F8 FF 8B 85 24 F5 FF FF 8D 95 28 F5 FF  .......$.....(..
+0012F2BC: 00000000   00476FC8: FF E8 12 27 F9 FF 8D 85 28 F5 FF FF 50 8D 95 18  ...'....(...P...
+
+
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Wed, 26 Oct 2005 14:45:38 +0300
+  1.2 Name/Description: IniCopy.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+------------------------------------------------------------------------------------------------------
+  2.1 Date   : Wed, 26 Oct 2005 14:45:41 +0300
+  2.2 Address: 00476ED8
+  2.3 Module : IniCopy.exe
+  2.4 Type   : EAccessViolation
+  2.5 Message: Access violation at address 00476ED8 in module 'IniCopy.exe'. Read of address 78836653.
+
+Active Controls:
+---------------------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Копирование файлов
+  3.3 Control Class: TForm1
+  3.4 Control Text : Копирование файлов
+
+Computer:
+------------------------------
+  4.1 Name        : SPROKUSHEV
+  4.2 User        : SProkushev
+  4.3 Total Memory: 495 Mb
+  4.4 Free Memory : 143 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 0.27 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+----------------------------------------------------------------------
+|Address |Module     |Unit        |Class |Procedure/Method      |Line|
+----------------------------------------------------------------------
+|00476ED8|IniCopy.exe|copymain.pas|TForm1|Timer1Timer           |44  |
+|77D4BCC7|user32.dll |            |      |DispatchMessageA      |    |
+|77D4BCBD|user32.dll |            |      |DispatchMessageA      |    |
+|00477AC3|IniCopy.exe|IniCopy.dpr |      |                      |13  |
+|7C90E64C|ntdll.dll  |            |      |NtSetInformationThread|    |
+----------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name             |Description                                     |Version       |Size   |Path                                                                                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|IniCopy.exe      |                                                |              |577536 |U:\MASTER                                                                                           |
+|10000000|MsgPlusLoader.dll|Messenger Plus! Process Monitor                 |3.50.2.0      |45192  |C:\Program Files\Messenger Plus! 3                                                                  |
+|5AD70000|uxtheme.dll      |Microsoft UxTheme Library                       |6.0.2900.2180 |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll     |Common Controls Library                         |5.82.2900.2527|617472 |C:\WINDOWS\system32                                                                                 |
+|71AA0000|WS2HELP.dll      |Windows Socket 2.0 Helper for Windows NT        |5.1.2600.2180 |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll       |Windows Socket 2.0 32-Bit DLL                   |5.1.2600.2180 |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll      |Windows Socket 32-Bit DLL                       |5.1.2600.2180 |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll        |MSCTF Server DLL                                |5.1.2600.2180 |294400 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL        |Process Status Helper                           |5.1.2600.2180 |23040  |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll     |                                                |5.1.2600.2180 |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll     |User Experience Controls Library                |6.0.2900.2527 |1053696|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2527_x-ww_aa415c8a|
+|774E0000|ole32.dll        |Microsoft OLE for Windows                       |5.1.2600.2180 |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll      |Version Checking and File Installation Libraries|5.1.2600.2180 |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll       |Windows NT CRT DLL                              |7.0.2600.2180 |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll       |Windows XP USER API Client DLL                  |5.1.2600.2180 |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll     |Advanced Windows 32 Base API                    |5.1.2600.2180 |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll       |Remote Procedure Call Runtime                   |5.1.2600.2180 |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll        |GDI Client DLL                                  |5.1.2600.2180 |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll      |Shell Light-weight Utility Library              |6.0.2900.2180 |473600 |C:\WINDOWS\system32                                                                                 |
+|77FE0000|Secur32.dll      |Security Support Provider Interface             |5.1.2600.2180 |55808  |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll     |Windows NT BASE API Client DLL                  |5.1.2600.2180 |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll        |NT Layer DLL                                    |5.1.2600.2180 |708096 |C:\WINDOWS\system32                                                                                 |
+|7C9C0000|shell32.dll      |Windows Shell Common Dll                        |6.0.2900.2180 |8384000|C:\WINDOWS\system32                                                                                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F280: 0012F324   00476ED8: FF 13 8B 85 30 F5 FF FF 8D 95 34 F5 FF FF E8 69  ....0.....4....i
+0012F284: 00477650   00476EE8: 1E F9 FF 8B 95 34 F5 FF FF 8D 85 38 F8 FF FF B9  .....4.....8....
+0012F288: 0012FE04   00476EF8: FF 00 00 00 E8 DB DE F8 FF 8D 85 38 F8 FF FF BA  ...........8....
+0012F28C: 004043C8   00476F08: 74 76 47 00 33 C9 8A 08 41 E8 5A C5 F8 FF 74 32  tvG.3...A.Z...t2
+0012F290: 0012FDF4   00476F18: 8D 85 38 F8 FF FF BA 78 76 47 00 33 C9 8A 08 41  ..8....xvG.3...A
+0012F294: 0012FEA0   00476F28: E8 43 C5 F8 FF 74 1B 8D 85 38 F8 FF FF BA 7C 76  .C...t...8....|v
+0012F298: 0044AD14   00476F38: 47 00 33 C9 8A 08 41 E8 2C C5 F8 FF 74 04 33 C0  G.3...A.,...t.3.
+0012F29C: 009A4E74   00476F48: EB 02 B0 01 88 45 EF 80 7D EF 00 75 23 8D 95 2C  .....E..}..u#..,
+0012F2A0: 00000000   00476F58: F5 FF FF 8B 45 FC E8 05 08 00 00 8B 95 2C F5 FF  ....E........,..
+0012F2A4: 00000000   00476F68: FF 8D 45 E8 B9 88 76 47 00 E8 D6 DE F8 FF EB 08  ..E...vG........
+0012F2A8: 00000000   00476F78: 8D 45 E8 E8 A4 DB F8 FF 8B 45 FC 8B 80 FC 02 00  .E.......E......
+0012F2AC: 00000000   00476F88: 00 33 D2 E8 4C 3D FD FF 8B 45 FC 8B 80 F8 02 00  .3..L=...E......
+0012F2B0: 00000000   00476F98: 00 B2 01 E8 20 63 FD FF 8B 45 FC 8B 80 F8 02 00  .... c...E......
+0012F2B4: 00000000   00476FA8: 00 B2 01 E8 4C EF FD FF 8D 95 24 F5 FF FF 33 C0  ....L.....$...3.
+0012F2B8: 00000000   00476FB8: E8 87 BF F8 FF 8B 85 24 F5 FF FF 8D 95 28 F5 FF  .......$.....(..
+0012F2BC: 00000000   00476FC8: FF E8 12 27 F9 FF 8D 85 28 F5 FF FF 50 8D 95 18  ...'....(...P...
+
+
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Wed, 26 Oct 2005 14:45:38 +0300
+  1.2 Name/Description: IniCopy.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+------------------------------------------------------------------------------------------------------
+  2.1 Date   : Wed, 26 Oct 2005 14:45:41 +0300
+  2.2 Address: 00476ED8
+  2.3 Module : IniCopy.exe
+  2.4 Type   : EAccessViolation
+  2.5 Message: Access violation at address 00476ED8 in module 'IniCopy.exe'. Read of address 78836653.
+
+Active Controls:
+---------------------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Копирование файлов
+  3.3 Control Class: TForm1
+  3.4 Control Text : Копирование файлов
+
+Computer:
+------------------------------
+  4.1 Name        : SPROKUSHEV
+  4.2 User        : SProkushev
+  4.3 Total Memory: 495 Mb
+  4.4 Free Memory : 143 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 0.27 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+----------------------------------------------------------------------
+|Address |Module     |Unit        |Class |Procedure/Method      |Line|
+----------------------------------------------------------------------
+|00476ED8|IniCopy.exe|copymain.pas|TForm1|Timer1Timer           |44  |
+|77D4BCC7|user32.dll |            |      |DispatchMessageA      |    |
+|77D4BCBD|user32.dll |            |      |DispatchMessageA      |    |
+|00477AC3|IniCopy.exe|IniCopy.dpr |      |                      |13  |
+|7C90E64C|ntdll.dll  |            |      |NtSetInformationThread|    |
+----------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name             |Description                                     |Version       |Size   |Path                                                                                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|IniCopy.exe      |                                                |              |577536 |U:\MASTER                                                                                           |
+|10000000|MsgPlusLoader.dll|Messenger Plus! Process Monitor                 |3.50.2.0      |45192  |C:\Program Files\Messenger Plus! 3                                                                  |
+|5AD70000|uxtheme.dll      |Microsoft UxTheme Library                       |6.0.2900.2180 |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll     |Common Controls Library                         |5.82.2900.2527|617472 |C:\WINDOWS\system32                                                                                 |
+|71AA0000|WS2HELP.dll      |Windows Socket 2.0 Helper for Windows NT        |5.1.2600.2180 |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll       |Windows Socket 2.0 32-Bit DLL                   |5.1.2600.2180 |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll      |Windows Socket 32-Bit DLL                       |5.1.2600.2180 |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll        |MSCTF Server DLL                                |5.1.2600.2180 |294400 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL        |Process Status Helper                           |5.1.2600.2180 |23040  |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll     |                                                |5.1.2600.2180 |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll     |User Experience Controls Library                |6.0.2900.2527 |1053696|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2527_x-ww_aa415c8a|
+|774E0000|ole32.dll        |Microsoft OLE for Windows                       |5.1.2600.2180 |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll      |Version Checking and File Installation Libraries|5.1.2600.2180 |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll       |Windows NT CRT DLL                              |7.0.2600.2180 |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll       |Windows XP USER API Client DLL                  |5.1.2600.2180 |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll     |Advanced Windows 32 Base API                    |5.1.2600.2180 |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll       |Remote Procedure Call Runtime                   |5.1.2600.2180 |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll        |GDI Client DLL                                  |5.1.2600.2180 |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll      |Shell Light-weight Utility Library              |6.0.2900.2180 |473600 |C:\WINDOWS\system32                                                                                 |
+|77FE0000|Secur32.dll      |Security Support Provider Interface             |5.1.2600.2180 |55808  |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll     |Windows NT BASE API Client DLL                  |5.1.2600.2180 |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll        |NT Layer DLL                                    |5.1.2600.2180 |708096 |C:\WINDOWS\system32                                                                                 |
+|7C9C0000|shell32.dll      |Windows Shell Common Dll                        |6.0.2900.2180 |8384000|C:\WINDOWS\system32                                                                                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F280: 0012F324   00476ED8: FF 13 8B 85 30 F5 FF FF 8D 95 34 F5 FF FF E8 69  ....0.....4....i
+0012F284: 00477650   00476EE8: 1E F9 FF 8B 95 34 F5 FF FF 8D 85 38 F8 FF FF B9  .....4.....8....
+0012F288: 0012FE04   00476EF8: FF 00 00 00 E8 DB DE F8 FF 8D 85 38 F8 FF FF BA  ...........8....
+0012F28C: 004043C8   00476F08: 74 76 47 00 33 C9 8A 08 41 E8 5A C5 F8 FF 74 32  tvG.3...A.Z...t2
+0012F290: 0012FDF4   00476F18: 8D 85 38 F8 FF FF BA 78 76 47 00 33 C9 8A 08 41  ..8....xvG.3...A
+0012F294: 0012FEA0   00476F28: E8 43 C5 F8 FF 74 1B 8D 85 38 F8 FF FF BA 7C 76  .C...t...8....|v
+0012F298: 0044AD14   00476F38: 47 00 33 C9 8A 08 41 E8 2C C5 F8 FF 74 04 33 C0  G.3...A.,...t.3.
+0012F29C: 009A4E74   00476F48: EB 02 B0 01 88 45 EF 80 7D EF 00 75 23 8D 95 2C  .....E..}..u#..,
+0012F2A0: 00000000   00476F58: F5 FF FF 8B 45 FC E8 05 08 00 00 8B 95 2C F5 FF  ....E........,..
+0012F2A4: 00000000   00476F68: FF 8D 45 E8 B9 88 76 47 00 E8 D6 DE F8 FF EB 08  ..E...vG........
+0012F2A8: 00000000   00476F78: 8D 45 E8 E8 A4 DB F8 FF 8B 45 FC 8B 80 FC 02 00  .E.......E......
+0012F2AC: 00000000   00476F88: 00 33 D2 E8 4C 3D FD FF 8B 45 FC 8B 80 F8 02 00  .3..L=...E......
+0012F2B0: 00000000   00476F98: 00 B2 01 E8 20 63 FD FF 8B 45 FC 8B 80 F8 02 00  .... c...E......
+0012F2B4: 00000000   00476FA8: 00 B2 01 E8 4C EF FD FF 8D 95 24 F5 FF FF 33 C0  ....L.....$...3.
+0012F2B8: 00000000   00476FB8: E8 87 BF F8 FF 8B 85 24 F5 FF FF 8D 95 28 F5 FF  .......$.....(..
+0012F2BC: 00000000   00476FC8: FF E8 12 27 F9 FF 8D 85 28 F5 FF FF 50 8D 95 18  ...'....(...P...
+
+
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Wed, 26 Oct 2005 14:45:38 +0300
+  1.2 Name/Description: IniCopy.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+------------------------------------------------------------------------------------------------------
+  2.1 Date   : Wed, 26 Oct 2005 14:45:43 +0300
+  2.2 Address: 00476ED8
+  2.3 Module : IniCopy.exe
+  2.4 Type   : EAccessViolation
+  2.5 Message: Access violation at address 00476ED8 in module 'IniCopy.exe'. Read of address 78836653.
+
+Active Controls:
+---------------------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Копирование файлов
+  3.3 Control Class: TForm1
+  3.4 Control Text : Копирование файлов
+
+Computer:
+------------------------------
+  4.1 Name        : SPROKUSHEV
+  4.2 User        : SProkushev
+  4.3 Total Memory: 495 Mb
+  4.4 Free Memory : 143 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 0.27 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+----------------------------------------------------------------------
+|Address |Module     |Unit        |Class |Procedure/Method      |Line|
+----------------------------------------------------------------------
+|00476ED8|IniCopy.exe|copymain.pas|TForm1|Timer1Timer           |44  |
+|77D4BCC7|user32.dll |            |      |DispatchMessageA      |    |
+|77D4BCBD|user32.dll |            |      |DispatchMessageA      |    |
+|00477AC3|IniCopy.exe|IniCopy.dpr |      |                      |13  |
+|7C90E64C|ntdll.dll  |            |      |NtSetInformationThread|    |
+----------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name             |Description                                     |Version       |Size   |Path                                                                                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|IniCopy.exe      |                                                |              |577536 |U:\MASTER                                                                                           |
+|10000000|MsgPlusLoader.dll|Messenger Plus! Process Monitor                 |3.50.2.0      |45192  |C:\Program Files\Messenger Plus! 3                                                                  |
+|5AD70000|uxtheme.dll      |Microsoft UxTheme Library                       |6.0.2900.2180 |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll     |Common Controls Library                         |5.82.2900.2527|617472 |C:\WINDOWS\system32                                                                                 |
+|71AA0000|WS2HELP.dll      |Windows Socket 2.0 Helper for Windows NT        |5.1.2600.2180 |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll       |Windows Socket 2.0 32-Bit DLL                   |5.1.2600.2180 |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll      |Windows Socket 32-Bit DLL                       |5.1.2600.2180 |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll        |MSCTF Server DLL                                |5.1.2600.2180 |294400 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL        |Process Status Helper                           |5.1.2600.2180 |23040  |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll     |                                                |5.1.2600.2180 |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll     |User Experience Controls Library                |6.0.2900.2527 |1053696|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2527_x-ww_aa415c8a|
+|774E0000|ole32.dll        |Microsoft OLE for Windows                       |5.1.2600.2180 |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll      |Version Checking and File Installation Libraries|5.1.2600.2180 |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll       |Windows NT CRT DLL                              |7.0.2600.2180 |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll       |Windows XP USER API Client DLL                  |5.1.2600.2180 |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll     |Advanced Windows 32 Base API                    |5.1.2600.2180 |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll       |Remote Procedure Call Runtime                   |5.1.2600.2180 |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll        |GDI Client DLL                                  |5.1.2600.2180 |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll      |Shell Light-weight Utility Library              |6.0.2900.2180 |473600 |C:\WINDOWS\system32                                                                                 |
+|77FE0000|Secur32.dll      |Security Support Provider Interface             |5.1.2600.2180 |55808  |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll     |Windows NT BASE API Client DLL                  |5.1.2600.2180 |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll        |NT Layer DLL                                    |5.1.2600.2180 |708096 |C:\WINDOWS\system32                                                                                 |
+|7C9C0000|shell32.dll      |Windows Shell Common Dll                        |6.0.2900.2180 |8384000|C:\WINDOWS\system32                                                                                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F280: 0012F324   00476ED8: FF 13 8B 85 30 F5 FF FF 8D 95 34 F5 FF FF E8 69  ....0.....4....i
+0012F284: 00477650   00476EE8: 1E F9 FF 8B 95 34 F5 FF FF 8D 85 38 F8 FF FF B9  .....4.....8....
+0012F288: 0012FE04   00476EF8: FF 00 00 00 E8 DB DE F8 FF 8D 85 38 F8 FF FF BA  ...........8....
+0012F28C: 004043C8   00476F08: 74 76 47 00 33 C9 8A 08 41 E8 5A C5 F8 FF 74 32  tvG.3...A.Z...t2
+0012F290: 0012FDF4   00476F18: 8D 85 38 F8 FF FF BA 78 76 47 00 33 C9 8A 08 41  ..8....xvG.3...A
+0012F294: 0012FEA0   00476F28: E8 43 C5 F8 FF 74 1B 8D 85 38 F8 FF FF BA 7C 76  .C...t...8....|v
+0012F298: 0044AD14   00476F38: 47 00 33 C9 8A 08 41 E8 2C C5 F8 FF 74 04 33 C0  G.3...A.,...t.3.
+0012F29C: 009A4E74   00476F48: EB 02 B0 01 88 45 EF 80 7D EF 00 75 23 8D 95 2C  .....E..}..u#..,
+0012F2A0: 00000000   00476F58: F5 FF FF 8B 45 FC E8 05 08 00 00 8B 95 2C F5 FF  ....E........,..
+0012F2A4: 00000000   00476F68: FF 8D 45 E8 B9 88 76 47 00 E8 D6 DE F8 FF EB 08  ..E...vG........
+0012F2A8: 00000000   00476F78: 8D 45 E8 E8 A4 DB F8 FF 8B 45 FC 8B 80 FC 02 00  .E.......E......
+0012F2AC: 00000000   00476F88: 00 33 D2 E8 4C 3D FD FF 8B 45 FC 8B 80 F8 02 00  .3..L=...E......
+0012F2B0: 00000000   00476F98: 00 B2 01 E8 20 63 FD FF 8B 45 FC 8B 80 F8 02 00  .... c...E......
+0012F2B4: 00000000   00476FA8: 00 B2 01 E8 4C EF FD FF 8D 95 24 F5 FF FF 33 C0  ....L.....$...3.
+0012F2B8: 00000000   00476FB8: E8 87 BF F8 FF 8B 85 24 F5 FF FF 8D 95 28 F5 FF  .......$.....(..
+0012F2BC: 00000000   00476FC8: FF E8 12 27 F9 FF 8D 85 28 F5 FF FF 50 8D 95 18  ...'....(...P...
+
+
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Wed, 26 Oct 2005 14:45:38 +0300
+  1.2 Name/Description: IniCopy.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+------------------------------------------------------------------------------------------------------
+  2.1 Date   : Wed, 26 Oct 2005 14:45:43 +0300
+  2.2 Address: 00476ED8
+  2.3 Module : IniCopy.exe
+  2.4 Type   : EAccessViolation
+  2.5 Message: Access violation at address 00476ED8 in module 'IniCopy.exe'. Read of address 78836653.
+
+Active Controls:
+---------------------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Копирование файлов
+  3.3 Control Class: TForm1
+  3.4 Control Text : Копирование файлов
+
+Computer:
+------------------------------
+  4.1 Name        : SPROKUSHEV
+  4.2 User        : SProkushev
+  4.3 Total Memory: 495 Mb
+  4.4 Free Memory : 143 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 0.27 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+----------------------------------------------------------------------
+|Address |Module     |Unit        |Class |Procedure/Method      |Line|
+----------------------------------------------------------------------
+|00476ED8|IniCopy.exe|copymain.pas|TForm1|Timer1Timer           |44  |
+|77D4BCC7|user32.dll |            |      |DispatchMessageA      |    |
+|77D4BCBD|user32.dll |            |      |DispatchMessageA      |    |
+|00477AC3|IniCopy.exe|IniCopy.dpr |      |                      |13  |
+|7C90E64C|ntdll.dll  |            |      |NtSetInformationThread|    |
+----------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name             |Description                                     |Version       |Size   |Path                                                                                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|IniCopy.exe      |                                                |              |577536 |U:\MASTER                                                                                           |
+|10000000|MsgPlusLoader.dll|Messenger Plus! Process Monitor                 |3.50.2.0      |45192  |C:\Program Files\Messenger Plus! 3                                                                  |
+|5AD70000|uxtheme.dll      |Microsoft UxTheme Library                       |6.0.2900.2180 |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll     |Common Controls Library                         |5.82.2900.2527|617472 |C:\WINDOWS\system32                                                                                 |
+|71AA0000|WS2HELP.dll      |Windows Socket 2.0 Helper for Windows NT        |5.1.2600.2180 |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll       |Windows Socket 2.0 32-Bit DLL                   |5.1.2600.2180 |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll      |Windows Socket 32-Bit DLL                       |5.1.2600.2180 |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll        |MSCTF Server DLL                                |5.1.2600.2180 |294400 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL        |Process Status Helper                           |5.1.2600.2180 |23040  |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll     |                                                |5.1.2600.2180 |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll     |User Experience Controls Library                |6.0.2900.2527 |1053696|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2527_x-ww_aa415c8a|
+|774E0000|ole32.dll        |Microsoft OLE for Windows                       |5.1.2600.2180 |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll      |Version Checking and File Installation Libraries|5.1.2600.2180 |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll       |Windows NT CRT DLL                              |7.0.2600.2180 |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll       |Windows XP USER API Client DLL                  |5.1.2600.2180 |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll     |Advanced Windows 32 Base API                    |5.1.2600.2180 |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll       |Remote Procedure Call Runtime                   |5.1.2600.2180 |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll        |GDI Client DLL                                  |5.1.2600.2180 |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll      |Shell Light-weight Utility Library              |6.0.2900.2180 |473600 |C:\WINDOWS\system32                                                                                 |
+|77FE0000|Secur32.dll      |Security Support Provider Interface             |5.1.2600.2180 |55808  |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll     |Windows NT BASE API Client DLL                  |5.1.2600.2180 |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll        |NT Layer DLL                                    |5.1.2600.2180 |708096 |C:\WINDOWS\system32                                                                                 |
+|7C9C0000|shell32.dll      |Windows Shell Common Dll                        |6.0.2900.2180 |8384000|C:\WINDOWS\system32                                                                                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F280: 0012F324   00476ED8: FF 13 8B 85 30 F5 FF FF 8D 95 34 F5 FF FF E8 69  ....0.....4....i
+0012F284: 00477650   00476EE8: 1E F9 FF 8B 95 34 F5 FF FF 8D 85 38 F8 FF FF B9  .....4.....8....
+0012F288: 0012FE04   00476EF8: FF 00 00 00 E8 DB DE F8 FF 8D 85 38 F8 FF FF BA  ...........8....
+0012F28C: 004043C8   00476F08: 74 76 47 00 33 C9 8A 08 41 E8 5A C5 F8 FF 74 32  tvG.3...A.Z...t2
+0012F290: 0012FDF4   00476F18: 8D 85 38 F8 FF FF BA 78 76 47 00 33 C9 8A 08 41  ..8....xvG.3...A
+0012F294: 0012FEA0   00476F28: E8 43 C5 F8 FF 74 1B 8D 85 38 F8 FF FF BA 7C 76  .C...t...8....|v
+0012F298: 0044AD14   00476F38: 47 00 33 C9 8A 08 41 E8 2C C5 F8 FF 74 04 33 C0  G.3...A.,...t.3.
+0012F29C: 009A4E74   00476F48: EB 02 B0 01 88 45 EF 80 7D EF 00 75 23 8D 95 2C  .....E..}..u#..,
+0012F2A0: 00000000   00476F58: F5 FF FF 8B 45 FC E8 05 08 00 00 8B 95 2C F5 FF  ....E........,..
+0012F2A4: 00000000   00476F68: FF 8D 45 E8 B9 88 76 47 00 E8 D6 DE F8 FF EB 08  ..E...vG........
+0012F2A8: 00000000   00476F78: 8D 45 E8 E8 A4 DB F8 FF 8B 45 FC 8B 80 FC 02 00  .E.......E......
+0012F2AC: 00000000   00476F88: 00 33 D2 E8 4C 3D FD FF 8B 45 FC 8B 80 F8 02 00  .3..L=...E......
+0012F2B0: 00000000   00476F98: 00 B2 01 E8 20 63 FD FF 8B 45 FC 8B 80 F8 02 00  .... c...E......
+0012F2B4: 00000000   00476FA8: 00 B2 01 E8 4C EF FD FF 8D 95 24 F5 FF FF 33 C0  ....L.....$...3.
+0012F2B8: 00000000   00476FB8: E8 87 BF F8 FF 8B 85 24 F5 FF FF 8D 95 28 F5 FF  .......$.....(..
+0012F2BC: 00000000   00476FC8: FF E8 12 27 F9 FF 8D 85 28 F5 FF FF 50 8D 95 18  ...'....(...P...
+
+
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Wed, 26 Oct 2005 14:45:38 +0300
+  1.2 Name/Description: IniCopy.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+------------------------------------------------------------------------------------------------------
+  2.1 Date   : Wed, 26 Oct 2005 14:45:43 +0300
+  2.2 Address: 00476ED8
+  2.3 Module : IniCopy.exe
+  2.4 Type   : EAccessViolation
+  2.5 Message: Access violation at address 00476ED8 in module 'IniCopy.exe'. Read of address 78836653.
+
+Active Controls:
+---------------------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Копирование файлов
+  3.3 Control Class: TForm1
+  3.4 Control Text : Копирование файлов
+
+Computer:
+------------------------------
+  4.1 Name        : SPROKUSHEV
+  4.2 User        : SProkushev
+  4.3 Total Memory: 495 Mb
+  4.4 Free Memory : 143 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 0.27 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+----------------------------------------------------------------------
+|Address |Module     |Unit        |Class |Procedure/Method      |Line|
+----------------------------------------------------------------------
+|00476ED8|IniCopy.exe|copymain.pas|TForm1|Timer1Timer           |44  |
+|77D4BCC7|user32.dll |            |      |DispatchMessageA      |    |
+|77D4BCBD|user32.dll |            |      |DispatchMessageA      |    |
+|00477AC3|IniCopy.exe|IniCopy.dpr |      |                      |13  |
+|7C90E64C|ntdll.dll  |            |      |NtSetInformationThread|    |
+----------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name             |Description                                     |Version       |Size   |Path                                                                                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|IniCopy.exe      |                                                |              |577536 |U:\MASTER                                                                                           |
+|10000000|MsgPlusLoader.dll|Messenger Plus! Process Monitor                 |3.50.2.0      |45192  |C:\Program Files\Messenger Plus! 3                                                                  |
+|5AD70000|uxtheme.dll      |Microsoft UxTheme Library                       |6.0.2900.2180 |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll     |Common Controls Library                         |5.82.2900.2527|617472 |C:\WINDOWS\system32                                                                                 |
+|71AA0000|WS2HELP.dll      |Windows Socket 2.0 Helper for Windows NT        |5.1.2600.2180 |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll       |Windows Socket 2.0 32-Bit DLL                   |5.1.2600.2180 |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll      |Windows Socket 32-Bit DLL                       |5.1.2600.2180 |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll        |MSCTF Server DLL                                |5.1.2600.2180 |294400 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL        |Process Status Helper                           |5.1.2600.2180 |23040  |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll     |                                                |5.1.2600.2180 |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll     |User Experience Controls Library                |6.0.2900.2527 |1053696|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2527_x-ww_aa415c8a|
+|774E0000|ole32.dll        |Microsoft OLE for Windows                       |5.1.2600.2180 |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll      |Version Checking and File Installation Libraries|5.1.2600.2180 |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll       |Windows NT CRT DLL                              |7.0.2600.2180 |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll       |Windows XP USER API Client DLL                  |5.1.2600.2180 |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll     |Advanced Windows 32 Base API                    |5.1.2600.2180 |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll       |Remote Procedure Call Runtime                   |5.1.2600.2180 |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll        |GDI Client DLL                                  |5.1.2600.2180 |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll      |Shell Light-weight Utility Library              |6.0.2900.2180 |473600 |C:\WINDOWS\system32                                                                                 |
+|77FE0000|Secur32.dll      |Security Support Provider Interface             |5.1.2600.2180 |55808  |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll     |Windows NT BASE API Client DLL                  |5.1.2600.2180 |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll        |NT Layer DLL                                    |5.1.2600.2180 |708096 |C:\WINDOWS\system32                                                                                 |
+|7C9C0000|shell32.dll      |Windows Shell Common Dll                        |6.0.2900.2180 |8384000|C:\WINDOWS\system32                                                                                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F280: 0012F324   00476ED8: FF 13 8B 85 30 F5 FF FF 8D 95 34 F5 FF FF E8 69  ....0.....4....i
+0012F284: 00477650   00476EE8: 1E F9 FF 8B 95 34 F5 FF FF 8D 85 38 F8 FF FF B9  .....4.....8....
+0012F288: 0012FE04   00476EF8: FF 00 00 00 E8 DB DE F8 FF 8D 85 38 F8 FF FF BA  ...........8....
+0012F28C: 004043C8   00476F08: 74 76 47 00 33 C9 8A 08 41 E8 5A C5 F8 FF 74 32  tvG.3...A.Z...t2
+0012F290: 0012FDF4   00476F18: 8D 85 38 F8 FF FF BA 78 76 47 00 33 C9 8A 08 41  ..8....xvG.3...A
+0012F294: 0012FEA0   00476F28: E8 43 C5 F8 FF 74 1B 8D 85 38 F8 FF FF BA 7C 76  .C...t...8....|v
+0012F298: 0044AD14   00476F38: 47 00 33 C9 8A 08 41 E8 2C C5 F8 FF 74 04 33 C0  G.3...A.,...t.3.
+0012F29C: 009A4E74   00476F48: EB 02 B0 01 88 45 EF 80 7D EF 00 75 23 8D 95 2C  .....E..}..u#..,
+0012F2A0: 00000000   00476F58: F5 FF FF 8B 45 FC E8 05 08 00 00 8B 95 2C F5 FF  ....E........,..
+0012F2A4: 00000000   00476F68: FF 8D 45 E8 B9 88 76 47 00 E8 D6 DE F8 FF EB 08  ..E...vG........
+0012F2A8: 00000000   00476F78: 8D 45 E8 E8 A4 DB F8 FF 8B 45 FC 8B 80 FC 02 00  .E.......E......
+0012F2AC: 00000000   00476F88: 00 33 D2 E8 4C 3D FD FF 8B 45 FC 8B 80 F8 02 00  .3..L=...E......
+0012F2B0: 00000000   00476F98: 00 B2 01 E8 20 63 FD FF 8B 45 FC 8B 80 F8 02 00  .... c...E......
+0012F2B4: 00000000   00476FA8: 00 B2 01 E8 4C EF FD FF 8D 95 24 F5 FF FF 33 C0  ....L.....$...3.
+0012F2B8: 00000000   00476FB8: E8 87 BF F8 FF 8B 85 24 F5 FF FF 8D 95 28 F5 FF  .......$.....(..
+0012F2BC: 00000000   00476FC8: FF E8 12 27 F9 FF 8D 85 28 F5 FF FF 50 8D 95 18  ...'....(...P...
+
+
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Wed, 26 Oct 2005 14:45:38 +0300
+  1.2 Name/Description: IniCopy.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+------------------------------------------------------------------------------------------------------
+  2.1 Date   : Wed, 26 Oct 2005 14:45:44 +0300
+  2.2 Address: 00476ED8
+  2.3 Module : IniCopy.exe
+  2.4 Type   : EAccessViolation
+  2.5 Message: Access violation at address 00476ED8 in module 'IniCopy.exe'. Read of address 78836653.
+
+Active Controls:
+---------------------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Копирование файлов
+  3.3 Control Class: TForm1
+  3.4 Control Text : Копирование файлов
+
+Computer:
+------------------------------
+  4.1 Name        : SPROKUSHEV
+  4.2 User        : SProkushev
+  4.3 Total Memory: 495 Mb
+  4.4 Free Memory : 143 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 0.27 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+----------------------------------------------------------------------
+|Address |Module     |Unit        |Class |Procedure/Method      |Line|
+----------------------------------------------------------------------
+|00476ED8|IniCopy.exe|copymain.pas|TForm1|Timer1Timer           |44  |
+|77D4BCC7|user32.dll |            |      |DispatchMessageA      |    |
+|77D4BCBD|user32.dll |            |      |DispatchMessageA      |    |
+|00477AC3|IniCopy.exe|IniCopy.dpr |      |                      |13  |
+|7C90E64C|ntdll.dll  |            |      |NtSetInformationThread|    |
+----------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name             |Description                                     |Version       |Size   |Path                                                                                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|IniCopy.exe      |                                                |              |577536 |U:\MASTER                                                                                           |
+|10000000|MsgPlusLoader.dll|Messenger Plus! Process Monitor                 |3.50.2.0      |45192  |C:\Program Files\Messenger Plus! 3                                                                  |
+|5AD70000|uxtheme.dll      |Microsoft UxTheme Library                       |6.0.2900.2180 |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll     |Common Controls Library                         |5.82.2900.2527|617472 |C:\WINDOWS\system32                                                                                 |
+|71AA0000|WS2HELP.dll      |Windows Socket 2.0 Helper for Windows NT        |5.1.2600.2180 |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll       |Windows Socket 2.0 32-Bit DLL                   |5.1.2600.2180 |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll      |Windows Socket 32-Bit DLL                       |5.1.2600.2180 |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll        |MSCTF Server DLL                                |5.1.2600.2180 |294400 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL        |Process Status Helper                           |5.1.2600.2180 |23040  |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll     |                                                |5.1.2600.2180 |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll     |User Experience Controls Library                |6.0.2900.2527 |1053696|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2527_x-ww_aa415c8a|
+|774E0000|ole32.dll        |Microsoft OLE for Windows                       |5.1.2600.2180 |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll      |Version Checking and File Installation Libraries|5.1.2600.2180 |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll       |Windows NT CRT DLL                              |7.0.2600.2180 |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll       |Windows XP USER API Client DLL                  |5.1.2600.2180 |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll     |Advanced Windows 32 Base API                    |5.1.2600.2180 |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll       |Remote Procedure Call Runtime                   |5.1.2600.2180 |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll        |GDI Client DLL                                  |5.1.2600.2180 |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll      |Shell Light-weight Utility Library              |6.0.2900.2180 |473600 |C:\WINDOWS\system32                                                                                 |
+|77FE0000|Secur32.dll      |Security Support Provider Interface             |5.1.2600.2180 |55808  |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll     |Windows NT BASE API Client DLL                  |5.1.2600.2180 |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll        |NT Layer DLL                                    |5.1.2600.2180 |708096 |C:\WINDOWS\system32                                                                                 |
+|7C9C0000|shell32.dll      |Windows Shell Common Dll                        |6.0.2900.2180 |8384000|C:\WINDOWS\system32                                                                                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F280: 0012F324   00476ED8: FF 13 8B 85 30 F5 FF FF 8D 95 34 F5 FF FF E8 69  ....0.....4....i
+0012F284: 00477650   00476EE8: 1E F9 FF 8B 95 34 F5 FF FF 8D 85 38 F8 FF FF B9  .....4.....8....
+0012F288: 0012FE04   00476EF8: FF 00 00 00 E8 DB DE F8 FF 8D 85 38 F8 FF FF BA  ...........8....
+0012F28C: 004043C8   00476F08: 74 76 47 00 33 C9 8A 08 41 E8 5A C5 F8 FF 74 32  tvG.3...A.Z...t2
+0012F290: 0012FDF4   00476F18: 8D 85 38 F8 FF FF BA 78 76 47 00 33 C9 8A 08 41  ..8....xvG.3...A
+0012F294: 0012FEA0   00476F28: E8 43 C5 F8 FF 74 1B 8D 85 38 F8 FF FF BA 7C 76  .C...t...8....|v
+0012F298: 0044AD14   00476F38: 47 00 33 C9 8A 08 41 E8 2C C5 F8 FF 74 04 33 C0  G.3...A.,...t.3.
+0012F29C: 009A4E74   00476F48: EB 02 B0 01 88 45 EF 80 7D EF 00 75 23 8D 95 2C  .....E..}..u#..,
+0012F2A0: 00000000   00476F58: F5 FF FF 8B 45 FC E8 05 08 00 00 8B 95 2C F5 FF  ....E........,..
+0012F2A4: 00000000   00476F68: FF 8D 45 E8 B9 88 76 47 00 E8 D6 DE F8 FF EB 08  ..E...vG........
+0012F2A8: 00000000   00476F78: 8D 45 E8 E8 A4 DB F8 FF 8B 45 FC 8B 80 FC 02 00  .E.......E......
+0012F2AC: 00000000   00476F88: 00 33 D2 E8 4C 3D FD FF 8B 45 FC 8B 80 F8 02 00  .3..L=...E......
+0012F2B0: 00000000   00476F98: 00 B2 01 E8 20 63 FD FF 8B 45 FC 8B 80 F8 02 00  .... c...E......
+0012F2B4: 00000000   00476FA8: 00 B2 01 E8 4C EF FD FF 8D 95 24 F5 FF FF 33 C0  ....L.....$...3.
+0012F2B8: 00000000   00476FB8: E8 87 BF F8 FF 8B 85 24 F5 FF FF 8D 95 28 F5 FF  .......$.....(..
+0012F2BC: 00000000   00476FC8: FF E8 12 27 F9 FF 8D 85 28 F5 FF FF 50 8D 95 18  ...'....(...P...
+
+
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Wed, 26 Oct 2005 14:45:38 +0300
+  1.2 Name/Description: IniCopy.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+------------------------------------------------------------------------------------------------------
+  2.1 Date   : Wed, 26 Oct 2005 14:45:44 +0300
+  2.2 Address: 00476ED8
+  2.3 Module : IniCopy.exe
+  2.4 Type   : EAccessViolation
+  2.5 Message: Access violation at address 00476ED8 in module 'IniCopy.exe'. Read of address 78836653.
+
+Active Controls:
+---------------------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Копирование файлов
+  3.3 Control Class: TForm1
+  3.4 Control Text : Копирование файлов
+
+Computer:
+------------------------------
+  4.1 Name        : SPROKUSHEV
+  4.2 User        : SProkushev
+  4.3 Total Memory: 495 Mb
+  4.4 Free Memory : 143 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 0.27 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+----------------------------------------------------------------------
+|Address |Module     |Unit        |Class |Procedure/Method      |Line|
+----------------------------------------------------------------------
+|00476ED8|IniCopy.exe|copymain.pas|TForm1|Timer1Timer           |44  |
+|77D4BCC7|user32.dll |            |      |DispatchMessageA      |    |
+|77D4BCBD|user32.dll |            |      |DispatchMessageA      |    |
+|00477AC3|IniCopy.exe|IniCopy.dpr |      |                      |13  |
+|7C90E64C|ntdll.dll  |            |      |NtSetInformationThread|    |
+----------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name             |Description                                     |Version       |Size   |Path                                                                                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|IniCopy.exe      |                                                |              |577536 |U:\MASTER                                                                                           |
+|10000000|MsgPlusLoader.dll|Messenger Plus! Process Monitor                 |3.50.2.0      |45192  |C:\Program Files\Messenger Plus! 3                                                                  |
+|5AD70000|uxtheme.dll      |Microsoft UxTheme Library                       |6.0.2900.2180 |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll     |Common Controls Library                         |5.82.2900.2527|617472 |C:\WINDOWS\system32                                                                                 |
+|71AA0000|WS2HELP.dll      |Windows Socket 2.0 Helper for Windows NT        |5.1.2600.2180 |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll       |Windows Socket 2.0 32-Bit DLL                   |5.1.2600.2180 |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll      |Windows Socket 32-Bit DLL                       |5.1.2600.2180 |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll        |MSCTF Server DLL                                |5.1.2600.2180 |294400 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL        |Process Status Helper                           |5.1.2600.2180 |23040  |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll     |                                                |5.1.2600.2180 |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll     |User Experience Controls Library                |6.0.2900.2527 |1053696|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2527_x-ww_aa415c8a|
+|774E0000|ole32.dll        |Microsoft OLE for Windows                       |5.1.2600.2180 |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll      |Version Checking and File Installation Libraries|5.1.2600.2180 |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll       |Windows NT CRT DLL                              |7.0.2600.2180 |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll       |Windows XP USER API Client DLL                  |5.1.2600.2180 |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll     |Advanced Windows 32 Base API                    |5.1.2600.2180 |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll       |Remote Procedure Call Runtime                   |5.1.2600.2180 |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll        |GDI Client DLL                                  |5.1.2600.2180 |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll      |Shell Light-weight Utility Library              |6.0.2900.2180 |473600 |C:\WINDOWS\system32                                                                                 |
+|77FE0000|Secur32.dll      |Security Support Provider Interface             |5.1.2600.2180 |55808  |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll     |Windows NT BASE API Client DLL                  |5.1.2600.2180 |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll        |NT Layer DLL                                    |5.1.2600.2180 |708096 |C:\WINDOWS\system32                                                                                 |
+|7C9C0000|shell32.dll      |Windows Shell Common Dll                        |6.0.2900.2180 |8384000|C:\WINDOWS\system32                                                                                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F280: 0012F324   00476ED8: FF 13 8B 85 30 F5 FF FF 8D 95 34 F5 FF FF E8 69  ....0.....4....i
+0012F284: 00477650   00476EE8: 1E F9 FF 8B 95 34 F5 FF FF 8D 85 38 F8 FF FF B9  .....4.....8....
+0012F288: 0012FE04   00476EF8: FF 00 00 00 E8 DB DE F8 FF 8D 85 38 F8 FF FF BA  ...........8....
+0012F28C: 004043C8   00476F08: 74 76 47 00 33 C9 8A 08 41 E8 5A C5 F8 FF 74 32  tvG.3...A.Z...t2
+0012F290: 0012FDF4   00476F18: 8D 85 38 F8 FF FF BA 78 76 47 00 33 C9 8A 08 41  ..8....xvG.3...A
+0012F294: 0012FEA0   00476F28: E8 43 C5 F8 FF 74 1B 8D 85 38 F8 FF FF BA 7C 76  .C...t...8....|v
+0012F298: 0044AD14   00476F38: 47 00 33 C9 8A 08 41 E8 2C C5 F8 FF 74 04 33 C0  G.3...A.,...t.3.
+0012F29C: 009A4E74   00476F48: EB 02 B0 01 88 45 EF 80 7D EF 00 75 23 8D 95 2C  .....E..}..u#..,
+0012F2A0: 00000000   00476F58: F5 FF FF 8B 45 FC E8 05 08 00 00 8B 95 2C F5 FF  ....E........,..
+0012F2A4: 00000000   00476F68: FF 8D 45 E8 B9 88 76 47 00 E8 D6 DE F8 FF EB 08  ..E...vG........
+0012F2A8: 00000000   00476F78: 8D 45 E8 E8 A4 DB F8 FF 8B 45 FC 8B 80 FC 02 00  .E.......E......
+0012F2AC: 00000000   00476F88: 00 33 D2 E8 4C 3D FD FF 8B 45 FC 8B 80 F8 02 00  .3..L=...E......
+0012F2B0: 00000000   00476F98: 00 B2 01 E8 20 63 FD FF 8B 45 FC 8B 80 F8 02 00  .... c...E......
+0012F2B4: 00000000   00476FA8: 00 B2 01 E8 4C EF FD FF 8D 95 24 F5 FF FF 33 C0  ....L.....$...3.
+0012F2B8: 00000000   00476FB8: E8 87 BF F8 FF 8B 85 24 F5 FF FF 8D 95 28 F5 FF  .......$.....(..
+0012F2BC: 00000000   00476FC8: FF E8 12 27 F9 FF 8D 85 28 F5 FF FF 50 8D 95 18  ...'....(...P...
+
+
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Wed, 26 Oct 2005 14:45:38 +0300
+  1.2 Name/Description: IniCopy.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+------------------------------------------------------------------------------------------------------
+  2.1 Date   : Wed, 26 Oct 2005 14:45:44 +0300
+  2.2 Address: 00476ED8
+  2.3 Module : IniCopy.exe
+  2.4 Type   : EAccessViolation
+  2.5 Message: Access violation at address 00476ED8 in module 'IniCopy.exe'. Read of address 78836653.
+
+Active Controls:
+---------------------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Копирование файлов
+  3.3 Control Class: TForm1
+  3.4 Control Text : Копирование файлов
+
+Computer:
+------------------------------
+  4.1 Name        : SPROKUSHEV
+  4.2 User        : SProkushev
+  4.3 Total Memory: 495 Mb
+  4.4 Free Memory : 143 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 0.27 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+----------------------------------------------------------------------
+|Address |Module     |Unit        |Class |Procedure/Method      |Line|
+----------------------------------------------------------------------
+|00476ED8|IniCopy.exe|copymain.pas|TForm1|Timer1Timer           |44  |
+|77D4BCC7|user32.dll |            |      |DispatchMessageA      |    |
+|77D4BCBD|user32.dll |            |      |DispatchMessageA      |    |
+|00477AC3|IniCopy.exe|IniCopy.dpr |      |                      |13  |
+|7C90E64C|ntdll.dll  |            |      |NtSetInformationThread|    |
+----------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name             |Description                                     |Version       |Size   |Path                                                                                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|IniCopy.exe      |                                                |              |577536 |U:\MASTER                                                                                           |
+|10000000|MsgPlusLoader.dll|Messenger Plus! Process Monitor                 |3.50.2.0      |45192  |C:\Program Files\Messenger Plus! 3                                                                  |
+|5AD70000|uxtheme.dll      |Microsoft UxTheme Library                       |6.0.2900.2180 |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll     |Common Controls Library                         |5.82.2900.2527|617472 |C:\WINDOWS\system32                                                                                 |
+|71AA0000|WS2HELP.dll      |Windows Socket 2.0 Helper for Windows NT        |5.1.2600.2180 |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll       |Windows Socket 2.0 32-Bit DLL                   |5.1.2600.2180 |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll      |Windows Socket 32-Bit DLL                       |5.1.2600.2180 |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll        |MSCTF Server DLL                                |5.1.2600.2180 |294400 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL        |Process Status Helper                           |5.1.2600.2180 |23040  |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll     |                                                |5.1.2600.2180 |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll     |User Experience Controls Library                |6.0.2900.2527 |1053696|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2527_x-ww_aa415c8a|
+|774E0000|ole32.dll        |Microsoft OLE for Windows                       |5.1.2600.2180 |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll      |Version Checking and File Installation Libraries|5.1.2600.2180 |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll       |Windows NT CRT DLL                              |7.0.2600.2180 |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll       |Windows XP USER API Client DLL                  |5.1.2600.2180 |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll     |Advanced Windows 32 Base API                    |5.1.2600.2180 |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll       |Remote Procedure Call Runtime                   |5.1.2600.2180 |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll        |GDI Client DLL                                  |5.1.2600.2180 |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll      |Shell Light-weight Utility Library              |6.0.2900.2180 |473600 |C:\WINDOWS\system32                                                                                 |
+|77FE0000|Secur32.dll      |Security Support Provider Interface             |5.1.2600.2180 |55808  |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll     |Windows NT BASE API Client DLL                  |5.1.2600.2180 |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll        |NT Layer DLL                                    |5.1.2600.2180 |708096 |C:\WINDOWS\system32                                                                                 |
+|7C9C0000|shell32.dll      |Windows Shell Common Dll                        |6.0.2900.2180 |8384000|C:\WINDOWS\system32                                                                                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F280: 0012F324   00476ED8: FF 13 8B 85 30 F5 FF FF 8D 95 34 F5 FF FF E8 69  ....0.....4....i
+0012F284: 00477650   00476EE8: 1E F9 FF 8B 95 34 F5 FF FF 8D 85 38 F8 FF FF B9  .....4.....8....
+0012F288: 0012FE04   00476EF8: FF 00 00 00 E8 DB DE F8 FF 8D 85 38 F8 FF FF BA  ...........8....
+0012F28C: 004043C8   00476F08: 74 76 47 00 33 C9 8A 08 41 E8 5A C5 F8 FF 74 32  tvG.3...A.Z...t2
+0012F290: 0012FDF4   00476F18: 8D 85 38 F8 FF FF BA 78 76 47 00 33 C9 8A 08 41  ..8....xvG.3...A
+0012F294: 0012FEA0   00476F28: E8 43 C5 F8 FF 74 1B 8D 85 38 F8 FF FF BA 7C 76  .C...t...8....|v
+0012F298: 0044AD14   00476F38: 47 00 33 C9 8A 08 41 E8 2C C5 F8 FF 74 04 33 C0  G.3...A.,...t.3.
+0012F29C: 009A4E74   00476F48: EB 02 B0 01 88 45 EF 80 7D EF 00 75 23 8D 95 2C  .....E..}..u#..,
+0012F2A0: 00000000   00476F58: F5 FF FF 8B 45 FC E8 05 08 00 00 8B 95 2C F5 FF  ....E........,..
+0012F2A4: 00000000   00476F68: FF 8D 45 E8 B9 88 76 47 00 E8 D6 DE F8 FF EB 08  ..E...vG........
+0012F2A8: 00000000   00476F78: 8D 45 E8 E8 A4 DB F8 FF 8B 45 FC 8B 80 FC 02 00  .E.......E......
+0012F2AC: 00000000   00476F88: 00 33 D2 E8 4C 3D FD FF 8B 45 FC 8B 80 F8 02 00  .3..L=...E......
+0012F2B0: 00000000   00476F98: 00 B2 01 E8 20 63 FD FF 8B 45 FC 8B 80 F8 02 00  .... c...E......
+0012F2B4: 00000000   00476FA8: 00 B2 01 E8 4C EF FD FF 8D 95 24 F5 FF FF 33 C0  ....L.....$...3.
+0012F2B8: 00000000   00476FB8: E8 87 BF F8 FF 8B 85 24 F5 FF FF 8D 95 28 F5 FF  .......$.....(..
+0012F2BC: 00000000   00476FC8: FF E8 12 27 F9 FF 8D 85 28 F5 FF FF 50 8D 95 18  ...'....(...P...
+
+
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Wed, 26 Oct 2005 14:45:38 +0300
+  1.2 Name/Description: IniCopy.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+------------------------------------------------------------------------------------------------------
+  2.1 Date   : Wed, 26 Oct 2005 14:45:44 +0300
+  2.2 Address: 00476ED8
+  2.3 Module : IniCopy.exe
+  2.4 Type   : EAccessViolation
+  2.5 Message: Access violation at address 00476ED8 in module 'IniCopy.exe'. Read of address 78836653.
+
+Active Controls:
+---------------------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Копирование файлов
+  3.3 Control Class: TForm1
+  3.4 Control Text : Копирование файлов
+
+Computer:
+------------------------------
+  4.1 Name        : SPROKUSHEV
+  4.2 User        : SProkushev
+  4.3 Total Memory: 495 Mb
+  4.4 Free Memory : 143 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 0.27 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+----------------------------------------------------------------------
+|Address |Module     |Unit        |Class |Procedure/Method      |Line|
+----------------------------------------------------------------------
+|00476ED8|IniCopy.exe|copymain.pas|TForm1|Timer1Timer           |44  |
+|77D4BCC7|user32.dll |            |      |DispatchMessageA      |    |
+|77D4BCBD|user32.dll |            |      |DispatchMessageA      |    |
+|00477AC3|IniCopy.exe|IniCopy.dpr |      |                      |13  |
+|7C90E64C|ntdll.dll  |            |      |NtSetInformationThread|    |
+----------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name             |Description                                     |Version       |Size   |Path                                                                                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|IniCopy.exe      |                                                |              |577536 |U:\MASTER                                                                                           |
+|10000000|MsgPlusLoader.dll|Messenger Plus! Process Monitor                 |3.50.2.0      |45192  |C:\Program Files\Messenger Plus! 3                                                                  |
+|5AD70000|uxtheme.dll      |Microsoft UxTheme Library                       |6.0.2900.2180 |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll     |Common Controls Library                         |5.82.2900.2527|617472 |C:\WINDOWS\system32                                                                                 |
+|71AA0000|WS2HELP.dll      |Windows Socket 2.0 Helper for Windows NT        |5.1.2600.2180 |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll       |Windows Socket 2.0 32-Bit DLL                   |5.1.2600.2180 |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll      |Windows Socket 32-Bit DLL                       |5.1.2600.2180 |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll        |MSCTF Server DLL                                |5.1.2600.2180 |294400 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL        |Process Status Helper                           |5.1.2600.2180 |23040  |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll     |                                                |5.1.2600.2180 |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll     |User Experience Controls Library                |6.0.2900.2527 |1053696|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2527_x-ww_aa415c8a|
+|774E0000|ole32.dll        |Microsoft OLE for Windows                       |5.1.2600.2180 |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll      |Version Checking and File Installation Libraries|5.1.2600.2180 |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll       |Windows NT CRT DLL                              |7.0.2600.2180 |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll       |Windows XP USER API Client DLL                  |5.1.2600.2180 |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll     |Advanced Windows 32 Base API                    |5.1.2600.2180 |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll       |Remote Procedure Call Runtime                   |5.1.2600.2180 |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll        |GDI Client DLL                                  |5.1.2600.2180 |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll      |Shell Light-weight Utility Library              |6.0.2900.2180 |473600 |C:\WINDOWS\system32                                                                                 |
+|77FE0000|Secur32.dll      |Security Support Provider Interface             |5.1.2600.2180 |55808  |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll     |Windows NT BASE API Client DLL                  |5.1.2600.2180 |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll        |NT Layer DLL                                    |5.1.2600.2180 |708096 |C:\WINDOWS\system32                                                                                 |
+|7C9C0000|shell32.dll      |Windows Shell Common Dll                        |6.0.2900.2180 |8384000|C:\WINDOWS\system32                                                                                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F280: 0012F324   00476ED8: FF 13 8B 85 30 F5 FF FF 8D 95 34 F5 FF FF E8 69  ....0.....4....i
+0012F284: 00477650   00476EE8: 1E F9 FF 8B 95 34 F5 FF FF 8D 85 38 F8 FF FF B9  .....4.....8....
+0012F288: 0012FE04   00476EF8: FF 00 00 00 E8 DB DE F8 FF 8D 85 38 F8 FF FF BA  ...........8....
+0012F28C: 004043C8   00476F08: 74 76 47 00 33 C9 8A 08 41 E8 5A C5 F8 FF 74 32  tvG.3...A.Z...t2
+0012F290: 0012FDF4   00476F18: 8D 85 38 F8 FF FF BA 78 76 47 00 33 C9 8A 08 41  ..8....xvG.3...A
+0012F294: 0012FEA0   00476F28: E8 43 C5 F8 FF 74 1B 8D 85 38 F8 FF FF BA 7C 76  .C...t...8....|v
+0012F298: 0044AD14   00476F38: 47 00 33 C9 8A 08 41 E8 2C C5 F8 FF 74 04 33 C0  G.3...A.,...t.3.
+0012F29C: 009A4E74   00476F48: EB 02 B0 01 88 45 EF 80 7D EF 00 75 23 8D 95 2C  .....E..}..u#..,
+0012F2A0: 00000000   00476F58: F5 FF FF 8B 45 FC E8 05 08 00 00 8B 95 2C F5 FF  ....E........,..
+0012F2A4: 00000000   00476F68: FF 8D 45 E8 B9 88 76 47 00 E8 D6 DE F8 FF EB 08  ..E...vG........
+0012F2A8: 00000000   00476F78: 8D 45 E8 E8 A4 DB F8 FF 8B 45 FC 8B 80 FC 02 00  .E.......E......
+0012F2AC: 00000000   00476F88: 00 33 D2 E8 4C 3D FD FF 8B 45 FC 8B 80 F8 02 00  .3..L=...E......
+0012F2B0: 00000000   00476F98: 00 B2 01 E8 20 63 FD FF 8B 45 FC 8B 80 F8 02 00  .... c...E......
+0012F2B4: 00000000   00476FA8: 00 B2 01 E8 4C EF FD FF 8D 95 24 F5 FF FF 33 C0  ....L.....$...3.
+0012F2B8: 00000000   00476FB8: E8 87 BF F8 FF 8B 85 24 F5 FF FF 8D 95 28 F5 FF  .......$.....(..
+0012F2BC: 00000000   00476FC8: FF E8 12 27 F9 FF 8D 85 28 F5 FF FF 50 8D 95 18  ...'....(...P...
+
+
+
+EurekaLog 4.5.7
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Wed, 26 Oct 2005 14:45:45 +0300
+  1.2 Name/Description: IniCopy.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : 
+
+Exception:
+------------------------------------------------------------------------------------------------------
+  2.1 Date   : Wed, 26 Oct 2005 14:45:45 +0300
+  2.2 Address: 00476ED8
+  2.3 Module : IniCopy.exe
+  2.4 Type   : EAccessViolation
+  2.5 Message: Access violation at address 00476ED8 in module 'IniCopy.exe'. Read of address 78836653.
+
+Active Controls:
+---------------------------------------
+  3.1 Form Class   : TForm1
+  3.2 Form Text    : Копирование файлов
+  3.3 Control Class: TForm1
+  3.4 Control Text : Копирование файлов
+
+Computer:
+------------------------------
+  4.1 Name        : SPROKUSHEV
+  4.2 User        : SProkushev
+  4.3 Total Memory: 495 Mb
+  4.4 Free Memory : 143 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 0.27 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 2
+  5.4 Language: Русский
+
+Call Stack Information:
+----------------------------------------------------------------------
+|Address |Module     |Unit        |Class |Procedure/Method      |Line|
+----------------------------------------------------------------------
+|00476ED8|IniCopy.exe|copymain.pas|TForm1|Timer1Timer           |44  |
+|77D4BCC7|user32.dll |            |      |DispatchMessageA      |    |
+|77D4BCBD|user32.dll |            |      |DispatchMessageA      |    |
+|00477AC3|IniCopy.exe|IniCopy.dpr |      |                      |13  |
+|7C90E64C|ntdll.dll  |            |      |NtSetInformationThread|    |
+----------------------------------------------------------------------
+
+Modules Information:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name             |Description                                     |Version       |Size   |Path                                                                                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|IniCopy.exe      |                                                |              |577536 |U:\MASTER                                                                                           |
+|10000000|MsgPlusLoader.dll|Messenger Plus! Process Monitor                 |3.50.2.0      |45192  |C:\Program Files\Messenger Plus! 3                                                                  |
+|5AD70000|uxtheme.dll      |Microsoft UxTheme Library                       |6.0.2900.2180 |218624 |C:\WINDOWS\system32                                                                                 |
+|5D090000|comctl32.dll     |Common Controls Library                         |5.82.2900.2527|617472 |C:\WINDOWS\system32                                                                                 |
+|71AA0000|WS2HELP.dll      |Windows Socket 2.0 Helper for Windows NT        |5.1.2600.2180 |19968  |C:\WINDOWS\system32                                                                                 |
+|71AB0000|WS2_32.dll       |Windows Socket 2.0 32-Bit DLL                   |5.1.2600.2180 |82944  |C:\WINDOWS\system32                                                                                 |
+|71AD0000|wsock32.dll      |Windows Socket 32-Bit DLL                       |5.1.2600.2180 |22528  |C:\WINDOWS\system32                                                                                 |
+|74720000|MSCTF.dll        |MSCTF Server DLL                                |5.1.2600.2180 |294400 |C:\WINDOWS\system32                                                                                 |
+|76BF0000|PSAPI.DLL        |Process Status Helper                           |5.1.2600.2180 |23040  |C:\WINDOWS\system32                                                                                 |
+|77120000|oleaut32.dll     |                                                |5.1.2600.2180 |553472 |C:\WINDOWS\system32                                                                                 |
+|773D0000|comctl32.dll     |User Experience Controls Library                |6.0.2900.2527 |1053696|C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.2527_x-ww_aa415c8a|
+|774E0000|ole32.dll        |Microsoft OLE for Windows                       |5.1.2600.2180 |1281536|C:\WINDOWS\system32                                                                                 |
+|77C00000|version.dll      |Version Checking and File Installation Libraries|5.1.2600.2180 |18944  |C:\WINDOWS\system32                                                                                 |
+|77C10000|msvcrt.dll       |Windows NT CRT DLL                              |7.0.2600.2180 |343040 |C:\WINDOWS\system32                                                                                 |
+|77D40000|user32.dll       |Windows XP USER API Client DLL                  |5.1.2600.2180 |577024 |C:\WINDOWS\system32                                                                                 |
+|77DD0000|advapi32.dll     |Advanced Windows 32 Base API                    |5.1.2600.2180 |616960 |C:\WINDOWS\system32                                                                                 |
+|77E70000|RPCRT4.dll       |Remote Procedure Call Runtime                   |5.1.2600.2180 |581120 |C:\WINDOWS\system32                                                                                 |
+|77F10000|GDI32.dll        |GDI Client DLL                                  |5.1.2600.2180 |278016 |C:\WINDOWS\system32                                                                                 |
+|77F60000|SHLWAPI.dll      |Shell Light-weight Utility Library              |6.0.2900.2180 |473600 |C:\WINDOWS\system32                                                                                 |
+|7C800000|kernel32.dll     |Windows NT BASE API Client DLL                  |5.1.2600.2180 |983552 |C:\WINDOWS\system32                                                                                 |
+|7C900000|ntdll.dll        |NT Layer DLL                                    |5.1.2600.2180 |708096 |C:\WINDOWS\system32                                                                                 |
+|7C9C0000|shell32.dll      |Windows Shell Common Dll                        |6.0.2900.2180 |8384000|C:\WINDOWS\system32                                                                                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F280: 0012F324   00476ED8: FF 13 8B 85 30 F5 FF FF 8D 95 34 F5 FF FF E8 69  ....0.....4....i
+0012F284: 00477650   00476EE8: 1E F9 FF 8B 95 34 F5 FF FF 8D 85 38 F8 FF FF B9  .....4.....8....
+0012F288: 0012FE04   00476EF8: FF 00 00 00 E8 DB DE F8 FF 8D 85 38 F8 FF FF BA  ...........8....
+0012F28C: 004043C8   00476F08: 74 76 47 00 33 C9 8A 08 41 E8 5A C5 F8 FF 74 32  tvG.3...A.Z...t2
+0012F290: 0012FDF4   00476F18: 8D 85 38 F8 FF FF BA 78 76 47 00 33 C9 8A 08 41  ..8....xvG.3...A
+0012F294: 0012FEA0   00476F28: E8 43 C5 F8 FF 74 1B 8D 85 38 F8 FF FF BA 7C 76  .C...t...8....|v
+0012F298: 0044AD14   00476F38: 47 00 33 C9 8A 08 41 E8 2C C5 F8 FF 74 04 33 C0  G.3...A.,...t.3.
+0012F29C: 009A4E74   00476F48: EB 02 B0 01 88 45 EF 80 7D EF 00 75 23 8D 95 2C  .....E..}..u#..,
+0012F2A0: 00000000   00476F58: F5 FF FF 8B 45 FC E8 05 08 00 00 8B 95 2C F5 FF  ....E........,..
+0012F2A4: 00000000   00476F68: FF 8D 45 E8 B9 88 76 47 00 E8 D6 DE F8 FF EB 08  ..E...vG........
+0012F2A8: 00000000   00476F78: 8D 45 E8 E8 A4 DB F8 FF 8B 45 FC 8B 80 FC 02 00  .E.......E......
+0012F2AC: 00000000   00476F88: 00 33 D2 E8 4C 3D FD FF 8B 45 FC 8B 80 F8 02 00  .3..L=...E......
+0012F2B0: 00000000   00476F98: 00 B2 01 E8 20 63 FD FF 8B 45 FC 8B 80 F8 02 00  .... c...E......
+0012F2B4: 00000000   00476FA8: 00 B2 01 E8 4C EF FD FF 8D 95 24 F5 FF FF 33 C0  ....L.....$...3.
+0012F2B8: 00000000   00476FB8: E8 87 BF F8 FF 8B 85 24 F5 FF FF 8D 95 28 F5 FF  .......$.....(..
+0012F2BC: 00000000   00476FC8: FF E8 12 27 F9 FF 8D 85 28 F5 FF FF 50 8D 95 18  ...'....(...P...
+
+
+
+
+

@@ -1,0 +1,183 @@
+EurekaLog 4.5.7
+
+Application:
+------------------------------------------------------
+  1.1 Start Date      : Wed, 5 Jan 2005 11:08:58 +0300
+  1.2 Name/Description: Интерфейс
+  1.3 Version Number  : 1.0.0.0
+  1.4 Parameters      : 
+
+Exception:
+-------------------------------------------------------
+  2.1 Date   : Wed, 5 Jan 2005 11:09:36 +0300
+  2.2 Address: 00549156
+  2.3 Module : Load.exe
+  2.4 Type   : Exception
+  2.5 Message: You cannot access field data beyond Eof.
+
+Active Controls:
+---------------------------------------------------------------------------------------
+  3.1 Form Class   : TfrmMain
+  3.2 Form Text    : Интерфейс с комплексом ПАРУС (pvz@P5) - [Приходные ордера в Парус]
+  3.3 Control Class: TBitBtn
+  3.4 Control Text : Загрузка в Парус
+
+Computer:
+----------------------------
+  4.1 Name        : UKHBUH1
+  4.2 User        : JRomanov
+  4.3 Total Memory: 1023 Mb
+  4.4 Free Memory : 246 Mb
+  4.5 Total Disk  : 12 Gb
+  4.6 Free Disk   : 3.65 Gb
+
+Operating System:
+--------------------------------------
+  5.1 Type    : Microsoft Windows 2000
+  5.2 Build # : 2195
+  5.3 Update  : Service Pack 4
+  5.4 Language: Русский
+
+Call Stack Information:
+-----------------------------------------------------------------------------
+|Address |Module    |Unit        |Class   |Procedure/Method            |Line|
+-----------------------------------------------------------------------------
+|006076CE|Load.exe  |pr17load.pas|TfrmPR17|acLoadExecute               |449 |
+|77E1733C|user32.dll|            |        |SendMessageW                |    |
+|77E172FD|user32.dll|            |        |SendMessageW                |    |
+|77F5ED7D|GDI32.dll |            |        |GdiReleaseDC                |    |
+|77E155E2|user32.dll|            |        |ReleaseDC                   |    |
+|77E155CC|user32.dll|            |        |ReleaseDC                   |    |
+|77F878A1|ntdll.dll |            |        |RtlMultiByteToUnicodeN      |    |
+|77F91503|ntdll.dll |            |        |RtlAnsiStringToUnicodeString|    |
+|77E16B3F|user32.dll|            |        |CallWindowProcA             |    |
+|77E16B2B|user32.dll|            |        |CallWindowProcA             |    |
+|77E1751C|user32.dll|            |        |WCSToMBEx                   |    |
+|77E1A3BD|user32.dll|            |        |CallNextHookEx              |    |
+|77E1733C|user32.dll|            |        |SendMessageW                |    |
+|77E172FD|user32.dll|            |        |SendMessageW                |    |
+|77E16B2B|user32.dll|            |        |CallWindowProcA             |    |
+|77E16B3F|user32.dll|            |        |CallWindowProcA             |    |
+|77E16B2B|user32.dll|            |        |CallWindowProcA             |    |
+|77E1A3BD|user32.dll|            |        |CallNextHookEx              |    |
+|77E18546|user32.dll|            |        |GetCapture                  |    |
+|77E1A37E|user32.dll|            |        |CallNextHookEx              |    |
+|004CB4BF|Load.exe  |TB2Hook.pas |        |GetMessageHook              |123 |
+|77E156CF|user32.dll|            |        |PeekMessageA                |    |
+|77E15B4C|user32.dll|            |        |DispatchMessageA            |    |
+|77E15B46|user32.dll|            |        |DispatchMessageA            |    |
+|006906BB|Load.exe  |Load.dpr    |        |                            |44  |
+-----------------------------------------------------------------------------
+
+Modules Information:
+----------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name            |Description                                          |Version       |Size   |Path               |
+----------------------------------------------------------------------------------------------------------------------------
+|00400000|Load.exe        |Интерфейс                                            |1.0.0.0       |3539456|U:\MASTER\PARUS    |
+|015C0000|oravsn8.dll     |Oracle RDBMS Version Library                         |              |5392   |C:\oracle\ora81\bin|
+|015D0000|orannzsbb8.dll  |Oracle SQL*Net ORANNZSBB8 DLL                        |              |383760 |C:\oracle\ora81\bin|
+|01640000|orancds8.dll    |Oracle SQL*Net ORANCDS8 DLL                          |              |4880   |C:\oracle\ora81\bin|
+|01650000|oranms.dll      |Oracle SNMP Library                                  |              |10512  |C:\oracle\ora81\bin|
+|01660000|oranmsp.dll     |Oracle SNMP Peer adaptor Library                     |              |51472  |C:\oracle\ora81\bin|
+|10000000|oci.dll         |Oracle Call Interface                                |              |89088  |C:\oracle\ora81\bin|
+|60000000|orageneric8.dll |Oracle RDBMS Generic Library                         |              |1169168|C:\oracle\ora81\bin|
+|60200000|oracommon8.dll  |Oracle RDBMS Common Library                          |              |401680 |C:\oracle\ora81\bin|
+|60350000|orawtc8.dll     |Oracle RDBMS WTC Library                             |              |6928   |C:\oracle\ora81\bin|
+|60400000|OraClient8.Dll  |Oracle RDBMS Client Library                          |              |1014544|C:\oracle\ora81\bin|
+|60600000|oracore8.dll    |Oracle CORE Library                                  |              |533264 |C:\oracle\ora81\bin|
+|60800000|oranls8.dll     |Oracle NLS Runtime Library                           |              |301840 |C:\oracle\ora81\bin|
+|60A00000|oranl8.dll      |Oracle SQL*Net ORANL8 DLL                            |              |163600 |C:\oracle\ora81\bin|
+|60B00000|oran8.dll       |Oracle SQL*Net ORAN8 DLL                             |              |663312 |C:\oracle\ora81\bin|
+|60E00000|orancrypt8.dll  |Oracle SQL*Net ORANCRYPT8 DLL                        |              |42768  |C:\oracle\ora81\bin|
+|61100000|oranro8.dll     |Oracle SQL*Net ORANRO8 DLL                           |              |211216 |C:\oracle\ora81\bin|
+|61500000|oranldap8.dll   |Oracle SQL*Net ORANLDAP8 DLL                         |              |47376  |C:\oracle\ora81\bin|
+|61700000|oraldapclnt8.dll|Oracle Internet Directory Client Library             |              |120592 |C:\oracle\ora81\bin|
+|61900000|oranhost8.dll   |Oracle SQL*Net ORANHOST8 DLL                         |              |7440   |C:\oracle\ora81\bin|
+|62100000|oranoname8.dll  |Oracle SQL*Net ORANONAME8 DLL                        |              |5904   |C:\oracle\ora81\bin|
+|62300000|orantns8.dll    |Oracle SQL*Net ORANTNS8 DLL                          |              |7952   |C:\oracle\ora81\bin|
+|62500000|orannds8.dll    |Oracle SQL*Net ORANNDS DLL                           |              |16656  |C:\oracle\ora81\bin|
+|62700000|ORATRACE8.dll   |                                                     |              |248592 |C:\oracle\ora81\bin|
+|62900000|orapls8.dll     |Oracle PLS runtime Library                           |              |2227984|C:\oracle\ora81\bin|
+|63100000|oraslax8.dll    |Oracle SLAX runtime Library                          |              |14096  |C:\oracle\ora81\bin|
+|63200000|orasql8.dll     |Oracle SQL Runtime Library                           |              |453392 |C:\oracle\ora81\bin|
+|64700000|orantcp8.dll    |Oracle SQL*Net ORANTCP8 DLL                          |              |32016  |C:\oracle\ora81\bin|
+|690A0000|PSAPI.DLL       |Process Status Helper                                |5.0.2134.1    |28944  |C:\WINNT\system32  |
+|695E0000|olepro32.dll    |                                                     |5.0.4522.0    |164112 |C:\WINNT\system32  |
+|74FD0000|msafd.dll       |Microsoft Windows Sockets 2.0 Service Provider       |5.0.2195.6602 |108816 |C:\WINNT\system32  |
+|75010000|wshtcpip.dll    |Windows Sockets Helper DLL                           |5.0.2195.6601 |17680  |C:\WINNT\System32  |
+|75020000|WS2HELP.DLL     |Модуль поддержки Windows Socket 2.0 для Windows NT   |5.0.2134.1    |18192  |C:\WINNT\system32  |
+|75030000|WS2_32.DLL      |Windows Socket 2.0 32-Bit DLL                        |5.0.2195.6601 |69904  |C:\WINNT\system32  |
+|75050000|wsock32.dll     |32-разрядная библиотека Windows Socket               |5.0.2152.1    |21776  |C:\WINNT\system32  |
+|75150000|SAMLIB.DLL      |SAM Library DLL                                      |5.0.2195.6666 |49936  |C:\WINNT\system32  |
+|75170000|NETAPI32.DLL    |Net Win32 API DLL                                    |5.0.2195.6601 |311568 |C:\WINNT\system32  |
+|751C0000|NETRAP.DLL      |Net Remote Admin Protocol DLL                        |5.0.2134.1    |11536  |C:\WINNT\system32  |
+|759B0000|LZ32.DLL        |LZ Expand/Compress API DLL                           |5.0.2195.6611 |10000  |C:\WINNT\system32  |
+|75E60000|imm32.dll       |Windows 2000 IMM32 API Client DLL                    |5.0.2195.6655 |96528  |C:\WINNT\system32  |
+|76620000|mpr.dll         |Библиотека маршрутизации для нескольких служб доступа|5.0.2146.1    |55056  |C:\WINNT\system32  |
+|76B30000|comdlg32.dll    |Библиотека общих диалоговых окон                     |5.0.2920.0    |241424 |C:\WINNT\system32  |
+|77320000|MPRAPI.DLL      |Windows NT MP Router Administration DLL              |5.0.2181.1    |81168  |C:\WINNT\system32  |
+|77340000|iphlpapi.dll    |API модуля поддержки IP                              |5.0.2173.2    |69904  |C:\WINNT\system32  |
+|77360000|DHCPCSVC.DLL    |Служба DHCP-клиента                                  |5.0.2153.1    |92944  |C:\WINNT\system32  |
+|77380000|ADSLDPC.DLL     |Библиотека DLL поставщика LDAP AD                    |5.0.2172.1    |133904 |C:\WINNT\system32  |
+|773B0000|ACTIVEDS.DLL    |Библиотека DLL уровня маршрутизатора AD              |5.0.2172.1    |182032 |C:\WINNT\system32  |
+|774C0000|RASMAN.DLL      |Remote Access Connection Manager                     |5.0.2195.6604 |56080  |C:\WINNT\system32  |
+|774E0000|RASAPI32.DLL    |Remote Access API                                    |5.0.2195.6625 |197392 |C:\WINNT\system32  |
+|77520000|ICMP.DLL        |ICMP DLL                                             |5.0.2134.1    |7440   |C:\WINNT\system32  |
+|77530000|TAPI32.DLL      |Библиотека API телефонии Microsoft® Windows™         |5.0.2182.1    |126736 |C:\WINNT\system32  |
+|77570000|winmm.dll       |MCI API DLL                                          |5.0.2161.1    |189200 |C:\WINNT\system32  |
+|77630000|tsappcmp.dll    |Terminal Services Application Compatibility DLL      |5.0.2195.6693 |49424  |C:\WINNT\system32  |
+|777E0000|winrnr.dll      |LDAP RnR Provider DLL                                |5.0.2160.1    |19216  |C:\WINNT\System32  |
+|777F0000|rasadhlp.dll    |Remote Access AutoDial Helper                        |5.0.2168.1    |7440   |C:\WINNT\system32  |
+|77800000|winspool.drv    |Драйвер диспетчера очереди Windows                   |5.0.2167.1    |113936 |C:\WINNT\system32  |
+|77820000|version.dll     |Version Checking and File Installation Libraries     |5.0.2195.6623 |16144  |C:\WINNT\system32  |
+|77830000|RTUTILS.DLL     |Routing Utilities                                    |5.0.2168.1    |44816  |C:\WINNT\system32  |
+|77880000|SETUPAPI.DLL    |Windows Setup API                                    |5.0.2183.1    |570128 |C:\WINNT\system32  |
+|77950000|WLDAP32.DLL     |Win32 LDAP API DLL                                   |5.0.2168.1    |162064 |C:\WINNT\system32  |
+|77980000|DNSAPI.DLL      |DNS Client API DLL                                   |5.0.2195.6680 |134928 |C:\WINNT\system32  |
+|779B0000|oleaut32.dll    |                                                     |2.40.4522.0   |626960 |C:\WINNT\system32  |
+|77A50000|ole32.dll       |Microsoft OLE для  Windows                           |5.0.2181.1    |945936 |C:\WINNT\system32  |
+|77B50000|comctl32.dll    |Common Controls Library                              |5.81.3502.6601|550672 |C:\WINNT\system32  |
+|77C70000|SHLWAPI.DLL     |Библиотека небольших программ оболочки               |5.0.2920.0    |289552 |C:\WINNT\system32  |
+|77D30000|RPCRT4.DLL      |Remote Procedure Call Runtime                        |5.0.2195.6802 |432912 |C:\WINNT\system32  |
+|77E10000|user32.dll      |Библиотека клиента USER API Windows 2000             |5.0.2180.1    |380176 |C:\WINNT\system32  |
+|77F40000|GDI32.dll       |GDI Client DLL                                       |5.0.2195.6762 |222992 |C:\WINNT\system32  |
+|77F80000|ntdll.dll       |Системная библиотека NT                              |5.0.2163.1    |491792 |C:\WINNT\system32  |
+|78000000|MSVCRT.DLL      |Microsoft (R) C Runtime Library                      |6.1.9844.0    |286773 |C:\WINNT\system32  |
+|782C0000|rnr20.dll       |Windows Socket2 NameSpace DLL                        |5.0.2195.6603 |36624  |C:\WINNT\System32  |
+|782F0000|shell32.dll     |Общая библиотека оболочки Windows                    |5.0.2920.0    |2383632|C:\WINNT\system32  |
+|7C0F0000|USERENV.DLL     |Userenv                                              |5.0.2185.1    |385808 |C:\WINNT\system32  |
+|7C2D0000|advapi32.dll    |Расширенная библиотека API Windows 32                |5.0.2191.1    |387344 |C:\WINNT\system32  |
+|7C340000|SECUR32.DLL     |Security Support Provider Interface                  |5.0.2195.6695 |48912  |C:\WINNT\system32  |
+|7C570000|kernel32.dll    |Библиотека клиента Windows NT BASE API               |5.0.2191.1    |711440 |C:\WINNT\system32  |
+----------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000000   EDI: 00000000
+EBX: 00000000   ESI: 00000000
+ECX: 00000000   ESP: 00000000
+EDX: 00000000   EIP: 00000000
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012F088: 00549C1A   00549156: E8 E1 B7 EB FF C3 FF FF FF FF 27 00 00 00 59 6F  ..........'...Yo
+0012F08C: 0012F0B0   00549166: 75 20 63 61 6E 6E 6F 74 20 61 63 63 65 73 73 20  u cannot access 
+0012F090: 00404870   00549176: 66 69 65 6C 64 20 64 61 74 61 20 62 65 79 6F 6E  field data beyon
+0012F094: 0012F0A8   00549186: 64 20 45 6F 66 00 55 8B EC 83 C4 F0 53 56 57 33  d Eof.U.....SVW3
+0012F098: 00000000   00549196: DB 89 5D F0 89 5D F4 8B F9 8B F2 8B D8 33 C0 55  ..]..].......3.U
+0012F09C: 010092BC   005491A6: 68 82 93 54 00 64 FF 30 64 89 20 8B D6 8B 83 94  h..T.d.0d. .....
+0012F0A0: 00000000   005491B6: 00 00 00 E8 D2 83 ED FF 8B 15 68 91 53 00 E8 8B  ..........h.S...
+0012F0A4: 00000000   005491C6: B0 EB FF 8B F0 8B C3 E8 6A FF FF FF 8B 46 2C 8B  ........j....F,.
+0012F0A8: 0012F0E0   005491D6: 93 B4 00 00 00 66 83 3C 50 FF 74 30 66 8B 46 1E  .....f.<P.t0f.F.
+0012F0AC: 0054A116   005491E6: 66 83 E8 74 74 26 66 83 7E 1E 6C 75 54 8B C6 E8  f..tt&f.~.luT...
+0012F0B0: 0012F0F4   005491F6: FE 7F ED FF 8B D0 8B C3 E8 1D 1C 00 00 8B 15 B8  ................
+0012F0B4: 00404870   00549206: C7 53 00 E8 22 B0 EB FF 84 C0 75 35 8B 83 98 00  .S..".....u5....
+0012F0B8: 0012F0E0   00549216: 00 00 80 B8 A6 01 00 00 00 75 07 8B C7 E8 E8 1D  .........u......
+0012F0BC: 00608AE4   00549226: ED FF 8B 83 98 00 00 00 80 B8 A6 01 00 00 01 0F  ................
+0012F0C0: 010092BC   00549236: 85 2C 01 00 00 8B C7 E8 D6 1D ED FF E9 20 01 00  .,........... ..
+0012F0C4: 00000000   00549246: 00 C6 45 FB 00 0F BF 46 1E 83 F8 6C 7F 11 74 67  ..E....F...l..tg
+
+
+
+
+

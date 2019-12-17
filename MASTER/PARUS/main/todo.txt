@@ -1,0 +1,242 @@
+Клиент-банк
+P_BANKDOCS_INSERT
+(
+  nCOMPANY         in number,
+  nCRN             in number,
+  sBANK_TYPEDOC    in varchar2,
+  sBANK_PREFDOC    in varchar2,
+  sBANK_NUMBDOC    in varchar2,
+  dBANK_DATEDOC    in date,
+  sVALID_TYPEDOC   in varchar2,
+  sVALID_NUMBDOC   in varchar2,
+  dVALID_DATEDOC   in date,
+  sFROM_NUMB       in varchar2,
+  dFROM_DATE       in date,
+  sAGENT_FROM      in varchar2,
+  sAGENTF_ACC      in varchar2,
+  sAGENT_TO        in varchar2,
+  sAGENTT_ACC      in varchar2,
+  sBUNIT_MNEMO     in varchar2,
+  sTYPE_OPER       in varchar2,
+  sPAY_SEQ         in varchar2,
+  dPAY_DATA        in date,
+  sPAY_INFO        in varchar2,
+  sPAY_NOTE        in varchar2,
+  nPAY_SUM         in number,
+  nTAX_SUM         in number,
+  nPERCENT_TAX_SUM in number,
+  sCURRENCY        in varchar2,
+  sPAY_TYPE        in varchar2,
+  sPAY_KIND        in varchar2,
+  sJUR_PERS        in varchar2,
+  nRN              out number
+)
+ЗАменить на
+P_BANKDOCS_INSERT
+(
+nCOMPANY         in number,
+nCRN             in number,
+sBANK_TYPEDOC    in varchar2,
+sBANK_PREFDOC    in varchar2,
+sBANK_NUMBDOC    in varchar2,
+dBANK_DATEDOC    in date,
+sVALID_TYPEDOC   in varchar2,
+sVALID_NUMBDOC   in varchar2,
+dVALID_DATEDOC   in date,
+sFROM_NUMB       in varchar2,
+dFROM_DATE       in date,
+sAGENT_FROM      in varchar2,
+sAGENTF_ACC      in varchar2,
+sAGENT_TO        in varchar2,
+sAGENTT_ACC      in varchar2,
+sBUNIT_MNEMO     in varchar2,
+sTYPE_OPER       in varchar2,
+sPAY_SEQ         in varchar2,
+dPAY_DATA        in date,
+sPAY_INFO        in varchar2,
+sPAY_NOTE        in varchar2,
+nPAY_SUM         in number,
+nTAX_SUM         in number,
+nPERCENT_TAX_SUM in number,
+sCURRENCY        in varchar2,
+sPAY_TYPE        in varchar2,
+sPAY_KIND        in varchar2,
+sJUR_PERS        in varchar2,
+новое sINCOMECLASS     in varchar2,
+новое sTRANSREASON     in varchar2,
+новое sTRANSPERIOD     in varchar2,
+новое sTRANSNUMBER     in varchar2,
+новое dTRANSDATE       in date,
+новое sTRANSTYPE       in varchar2,
+новое nUNALLOTTED_SUM  in number,
+nRN              out number
+)
+
+ЗАказы подразделений****************************************************************************
+P_DEPARTMENTORD_SET_STATE
+(
+  nFLAG_SMART    in  number,   -- признак генерации исключения (0 - да, 1 - нет)
+  nCOMPANY       in  number,   -- организация.
+  nRN            in  number,   -- ("при 0"-RN заказа, "при 1"-RN спецификации, "при 2"-RN исполнения)
+  nFLAG_MODE     in  number,   -- действие (0-изм-е сост. заголовка, 1-изм-е сост. у спецификации, 2-изм-е сост. у исполнения)
+  nNEW_STATE     in  number,   -- новое состояние
+  dSTATE_DATE    in  date,     -- дата смены состояния.
+  nRESULT        out number    -- результат (0-сменили, 1-уже стоит,2-ошибка)
+)
+заменить на
+P_DEPARTMENTORD_SET_STATE
+(
+nFLAG_SMART    in number,   -- признак генерации исключения (0 - да, 1 - нет)
+nCOMPANY       in number,   -- организация.
+nRN            in number,   -- ("при 0"-RN заказа, "при 1"-RN спецификации, "при 2"-RN исполнения)
+nFLAG_MODE     in number,   -- действие (0-изм-е сост. заголовка, 1-изм-е сост. у спецификации, 2-изм-е сост. у исполнения)
+nNEW_STATE     in number,   -- новое состояние
+dSTATE_DATE    in date,     -- дата смены состояния.
+новое nRESERV_SIGN   in number,   -- признак резервирования (0-не резервировать, 1-в зависимости от настройки)
+новое nSIGN_WARN     in number,   -- признак генерации предупреждений для резервирования (0 - нет, 1 - да)
+nRESULT       out number,   -- результат (0 - сменили, 1 - уже стоит, 2 - ошибка)
+новое sMSG          out varchar2  -- сообщение
+)
+ЗАказы подразделений и потребителей ****************************************************************************
+P_DELIVERYORD_INSERT
+(
+  nCOMPANY        in number,      -- всегда должно быть
+  nCRN            in number,
+  sORD_PREF       in varchar2,
+  sORD_NUMB       in varchar2,
+  sAGENT          in varchar2,
+  sFACEACC        in varchar2,
+  sGRAPHPOINT     in varchar2,
+  sORD_DOCTYPE    in varchar2,
+  dORD_DATE       in date,
+  nORD_STATE      in number,
+  dSTATE_DATE     in date,
+  sDISP_TYPE      in varchar2,
+  sPAY_TYPE       in varchar2,
+  sDELIV_DIAGR    in varchar2,
+  sCURRENCY       in varchar2,
+  sSTORE          in varchar2,
+  sACC_AGENT      in varchar2,
+  sSUBDIV         in varchar2,
+  dPAY_DATE       in date,
+  dRELEASE_DATE   in date,
+  nORD_PERIOD     in number,
+  nPERIOD_CORR    in number,
+  nPERIOD_QUANT   in number,
+  nPERIOD_TYPE    in number,
+  nPERIOD_LEN     in number,
+  nATSAMETIME     in number,
+  nINCLUDETAX     in number,
+  nREDUCTION      in number,
+  sNOTE           in varchar2,
+  sJUR_PERS       in varchar2,
+  nRN            out number
+)
+заменить на
+P_DELIVERYORD_INSERT
+(
+nCOMPANY        in number,            -- всегда должно быть
+nCRN            in number,
+sORD_PREF       in varchar2,
+sORD_NUMB       in varchar2,
+sAGENT          in varchar2,
+sFACEACC        in varchar2,
+sGRAPHPOINT     in varchar2,
+sORD_DOCTYPE    in varchar2,
+dORD_DATE       in date,
+nORD_STATE      in number,
+dSTATE_DATE     in date,
+sDISP_TYPE      in varchar2,
+sPAY_TYPE       in varchar2,
+sDELIV_DIAGR    in varchar2,
+sCURRENCY       in varchar2,
+sSTORE          in varchar2,
+sACC_AGENT      in varchar2,
+sSUBDIV         in varchar2,
+dPAY_DATE       in date,
+dRELEASE_DATE   in date,
+nORD_PERIOD     in number,
+nPERIOD_CORR    in number,
+nPERIOD_QUANT   in number,
+nPERIOD_TYPE    in number,
+nPERIOD_LEN     in number,
+nATSAMETIME     in number,
+nINCLUDETAX     in number,
+nREDUCTION      in number,
+sNOTE           in varchar2,
+sJUR_PERS       in varchar2,
+новые
+sDELIVDOCNUMB   in varchar2,          -- Номер заказа у поставщика 
+dDELIVDOCDATE   in date,              -- Дата регистрации заказа поставщиком
+nRN             out number
+)
+Приходные ордера ****************************************************************************
+P_INORDERSPECS_INSERT
+(
+  nCOMPANY         in number,
+  nPRN             in number,
+  sNOMEN           in varchar2,
+  sNOMMODIF        in varchar2,
+  sNOMNMODIFPACK   in varchar2,
+  sARTICLE         in varchar2,
+  sCELL            in varchar2,
+  sTAXGR           in varchar2,
+  nPLANQUANT       in number,
+  nFACTQUANT       in number,
+  nPLANQUANTALT    in number,
+  nFACTQUANTALT    in number,
+  nPRICE           in number,
+  nPRICEMEAS       in number,
+  nPRICE_CALC_RULE in number,
+  nACC_PRICE       in number,
+  nACC_PRICEMEAS   in number,
+  dEXPIRY_DATE     in date,
+  sCERTIFICATE     in varchar2,
+  nPLANSUM         in number,
+  nPLANSUMTAX      in number,
+  nFACTSUM         in number,
+  nFACTSUMTAX      in number,
+  sNOTE            in varchar2,
+  sSERNUMB         in varchar2,
+  sBARCODE         in varchar2,
+  sCOUNTRY         in varchar2,
+  sGTD             in varchar2,
+  sPRODUCER        in varchar2,
+  nRN             out number
+)
+Заменить на
+P_INORDERSPECS_INSERT
+(
+nCOMPANY         in number,
+nPRN             in number,
+sNOMEN           in varchar2,
+sNOMMODIF        in varchar2,
+sNOMNMODIFPACK   in varchar2,
+sARTICLE         in varchar2,
+sCELL            in varchar2,
+sTAXGR           in varchar2,
+nPLANQUANT       in number,
+nFACTQUANT       in number,
+nPLANQUANTALT    in number,
+nFACTQUANTALT    in number,
+nPRICE           in number,
+nPRICEMEAS       in number,
+nPRICE_CALC_RULE in number,
+nACC_PRICE       in number,
+nACC_PRICEMEAS   in number,
+dEXPIRY_DATE     in date,
+sCERTIFICATE     in varchar2,
+nPLANSUM         in number,
+nPLANSUMTAX      in number,
+nFACTSUM         in number,
+nFACTSUMTAX      in number,
+sNOTE            in varchar2,
+sSERNUMB         in varchar2,
+sBARCODE         in varchar2,
+sCOUNTRY         in varchar2,
+sGTD             in varchar2,
+sPRODUCER        in varchar2,
+новое nSTORAGE_TIME    in number,
+новое sUMEAS_STORAGE   in varchar2,
+nRN             out number
+)

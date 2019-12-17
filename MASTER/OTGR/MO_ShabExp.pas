@@ -1,0 +1,258 @@
+unit MO_ShabExp;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Grids, DBGridEh, ToolWin, ActnMan, ActnCtrls, ExtCtrls,
+  ActnList, XPStyleActnCtrls, Oracle, DB, OracleData, StdCtrls, GridsEh;
+
+type
+  Tf_ShabExp = class(TForm)
+    ActionToolBar1: TActionToolBar;
+    grid1: TDBGridEh;
+    amShabExp: TActionManager;
+    adAdd: TAction;
+    acSave: TAction;
+    acDel: TAction;
+    acClose: TAction;
+    acEdit: TAction;
+    acCopy: TAction;
+    ora_Session: TOracleSession;
+    q_grid: TOracleDataSet;
+    ds_grid: TDataSource;
+    q_dog: TOracleDataSet;
+    ds_dog: TDataSource;
+    ds_prod: TDataSource;
+    q_prod: TOracleDataSet;
+    ds_stan: TDataSource;
+    q_stan: TOracleDataSet;
+    q_tex_pd: TOracleDataSet;
+    ds_tex_pd: TDataSource;
+    q_gridID: TFloatField;
+    q_gridFLG_DOSTUP: TIntegerField;
+    q_gridDOG_ID: TIntegerField;
+    q_gridPROD_ID_NPR: TStringField;
+    q_gridSTAN_ID: TFloatField;
+    q_gridPRIM_DOG: TStringField;
+    q_gridOSOB1: TStringField;
+    q_gridOSOB2: TStringField;
+    q_gridOSOB3: TStringField;
+    q_gridOSOB4: TStringField;
+    q_gridPOL1: TStringField;
+    q_gridPOL2: TStringField;
+    q_gridPOL3: TStringField;
+    q_gridPOL4: TStringField;
+    q_gridNEOB1: TStringField;
+    q_gridNEOB2: TStringField;
+    q_gridNEOB3: TStringField;
+    q_gridNEOB4: TStringField;
+    q_gridSTAN1: TStringField;
+    q_gridSTAN2: TStringField;
+    q_gridSTAN3: TStringField;
+    q_gridSTAN4: TStringField;
+    q_gridDORST1: TStringField;
+    q_gridDORST2: TStringField;
+    q_gridNM_GR1: TStringField;
+    q_gridNM_GR2: TStringField;
+    q_gridNM_GR3: TStringField;
+    q_gridNM_GR4: TStringField;
+    q_gridNM_GR5: TStringField;
+    q_gridNM_GR6: TStringField;
+    q_gridNM_GR7: TStringField;
+    q_gridNM_GR8: TStringField;
+    q_gridNM_GR9: TStringField;
+    q_gridPLT_OT1: TStringField;
+    q_gridPLT_OT2: TStringField;
+    q_gridPLT_OT3: TStringField;
+    q_gridPLT_OT4: TStringField;
+    q_gridDOCS1: TStringField;
+    q_gridDOCS2: TStringField;
+    q_gridDOCS3: TStringField;
+    q_gridDOCS4: TStringField;
+    q_gridTAM1: TStringField;
+    q_gridTAM2: TStringField;
+    q_gridPOS33: TStringField;
+    q_gridPOS34: TStringField;
+    q_gridPOS35: TStringField;
+    q_gridPOS36: TStringField;
+    q_gridSHTAMP1: TStringField;
+    q_gridSHTAMP2: TStringField;
+    q_gridSHTAMP3: TStringField;
+    q_gridSHTAMP4: TStringField;
+    q_gridSHTAMP5: TStringField;
+    q_gridGR1_TXT_EX: TStringField;
+    q_gridGR2_TXT_EX: TStringField;
+    q_gridMESTO_PAY: TStringField;
+    q_gridCNT_VED: TIntegerField;
+    q_gridNAME_NPR: TStringField;
+    q_gridTEX_PD_NAME: TStringField;
+    q_gridSTAN_KOD: TIntegerField;
+    q_gridSTAN_NAME: TStringField;
+    q_gridDOG_NUMBER: TStringField;
+    cbShowAll: TCheckBox;
+    pkgFOR_NAKL: TOraclePackage;
+    q_gridINSNUM: TStringField;
+    q_gridINSDAT: TDateTimeField;
+    q_gridTEX_PD_ID: TFloatField;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure acCloseExecute(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure grid1Exit(Sender: TObject);
+    procedure adAddExecute(Sender: TObject);
+    procedure acSaveExecute(Sender: TObject);
+    procedure acDelExecute(Sender: TObject);
+    procedure acCopyExecute(Sender: TObject);
+    procedure acEditExecute(Sender: TObject);
+    procedure cbShowAllClick(Sender: TObject);
+    procedure grid1GetCellParams(Sender: TObject; Column: TColumnEh;
+      AFont: TFont; var Background: TColor; State: TGridDrawState);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  f_ShabExp: Tf_ShabExp;
+
+implementation
+uses main,ForDB,ForSess,MO_ShabExpNew;
+
+{$R *.dfm}
+procedure Tf_ShabExp.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+//Закроем сессию
+  grid1Exit(Sender);
+  ora_Session.Commit;
+  ora_Session.Connected:=false;
+// Закрываем окно
+  Action:=caFree;
+end;
+
+procedure Tf_ShabExp.acCloseExecute(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure Tf_ShabExp.FormCreate(Sender: TObject);
+begin
+  f_db.LogonMasterSession(ora_Session);
+  q_prod.Open;
+  q_stan.Open;
+  q_tex_pd.Open;
+  q_dog.Open;
+  q_grid.Open;
+end;
+
+procedure Tf_ShabExp.grid1Exit(Sender: TObject);
+begin
+  if q_grid.Active and (q_grid.State<>dsBrowse) then q_grid.Post;
+end;
+
+procedure Tf_ShabExp.adAddExecute(Sender: TObject);
+begin
+{}
+  // Проверка
+  if not q_grid.Active then exit;
+  // Фиксируем изменения
+  Grid1Exit(Sender);
+  // Добавление документа
+  with tf_ShabExpNew.create(self) do
+  Begin
+    EditMode:=0;
+    EditId:=-1;
+    if ShowModal=mrOk then
+    Begin
+      // Позиционируемся на документ
+      f_db.ReQuery(q_grid,false);
+      q_grid.Locate('ID',EditId,[]);
+    end;
+    Free;
+  end;
+end;
+
+procedure Tf_ShabExp.acSaveExecute(Sender: TObject);
+begin
+  grid1Exit(Sender);
+  ora_Session.Commit;
+end;
+
+procedure Tf_ShabExp.acDelExecute(Sender: TObject);
+begin
+  try
+    pkgFor_nakl.CallProcedure('DelShabExp',[1,q_gridID.Value]);
+  except
+    on E: Exception do
+    Begin
+      // Отобразим ошибку
+      f_main.ApplSession.WriteToLog(amFull,'MO_ShabExp',sesError,E.Message,0,'');
+      ora_session.Rollback;
+      exit;
+    end;
+  End;
+  //Позиционируемся на документ
+  f_db.ReQuery(q_grid,false);
+
+end;
+
+procedure Tf_ShabExp.acCopyExecute(Sender: TObject);
+begin
+  // Проверка
+  if not q_grid.Active then exit;
+  // Фиксируем изменения
+  Grid1Exit(Sender);
+  // Добавление документа
+  with tf_ShabExpNew.create(self) do
+  Begin
+    EditMode:=2;
+    EditId:=-1;
+    if ShowModal=mrOk then
+    Begin
+      // Позиционируемся на документ
+      f_db.ReQuery(q_grid,false);
+      q_grid.DisableControls;
+      q_grid.Locate('ID',EditId,[]);
+      q_grid.EnableControls;
+    end;
+    Free;
+  end;
+end;
+
+procedure Tf_ShabExp.acEditExecute(Sender: TObject);
+begin
+  inherited;
+  // Проверка
+  if not q_grid.Active then exit;
+  // Фиксируем изменения
+  Grid1Exit(Sender);
+  // Добавление документа
+  with tf_ShabExpNew.create(self) do
+  Begin
+    EditId:=q_gridID.Value;
+    EditMode:=1;
+    if ShowModal=mrOk then
+    Begin
+      // Позиционируемся на документ
+      f_db.ReQuery(q_grid,true);
+    end;
+    Free;
+  end;
+
+
+end;
+
+procedure Tf_ShabExp.cbShowAllClick(Sender: TObject);
+begin
+  q_grid.Filtered:=not cbShowAll.Checked;
+end;
+
+procedure Tf_ShabExp.grid1GetCellParams(Sender: TObject; Column: TColumnEh;
+  AFont: TFont; var Background: TColor; State: TGridDrawState);
+begin
+  inherited;
+  if q_grid.Filtered then exit;
+  if q_gridFlg_dostup.Value=0 then Background:=clRed;
+end;
+
+end.

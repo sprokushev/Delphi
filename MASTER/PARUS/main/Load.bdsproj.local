@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2005.05.24 16:25:25.093.pas,C:\Borland\projs\parus\pech\cord_out.pas=</Transaction>
+    <Transaction>2005.05.24 16:25:25.093.dfm,C:\Borland\projs\parus\pech\cord_out.dfm=</Transaction>
+    <Transaction>2006.10.13 12:48:24.628.pas,C:\Projects\parus\main\Unit1.pas=C:\Projects\parus\main\DM.pas</Transaction>
+    <Transaction>2006.10.13 12:48:24.628.dfm,C:\Projects\parus\main\Unit1.dfm=C:\Projects\parus\main\DM.dfm</Transaction>
+    <Transaction>2006.10.13 12:49:05.909.pas,C:\Projects\parus\main\DM.pas=C:\Projects\parus\main\DMunit.pas</Transaction>
+    <Transaction>2006.10.13 12:49:05.909.dfm,C:\Projects\parus\main\DM.dfm=C:\Projects\parus\main\DMunit.dfm</Transaction>
+    <Transaction>2006.10.13 14:43:57.582.pas,C:\Projects\parus\main\Unit1.pas=C:\Projects\parus\main\EventUnit.pas</Transaction>
+    <Transaction>2006.10.13 14:43:57.582.dfm,C:\Projects\parus\main\Unit1.dfm=C:\Projects\parus\main\EventUnit.dfm</Transaction>
+    <Transaction>2006.10.25 10:50:45.418.pas,C:\Projects\parus\consord\cordload.pas=C:\Projects\parus\zakaz\ZakazLoad.pas</Transaction>
+    <Transaction>2006.10.25 10:50:45.433.dfm,C:\Projects\parus\consord\cordload.dfm=C:\Projects\parus\zakaz\ZakazLoad.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

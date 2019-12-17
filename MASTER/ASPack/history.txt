@@ -1,0 +1,132 @@
+	ASPack: Version History
+	-----------------------
+
+	Version 1.08.03 (14.05.99)
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
+	• Problem with latest AVP update fixed
+	• Support for DLLs without entry point (like CABINET.DLL) 
+	  added 
+	• Small decompressor's protection added	
+	• New languages added
+
+	  - Suomi
+	  - Slovene
+
+
+	Version 1.08.02 (14.04.99)
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
+	• New anti-dumping trick
+	• New languages added
+
+	  - Chinese (BIG5)
+	  - Chinese (GB)
+	  - Czech
+	  - Italian
+	  - Norwegian
+	  - Polski
+	  - Swedish
+
+
+	Version 1.08.01 (09.04.99)
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
+	• Default language bug fixed 
+	• Trial bug fixed 
+	• New languages added
+	  - Danish
+	  - Spanish
+	  - Dutch
+
+	Version 1.08 release (07.04.99)
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
+	• First release
+	• Documentation + FAQ updated
+	• Improved command line support
+	• Antivirus detection fixed (DrWeb, F-Prot)
+	• Resource aligning bug fixed
+	• Multilanguage support added
+	• Anti-virus self-checking added	
+	• Minor bugs fixed
+	
+
+	Version 1.07b beta (22.02.99)
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
+	• First full shareware release
+	• Main ASPack's web site moved to 
+  	  www.entechtaiwan.com/aspack.htm
+	• Authors e-mail now is devutils@entechtaiwan.com
+	• Documentation + FAQ added
+	• Added command line mask support
+	• Another LMD tools bug fixed
+	• Saves last processing file name in Open file dialog
+	• New options added:
+	  - add into (remove from) context menu 
+	  - auto run after loading 		
+	  - preserve extra data	
+	• Visual C++ and Visual Basic DLL (OCX) bug fixed
+
+
+	Version 1.061b beta (02.02.99)
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   
+	• Zero-resource bug fixed 
+	• «Use additional DLL loader» option added 
+	  (turn this off for Borland C++ compilers) 
+
+
+	Version 1.06b beta (30.01.99)
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	• Import loader improved 
+	• «Test» and «Restore» buttons added 
+	• Minor bugs fixed 
+
+
+	Version 1.05b beta (21.01.99)
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• LMD Tools bug fixed 
+	• Support for Clarion executables added 
+	• Support for Watcom C++ executables added 
+
+
+	Version 1.04b beta (13.01.99)
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• A lot of bugs from previous 1.03x versions fixed 
+	• Buggy antivirus CRC check removed 
+
+
+	Version 1.031b beta (11.01.99)
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Antivirus CRC check rewritten (would fail on Windows NT 4.x) 
+	• Support for Inprise (Borland) C++ executables added 
+
+	Version 1.03b (beta) (07.01.99)
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Compress ratio improved significantly 
+	• Antivirus CRC check added (for EXE-files only) 
+	• Delphi Type Library resource compression bug fixed 
+	• Visual C++ application compression bug under WinNT fixed 
+	• Visual Basic's application compression bug under WinNT fixed 
+	• «Open File» button added 
+	• Yellow logo fixed 
+	• Some options added 
+
+
+	Version 1.02b beta (21.12.98)
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	• AVP bug fixed (crazy heuristic mode) 
+	• Right mouse button menu item added (Compress with ASPack) 
+	• «Make *.bak copy» feature added 
+	• Cancel button behaviour improved
+	• *.DPL, *.BPL file mask added to «Open» dialog 
+
+
+	Version 1.01b beta (16.12.98)
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	• Full icons support added 
+	• added support for C++ Builder and other non-standard PE-header formats
+	• DLL packing bugs fixed 
+	• Common progress bar fixed 
+
+
+	Version 1.00b first beta (06.12.98)
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+	• First public release
+

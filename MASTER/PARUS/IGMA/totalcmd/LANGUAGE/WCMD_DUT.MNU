@@ -1,0 +1,118 @@
+POPUP "&Bestand"
+  MENUITEM "Attributen &wijzigen...", cm_SetAttrib
+  MENUITEM "&Inpakken...\tALT+F5", cm_PackFiles
+  MENUITEM "&Uitpakken...\tALT+F9", cm_UnpackFiles
+  MENUITEM "&Test archief\tALT+SHIFT+F9",518
+  MENUITEM "&Vergelijk inhoud...", 2022
+  MENUITEM "Verbi&nden...", cm_associate
+  MENUITEM "&Gegevens...\tALT+ENTER", cm_versioninfo
+  MENUITEM "&Bereken benodigde ruimte...", cm_GetFileSpace
+  MENUITEM "Meervoudig-&hernoemen-Tool...\tCtrl+T", 2400
+  MENUITEM "Wij&zig commentaar...\tCtrl+Z", 2700
+  POPUP "Afd&rukken"
+    MENUITEM "Bestands&lijst...", 2027
+    MENUITEM "Bestandslijst met &subdirectories...", 2028
+    MENUITEM "Bestandsin&houd\tCtrl+F9", cm_PrintFile
+  END_POPUP
+  MENUITEM SEPARATOR
+  MENUITEM "&Splits bestand...", 560
+  MENUITEM "Co&mbineer bestanden...", 561
+  MENUITEM "&Encodeer bestand (MIME,UUE,XXE)...", 562
+  MENUITEM "&Decodeer bestand (MIME,UUE,XXE,BinHex)...", 563
+  MENUITEM "Maak &CRC checksums (SFV formaat)...", 564
+  MENUITEM "Veri&fieer CRC checksums (van SFV bestanden)", 565
+  MENUITEM SEPARATOR
+  MENUITEM "&Afsluiten\tALT+F4", 24340
+END_POPUP
+
+POPUP "&Markeren"
+  MENUITEM "Markeer &groep...\tGrijze +", cm_spreadselection
+  MENUITEM "&Demarkeer groep...\tGrijze -", cm_shrinkselection
+  MENUITEM "Markeer &alles\tCTRL Grijze +", cm_selectall
+  MENUITEM "De&markeer alles\tCTRL Grijze -", cm_Clearall
+  MENUITEM "&Keer markering om\tGrijze *", cm_ExchangeSelection
+  MENUITEM "&Herstel markering\tNUM /", 529
+  MENUITEM SEPARATOR
+  MENUITEM "&Vergelijk directories\tShift+F2", cm_CompareDirs
+  MENUITEM "&Nieuwe markeren, gelijke weglaten", cm_DirMatch
+END_POPUP
+
+POPUP "&Opdracht"
+  MENUITEM "&CD boom...\tALT+F10", cm_CDtree
+  MENUITEM "&Zoek bestand...\tALT+F7", cm_searchfor
+  MENUITEM "&Schijfbenaming...", cm_VolumeId
+  MENUITEM "Systeem &Informatie...", cm_sysinfo
+  MENUITEM "Directories s&ynchroniseren...", 2020
+  MENUITEM "Directory &favorieten\tCTRL+D", 526
+  MENUITEM "&Ga terug\tAlt,pijl links", 570
+  MENUITEM SEPARATOR
+  MENUITEM "&DOS starten", cm_ExecuteDOS
+  MENUITEM SEPARATOR
+  MENUITEM "Boomw&eergave (met subdirectories)\tCtrl+B", 2026
+  MENUITEM "&Open map: bureaublad", 2121
+  MENUITEM "Achtergrond overdrachts&beheerder...",559
+  MENUITEM SEPARATOR
+  MENUITEM "&Wissel vensters\tCTRL+U", cm_exchange
+  MENUITEM "&Maak vensters gelijk", cm_matchsrc
+END_POPUP
+
+POPUP "&Netwerk"
+  MENUITEM "&Netwerkstation verbindingen...", cm_NetConnect
+  MENUITEM "Verbinding netwer&kstation verbreken...", cm_NetDisconnect
+  MENUITEM "&Huidige directory delen...", cm_NetShareDir
+  MENUITEM "Huidige directory de&len beëindigen...", cm_NetUnshareDir
+  MENUITEM "Toon administratieve netwerkstations", 2204
+  MENUITEM SEPARATOR
+  MENUITEM "FTP &Verbind...\tCTRL+F", 550
+  MENUITEM "FT&P Nieuwe verbinding...\tCTRL+N", 551
+  MENUITEM "FTP Ver&breek\tCTRL+SHIFT+F", 552
+  MENUITEM "FTP &Toon verborgen bestanden", 553
+  MENUITEM "FTP b&estanden van lijst downloaden", 558
+  MENUITEM "POORT verbinding met &andere PC...", 2300
+END_POPUP
+
+POPUP "&Weergave"
+  MENUITEM "&Kort\tCTRL+F1", cm_srcshort
+  MENUITEM "&Lang\tCTRL+F2", cm_srclong
+  MENUITEM "&Commentaar\tCtrl+Shift+F2", 300
+  MENUITEM "&Boom\tCTRL+F8", cm_srcTree
+  MENUITEM "&Snel bekijken\tCTRL+Q",304
+  MENUITEM "&Verticaal uitgelijnd", 305
+  MENUITEM SEPARATOR
+  MENUITEM "&Alle Bestanden\tCTRL+F10", cm_srcallfiles
+  MENUITEM "&Uitvoerbare bestanden\tCTRL+F11", cm_srcexecs
+  MENUITEM "*.*", cm_srcuserspec
+  MENUITEM "Aange&past...\tCTRL+F12", cm_srcuserdef
+  MENUITEM "Alleen geselectee&rde bestanden", 2023
+  MENUITEM SEPARATOR
+  MENUITEM "&Naam\tCTRL+F3", cm_srcbyname
+  MENUITEM "&Extensie\tCTRL+F4", cm_srcbyext
+  MENUITEM "&Tijd\tCTRL+F5", cm_srcbydatetime
+  MENUITEM "&Grootte\tCTRL+F6", cm_srcbysize
+  MENUITEM "&Ongesorteerd\tCTRL+F7", cm_srcunsorted
+  MENUITEM SEPARATOR
+  MENUITEM "O&mgekeerde volgorde", cm_srcnegorder
+  MENUITEM SEPARATOR
+  MENUITEM "Opnieuw &inlezen\tCTRL+R", cm_rereadsource
+END_POPUP
+
+POPUP "&Configuratie"
+  MENUITEM "&Opties...", cm_config
+  MENUITEM "&Werkbalk aanpassen...", cm_ButtonConfig
+  MENUITEM "Instellingsbestanden direct wij&zigen...", 581
+  MENUITEM "&Positie bewaren", cm_configSavepos
+  MENUITEM "Instellingen op&slaan", 580
+END_POPUP
+
+STARTMENU
+
+HELP_BREAK
+
+POPUP "&Help", HELP
+  MENUITEM "&Help-index\tF1", cm_HelpIndex
+  MENUITEM "&Toetsenbord indeling", cm_keyboard
+  MENUITEM "&Registratie-Info", cm_register
+  MENUITEM "&Bezoek Totalcmd web site", 640
+  MENUITEM SEPARATOR
+  MENUITEM "&Info Total Commander...", cm_About
+END_POPUP

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="wc2d7zhie_v">
+    <property name="$name" value="cordload" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="delphi:e_class:src:Load:cordload.TfrmCord">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraMain" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCord" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.dsCord" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.Panel1" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.Panel2" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.dbgCord" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.ActionManager1" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.acFilter" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.acLoad" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.BitBtn2" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.OraQuery" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.Panel3" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.Splitter3" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraParus" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCatalog" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.dsCatalog" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraQ" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.Splitter1" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraInvIns" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraInvsIns" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordSFACEACC" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordSAGENT" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordSTARIF" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordSSHIPVIEW" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordSPAY_TYPE" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordNOM_ZD" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordTONN_DECLARED" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordDATE_PLAN" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordINPUT_DATE" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordSAGNFIFO" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordSSUBDIV" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordSJUR_PERS" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordMODIF" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordMOD_MODIF" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordSTAN_NAME" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraProps" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.GroupBox1" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.Label2" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.Label3" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.deBeg" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.deEnd" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.BitBtn1" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraState" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.rbPotreb" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.rbArxPotr" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraDelIns" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraDelsIns" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraDelCat" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordPLANSTRU_ID" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.mteCatalog" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.mteCatalogRN" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.mteCatalogCRN" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.mteCatalogNAME" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.dsdCatalog" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.DBGridEh1" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraDelState" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.memo" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordTAXGR_CODE" />
+      <reference referencedUin="delphi:e_field:src:Load:cordload.TfrmCord.oraCordTAXGR_CODE_NEW" />
+      <reference referencedUin="delphi:e_method:src:Load:cordload.TfrmCord.DBGridEh1Columns0GetCellParams" />
+      <reference referencedUin="delphi:e_method:src:Load:cordload.TfrmCord.acFilterExecute" />
+      <reference referencedUin="delphi:e_method:src:Load:cordload.TfrmCord.FormCreate" />
+      <reference referencedUin="delphi:e_method:src:Load:cordload.TfrmCord.FormClose" />
+      <reference referencedUin="delphi:e_method:src:Load:cordload.TfrmCord.acLoadExecute" />
+      <reference referencedUin="delphi:e_method:src:Load:cordload.TfrmCord.dbgCordGetCellParams" />
+      <reference referencedUin="delphi:e_method:src:Load:cordload.TfrmCord.tvCatalogGetImageIndex" />
+      <reference referencedUin="delphi:e_method:src:Load:cordload.TfrmCord.LoadParus" />
+      <reference referencedUin="delphi:e_method:src:Load:cordload.TfrmCord.deBegChange" />
+      <reference referencedUin="delphi:e_method:src:Load:cordload.TfrmCord.WriteEvent" />
+    </reference>
+  </view>
+</nodeSet>

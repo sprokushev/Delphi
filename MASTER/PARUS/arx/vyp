@@ -1,0 +1,68 @@
+#===============================================================================
+#==TABLE no 66     : Документ Выписка
+# Name    |Descr                         |Type[A/S/U]|DBTableName|ReUsable  
+T=DH3303  |Документ Выписка              |A          |DH3303     |1         
+#-----Fields-------
+# Name      |Descr               |Type|Length|Precision
+F=IDDOC     |ID Document's       |C   |9     |0        
+F=SP3304    |(P)БанковскийСчет   |C   |9     |0        
+F=SP4084    |(P)Валюта           |C   |9     |0        
+F=SP3306    |(P)Приход           |N   |16    |2        
+F=SP3307    |(P)Расход           |N   |16    |2        
+F=SP3905    |(P)ВалСумма         |N   |16    |2        
+F=SP13136   |(P)НомерОбмена      |C   |20    |0        
+#===============================================================================
+#==TABLE no 67     : Документ (Мн.ч.) Выписка
+# Name    |Descr                         |Type[A/S/U]|DBTableName|ReUsable  
+T=DT3303  |Документ (Мн.ч.) Выписка      |A          |DT3303     |1         
+#-----Fields-------
+# Name      |Descr               |Type|Length|Precision
+F=IDDOC     |ID Document's       |C   |9     |0        
+F=LINENO    |LineNo              |N   |4     |0        
+F=SP3305    |(P)ВидДвижения      |C   |9     |0        
+F=SP3306    |(P)Приход           |N   |16    |2        
+F=SP3307    |(P)Расход           |N   |16    |2        
+F=SP3453    |(P)НазначениеПлатежа|C   |100   |0        
+F=SP3308    |(P)КоррСчет         |C   |9     |0        
+F=SP3309    |(P)Субконто1        |C   |23    |0        
+F=TSP3309   |                    |C   |3     |0        
+F=SP3310    |(P)Субконто2        |C   |23    |0        
+F=TSP3310   |                    |C   |3     |0        
+F=SP3311    |(P)Субконто3        |C   |23    |0        
+F=TSP3311   |                    |C   |3     |0        
+F=SP3902    |(P)Количество       |N   |15    |3        
+F=SP3905    |(P)ВалСумма         |N   |16    |2        
+F=SP3454    |(P)ПервичныйДокумент|C   |13    |0        
+#===============================================================================
+#==TABLE no 202    : Счета
+# Name    |Descr                         |Type[A/S/U]|DBTableName|ReUsable  
+T=1SACCS  |Счета                         |A          |1SACCS     |1         
+#-----Fields-------
+# Name      |Descr               |Type|Length|Precision
+F=ID        |Account Id          |C   |9     |0        
+F=PLANID    |Plan Id             |C   |4     |0        
+F=SCHKOD    |Account code(number)|C   |11    |0        
+F=SCHIM     |Account description |C   |25    |0        
+F=SCHV      |Flag Currency enable|N   |1     |0        
+F=SCHKOL    |Flag Amount enable  |N   |1     |0        
+F=SCHSINGLE |Flag no need corresp|N   |1     |0        
+F=ISFOLDER  |Flag Have child acco|N   |1     |0        
+F=ISMARK    |Flag Object is Marke|C   |1     |0        
+F=LEVEL     |Level of Account    |N   |3     |0        
+F=MDID      |Metadata Id         |C   |4     |0        
+F=ACTIVE    |Flag Active         |N   |1     |0        
+F=VERSTAMP  |Version stamp       |C   |6     |0        
+F=SC0       |                    |C   |4     |0        
+F=OSC0      |                    |N   |1     |0        
+F=FSC0      |                    |N   |1     |0        
+F=SC1       |                    |C   |4     |0        
+F=OSC1      |                    |N   |1     |0        
+F=FSC1      |                    |N   |1     |0        
+F=SC2       |                    |C   |4     |0        
+F=OSC2      |                    |N   |1     |0        
+F=FSC2      |                    |N   |1     |0        
+
+
+select 
+from dt3303,1saccs
+where 

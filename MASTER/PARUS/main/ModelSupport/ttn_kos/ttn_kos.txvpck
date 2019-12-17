@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet>
+  <view uin="rd28449np_v">
+    <property name="$name" value="ttn_kos" />
+    <property name="$defaultDiagram" value="True" />
+    <property name="$metaclass" value="Package Diagram" />
+    <reference referencedUin="delphi:e_class:src:Load:ttn_kos.TfrmTTNKos">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.Panel1" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.Panel2" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.dbgTTN17_cond" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.ActionManager1" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.acFilter" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.acLoad" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.BitBtn2" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.qLink" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.Panel3" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.Splitter3" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.oraParus" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.oraCatalog" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.dsCatalog" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.dsTTN" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.dsTTN17specs" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.Splitter1" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.dbgTTN17_new" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.oraInvIns" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.oraInvsIns" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.Splitter4" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.mLog" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.tTTN" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.tTTNspecs" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.qLinkIn" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.qLinkOut" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.qInS" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.oraFindPack" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.adoMain" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.PropStorageEh1" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.RegPropStorageManEh1" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.GroupBox1" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.Label1" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.edPath" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.BitBtn1" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.oraS" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.mteCatalog" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.mteCatalogRN" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.mteCatalogCRN" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.mteCatalogNAME" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.dsdCatalog" />
+      <reference referencedUin="delphi:e_field:src:Load:ttn_kos.TfrmTTNKos.DBGridEh1" />
+      <reference referencedUin="delphi:e_method:src:Load:ttn_kos.TfrmTTNKos.DBGridEh1Columns0GetCellParams" />
+      <reference referencedUin="delphi:e_method:src:Load:ttn_kos.TfrmTTNKos.acFilterExecute" />
+      <reference referencedUin="delphi:e_method:src:Load:ttn_kos.TfrmTTNKos.FormCreate" />
+      <reference referencedUin="delphi:e_method:src:Load:ttn_kos.TfrmTTNKos.FormClose" />
+      <reference referencedUin="delphi:e_method:src:Load:ttn_kos.TfrmTTNKos.acLoadExecute" />
+      <reference referencedUin="delphi:e_method:src:Load:ttn_kos.TfrmTTNKos.tvCatalogGetImageIndex" />
+      <reference referencedUin="delphi:e_method:src:Load:ttn_kos.TfrmTTNKos.LoadParus" />
+    </reference>
+  </view>
+</nodeSet>

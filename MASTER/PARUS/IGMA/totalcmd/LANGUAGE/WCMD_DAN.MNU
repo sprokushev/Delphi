@@ -1,0 +1,119 @@
+POPUP "&Fil"	
+  MENUITEM "&Ændre attributter...", cm_SetAttrib
+  MENUITEM "&Pak filer...\tAlt-F5", cm_PackFiles
+  MENUITEM "&Udpak filer...\tAlt-F9", cm_UnpackFiles
+  MENUITEM "Ko&ntroller arkiv(er)\tAlt-Shift-F9", cm_TestArchive
+  MENUITEM "Sammenlign &indhold...", cm_CompareFilesByContent
+  MENUITEM "Asso&cier...", cm_Associate
+  MENUITEM "E&genskaber...\tAlt-Enter", cm_VersionInfo
+  MENUITEM "B&eregn brugt plads...", cm_GetFileSpace
+  MENUITEM "Multi-omd&øbning...\tCtrl-T", cm_MultiRenameFiles
+  MENUITEM "Rediger &filkommentar\tCtrl-Z", 2700
+  POPUP "Udsk&riv"
+    MENUITEM "Fil&liste...", cm_PrintDir
+    MENUITEM "Filliste med &undermapper...", cm_PrintDirSub
+    MENUITEM "Fil&indhold\tCtrl-F9", cm_PrintFile
+  END_POPUP
+  MENUITEM SEPARATOR
+  MENUITEM "&Opdel fil...", cm_Split
+  MENUITEM "&Saml filer...", cm_Combine
+  MENUITEM "&Kod fil (MIME, UUE, XXE)...", cm_Encode
+  MENUITEM "&Dekod fil (MIME, UUE, XXE, BinHex)...", cm_Decode
+  MENUITEM "Dan CRC-c&hecksumsfil (SFV-format)...", cm_CRCcreate
+  MENUITEM "Kontroller CRC-checksu&msfil (fra SFV-filer)...", cm_CRCcheck
+  MENUITEM SEPARATOR
+  MENUITEM "Afslu&t\tAlt-F4", cm_Exit
+END
+
+POPUP "&Marker"
+  MENUITEM "&Udvid valg...\tGrå +", cm_SpreadSelection
+  MENUITEM "In&dskrænk valg...\tGrå -", cm_ShrinkSelection
+  MENUITEM "Vælg &alle\tCtrl-Grå +", cm_SelectAll
+  MENUITEM "&Fravælg alle\tCtrl-Grå -", cm_ClearAll
+  MENUITEM "&Inverter valg\tGrå *", cm_ExchangeSelection
+  MENUITEM "&Gendan valg\tGrå /", cm_RestoreSelection
+  MENUITEM SEPARATOR
+  MENUITEM "&Sammenlign vinduer\tShift-F2", cm_CompareDirs
+  MENUITEM "Marker &nyere, gem ens filer", cm_DirMatch
+END_POPUP
+
+POPUP "&Kommandoer"
+  MENUITEM "Mappes&truktur...\tAlt-F10", cm_CDtree
+  MENUITEM "Find fi&ler...\tAlt-F7", cm_SearchFor
+  MENUITEM "Sæt disk&navn...", cm_VolumeId
+  MENUITEM "System &Information...", cm_sysinfo
+  MENUITEM "S&ynkroniser mapper...", cm_FileSync
+  MENUITEM "Favorit&mapper\tCtrl-D", cm_DirectoryHotlist
+  MENUITEM "Til&bage\tAlt-Venstre", cm_GotoPreviousDir
+  MENUITEM SEPARATOR
+  MENUITEM "Start &DOS-session", cm_ExecuteDOS
+  MENUITEM SEPARATOR
+  MENUITEM "&Udvid visning (med undermapper)\tCtrl-B", cm_DirBranch
+  MENUITEM "Vis &skrivebord", cm_OpenDesktop
+  MENUITEM "Bagg&rundsoverførsel...", cm_OpenTransferManager
+  MENUITEM SEPARATOR
+  MENUITEM "Venstre &<-> Højre\tCtrl-U", cm_Exchange
+  MENUITEM "Venstre &= Højre", cm_MatchSrc
+END_POPUP
+
+POPUP "&Net"
+  MENUITEM "Net&værkstilslutninger...", cm_NetConnect
+  MENUITEM "&Fjern netværksdrev...", cm_NetDisconnect
+  MENUITEM "Del &aktuel mappe...", cm_NetShareDir
+  MENUITEM "&Ophør med deling af mappe...", cm_NetUnshareDir
+  MENUITEM "Vis administrative &delinger", cm_AdministerServer
+  MENUITEM SEPARATOR
+  MENUITEM "Tilslut til FTP-&server...\tCtrl-F", cm_FtpConnect
+  MENUITEM "Ny FT&P-forbindelse...\tCtrl-N", cm_FtpNew
+  MENUITEM "Afbryd FTP-forbind&else\tCtrl-Shift-F", cm_FtpDisconnect
+  MENUITEM "FTP Vis skj&ulte filer", cm_FtpHiddenFiles
+  MENUITEM "FTP do&wnload fra liste...",  cm_FtpDownloadList
+  MENUITEM "&Kabelforbindelse til anden PC...", cm_DirectCableConnect
+END_POPUP
+
+POPUP "&Vis"
+  MENUITEM "&Kort visning\tCtrl-F1", cm_SrcShort
+  MENUITEM "&Lang visning\tCtrl-F2", cm_SrcLong
+  MENUITEM "&Filkommentarer\tShift-Ctrl-F2", 300
+  MENUITEM "Mappeoversig&t\tCtrl-F8", cm_SrcTree
+  MENUITEM "&Hurtig visning\tCTRL-Q",cm_SrcQuickview
+  MENUITEM "Vertikal visnin&g", cm_VerticalPanels
+  MENUITEM SEPARATOR
+  MENUITEM "&Alle Filer\tCtrl-F10", cm_SrcAllFiles
+  MENUITEM "&Programmer\tCtrl-F11", cm_SrcExecs
+  MENUITEM "*.*", cm_srcuserspec
+  MENUITEM "Mask&e...\tCtrl-F12", cm_SrcUserDef
+  MENUITEM "Kun &valgte filer", cm_ShowOnlySelected
+  MENUITEM SEPARATOR
+  MENUITEM "&Navne-sortering\tCtrl-F3", cm_SrcByName
+  MENUITEM "T&ype-sortering\tCtrl-F4", cm_SrcByExt
+  MENUITEM "Dato-sorter&ing\tCtrl-F5", cm_SrcByDateTime
+  MENUITEM "&Størrelse-sortering\tCtrl-F6", cm_SrcBySize
+  MENUITEM "&Uden sortering\tCtrl-F7", cm_SrcUnsorted
+  MENUITEM SEPARATOR
+  MENUITEM "O&mvendt sortering", cm_SrcNegOrder
+  MENUITEM SEPARATOR
+  MENUITEM "&Opdater vindue\tF2 / Ctrl-R", cm_RereadSource
+END_POPUP
+
+POPUP "&Opsætning"
+  MENUITEM "&Indstillinger...", cm_Config
+  MENUITEM "Ændre &knappanel...", cm_ButtonConfig
+  MENUITEM "&Rediger ini-filer direkte...", 581
+  MENUITEM "Ge&m vinduesposition", cm_ConfigSavepos
+  MENUITEM "&Gem indstillinger", cm_ConfigSaveSettings
+END_POPUP
+
+STARTMENU
+
+HELP_BREAK
+
+POPUP "&Hjælp", HELP
+  MENUITEM "&Index\tF1", cm_HelpIndex
+  MENUITEM "&Tastatur", cm_Keyboard
+  MENUITEM "&Registrerings-Info", cm_Register
+  MENUITEM "Totalcmd på &WWW", cm_VisitHomepage
+  MENUITEM SEPARATOR
+  MENUITEM "&Om Total Commander...", cm_About
+END_POPUP
+

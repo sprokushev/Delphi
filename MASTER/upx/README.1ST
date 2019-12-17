@@ -1,0 +1,33 @@
+                 ooooo     ooo ooooooooo.   ooooooo  ooooo
+                 `888'     `8' `888   `Y88.  `8888    d8'
+                  888       8   888   .d88'    Y888..8P
+                  888       8   888ooo88P'      `8888'
+                  888       8   888            .8PY888.
+                  `88.    .8'   888           d8'  `888b
+                    `YbodP'    o888o        o888o  o88888o
+
+
+                    The Ultimate Packer for eXecutables
+
+
+
+WARNING - UNSTABLE BETA VERSION
+===============================
+
+All versions 1.9x are unstable beta releases - use them only for testing,
+and never distribute a program that is packed with them !
+There will be hidden bugs. Really.
+
+The current stable release is 1.25, and the next stable release
+will be called version 2.00.
+
+The main news since 1.25 are:
+  - slightly better compression using the new NRV2E algorithm
+  - new options for compression tuining (e.g. `--brute')
+  - support for bootable Linux kernels ("vmlinuz/386")
+  - support for Linux kernel building  ("vmlinux/386")
+  - direct Linux ELF-to-memory decompression ("linux/elf386") and
+    shell-to-memory decompression ("linux/sh386")
+  - support for playstation exes ("ps1/exe")
+  - lots of new bugs ;-) take care
+

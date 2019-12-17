@@ -1,0 +1,24 @@
+DEFAULT.BAR Default button bar file
+NO.BAR Empty button bar file
+WCMZIP32.DLL Zip packer DLL
+WCMICONS.DLL Icons for button bar
+WC32TO16.EXE Helper tool to set the date/time of directories on Win9x and ME
+UNRAR.DLL RAR unpacker DLL
+UNACEV2.DLL ACE unpacker DLL
+SHARE_NT.EXE Helper tool to show share/unshare dialog on Windows NT
+SFXHEAD.SFX Self extracting header for ZIP
+HISTORY.TXT History of all changes
+FRERES32.DLL Library to get free system resources on Windows 9x/ME
+CGLPTNT.SYS Parallel port driver for Windows NT/2000/XP
+CGLPT9X.VXD Parallel port driver for Windows 9x/ME
+CABRK.DLL CAB unpacker DLL
+descript.ion This file contains these descriptions! Use Ctrl+Z to change them.
+LANGUAGE Additional Totalcmd languages can be found on our addons page on www.ghisler.com
+REGISTER.WRI Registration form
+KEYBOARD.TXT Keyboard layout
+TOTALCMD.INC Command strings for menu and button bar
+TOTALCMD.EXE Total Commander - Main Program
+TOTALCMD.HLP Help file
+TCUNINST.EXE Uninstall and repair tool
+TCUNINST.WUL Uninstall list (files to be removed)
+WCUNINST.WUL Old uninstall list of Wincmd

@@ -1,0 +1,6 @@
+open 10.202.129.110
+unp
+1r9s%QLb
+bin
+delete SH022_00334417.csv 
+bye

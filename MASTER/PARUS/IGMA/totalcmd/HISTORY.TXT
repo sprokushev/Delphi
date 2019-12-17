@@ -1,0 +1,736 @@
+04.11.02 Release Total Commander 5.50 Silent update 1
+04.11.02   Fixed: File name and comment could overlap when showing extensions directly after file names
+04.11.02   Fixed: Lister: RTF viewer printed unlimited number of pages
+03.11.02   Fixed: Switch /O no longer working
+
+29.10.02 Release Total Commander 5.50 Final
+29.10.02   Added: Conversions to new name "Total Commander" completed
+29.10.02   Fixed: In F5-Copy dialog, allow user to uncheck "Overwrite hidden/system/read only"
+29.10.02   Fixed: When user tries to download a file from a file system plugin to an archive, suggest the parent dir of the archive as the target
+29.10.02   Fixed: Show error "Function not supported" when user tries to upload a file from inside a ZIP to a file system plugin
+29.10.02   Fixed: Ctrl+Alt+Click on F5 button didn't create archive in same dir
+29.10.02   Fixed: Drop URL from Internet Explorer on Totalcmd now creates .URL file, Shift+Drop starts download
+23.10.02   Added: Conversions to new name "Total Commander" start
+
+22.10.02 Release Wincmd 5.50 Release Candidate 1
+22.10.02   Added: Compare by contents: Detect lines longer than 16350 chars as beeing different in text mode (was seen as identical)
+22.10.02   Added: Compare by contents: Alt+Cursor left/right scrolls by 30 characters
+22.10.02   Fixed: When moving files and a disk full error occurs, the cursor may be set on a non-existing item in the file list
+22.10.02   Fixed: Removed '&' sign in some dialogs (e.g. Rename fs-plugin dialog)
+22.10.02   Fixed: RAR32 and ACE32: Also allow long names with spaces as archive names
+22.10.02   Fixed: 32-bit external packers: Set source dir to long name before calling packer
+22.10.02   Added: Recognize html bookmarks exported by Internet Explorer (which don't have a <head> or <body> tag)
+22.10.02   Fixed: Create CRC checksums: when using the tree button, preserve the file name
+18.10.02   Fixed: Subdirs sometimes not deleted when using 'skip' or when a descript.ion file is present
+18.10.02   Fixed: "Edit ini files directly" not working if ini files in windows dir
+18.10.02   Fixed: Use own function to convert current date to string in search function, because Delphi function may make invalid conversion
+18.10.02   Fixed: When packing from 'search'-'feed to listbox', only short names were created
+18.10.02   Added: Search backwards in RTF
+18.10.02   Fixed: Search no longer worked in RTF control (Lister)
+
+16.10.02 Release Wincmd 5.50 Beta 4
+15.10.02   Fixed: Hide comment if descript.ion contains empty comment
+15.10.02   Fixed: 16 bit version couldn't open all dialogs due to low local heap
+15.10.02   Fixed: Support Explorer-private associations also on Win2k and WinME (was already supported on XP)
+15.10.02   Fixed: Compare by contents: Limit re-sync length to 50'000 lines to avoid endless wait
+13.10.02   Added: Synchronize dirs: Keep cursor on current file if user switches on/off display options (e.g. equal files)
+11.10.02   Fixed: When user enters incomplete path to archive, Wincmd converts it to full path (for plugins)
+11.10.02   Added: Synchronize dirs: When deleting files, don't simply skip read-only files, ask the user instead
+11.10.02   Added: wincmd.ini [Configuration] olecomments=0 turns off retrieval of Explorer comments (only get comments from text description files)
+10.10.02   Fixed: Show Network Neighborhood also when there is no net, to show file system plugins
+10.10.02   Fixed: Files in zip containing multiple dots could still be converted to lowercase
+10.10.02   Added: wincmd.ini [Configuration] SearchInFiles=*.jar *.exe  forces Wincmd to search in these additional archive types
+10.10.02   Fixed: Couldn't create one archive per file when file name contained ' -' (was interpreted as a switch)
+10.10.02   Fixed: Don't try to open ini files for editing if they don't exist
+10.10.02   Fixed: Wrong title in Ctrl+D - Add current dir
+
+09.10.02 Release Wincmd 5.50 Beta 3
+09.10.02   Fixed: Search - go to file: Don't place cursor at bottom of list
+09.10.02   Fixed: Wincmd reported a bad CRC for 0 byte files in archives which weren't actually bad
+09.10.02   Fixed: Calculate occupied space no longer showed the unit 'k'.
+09.10.02   Fixed: Always show comments to the lower right of the mouse cursor when the option "Win32 style comments" is checked
+08.10.02   Fixed: cm_LeftComments and cm_RightComments internal commands didn't work
+06.10.02   Added: Menu item to edit ini files
+06.10.02   Fixed: Allow values in single quotes in HTML, e.g. <a href='somefile'>
+06.10.02   Fixed: WinME: Wrong tips shown for folders (WinME returned empty string instead of NULL string)
+06.10.02   Fixed: When switching to vertical arrangement during comments view, tabstops could get wrong
+06.10.02   Fixed: Access violation in 16bit version when trying to use 'cd command' button in buttonbar
+04.10.02   Fixed: 4th or 5th mouse button click on AVI window in lister hanged Wincmd
+04.10.02   Added: File system plugin interface: Sum up dirs with Spacebar or Alt+Shift+Enter
+04.10.02   Added: descriptions to Wincmd dir
+04.10.02   Fixed: Comments view: no hints shown if file name truncated
+04.10.02   Fixed: Strings " of " and " free" now contain the spaces (for languages with a dash after the 'k' or 'M' display)
+04.10.02   Fixed: Background transfer manager had no press bar when adding selected files for download with "+" button
+02.10.02   Fixed: Potential division by zero error in Windows CE plugin
+02.10.02   Fixed: RTF control forgets margins when switching between wrapped and unwrapped mode
+02.10.02   Fixed: Synchronize dirs: do not synchronize comment files (the comments will be synchronized with the files)
+02.10.02   Fixed: Exclude comment files from multi-rename tool. To include them, you need to enable copying of these files.
+02.10.02   Fixed: When renaming, moving, copying or deleting files, skip comment files except if it's the only selected file
+01.10.02   Fixed: SFTP Plugin: Create new connection with F7
+01.10.02   Fixed: Don't try to get file tip window again and again if it failed the first time and the mouse wasn't moved
+01.10.02   Fixed: New internal command cm_VisDriveButtons didn't display volume label+disk size
+01.10.02   Fixed: Multi-rename tool: Show '..' after shortened numbers
+01.10.02   Fixed: SFTP Plugin: Forget password when user clicks on disconnect
+01.10.02   Fixed: When deleting subdirs, show no error when comment file is already deleted
+01.10.02   Added: Sync dirs: Added browse buttons >> for target dirs
+01.10.02   Fixed: Hide tooltips when any key is pressed, until the mouse is moved again
+01.10.02   Fixed: Only descript.ion files are created hidden, files.bbs are created normally
+01.10.02   Fixed: Background transfer manager: Don't show "Continue with next" if no file in list and user clicks on "-"
+01.10.02   Fixed: Shortcut definitions not shown with correct font in Starter - Change starter menu
+30.09.02   Fixed: Two strings were missing (1520+1521)
+30.09.02   Added: Resume upload: if SIZE command not supported, rely on size returned through FTP listing (less safe)
+29.09.02   Fixed: Search in CAB files: F3 sometimes opened wrong file (when file was reaching in next archive of multi-volume archive)
+29.09.02   Fixed: Try to catch bad mouse messages to drive combobox (Logitech mouse problem)
+
+26.09.02 Release Wincmd 5.50 Beta 2
+26.09.02   Added: Show free+total disk space exactly like footer (selected files): User can choose between bytes, kbytes and dynamic
+26.09.02   Fixed: In Compare by contents, move cursor with search result
+26.09.02   Fixed: In Compare by contents, changed search result underline color to green
+26.09.02   Fixed: Changed default color of differences in compare by contents to red (because WinXP uses a light blue to show selected lines)
+26.09.02   Fixed: If 2 FTP connections are open and Wincmd tries to reconnect the second, it may show the wrong path
+26.09.02   Fixed: Couldn't unpack ZIP archive with Alt+F9 which contained the full path to the file (including drive)
+26.09.02   Fixed: Use Ansi font for Ansi comments
+26.09.02   Added: Set default comment type to descript.ion with ANSI charset
+26.09.02   Added: Option to choose whether to store file comments with DOS (ASCII) or Windows (ANSI) charset. Default is ANSI.
+26.09.02   Fixed: When deleting html files in lower dir levels with associated "filename_files" subdir, Wincmd could show error "Could not delete directory xyz"
+26.09.02   Fixed: Sometimes there was no progressbar shown for background downloads
+26.09.02   Fixed: Don't react to Ctrl+Z in inplace rename field or command line (it's used for undo by the edit field)
+24.09.02   Fixed: When moving a file comment from one format to the other, the comment type wasn't always adjusted
+24.09.02   Fixed: FTP toolbar wasn't shown after dropping ftp url to Wincmd
+24.09.02   Added: Commands cm_CopySrcPathToClip and cm_CopyTrgPathToClip to copy current source/target path to clipboard
+22.09.02   Fixed: Problems with RTF viewer on NT4
+22.09.02   Fixed: When switching between horizontal and vertical arrangement, scroll item under cursor into view
+22.09.02   Fixed: clear color cache when user presses F2, so all custom file colors are re-read (necessary for time-dependent colors, e.g. files max 1 day old)
+22.09.02   Added: "Save position": Saves separate window width/separators in comments view mode! You can make the panel wider and choose "Save posision"
+22.09.02   Added: Comments view (Ctrl+Shift+F2): use fixed tab position for comments (even when resizing window)
+22.09.02   Fixed: When a foreground thread finished while a background thread showed the overwrite dialog, the dialog disappeared! Solution: Don't close FG progress until BG dialog used.
+20.09.02   Added: FTP resume upload now uses SIZE+APPE instead of REST+STOR. Reason: bugs in some ftp servers corrupted uploaded data!
+20.09.02   Added: Delete sfv files when user aborts its creation and the file doesn't contain any checksums
+20.09.02   Fixed: Synchronize dirs asymmetric mode: Don't delete empty dirs by default, user needs to check this option
+20.09.02   Fixed: Alt+F3 on file when no default external lister defined -> wincmd passed DOS name to lister
+20.09.02   Fixed: Drag a link from Mozilla to Wincmd didn't work
+20.09.02   Fixed: When changing descript.ion file, don't show data after Ctrl+D character to the user
+20.09.02   Fixed: When showing comments, don't show data after Ctrl+D character to the user
+20.09.02   Fixed: Some dirs appear in uppercase in the tree
+17.09.02   Fixed: No comment was shown if the file name was in double quotes but didn't contain any space
+17.09.02   Added: Internal commands to Show/hide various user elements (cm_visButtonbar etc.)
+17.09.02   Added: FTP-Connect via Ctrl+D now also works with target dir
+17.09.02   Fixed: Expandable tree didn't initially show special icons, e.g. for recycle bin
+17.09.02   Fixed: Drag&Drop was not working with file system plugins
+17.09.02   Fixed: Buttons slow while browsing with file system plugin
+17.09.02   Fixed: Stored 2 different paths to same ftp server in Ctrl+D, open both in left+right window sets wrong path in first
+17.09.02   Fixed: Branch view, Mark newer, hide same files could show too many files and crash
+17.09.02   Fixed: Crash when disconnecting from ftp while focus is in history list window
+17.09.02   Added: Checkbox to also save the target dir in Ctrl+D menu
+17.09.02   Fixed: Don't allow the user to enter a dash "-" as the first char when changing user menu title (it's used for submenus)
+17.09.02   Fixed: Create description files as hidden files
+17.09.02   Fixed: Multi-rename tool: don't store <Clear> as replacement text
+17.09.02   Added: Always enclose Multi-Rename settings in double quotes to preserve spaces
+17.09.02   Added: Comment-change dialog: Let user choose between Windows and DOS font (comments are always STORED in DOS font)
+17.09.02   Added: Comment-change dialog: Also support Ctrl+Enter to save comment
+17.09.02   Fixed: Changed maximum allowed comment length for descript.ion lines to 511
+17.09.02   Added: RTF viewer: Set left margin of 8 pixels
+17.09.02   Fixed: Show->Comments not working in English version
+17.09.02   Fixed: Crash on CRC check of packer plugin
+17.09.02   Fixed: File system plugins couldn't be loaded on Win9x/ME
+
+16.09.02 Release Wincmd 5.11 Final (just the bugfixes)
+14.09.02   Fixed: Copying to device with trailing colon (e.g. prn:) was no longer possible
+14.09.02   Fixed: Delete comment file if it contains no more comments (size=0)
+14.09.02   Fixed: Don't modify comment file when deleting a file and no comment exists for this file
+13.09.02   Fixed: Store last cursor positions for selection separately per file pane
+12.09.02   Fixed: Searching on multiple drives was not working if space after ";", e.g. c:\; d:\; e:\
+12.09.02   Fixed: Packing with ARJ no longer packed recursively (folders in subfolders were not packed)
+12.09.02   Fixed: Files in subdirs may be copied in reverse order
+12.09.02   Fixed: Don't show file tip while right click context menu is open
+12.09.02   Fixed: Lister was sometimes not switching to next RTF file with 'n' key
+
+11.09.02 Release Wincmd 5.50 Beta 1
+11.09.02   Added: HTML viewer: Use id="name" as jump target, this may be present in any supported tag, e.g. <p id="name"> instead of the usual <a name="name">
+11.09.02   Fixed: Also refresh other panel when changing attributes in subdirs and the other panel shows a subdir of the active panel
+11.09.02   Fixed: FTP upload in background: Also cause a refresh if the transfer was aborted (to show partial file)
+11.09.02   Added: CRC creation and branch view: Don't try to create SFV files in subdirs if user gives different target dir
+10.09.02   Added: Make CRC creation work correctly with Branch View (Ctrl+B): A single SFV file contains relative paths to subdirs; individual SFV files are created in the subdirs
+10.09.02   Fixed: Lister: When copying ASCII text, don't set cf_locale clipboard format any more (can cause problems)
+10.09.02   Added: Search function: Ctrl+C or Ctrl+Insert in result list copies whole list to clipboard
+10.09.02   Added: CRC check function: Copy selected lines in listbox to clipboard with Ctrl+C or Ctrl+Insert
+08.09.02   Added: Call external WinRAR for unpacking when RAR with encryped headers is detected
+08.09.02   Added: Change attributes on FTP: Allow user to enter Unix mode numerically
+08.09.02   Fixed: Press Tab, then Shift+Click to select files -> Selection started at the wrong item
+08.09.02   Added: wincmd.ini [Configuration] iconsspecialfolders=  allows to enable/disable display of special folder icons (0=none, 1=local, 2=in nethood, 3=both)
+08.09.02   Fixed: Search function couldn't find file names in double quotes "" except if they contained a space!
+08.09.02   Added: Wincmd can now look into Winzip-stype 'split-zip' files. Naming convention: file.z01, file.z02, ... last part: file.zip (!)
+08.09.02   Fixed: FTP upload resume: No longer ignore last 10 k (Reason: Some faulty FTP servers ignore the number passed in the REST command and always restart at the end!)
+08.09.02   Fixed: Changed some buttons in English and German: RenMov -> Move, MkDir->NewFolder
+05.09.02   Fixed: WinXP: Some associations stopped working
+03.09.02   Added: Flag PK_CAPS_HIDE for packer plugins, associated files will not show up with packer icon and need to be opened with Ctrl+PgDn
+03.09.02   Fixed: HTML viewer: convert special characters also in links, e.g. &amp; -> "&"
+03.09.02   Fixed: Calculate new total of all selected subdirs when copying/moving with F5/F6
+03.09.02   Added: Show custom icons for file system plugins (just use first icon found inside the plugin)
+01.09.02   Added: Option to keep unpacked files (from zip) even if the CRC checksum is wrong
+01.09.02   Added: Option to open partial zip files, allows to look inside a ZIP during the download!
+31.08.02   Fixed: Plugin interface: No auto-refresh after chmod
+31.08.02   Fixed: Make links work with file system plugins
+
+28.08.02 Release Wincmd 5.10 Final
+27.08.02   Fixed: When copying to removable NTFS volume, don't call "Flush" every xx seconds (causing problems with preallocation)
+22.08.02   Fixed: Installer hangs if any of the target files has the hidden attribute
+
+21.08.02 Release Wincmd 5.10 RC1
+20.08.02   Fixed: Diskdir plugin: Extract file date/time with files
+20.08.02   Fixed: Ctrl+B Branch view: Drag file from subdir with spaces in it to button bar button would not open the file
+20.08.02   Fixed: FTP: When editing a file with F4, then disconnecting and reconnecting to other server, the file was re-uploaded to the wrong server
+
+14.08.02 Release Wincmd 5.10 Beta 2
+14.08.02   Fixed: Crash on Alt+Enter if WinRAR 3 installed
+13.08.02   Fixed: Moved creation of sound registry keys to configuration dialog - only if "Configure sounds" button is clicked
+12.08.02   Fixed: Make Wincmd work with current RAR.EXE version (Winrar.exe already worked, use this if possible)
+07.08.02   Fixed: Shift+Enter didn't work inside of archives
+07.08.02   Fixed: "Show (Lister)" no longer working in context menu
+
+06.08.02 Release Wincmd 5.10 Beta 1 (without the new features, just the fixes)
+06.08.02   Fixed: Parameter %P in button bar: Remove "0:" pseudo drive for ftp connections
+04.08.02   Fixed: Search function unpacked ACE archives even when it didn't search for text
+31.07.02   Added: Show name of logged-on user in the title bar if the program was started with RunAs
+30.07.02   Fixed: Win32-style hints crash in Ctrl+B mode
+30.07.02   Fixed: Compare by contents: If one listbox has a horizonal scrollbar and the other hasn't, scrolling to the end brings lists out of sync
+30.07.02   Fixed: User-defined hotkeys didn't work with RestrictInterface=1 (turning off the start menu)
+28.07.02   Added: Support for TAR files >2GB (the individual packed files must be smaller than 2 GB!)
+28.07.02   Fixed: On Win9x+ME, the parallel port driver cannot be loaded if the directory contains a non-English accented character -> copy driver temporarily to system directory
+28.07.02   Fixed: Parameter /L=//servername/ didn't work, only /L=//servername/share
+26.07.02   Added: Drag a link from IE to Wincmd to open the URL dialog to download the linked file
+26.07.02   Fixed: Shift+F4 (new file) didn't work if editor was defined with "%1" parameter
+26.07.02   Added: Translate environment variables in the command line, e.g. cd %windir%  ->  cd c:\windows
+26.07.02   Fixed: Right click on drive button and choosing a command from the 'New' submenu sometimes created the new item in the current directory
+23.07.02   Added: wincmd.ini, [Configuration], XPMoveMethod=1/0 sets move method described below also on other operating systems (Win2k/NT4)
+23.07.02   Added: WinXP: Make Wincmd behave like Explorer when moving files: The target file always gets the permissions of the target directory and doesn't keep its own
+23.07.02   Fixed: WinXP shows other computers in Nethood subdirs in the form "Server Comment (servername)". Changed to "servername".
+23.07.02   Added: Show warning in sync function and in "compare by contents" if source and target contain the same dir
+23.07.02   Fixed: When unpacking to temp dir on ENTER, remove read-only attribute so file can be deleted later
+19.07.02   Added: Multi-rename tool, search+replace: added wildcard '*' which stands for 0 or more characters
+19.07.02   Added: Multi-rename tool, search+replace: added wildcard '?' which stands for a single character
+19.07.02   Fixed: FTP: access violation if local name too long
+19.07.02   Fixed: Sync tool: German 'sz' letter was detected as being the same as 'ss' in sync tool ('feature' of the 'CompareString' function of Windows...)
+19.07.02   Fixed: background transfer manager: Total length of source+target dir couldn't exceed 259 characters
+14.07.02   Added: Updated help files to reflect the new functions
+14.07.02   Fixed: FTP always open in left or right window wasn't correctly saved
+10.07.02   Added: Changed shortcut to edit comments to Ctrl+Z
+02.07.02   Fixed: Compare by content, if file too big, the file handle wasn't always closed after compare failed
+25.06.02   Fixed: Configuration dialog, when changing fonts, the preview shows the wrong fonts after clicking "Apply"
+25.06.02   Added: Change size display of total/marked files in footer below file lists (bytes, k or dynamic)
+25.06.02   Added: On FTP downloads, replace colon ":" by underscore "_" because otherwise Windows creates a named substream on NTFS
+25.06.02   Added: New drag&drop method: Before releasing the left mouse button, hold down the right button -> Files will be moved! (same as Shift+Drop)
+20.06.02   Added: Option in Configuration - Misc to always open new FTP connections in the left or right file panel instead of the active file panel
+20.06.02   Added: Command line during FTP connection: "PUT" command now supports absolute paths, e.g. PUT c:\files\file.txt
+20.06.02   Added: Synchronize dirs, asymmetric mode: Option to delete all empty dirs in right window (not available in zip or ftp)
+19.06.02   Added: File system plugin configuration dialog to load .wfx plugins
+18.06.02   Fixed: Creating multi-volume ZIP archives slow on Win2k
+18.06.02   Fixed: Background transfer manager: "-" button removed wrong items from list if already downloaded a file
+18.06.02   Fixed: Show file sizes >2 GB also in overwrite confirmation dialog
+18.06.02   Added: Wincmd now shows name of user account used to launch it, if different from current session (e.g. using RunAs)
+11.06.02   Added: In Copy dialog, "Options" button which allows to set "Overwrite all", "Skip all" etc. before copying
+11.06.02   Fixed: Parallel port server in Wincmd16: Could not access empty drives (e.g. floppy with no files)
+11.06.02   Fixed: Command line: Forward slashes will now be converted to backslashes on local drives
+11.06.02   Added: Lister: Show frame numbers if avi format doesn't support time format
+01.06.02   Added: Current transfer speed and approx. remaining time to file system plugin
+31.05.02   Fixed: Selection with Shift+Left click didn't always work after selecting first item with right click
+31.05.02   Added: Synchronize dirs: Total % of comparison now calculated by file size, not number of files
+31.05.02   Added: Support for <XMP> tag in lister (same as <PRE>)
+31.05.02   Fixed: In place rename in ZIP can now also be invoked by a slow double click
+31.05.02   Added: Search for multiple paths in search function now also works with UNC paths, e.g. \\server\share1;\\server\share2
+31.05.02   Added: Multi-rename tool: Load/Save settings, for often used changes
+30.05.02   Added: Lister: In 'Fit to window' mode, resize the video window to the lister window
+29.05.02   Added: FTP: When using auto-retry, also wait for the retry timeout after the first connection attempt
+27.05.02   Added: Remove file tip window when any key is pressed
+14.05.02   Added: Copying of comments (descript.ion and files.bbs)
+14.05.02   Added: SHA1 authentication to FTP client
+14.05.02   Fixed: Drag other window over drive button bar could show frame
+14.05.02   Fixed: In the button bar, a button was shown as down after right clicking on it
+13.05.02   Added: YENC decoder in files - decode files (with CRC and size check, supports multi-part)
+13.05.02   Added: FTP client will send FEAT command to ask for ftp server features MDTM and LIST -lT (full date/time display)
+10.05.02   Added: SFV function can now also create and check MD5 checksums. The created format is <checksum> <filename>, but verification also accepts <filename> <checksum>
+10.05.02   Added: FTP client: Upload/download files > 4 GB, also with resume
+05.05.02   Added: Show comments from descript.ion, files.bbs, Word documents and NTFS streams in a tooltip (needs to be enabled in Configuration - Display)
+05.05.02   Added: Show comments from descript.ion and files.bbs with Ctrl+Shift+F2
+05.05.02   Fixed: Lister standalone: Mouse scrolling didn't work
+21.04.02   Added: Plugin interface: "Overwrite all older" on downloads, uploads and remote transfers
+17.04.02   Fixed: After changing attributes in subdirs, the current selection wasn't removed if nothing had changed in the current directory
+17.04.02   Added: Also copy date/time of IStream objects on drag&drop (doesn't work with Outlook Express, because OE doesn't pass them)
+17.04.02   Fixed: Zip subdir was removed when clicking "encrypt" in pack dialog
+17.04.02   Fixed: Compare by contents could fail with a single character at the end
+16.04.02   Added: Copy additional NTFS streams when copying files. If the user doesn't have enough privileges, only the SummaryInformation stream is copied
+16.04.02   Added: Internal unpacking of single files from multi-volume RAR archives (requires new unrar.dll)
+16.04.02   Fixed: Multi-volume RAR files: Only show files which start in that volume!
+16.04.02   Fixed: Support for new multi-volume RAR files (requires external winrar for unpacking)
+15.04.02   Fixed: Problem with copying huge files using the special copying modes
+15.04.02   Fixed: Pausing a HTTP download moved to the background also paused a foreground ftp download
+15.04.02   Fixed: No error messages when trying to compare a file on an ftp server, or copying from ftp to an archive
+15.04.02   Fixed: FTP download later: didn't save firewall type for http firewalls
+15.04.02   Added: Support for bmp files with negative height (stored upside down)
+15.04.02   Added: Support for *.jp2 and *.j2k (Jpeg 2000) through Irfanview
+15.04.02   Added: Open link (*.lnk) in other window with Ctrl+Right arrow (or left arrow, respectively)
+15.04.02   Fixed: Background transfer manager didn't remember max. transfer speed during multiple http downloads or ftp via http downloads
+15.04.02   Added: Call MessageLoop only every 200 ms during a transfer, may make transfer faster
+15.04.02   Added: Timeout to "Download complete" message from ftp server - Wincmd should try to continue if no reply for 15 seconds
+09.04.02   Fixed: If opening of a subdir in a plugin fails, don't jump to local drive (but do it if refresh fails)
+09.04.02   Added: Ctrl+D menu now also supports the file system plugins (requires that plugin order isn't changed)
+09.04.02   Fixed: After sorting list in plugin display, cannot switch to subdirs
+25.03.02   Fixed: By mistake, quotation marks were removed from command line parameters of 2 character commands.
+25.03.02   Fixed: Ctrl+B in packer plugin: Extract of files from subdirs didn't work (because subdir wasn't created)
+25.03.02   Fixed: Background transfer manager didn't rename files on same drive, instead it copied+deleted them
+25.03.02   Fixed: Check for a colon ":" when copying/moving with F5 or F6 to avoid the copying of the data to a named substream
+25.03.02   Fixed: Explicitely check for a colon ":" when renaming with Shift+F6 to avoid moving the data to a named substream on NTFS drives
+25.03.02   Fixed: If deletion of non-empty dir is canceled, the dir loses any special attributes like hidden or system
+11.03.02   Fixed: Problems with internal HTML links without double quotes
+05.03.02   Added: RTF-Viewer in Lister, can be disabled in Lister's configuration (override with '4'=Multimedia)
+05.03.02   Fixed: Don't get special icons for folders with read-only attribute on UNC network drives
+28.02.02   Fixed: FTP transfer log sometimes contained duplicate slashes in URLs
+
+26.02.02 Release Windows Commander 5.0 Silent update (only contains the fixes, no new features)
+25.02.02   Fixed: Couldn't copy file on remote share to other dir with file of same name
+25.02.02   Fixed: Extension was removed from xyztar.zip when clicking on 'create self-extracting archive' in pack dialog
+
+24.02.02 Release Windows Commander 5.01 Beta 2
+24.02.02   Fixed: Detect if source and target file are identical even if they are on network drives with different names pointing to the same location (e.g. H: and I: poining both to \\server\share)
+22.02.02   Added: Show error when writing to wcx_ftp.ini fails in Net - FTP new connection
+22.02.02   Added: Show error when writing to button bar fails in Configuration - Button bar
+22.02.02   Added: Show error when writing to wincmd.ini fails in Configuration - Options
+22.02.02   Fixed: Access violation in new unrar.dll when trying to search in multi-volume archive
+21.02.02   Fixed: Problems in Ctrl+Q with [..] directory
+21.02.02   Fixed: Different way to draw footer, to avoid possible drawing errors
+20.02.02   Added: "+" and "-" keys on numeric keypad now work in background transfer manager
+20.02.02   Fixed: HTTP download in background, better function to abort a download
+20.02.02   Added: Quick search with search dialog now allows to find files with multiple dots. Eact typed dot is expanded to "*.", e.g. part1.part2.part3 -> part1*.part2*.part3
+19.02.02   Fixed: When moving files to RAR archives, directories were not deleted (only partially resolved, when recursing subdirs)
+19.02.02   Fixed: Lister F3 crashed with AVI files with a name longer than 193 characters (bug in media player) -> use dos name
+19.02.02   Fixed: Wrong unzip progress if selecting dirs in zip with Spacebar
+19.02.02   Fixed: Updated default Tandem FTP server template
+19.02.02   Fixed: Alt+F4 in verify checksums dialog didn't re-enable the main Wincmd window
+15.02.02   Added: Unpack ZIP files up to 4 GB (pack up to 2 GB)
+15.02.02   Added: Support for RAR files > 4 GB
+
+13.02.02 Release Windows Commander 5.01 Beta 1
+13.02.02   Fixed: Background button not working if a background delete operation was canceled after copying started
+13.02.02   Fixed: HTTP download in background didn't show name of downloaded file if clicking 'Background' during the connect
+12.02.02   Fixed: Pressing underlined key of the "Exit" button while in Ctrl+Q mode closes Wincmd (e.g. 'X' in German version)
+12.02.02   Fixed: Lister: in html link hints, replace hex values by the characters, e.g. %20 -> " " (space)
+12.02.02   Fixed: Open bad ZIP self-extracting modules which contain PK#3#4 signature in the sfx code
+12.02.02   Fixed: Background transfer manager: When using "add URL", don't ask for the password for anonymous FTP URLs
+12.02.02   Added: Support for F3 and F4 on the desktop (only user-specific files, not those belonging to all users)
+11.02.02   Added: wincmd.ini, [Configuration], UseShellConnect=1 lets Wincmd use the old (4.53) method to connect to network shares (in Ctrl+D etc.)
+10.02.02   Added: Support for OTP secure FTP authentication (not encryption!), e.g. for Serv-U, supports MD4 and MD5 (not working through all proxies)
+10.02.02   Fixed: Search function: "Search in" field set to c: instead of c:\ in the root
+10.02.02   Fixed: Switch to wrong FTP directory when synchronize is closed and connection was lost
+06.02.02   Fixed: Deadlock situation when background thread tries to show dialog box and main menu is open (could be resolved with alt+tab)
+06.02.02   Added: Search function can now correctly find files >2 GB
+04.02.02   Added: Auto-install feature to installer (no questions asked). In install.inf, section [auto], set auto=1
+                  lang= sets language, alllang=1 installs all other languages, iniloc=c:\wincmd sets ini location
+                  iniall=1 sets ini location for all users, mkgroup=1 creates Start menu group, mkdesktop=1 makes desktop icon
+                  Install dir is determined by previous installation location, or [Destination], Dir=
+04.02.02   Fixed: Ignore junk data after the end of a .GZ file (e.g. padding with 0 bytes)
+04.02.02   Fixed: Lister scrollbar problems when switching from image view to text view
+04.02.02   Fixed: Unicode big endian files not shown correctly when switching to hex and back to Unicode view
+04.02.02   Added: Include new unrar.dll to unpack version 1+3 files in addition to version 2
+04.02.02   Added: Don't use compression for help files, makes download archive 100k smaller(!)
+04.02.02   Added: Allow extension .crc when verifying checksums (in addition to .sfv)
+03.02.02   Fixed: Replaced NOOP by PWD in various places, because some servers dislike it
+03.02.02   Fixed: FTP server may return another wrong reply on NOOP command
+03.02.02   Fixed: Read WinXP-specific registry keys only on XP, some installers may write them on older versions of Windows
+01.02.02   Fixed: WinXP supports yet another new type of association, added to Wincmd too
+01.02.02   Fixed: Click on parent button in search result while other window open refreshes wrong window
+01.02.02   Fixed: Errors in German, French, Spanish, Slovak and Polish language files
+01.02.02   Added: cm_focusleft, cm_focusright internal commands set focus on left or right file window
+01.02.02   Added: Ctrl+X in command line now means 'cut' (was next command in history, for compatibility reasons)
+01.02.02   Fixed: Couldn't go up to the Desktop from Recycle Bin
+01.02.02   Fixed: Buttons like "Mail" on newer keyboards stopped working with Wincmd in foreground (only Win2k and newer)
+28.01.02   Fixed: Show larger rename edit box (Shift+F6) for very small fonts
+28.01.02   Fixed: If append to file fails, the file is now truncated to its original size
+28.01.02   Fixed: No error was shown when trying to pack to write-protected zip
+28.01.02   Fixed: Long directory names, or file names without extension are cut off by 1 character in brief mode
+22.01.02   Fixed: included style WS_CLIPCHILDREN in lister creation
+22.01.02   Fixed: Compare by contents crash with "ignore case" and DBCS characters
+
+21.01.02  Release Windows Commander 5.0 Final
+21.01.02   Fixed: Wrong font in background transfer manager
+20.01.02   Fixed: FTP in background: upload of files in subdirs wasn't aborted correctly, user was asked to continue multiple times
+20.01.02   Added: Button in installer to show readme file
+18.01.02   Added: Uninstaller can now repair missing desktop icon and start menu icons
+18.01.02   Fixed: Uninstaller didn't close the hidden console batch file to delete itself
+18.01.02   Fixed: Made background transfer manager a bit larger to allow longer translations
+17.01.02   Fixed: Changed background transfer manager to use font as defined for all dialog boxes
+
+15.01.02  Release Windows Commander 5.0 RC2
+15.01.02   Added: F1 key support for background transfer manager
+13.01.02   Added: Control panel icon to wcmicons.dll (this icon is redistributable according to MSDN Pro documentation)
+13.01.02   Fixed: Found a few functions without string length checking
+11.01.02   Added: Support for Back/Forward buttons on some newer keyboards/mice
+08.01.02   Fixed: Wrong error message when renaming file and trying to give invalid name
+08.01.02   Fixed: Problems with installer (back button not going to correct page)
+
+06.01.02  Release Windows Commander 5.0 RC1
+04.01.02   Added: Show user-defined folder icons if read only attribute is set for this folder
+31.12.01   Added: Download from list: Send additional header fields with Header: command, e.g. Header: Referer: http://www.somesite.com
+31.12.01   Fixed: Remember "Save destination" option (in Download later) during a Wincmd session
+31.12.01   Fixed: Background transfer manager: Copy files from Ctrl+B view or search results not working correctly
+30.12.01   Added: Supported for RAR SFX file ending with a header containing all zeroes
+30.12.01   Fixed: Show read error when trying to zip files from virtual folder like the desktop (which isn't supported)
+30.12.01   Fixed: Couldn't compare files by content in zip subdirs from synchronize right click menu
+30.12.01   Fixed: Search - go to file didn't place cursor on file in zip sudir
+28.12.01   Added: Dir branch (Ctrl+B) now also working inside of archives (user can choose to extact paths or not)
+28.12.01   Fixed: Background transfer manager, 'add for copying' dialog showed 'ftp' in title
+23.12.01   Fixed: HTTP download in background: invalid progress data shown in title
+23.12.01   Fixed: Uninstaller couldn't remove itself when the path to it contained any spaces
+23.12.01   Fixed: Lister was printing in the color set as the default text color in control panel instead of black
+23.12.01   Fixed: Combine files could fail if first part was smaller than second part (difference multiple of 32 k)
+20.12.01   Fixed: Lister (F3) had a limit of the number of files which could be opened at the same time
+
+19.12.01  Release Windows Commander 5.0 Beta 4
+19.12.01   Fixed: Don't abort download of whole subdir if download of 1 file fails, just report error after downloading whole dir
+19.12.01   Fixed: Couldn't search in self-extracting archive opened with Ctrl+PageDown
+19.12.01   Added: FTP through HTTP proxy: Support for proxies returning listing in a table (<tr> tags)
+18.12.01   Fixed: Error shown in "Define server type" when giving empty definition string
+18.12.01   Fixed: On WinXP, Wincmd no longer switched to C: automatically when disconnecting a network drive
+18.12.01   Fixed: Rename (Shift+F6) window too small for big fonts
+18.12.01   Fixed: Configuration - Edit/View: Save double quotes around editor name if specified by user
+18.12.01   Fixed: Resume download never worked in "Synchronize dirs"
+18.12.01   Fixed: Sound settings not always saved
+18.12.01   Fixed: Double click on zip associated with Wincmd didn't always work correctly
+18.12.01   Fixed: Unpack multiple archives to same dir didn't always unpack all archives
+12.12.01   Fixed: 'Configure' sounds button opened wrong control panel applet
+12.12.01   Fixed: Custom associations no longer worked
+
+11.12.01  Release Windows Commander 5.0 Beta 3
+11.12.01   Added: Detect symbolic links in ftp by http proxy
+11.12.01   Fixed: Consider XP style associations also in files - associate with
+11.12.01   Fixed: 16-bit version: Crash in 'synchronize dirs' due to stack overflow when uploading
+11.12.01   Fixed: Self extracting ZIP: Percent bar not correct for very big archives (several 100 MB)
+11.12.01   Added: Allow to set when to play custom sounds, either always or only for slow operations
+10.12.01   Added: Take associations also from new WinXP registry keys
+10.12.01   Fixed: Unpacking files with password through external pkunzip no longer worked
+10.12.01   Added: Sounds for copy/move complete, delete complete, pack/unpack/search complete
+10.12.01   Added: SFV creation: suggest name of file if only one file selected
+10.12.01   Fixed: Don't try to open *.m3u files in lister as multimedia, they don't work
+09.12.01   Fixed: Catch access violation happening in unacev2.dll when unpacking bad ACE file
+09.12.01   Added: Allow to skip files which cannot be deleted
+09.12.01   Added: 1hourdif option added to config dialog: Workaround to daylight saving time problems with local/remote NTFS drives
+09.12.01   Added: Count files in subdirs option split into 2 options: when hitting spacebar/when copying+deleting
+07.12.01   Fixed: Delete target GZIP file when packing fails
+05.12.01   Added: Option 'Skip' if write fails during copy
+05.12.01   Fixed: Set current dir to dir active in active window when right clicking on a file
+05.12.01   Fixed: FTP timeout settings in configuration - misc accepted negative values
+05.12.01   Fixed: FTP delete in background: Didn't always ask to delete non-empty dirs
+05.12.01   Added: Show progress bar for 'Compare by contents'
+05.12.01   Fixed: 'No files selected' error shown twice in CRC functions
+05.12.01   Fixed: Couldn't abort background packing while it was paused
+05.12.01   Fixed: Multi-rename tool stopped working with FTP after adding [P] placeholder
+05.12.01   Fixed: Uninstaller: Removed system menu and icon from title bar
+05.12.01   Fixed: TAR packer could show 'ZIP' in error text instead of 'TAR'
+05.12.01   Added: Show display adapter bit depth in true color mode (24 or 32 bit)
+
+02.12.01 Release Windows Commander 5.0 Beta 2
+02.12.01   Added: Custom sounds when connection established or transfer complete, can be set in Control Panel - Sounds + Multimedia
+02.12.01   Fixed: Win2k/XP: Files - Associate with - (none) didn't remove association if it was made directly (shell\open\command under .ext key)
+02.12.01   Fixed: Background transfer manager: selection in main win could disappear when clicking the "+" button
+30.11.01   Added: Background transfer manager: Delete button with no selected items or first item selected allows to abort current transfer and continue with next
+30.11.01   Added: Enhanced plugin interface allows to search for text with packer plugins (needs new plugin)
+30.11.01   Fixed: Problems with TAR files containing very long names starting with a slash (absolute directory)
+30.11.01   Added: wincmd.ini [Configuration] AppendWarning=0 removes warning message when appending to a file
+28.11.01   Added: Comment lines in 'download from list' allowed, must start with a  ;
+28.11.01   Fixed: FTP: When trying to upload multiple dirs to read-only dir, there was no way to abort the operation
+28.11.01   Fixed: Unpack each archive to separate dir didn't work with external unpackers
+28.11.01   Fixed: Show workgroup name on Windows 2000 in 'System information' dialog
+25.11.01   Added: Install/Uninstall allows to add/remove icon to/from the desktop
+25.11.01   Added: FTP upload in background (with transfer manager): Added overwrite confirmation dialog
+25.11.01   Fixed: Background HTTP download: no progress bar shown when dialog was not in the upper left corner
+25.11.01   Added: Pause button support for background zip+unzip
+23.11.01   Fixed: File selection not removed after packing to .GZ file(s)
+23.11.01   Added: Support for .GZ files where the stored name contains forward slashes
+23.11.01   Added: Deleting the only file contained in a .GZ file now deletes the .GZ file itself
+23.11.01   Added: Hints to new speed buttons in "compare by contents"
+23.11.01   Added: Support for SFV with chr(10) as linefeed
+23.11.01   Fixed: Couldn't create SFV files in the root of a drive
+23.11.01   Added: CRC-Check function: Show result list of checked files with 'OK' or 'Wrong CRC'
+23.11.01   Fixed: Support tabstops in SFV file
+23.11.01   Fixed: Added version number to SFV file to make WinSFV happy
+23.11.01   Added: Double click on SFV file starts verifying CRCs
+23.11.01   Fixed: Detect Windows ME and XP in system info box
+23.11.01   Fixed: Installer: Increased wait time for Wincmd closing to 30 seconds
+23.11.01   Fixed: Copy in background: 'Pause' button not working with Skip
+23.11.01   Fixed: The background transfer manager was appearing behind Wincmd even when started empty
+23.11.01   Fixed: Create separate archive per file/dir: Archive file name was wrong (test.txtzip)
+22.11.01   Added: Moved WinXP .Manifest file into EXE
+
+21.11.01 Release Windows Commander 5.0 Beta 1
+21.11.01   Added: Pause button now also works when copying, moving or deleting files in background
+20.11.01   Fixed: WinNT/2000: If parallel port driver was loaded, then Wincmd moved to a different dir, the driver wasn't found any more
+20.11.01   Fixed: Copy+Paste files: File list was only refreshed with Ctrl+V, not with right click+paste
+20.11.01   Fixed: Show free space available to user, not total free space on disk (considers quota settings if present)
+20.11.01   Added: Support for ZIP with wrong local header PK#7#0 instead of PK#7#8
+20.11.01   Fixed: Right click on dir - search  didn't work correctly
+19.11.01   Added: Download-list can now also upload files. WARNING: No overwrite-confirmation! Syntax:   put:sourcename -> targetname
+19.11.01   Added: Ctrl+A selects all, just like in Explorer
+18.11.01   Added: Split the "Commands" menu into "Commands" and "Net" menu, to make it smaller and add more commands
+16.11.01   Added: Extension of plugin interface allows to create archives of type TAR.Plugin
+16.11.01   Fixed: Documentation error in plugin writer guide: ProcessFile() is also called in PK_OM_LIST mode (with PK_SKIP parameter)
+16.11.01   Added: TBitBtn: Support for XP styles
+15.11.01   Added: Install+Uninstall: Support for new WinXP style
+14.11.01   Added: Background transfer manager can now also be started separately (empty)
+13.11.01   Added: FTP download in background: Allow to set the used firewall for ftp connections with line  firewall=1  (here, 1 stands for the first defined firewall)
+13.11.01   Added: Support for Mouse Wheel in "Compare by contents"
+13.11.01   Added: Support for XP themes - remove wincmd32.exe.Manifest if you don't like them in Wincmd!
+12.11.01   Fixed: Workaround to WinXP bug - lparam in LB_ADDSTRING or LB_INSERTSTRING cannot be 0 if .Manifest file present!
+12.11.01   Added: Download-list can now also copy+move files. Syntax:   copy:sourcename -> targetname   or   move:sourcename -> targetname
+11.11.01   Added: FTP download from list: detect if list file was modified, and add new items to current download
+11.11.01   Added: FTP+HTTP in background: Set speed limit for up- and downloads
+11.11.01   Added: FTP+HTTP in background: Pause button
+07.11.01   Fixed: Lister: Characters with code 00 not copied to clipboard -> replace with spaces
+07.11.01   Fixed: Installer: INI file could be created in wrong dir when user chooses custom location
+07.11.01   Fixed: Search function showed an error message for every bad *.ACE file it couldn't search
+07.11.01   Fixed: Synchronize with ZIP file: error when zip contained subdirs which didn't have the 'subdir' attribute set
+05.11.01   Fixed: FTP download files in subdirs: date/time not copied with files older than 1 year
+14.10.01   Fixed: Drag&Drop didn't work with negative coordinates (when using a secondary monitor on the left side of the primary)
+12.10.01   Added: Linux: TAR packer can now pack/unpack symbolic links
+12.10.01   Added: Linux: TAR packer now stores UID/GID/Permissions
+10.10.01   Fixed: Unzip: Detect encrypted files in ZIP also in subdirs
+10.10.01   Added: FTP details dialog: automatically replace forward slashes by backslashes in local dir path
+09.10.01   Added: Create CRC-Checksum files in SFV format, allows to verify that a copied/downloaded file is intact by verifying the checksum
+09.10.01   Fixed: F3 in lister couldn't show any multimedia files with names longer than 63 characters (Win9x+ME only)
+08.10.01   Fixed: Synchronize dirs: middle mouse button click also opened the context menu
+05.10.01   Added: FTP client: In log window, show connection number in front of the command/reply, e.g. 1:LIST (only for connections >0)
+05.10.01   Added: Configuration-Packer: Create TAR files either for Linux or SunOS. Difference only important if packed file/path name longer than 100 characters
+05.10.01   Added: Configuration - Display: Tree: Use ENTER to open dir in other window: If unchecked, dir is changed automatically
+03.10.01   Added: "Branch view" to "Commands" menu
+03.10.01   Added: Compare by contents: Button to show the two windows above each other, e.g. for wide texts
+03.10.01   Added: Pack: Option to create a separate archive for each selected file/dir. If no target dir is given, the packed file will be placed in the same dir as the original file.
+01.10.01   Added: Lister, right click menu: "Copy all URLs" in HTML-Viewer mode
+01.10.01   Added: Lister: Double click on a word now selects all letters including underscores _.
+01.10.01   Fixed: No tooltips shown for too long directory names in view - brief mode.
+28.09.01   Added: Compare by contents: Search for text in BOTH files simultaneously, found text will be underlined!
+28.09.01   Added: Lister: Ctrl+F3 now reverses search direction (until now it forced backwards search)
+28.09.01   Fixed: [..] and [\] buttons, <Backspace> and <Ctrl+PageUp> now work in cm_SyncChangeDir mode
+27.09.01   Added: Internal TGZ (TAR.GZ) packer. Uses same compression settings as the (G)ZIP packer.
+27.09.01   Added: Internal TAR packer. Warning: Names longer than 99 characters will be packed the GNU-way (Linux) and cannot be unpacked on SunOS etc.
+26.09.01   Added: Internal GZIP-Packer. Uses same compression settings as the ZIP packer.
+24.09.01   Added: FTP: Option to send keepalive messages (NOOP, PWD or so) to the server in user-defined intervals (for max. 1 hour of inactivity)
+24.09.01   Fixed: Compare by contents: Difference found at end of file if 2 files different in line ends only (CRLF vs. LF)
+24.09.01   Added: Find files: Start search inside an archive (only in the root of the archive)
+24.09.01   Added: Files - Unpack: Option to unpack each selected archive to a different dir, with the name of the archive (without the extension), e.g. test.zip -> test\
+24.09.01   Added: FTP-Server-Template: Allow multiplicator in size template, e.g. SSSSSSS=1024 in template multiplies size value with 1024, e.g. for servers which return the block size
+24.09.01   Added: Internal command cm_SyncChangeDir makes Wincmd change to the directory of the same name in BOTH windows synchronously, e.g. to traverse two identical trees local+remote
+23.09.01   Added: Multi-Rename-Tool: Placeholder [P] puts name of parent dir into file name, [P2-5] the letters 2-5 of the parent dir name
+19.09.01   Added: FTP: SOCKS4+SOCKS5 Proxy support (active+passive mode!), SOCKS5 without encryption
+17.09.01   Added: FTP - Synchronize dirs: If 'ignore dates' is checked, Wincmd no longer changes the date of the local files on upload
+17.09.01   Fixed: Lister: Hide hint window for URLs when menu is accessed
+17.09.01   Added: FTP-Server-Template: Allow Time format of hh.mm or hh,mm in UUUUU template, not only hh:mm
+17.09.01   Fixed: FTP server may return wrong reply on NOOP command (1684240 NOOP command ok), should be 3 digit number
+17.09.01   Fixed: Lister: Last search method not remembered correctly (Hex search)
+17.09.01   Added: FTP+HTTP: Auto-Resume download if download-connection lost
+14.09.01   Fixed: Long URLs in Wincmd start menu can cause Wincmd to vanish
+14.09.01   Fixed: ZIP file lost hidden/system attributes when adding files to it
+14.09.01   Fixed: Lister: Last character in a file not shown in UTF-8 mode
+22.08.01   Fixed: Test CAB archives while connected to FTP (in other panel) doesn't close progress dialog
+22.08.01   Fixed: Ctrl+Q in an archive with sound files didn't delete the files when going to next file while playing
+22.08.01   Fixed: Wincmd installer: Changed icon in "Installtion complete" to information (was warning icon)
+22.08.01   Fixed: Access violation when accessing FTP server in Network Neighborhood while offline
+22.08.01   Fixed: Lister: Positioning cursor with % menu item caused crash if file no longer existed
+22.08.01   Fixed: CAB unpacker didn't extract hidden/system attributes from CAB files
+21.08.01   Fixed: FTP-Client: Problems with recursive deletion if FTP server shows drive letters in all subdirs
+21.08.01   Fixed: 1 Pixel offset of right window when moving % slider between the 2 file windows
+21.08.01   Fixed: FTP client can now show file details correctly for files > 2GB (up/download still limited to 2 GB per file)
+21.08.01   Fixed: Config-Dialog, label of RAR+ACE checkboxes changed to ARJ when clicking Apply
+12.08.01   Fixed: Shell Extensions like PathCopy could prevent Copy+Paste in Wincmd (Ctrl+C Tab Ctrl+V)
+12.08.01   Fixed: (Second try): Problems with WindowBlinds: Multi-Rename tool moves up a few pixels each time it's re-opened (reason: Aspack EXE packer)
+12.08.01   Fixed: Multi-rename tool: With >10'000 files in a dir it took a long time until the renaming starts
+10.08.01   Fixed: Search - go to file didn't always work if file/dir in root
+10.08.01   Fixed: Search function didn't show NTFS-compressed attribute
+10.08.01   Added: FTP client now supports more than 2 definition strings per template (up to 32!)
+28.07.01   Fixed: Some file systems can contain file names with a space at the end, e.g. CD-ROMs
+27.07.01   Fixed: In huge copy block mode, don't use 'no buffering' flag with CD-ROMs.
+
+New in Version 4.54 (16.07.01):
+- Compare by content: Switch between binary and text mode.
+- Lister: Support word wrap in UTF8 mode
+
+New in Version 4.53 (31.05.01):
+- Display of UTF8 (special 1-6 byte Unicode format) in Lister
+- Support for ACE 2.0 archives
+- Support for files > 2 GB in Lister and split/combine functions
+- Directory print with subdirs: Print only files of certain types, e.g. *.txt *.doc
+- Change date/time of folders also on Windows NT/2000 (admins only due to restricted rights)
+- FTP: Resume upload (binary files only). WARNING: With some versions of the server WarFTPd, the resume seems to work, but the uploaded file is unusable!
+- Directory hotlist can now contain up to 200 entries
+- The location of Wincmd.ini and Wcx_ftp.ini can now be set in the registry (32-bit version only):\SOFTWARE\Ghisler\Windows Commander, new text values IniFileName and FtpIniName.This key may be created under HKEY_CURRENT_USER or HKEY_LOCAL_MACHINEThe command line parameters /i= and /f= still take precedence over the registry values.
+- Special larger block sizes when copying very large files can increase the copying speed of these large files quite a bit.This function is only meant for advanced users, and needs to be enabled through wincmd.ini (CopyBlockSize etc).
+
+New in Version 4.52 (15.01.01):
+- Display of Unicode and HTML (as plain text) in Lister
+- Search for Unicode and Hex in the search function
+- Print function to print directory lists, trees and compare results in 'Synchronize dirs'.
+- Display of all files in the current dir and all subdirs with Ctrl+B
+- File windows above each other instead of side by side
+- Display of the file size in kbytes or dynamic depending on the actual size
+- Multi-rename tool: Enhanced counter settings using definition strings [Cxxx]
+- Submenu 'New' in the right click context menu allows to create new (empty) files
+
+New in Version 4.51 (18.07.00):
+- Bugfix of 4.50
+
+New in Version 4.50 (30.6.00):
+- Multi-rename tool: Allows to rename multiple files in one step (Hotkey: Ctrl+T)
+- Batch rename function with Shift+F6 to quickly rename multiple files one by one
+- Rename files and subdirs inside a ZIP archive (Shift+F6)
+- Parallel port transfer function (direct cable connection), works between Win95/98/NT/2000/3.1 and DOS!
+- FTP: Definition of custom host types, using a definition string
+- FTP: Retry to connect multiple times also for non-anonymous connections
+- FTP: Support for multiple proxies (separately for FTP and HTTP connections)
+- FTP: Workaround to bug in some FTP servers: Upload of subdirs failed
+- Resolve lnk files on the desktop or in the Network Neighborhood
+- Unpack self-extracting files created by WinACE and WinRAR (open with Ctrl+PgDn)
+- "Unpack all and execute" in packer properties allows to try out a program or run an installer from inside an archive
+- Define custom colors for different file types, e.g. all directories, all zip files etc.
+- Search for text also inside CAB files
+- Copying to 'write only' directories (Windows NT, network)
+- Uninstaller: Automatic removal of the program through the Control Panel
+Several new commands and parameters for Button bar / Start menu:
+- cm_List now allows to open a file. The file name must be given directly behind CM_LIST, and not in the parameters field!
+  Example: cm_list c:\windows\wincmd.ini always opens the file wincmd.ini in lister.
+- cm_ShowFileUser: Show which remote user has opened a local file (through a shared directory)
+- cm_EditPersmissionInfo: Show permissions dialog on Windows NT (NTFS file system)
+- cm_EditAuditInfo: Show file auditing dialog (NTFS)
+- cm_EditOwnerInfo: Show "Take ownership" dialog (NTFS)
+- cm_ShowOnlySelected: Hide all files/dirs which aren't selected when this function is used
+- cm_OpenRecycled: Open 'recycle bin'
+- New parameters %L, %l, %F, %f, %D, %d create a list file in the TEMP directory with the names of the selected files and directories.
+
+New in Version 4.02 (16.12.99):
+- Unzip, delete and HTTP downloads (Ctrl+N) in background.
+- Synchronize dirs now also supports directory from/to ftp synchronization! Concerning the date/time synchronizing problems with ftp, please read the section important note on the page Synchronize dirs.
+- Tray icon right click menu (context menu).
+- Direct upload of files from inside an archive to an FTP server.
+- Better parsing of FTP file lists downloaded via a HTTP proxy.
+- User-defined keyboard shortcuts.
+- Split "Equal/Unequal" button into two buttons in sychronize function
+- Change date/time of directories (Win95/98 only)
+- FTP server to server transfers (FXP): Always sends PORT command to left server, PASV to right server. This allows for file transfers between a public server and one in a private address room, or behind a firewall. The private server must be in the left window.
+- Find files: Only search in selected files and folders
+- many small additions and bugfixes (see history.txt)
+
+New in Version 4.01 (27.07.99):
+- This version was mainly a bugfix release
+- HTTP downloads enhanced (now supports passwords, and special sites which require 'host:' line)
+- Settings what to do when second ftp connection opened in same window: wcx_ftp.ini, [General] AutoDisconnect  =1 disconnect previous  =2 keep previous  =0 ask user
+
+New in Version 4.00 (17.06.99):
+General:
+- Directory synchronize: Compare two dirs with subdirs, or 1 dir and 1 archive
+- Compare files by content
+- Allow to abort binary compare in 'synchronize' with ESC
+- Copy/move in the background - 32 bit only
+- wincmd.ini, [configuration], AlwaysCopyInBackground=1 always copies in background
+- Connect to UNC path (\\server\path) in background (separate thread), allow to abort after 3 seconds
+- Dialog box Change Attributes, button to set current date&time
+- wincmd.ini, [configuration], activeright=1 activates right file listbox at start
+- Support for virtual folders through button bar. Use commands: cm_OpenDesktop, cm_OpenDrives, cm_OpenControls, cm_OpenFonts, cm_OpenNetwork, cm_OpenPrinters
+- Copy and Move files from and to virtual folders
+- Copy to nul, prn, lptx and comx now supported
+- Rename or append when copying and target exists
+- Files - Split now also accepts fractions of a number, like 0.5 MB
+- Use NTFS time compare method (2 seconds difference considered as same) in 'Compare directories' and 'Synchroinize dirs'
+User interface:
+- 2 drive button bars, one per file window (configurable)
+- 256 color folder icons, and support for external icon library (icl): wincmd.ini, [configuration], iconlib=dllname.dll  (sample DLL on www.ghisler.com)
+- User-defined drive names (for drive list+button bar). Example: wincmd.ini, [DriveHints], E=ZIP drive
+- File window tabstops (column width) are now saved separately by resolution, and adjust to the right (configurable)
+- Save current position and maximized state separately for search, compare and synchronize dialogs
+- Show special folder icons for system folders, e.g. the Recycle Bin
+- Extended selection (Num+ and CTRL+F12) now supports almost all options as the 'search' function
+- The / key on numeric keypad restores file selection as it was before the last file operation
+Packer:
+- Multi-threading of zip function (pack in background) - 32 bit only
+- Packer/unpacker plugins to add external archiver DLLs
+- Copy files directly from ZIP to ZIP
+- Rename while unpacking (internally) and target exists
+- Support for ARJ SFX 2.62
+- LZH files with comment field (starting with -com-) now supported
+- Configuration - Save settings saves current file display settings and directories even if auto-save turned off
+FTP Client:
+- FTP resume download even if multiple files selected
+- FTP Connection dialog allows to specify commands executed after connecting, separated by a ";"
+- FTP connect dialog, "duplicate entry" added - allows to create new connection from an existing one
+- CTRL+M allows to select FTP transfer mode (text, binary, auto) with keyboard
+- Warn if binary file is downloaded or uploaded in text mode (to turn off: modify wcx_ftp.ini, section [General], WarnWrongMode=0)
+- Support for some more ftp server types (OS9 etc.)
+- HTTP proxy for FTP connections
+- Transparent FTP proxy: Send firewalluser, firewallpass, user, pass
+Search function:
+- Search for/select files which do NOT match certain wildcards. Use | to separate, e.g. w*.*|*.bak finds all files starting with w, without extension .bak
+- Search for all files NOT containing a certain string
+- Duplicate file finder can find files with same name, size, contents or any combination of the 3
+Lister:
+- Bitmap viewer, more formats through IrfanView plugin (see addons page on www.ghisler.com)
+- Lister can now play sound and video (configurable)
+- Printing in lister (Text+Graphics)
+- Select all in lister: CTRL+A selects whole file
+- Search for Hexadecimal strings, even mixed. Example: "PK"0102 will find 504B0102
+- Lister now wraps at word boundaries (may be disabled: wincmd.ini, [lister], WordWrap=0)
+
+New in Version 3.53 (8.11.98):
+- Did extensive Year 2000 (Y2k) tests. Results: no internal date problems, only one interface prob to FTP
+- Possible Y2k problem with FTP servers showing a 2 digit year only. Rule: date<80 ->20xx, date>=80 -> 19xx
+- bugfixes
+
+New in Version 3.52 (11.08.1998):
+- cd \\Servername in command line (32 bit)
+- Added: ACE packer/unpacker support
+- unrar.dll and unace.dll internal unpackers for RAR and ACE (32 bit)
+- bugfixes
+
+Release Version 3.51 (07.05.1998):
+- wcx_ftp.ini, [general], LogFile=Path\Log.txt writes FTP log to specified file
+- Support for creating RAR SFX files
+- Support for files > 2 GB (display, copy, rename, move, delete; NOT: ZIP, FTP, Lister)
+- CTRL+P copies current path to command line
+- FTP: Preserve file dates when downloading (selectable)
+- FTP: Convert file names to lowercase when uploaded (selectable)
+- FTP: Change Unix attributes (permissions) dialog for FTP sites (uses 'SITE chmod', which isn't supported by all sites)
+- Bugfixes
+
+New in Version 3.50 (18.3.1998):
+- FTP client
+- flat look
+- Network Neighborhood
+- IntelliMouse wheel support
+- Directory history list (alt+cursor down)
+- Go back, go forward (alt+cursor left / alt+cursor right)
+- Create self extracting ZIP archive
+- Expandable tree as in Explorer
+- UUE/MIME/XXE-encode and decode, Binhex-decode
+- Split/Combine files
+- Start menu now supports shortcut keys (Ctrl+Alt+F1-F12)
+- More command line switches (see help)
+- ALT+GrayPlus selects all files with the same extension
+
+New in Version 3.02 (14.4.1997):
+- Cut/Copy/Paste of button bar buttons
+- Deletion method used by explorer can be used also in Wincmd [Configuration] Win95Delete=1
+- CTRL+Q on archive shows contained file_id.diz, readme*, or *.txt (in this order)
+- Support for archives in archives
+- CTRL+PgDn to open archives in archives
+- TAR and GZ packers
+- New commands cm_Switch83Names, cm_SwitchDirSort, cm_SwitchHidSys, cm_SwitchLongNames to button bar commands
+
+New in Version 3.01 (31.12.1996):
+- Bugfixes
+
+New in Version 3.00 (15.12.1996):
+- 32-bit version available
+- drag&drop from and to explorer (32-bit version only)
+- enhanced search function
+- quick view panel (CTRL+Q)
+- drive bar to select different drives
+- button bar wraps around to 2 lines when larger than available width
+- new multi-page configuration dialog
+- Function to test selected archives for errors 
+- A header now allows to sort the files by name, extension, size, and date
+- All parts of the user interface (except the file list) can be turned off in the configuration
+- The file window separator can now be moved

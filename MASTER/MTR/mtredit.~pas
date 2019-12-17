@@ -1,0 +1,26 @@
+unit mtredit;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs;
+
+type
+  TF_mtredit = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  F_mtredit: TF_mtredit;
+
+implementation
+
+uses mtrmain, ForSess;
+
+{$R *.dfm}
+
+end.

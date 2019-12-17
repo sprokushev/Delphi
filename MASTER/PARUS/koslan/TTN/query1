@@ -1,0 +1,31 @@
+insert into trdepts(nrn, nprn, snomen, nnomen_typ, 
+snommodif, snompack, npack_quan, nparty, sgoodspart, 
+ssernumb, scountry, sgtd, nprice, nquant, nquantalt, npricemeas, 
+nsummwithn, dbegindate, denddate, smeas_main, smeas_alt, smeas_pack, sarticle, snote
+) 
+values(
+203108335, 
+203081755, 
+"Набор Holts", 
+1, 
+"Набор Holts", 
+"Набор "Обновитель пласт.Holts 600 мл.+салф.д/рук. Expert"", 
+1, 
+198559019, 
+"f9фик1", 
+null, 
+null, 
+null, 
+77.025, 
+36, 
+0, 
+2, 
+2772.9, 
+ctod(" / / "),
+ctod(" / / "),
+"шт", 
+null, 
+"ШТ", 
+null, 
+null
+)

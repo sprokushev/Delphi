@@ -1,0 +1,72 @@
+Система отчётности SAIO на SQLReports.
+
+Систему можно ставить только после установки Forms Runtime и Reports Runtime
+из комплекта Developer6i.
+Все пришедшие *.rep - файлы до этого дистрибутива - СТЕРЕТЬ !!!
+
+1. Переписать дир-ю (REPORTS_SAIO) системы на диск (например C:)
+
+Список поддирикторий:
+
+FMX      - дир-я форм;
+ICONS    - дир-я иконок;
+PLX      - дир-я библиотеки для формы;
+REP      - дир-я отчетов (REP-файлы);
+REPORTS  - рабочая дир-я (Дир-я создания TMP-файлов при выполнении отчётов,
+           log-файла окончания работы report-а и отчётов создаваемых
+           в формате rtf);
+SYSTEM   - дир-я системных файлов.
+
+2. Заменить файл %ORACLE_HOME%\FORMS60\fmrruw.res на файл fmrruw.res из дир-ии
+   C:\REPORTS_SAIO\SYSTEM\FORMS60.
+   Заменить файл %ORACLE_HOME%\TOOLS\COMMON60\Uifont.ali на файл Uifont.ali из
+   дир-ии C:\REPORTS_SAIO\SYSTEM\TOOLS\COMMON60.
+
+3. Выполнить reports_saio.reg для создания в регистре раздела REPORTS_SAIO.
+   (Внимание - в reports_saio.reg диск системы - C. Если Вы ставили систему
+   на другой диск (пример - D:\REPORTS_SAIO), то необходимо перед выполнением
+   отредактировать reports_saio.reg - заменить C на D).
+
+reports_saio.reg - файл создания раздела:
+                   HKEY_LOCAL_MACHINE\SOFTWARE\REPORTS_SAIO в registry
+                   для системы отчётов.
+
+RP_APPL_DIR  - Корневая дир-я системы (C:\REPORTS_SAIO);
+RP_PLUS_DFLT - plus80w или sqlplusw;
+RP_VIEWER    - имя задачи просмоторщика файлов (notepad или т.п. на выбор);
+RP_HELP      - дир-я HELP-файлов (C:\REPORTS_SAIO\HLP);
+WORK_DIR     - имя рабочей дир-ии (C:\REPORTS_SAIO\REPORTS).
+
+4. Дополнительно в раздел registry - HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE
+   в строковые параметры добавить:
+
+в FORMS60_PATH   - раздел нахождения файлов форм (FMX) и библиотек PLL
+                   (C:\REPORTS_SAIO\FMX;C:\REPORTS_SAIO\PLX);
+в REPORTS60_PATH - раздел нахождения файлов отчетов (REP)
+                   (C:\REPORTS_SAIO\REP);
+
+5. Дополнительно в разделе registry - HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE
+   создать и изменить значение некоторых строковых параметров выполнив
+   ora_add_reg.reg.
+
+   USER_NLS_LANG      - RUSSIAN_AMERICA.CL8MSWIN1251
+   NLS_LANG           - AMERICAN_AMERICA.CL8MSWIN1251
+   UI_ICON            - раздел нахождения файлов ICONs (C:\REPORTS_SAIO\ICONS)
+   DEVELOPER_NLS_LANG - RUSSIAN_AMERICA.CL8MSWIN1251
+   REPORTS60_TMP      - заменить значение на рабочую дир-ю
+                        (C:\REPORTS_SAIO\REPORTS)
+
+   (Внимание - в ora_add_reg.reg диск системы - C. Если Вы ставили систему
+   на другой диск (пример - D:\REPORTS_SAIO), то необходимо перед выполнением
+   отредактировать ora_add_reg.reg - заменить C на D).
+
+6. Добавить в Autoexec.Bat постоянную определяющую рабочую дир-ю:
+   SET WORK_DIR_SAIO=C:\REPORTS_SAIO\REPORTS
+
+7. Создать на рабочем столе ярлык "Отчеты SAIO".
+   Свойства иконки старта формы:
+   Объект: ifrun60.EXE RPTS_N.fmx
+   Необходимо обязательно указать имя рабочего каталога
+   (C:\REPORTS_SAIO\REPORTS).
+   Иконку для ярлыка взять из C:\REPS\REPORTS_SAIO\ICONS - файл rq_rep.ico или
+   rq_rep1.ico.

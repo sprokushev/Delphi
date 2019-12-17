@@ -1,0 +1,99 @@
+	FAQ
+	---
+
+	Common questions:
+	~~~~~~~~~~~~~~~~~
+
+	Q. How can ASPack reduce my application from 1.7Mb to 460Kb?
+
+	A. ASPack uses a very powerful compression algorithm combined 
+   	with a very small decompression procedure (less than 1Kb) in 
+   	the executable image. More details are available on request. 
+
+	---
+
+	Q. How does it work?
+
+	A. After compression of the executable image, ASPack writes a 
+   	small decompressor and places icons at the end of the compressed 
+   	file. The address of the application's entry point is set to the
+   	beginning of the decompressor, and the original entry point is
+   	saved. After the decompressor decompress the image in memory, it
+   	jumps to the application's original entry point.
+  	    	
+	---
+
+	Q. Do compressed files load faster or slower?
+
+	A. In most cases programs load faster, because they are smaller
+   	and require fewer disk accesses to load the executable image.
+   	Decompression is very fast. But if RAM is limited, Windows may
+   	move the application to the swap-file, and in this case loading 
+   	may be slower than usual.
+
+	---
+
+	Q. Can I decompress an ASPack'ed file?
+
+	A. No. One of the reasons for using ASPack is to protect applications 
+   	against patches and decompilation, and the decompressor - by design -
+   	creates obstacles for hackers.
+
+	---	
+
+	Q. When I remove ASPack.exe from my computer what would happen with compressed
+	files?
+
+	A. Nothing. Each compressed file has a small decompresor built-in.
+   	ASPack itself is not required to run ASPack'ed files.
+	
+	---
+	
+	Q. What compiler was used to create ASPack?
+
+	A. ASPack was written using Borland (Inprise) Delphi 2.0.      
+   	
+   	
+	Shareware authors' questions regarding protection
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	Q. Can ASPack protect my program against hackers?
+
+	A. ASPack is only a packer, not a full "protector". But ASPack is a good 
+   	defense against non-professional hackers.
+
+	---
+
+	Q. How I can better protect my application using ASPack?
+
+	A. Use these tricks:
+
+   	- use multiple layer compression (3-5 passes). On the first pass, turn 
+     	off the "Resource compression" option and turn it back on only for 
+	the last pass. Use should use different section names for each pass
+	(see the ASPack Option tab), e.g., .text, .code, .idata, .edata, etc.
+
+	- use a non-standard Image Base for your .EXEs (see the compiler Linker 
+	options). The default is 400000h, but you can change this to, e.g., 
+    	300000h.
+
+	---
+
+	Q. I use your ASPack program, but am still plagued by illegal registration 
+   	numbers. Why can't ASPack protect my application against this?  	
+
+	A. Because you are using a weak serial number scheme, which falls prey to
+	key-generators by hackers. Further help is available on request.
+
+	---
+
+	Q. How I can protect my application against professional hackers?
+   	Do you plan add some protection's options like encryption, anti-debugger
+   	tricks, and so on? 
+
+	A. Yes, I do. I'm planning to write a set of products for professional 
+   	protectors and shareware authors, such as ASPack Plus (a protector with 
+   	encryption), as well as a professional shareware library (for Delphi and 
+   	C++ Builder at first), with powerful run-time encryption, anti-debugging, 
+   	powerful serial number's generation, trial properties and so on.
+	
