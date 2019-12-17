@@ -1,0 +1,1 @@
+det60 _sinpasp <yes

@@ -1,0 +1,5 @@
+.INS L D D:\DBORACLE\SINHTABL,D:\ORACLE\ORANT\OCA60\PLSQLLIB
+.CON D nb/sitoca@vgd
+.A L exec_sql.pll F S
+.LOA F sinhtabs.pls
+.LOA F sinhtabb.pls

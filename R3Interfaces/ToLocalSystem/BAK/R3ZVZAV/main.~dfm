@@ -1,0 +1,75 @@
+object MainForm: TMainForm
+  Left = 412
+  Top = 283
+  Width = 400
+  Height = 174
+  Caption = #1055#1077#1088#1077#1082#1072#1095#1082#1072' R3 ZVZAV >>> MASTER SYSTEM'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Memo: TMemo
+    Left = 0
+    Top = 0
+    Width = 392
+    Height = 140
+    Align = alClient
+    TabOrder = 0
+  end
+  object ProcessButton: TButton
+    Left = 224
+    Top = 112
+    Width = 163
+    Height = 25
+    Caption = #1059#1082#1072#1079#1072#1090#1100' '#1092#1072#1081#1083' '#1076#1083#1103' '#1086#1073#1088#1072#1073#1086#1090#1082#1080
+    TabOrder = 1
+    Visible = False
+    OnClick = ProcessButtonClick
+  end
+  object FieldsEdit: TEdit
+    Left = 8
+    Top = 80
+    Width = 377
+    Height = 21
+    TabOrder = 2
+    Text = 
+      'FileRowNum;OrderNum;BeginDate;EndDate;PlanWeight;PlanCount;PlanV' +
+      'agonsCount;ProductKSSSCode;MeasureUnit;RecipientName;ProductType' +
+      ';OrderStatus;ActionCode;DeliveryDirection;Priority;SourceStation' +
+      'Code;DestinationStationCode;UnloadingStationName;ProductRecipien' +
+      'tKSSSCode;TariffPayerKSSSCode;ShipmentKindCode;Contract;GosSuppl' +
+      'yDirection;RemarkText;Price;Excise;SenderSpecialMark;ConsumerKSS' +
+      'SCode;PlanningGroupsHierarchy;ConsignerKSSSCode;ForwarderKSSSCod' +
+      'e;NumOfEtranSystem;VagonsOwnershipCode;ShipmentRequestID;SupplyO' +
+      'rderNum;SupplyOrderDate'
+  end
+  object OracleQuery1: TOracleQuery
+    Session = ora_Session
+    Left = 72
+    Top = 12
+  end
+  object ora_Session: TOracleSession
+    LogonUsername = 'MASTER'
+    LogonPassword = 'MASTER'
+    LogonDatabase = 'BUH'
+    Left = 8
+    Top = 12
+  end
+  object Timer: TTimer
+    Enabled = False
+    Interval = 3000
+    OnTimer = TimerTimer
+    Left = 8
+    Top = 48
+  end
+  object OpenDialog: TOpenDialog
+    Filter = #1060#1072#1081#1083#1099' SH022|SH022*.csv'
+    Left = 112
+    Top = 8
+  end
+end

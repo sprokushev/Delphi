@@ -1,0 +1,261 @@
+unit Main;
+interface
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls,Oracle,CSVToDB, ExtCtrls, ForSess, ForEnv,ForFiles;
+
+const
+  APPLICATION_NAME='R3ZKERP';
+  SCHEMA_NAME='MASTER';
+
+type
+  Tf_main = class(TForm,IInformation)
+    Memo: TMemo;
+    ora_Session: TOracleSession;
+    OracleQuery1: TOracleQuery;
+    Timer: TTimer;
+    OpenDialog: TOpenDialog;
+    ProcessButton: TButton;
+    FieldsEdit: TEdit;
+    procedure TimerTimer(Sender: TObject);
+    procedure ProcessButtonClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormActivate(Sender: TObject);
+  private
+    { Private declarations }
+    EnvGrpVari:string; // группа переменных
+    EnvGrpMail:string; // группа настроек почты
+    EnvGrpLog:string; // группа настроек журнала
+    function ZKERP(filename: string):integer;
+    procedure Information(Info:string; Error:boolean);
+  public
+    { Public declarations }
+    ApplSession:TApplSession; // Журнал событий приложения
+    ApplIniName:string;
+    UserADMIN:boolean; // legacy
+    MasterXLSPath, // legacy
+    MasterRPTPath:string; // legacy
+    LoadPath:string;
+    LoadFile:string;
+    ArhFrom:string;
+    function GetApplVari(VariName:string):string; // считываем значение переменной приложения
+    procedure SetApplVari(VariName,VariValue:string); // сохраняем значение переменной приложения
+    function GetMailVari(VariName:string):string; // считываем значение настроек почты
+    function GetLogVari(VariName:string):string; // считываем значение настроек журнала
+  end;
+
+var
+  f_main: Tf_main;
+
+implementation
+
+{$R *.dfm}
+
+uses CSVToDBOra,SystemConstants;
+
+{ TMainForm }
+
+// считываем значение переменной приложения
+function Tf_main.GetApplVari(VariName:string):string;
+Begin
+  GetApplVari:=F_Env.GetVari(APPLICATION_NAME,SCHEMA_NAME,EnvGrpVari,VariName,ora_Session);
+End;
+
+// сохраняем значение переменной приложения
+procedure Tf_main.SetApplVari(VariName,VariValue:string);
+Begin
+  F_Env.SetVari(APPLICATION_NAME,SCHEMA_NAME,EnvGrpVari,VariName,VariValue,ora_Session);
+End;
+
+// считываем значение настроек почты
+function Tf_main.GetMailVari(VariName:string):string;
+Begin
+  GetMailVari:=F_Env.GetVari(APPLICATION_NAME,SCHEMA_NAME,EnvGrpMail,VariName,ora_Session);
+End;
+
+// считываем значение настроек журнала
+function Tf_main.GetLogVari(VariName:string):string;
+Begin
+  GetLogVari:=F_Env.GetVari(APPLICATION_NAME,SCHEMA_NAME,EnvGrpLog,VariName,ora_Session);
+End;
+
+
+
+
+procedure Tf_main.Information(Info: string; Error:boolean);
+begin
+  Memo.Lines.Add(Info);
+  if Error then
+    ApplSession.WriteToLog(amDefault,'MAIN',sesError,Info,0,'');
+end;
+
+
+function Tf_main.ZKERP(filename: string):integer;
+var CSVToDBMapper:TCSVToDBMapper;
+    ORASQLEXPRESSION:TORASQLEXPRESSION;
+begin
+  result:=CONST_EXCEPTION;
+
+  Memo.Lines.Add('Обработка файла '+filename);
+  ORASQLEXPRESSION:=TORASQLEXPRESSION.create(OracleQuery1,self);
+  try
+    CSVToDBMapper:=TCSVToDBMapper.create('XX101_ZKERP_DATA',TFieldsMapDefault.create(
+                  [
+                  ConvertMap(5,TConversionDateClass.Create('YYYYMMDD','dd.mm.yyyy')),
+                  ConvertMap(27,TConversionDateClass.Create('YYYYMMDD','dd.mm.yyyy')),
+                  ConvertMap(40,TConversionDateClass.Create('YYYYMMDD','dd.mm.yyyy'))
+                  ]
+                  ,FieldsEdit.Text));
+    try
+      CSVToDBMapper.MapFile(filename,ORASQLEXPRESSION,'filename=$filename$;ParseDateTime=$date$');
+
+
+      Memo.Lines.Add('Предобработка выполнена');
+      Memo.Lines.Add('Занесение в БД');
+      ORASQLEXPRESSION.Execute;
+      Memo.Lines.Add('Занесение в БД выполнено');
+      OracleQuery1.Clear;
+
+      Memo.Lines.Add('Запуск пост обработки');
+      OracleQuery1.SQL.Add('BEGIN');
+      OracleQuery1.SQL.Add('Xx101_ZKERP_EXEC_PENDINGACTION;');
+      OracleQuery1.SQL.Add('END;');
+      OracleQuery1.Execute;
+
+      Memo.Lines.Add('Пост обработка выполнена');
+      ora_Session.Commit;
+      Memo.Lines.Add('Транзакция завершена');
+      result:=CONST_OK;
+    except
+      on E: Exception do
+      Begin
+        ApplSession.WriteToLog(amDefault,'MAIN',sesError,E.Message+#13#10+'Ошибка загрузки данных',0,'');
+      end;
+    end;
+    CSVToDBMapper.Free;
+  except
+    on E: Exception do
+    Begin
+      ApplSession.WriteToLog(amDefault,'MAIN',sesError,E.Message+#13#10+'Ошибка загрузки данных',0,'');
+    end;
+  end;
+  ORASQLEXPRESSION.free;
+end;
+
+procedure Tf_main.TimerTimer(Sender: TObject);
+var
+  ParCnt:integer;
+  Par1,Par2,Par3:string;
+  sr: TSearchRec;
+begin
+  Timer.Enabled:=False;
+
+  if not ora_Session.Connected then
+  begin
+    // выходим, если нет доступа к БД
+    Close;
+    exit;
+  end;
+
+  ParCnt:=ParamCount;
+  Par1:=AnsiUpperCase(ParamStr(1));
+
+  // Автоматическая загрузка
+  if (ParCnt>0) and (Par1='/AUTO') then
+    begin
+      if FindFirst(LoadPath+LoadFile, faArchive, sr) = 0 then
+      begin
+        repeat
+          if ZKERP(LoadPath+sr.Name)=CONST_OK then
+          begin
+            // Перенос файла в архив
+            F_FIleUtils.SafeCopyFile(LoadPath+sr.Name,ArhFrom+sr.Name);
+            DeleteFile(LoadPath+sr.Name);
+          end;
+        until FindNext(sr) <> 0;
+      end;
+      FindClose(sr);
+
+      Close;
+      exit;
+    end;
+end;
+
+procedure Tf_main.ProcessButtonClick(Sender: TObject);
+begin
+  if OpenDialog.Execute then ZKERP(OpenDialog.FileName);
+end;
+
+
+
+
+
+
+procedure Tf_main.FormCreate(Sender: TObject);
+begin
+  DecimalSeparator:='.';
+
+  // Выключить таймер
+  Timer.Enabled:=false;
+
+  // Создать сессию
+  ApplSession:=TApplSession.Create(Self);
+
+  // Инициализация переменных
+  F_Env:=TMasterEnv.Create(Self);
+
+  // Прочитать INI-файлы приложения и пользователя
+  ApplIniName:=ExtractFilePath(ParamStr(0))+APPLICATION_NAME+'.ini';
+
+  try
+    F_Env.OpenINI(ApplIniName,'');
+    with F_Env.ApplIni do
+      begin
+        EnvGrpVari:= ReadString('Common', 'GRP_VARI', 'VARI');
+        EnvGrpMail:= ReadString('Common', 'GRP_MAIL', 'MAIL');
+        EnvGrpLog:= ReadString('Common', 'GRP_LOG', 'LOG');
+        F_Env.SetGrpUseEnv(APPLICATION_NAME,SCHEMA_NAME,EnvGrpVari,
+              (AnsiUpperCase(ReadString(EnvGrpVari,'USE_ENVIRONMENT','NO'))='YES'));
+        F_Env.SetGrpUseEnv(APPLICATION_NAME,SCHEMA_NAME,EnvGrpMail,
+              (AnsiUpperCase(ReadString(EnvGrpMail,'USE_ENVIRONMENT','NO'))='YES'));
+        F_Env.SetGrpUseEnv(APPLICATION_NAME,SCHEMA_NAME,EnvGrpLog,
+              (AnsiUpperCase(ReadString(EnvGrpLog,'USE_ENVIRONMENT','NO'))='YES'));
+        LoadPath:= ReadString('Common', 'LOAD_PATH', 'C:\R3\R3ZKERP\');
+        ArhFrom:= ReadString('Common', 'ARH_PATH', 'C:\R3\R3ZKERP\ARCHIVE\');
+        LoadFile:= ReadString('Common', 'LOAD_FILE', 'SH015_*.csv');
+      end;
+
+    // Получить доступ к БД
+    ora_Session.LogOn;
+
+    // Открыть сессию
+    ApplSession.InitSession(amAuto,APPLICATION_NAME,SCHEMA_NAME,'MAIN',ApplIniName,'Сессия приложения',ora_Session);
+    Memo.Lines.Add('Установлено соединение с Oracle');
+  except
+    on E: Exception do
+    Begin
+      // Открыть сессию
+      ApplSession.InitSession(amAuto,APPLICATION_NAME,SCHEMA_NAME,'MAIN',ApplIniName,'Сессия приложения',nil);
+      ApplSession.WriteToLog(amDefault,'MAIN',sesError,E.Message+#13#10+'Не удалось получить доступ к БД',0,'');
+      Memo.Lines.Add(E.Message+#13#10+'Не удалось получить доступ к БД');
+    end;
+  end;
+end;
+
+procedure Tf_main.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  // Завершить сессию
+  ApplSession.DoneSession('MAIN');
+
+  // Закрыть INI-файл
+  F_Env.CloseINI;
+end;
+
+procedure Tf_main.FormActivate(Sender: TObject);
+begin
+  // Включить таймер
+  Timer.Enabled:=true;
+end;
+
+end.

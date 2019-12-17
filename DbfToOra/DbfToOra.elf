@@ -1,0 +1,200 @@
+EurekaLog 4.5.1
+
+Application:
+-------------------------------------------------------
+  1.1 Start Date      : Fri, 23 Jul 2004 12:24:41 +0300
+  1.2 Name/Description: DbfToOra.exe
+  1.3 Version Number  : 
+  1.4 Parameters      : "GU12B"
+
+Exception:
+--------------------------------------------------------
+  2.1 Date   : Fri, 23 Jul 2004 12:25:12 +0300
+  2.2 Address: 0051B873
+  2.3 Module : DbfToOra.exe
+  2.4 Type   : EIdSocketError
+  2.5 Message: Socket Error # 10061  Connection refused.
+
+Active Controls:
+----------------------------------------------------------------------------------
+  3.1 Form Class   : TAppBuilder
+  3.2 Form Text    : Delphi 7 - DbfToOra [Running]
+  3.3 Control Class: TFormMain
+  3.4 Control Text : "Çàêà÷êà â ORACLE" v2.7 @ 2001-2003 Âàíååâ Å.Â.,Ïðîêóøåâ Ñ.Â.
+
+Computer:
+------------------------------
+  4.1 Name        : SPROKUSHEV
+  4.2 User        : SProkushev
+  4.3 Total Memory: 255 Mb
+  4.4 Free Memory : 13 Mb
+  4.5 Total Disk  : 19.52 Gb
+  4.6 Free Disk   : 4.84 Gb
+
+Operating System:
+------------------------------------
+  5.1 Type    : Microsoft Windows XP
+  5.2 Build # : 2600
+  5.3 Update  : Service Pack 1
+  5.4 Language: Ðóññêèé
+
+Call Stack Information:
+--------------------------------------------------------------------------
+|Address |Module      |Unit        |Class    |Procedure/Method      |Line|
+--------------------------------------------------------------------------
+|00536F54|DbfToOra.exe|main.pas    |TFormMain|WriteToLog            |1522|
+|00536C30|DbfToOra.exe|main.pas    |TFormMain|WriteToLog            |1473|
+|00535EEE|DbfToOra.exe|main.pas    |TFormMain|LoadDBF               |1383|
+|77FB4DB8|ntdll.dll   |            |         |KiUserApcDispatcher   |    |
+|77E73881|kernel32.dll|            |         |RaiseException        |    |
+|77E73881|kernel32.dll|            |         |RaiseException        |    |
+|77F51773|ntdll.dll   |            |         |RtlAllocateHeap       |    |
+|77F517AD|ntdll.dll   |            |         |RtlAllocateHeap       |    |
+|77E73881|kernel32.dll|            |         |RaiseException        |    |
+|00536F54|DbfToOra.exe|main.pas    |TFormMain|WriteToLog            |1522|
+|00536C30|DbfToOra.exe|main.pas    |TFormMain|WriteToLog            |1473|
+|00539045|DbfToOra.exe|main.pas    |TFormMain|ProcessTable          |2079|
+|77FB4DB8|ntdll.dll   |            |         |KiUserApcDispatcher   |    |
+|77E73881|kernel32.dll|            |         |RaiseException        |    |
+|77E73881|kernel32.dll|            |         |RaiseException        |    |
+|77F51773|ntdll.dll   |            |         |RtlAllocateHeap       |    |
+|77F517AD|ntdll.dll   |            |         |RtlAllocateHeap       |    |
+|77E73881|kernel32.dll|            |         |RaiseException        |    |
+|00537998|DbfToOra.exe|main.pas    |TFormMain|ProcessTable          |1656|
+|00537730|DbfToOra.exe|main.pas    |TFormMain|ProcessTable          |1621|
+|00535BD8|DbfToOra.exe|main.pas    |TFormMain|LoadDBF               |1350|
+|00533E1C|DbfToOra.exe|main.pas    |TFormMain|LoadDBF               |971 |
+|00532FF0|DbfToOra.exe|main.pas    |TFormMain|ExecuteLoading        |770 |
+|00532120|DbfToOra.exe|main.pas    |TFormMain|ExecuteLoading        |612 |
+|00531B61|DbfToOra.exe|main.pas    |TFormMain|Timer1Timer           |520 |
+|77D44387|user32.dll  |            |         |DispatchMessageA      |    |
+|77D44381|user32.dll  |            |         |DispatchMessageA      |    |
+|0053A377|DbfToOra.exe|DbfToOra.dpr|         |                      |13  |
+|77F764A4|ntdll.dll   |            |         |ZwSetInformationThread|    |
+--------------------------------------------------------------------------
+
+Modules Information:
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Handle  |Name            |Description                                                                |Version        |Size   |Path                                                                                           |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|00400000|DbfToOra.exe    |                                                                           |               |1477632|C:\WORK\DbfToOra                                                                               |
+|02A20000|oci.dll         |Oracle Call Interface                                                      |               |114688 |D:\oracle\ora92\bin                                                                            |
+|02A40000|orageneric9.dll |Oracle RDBMS Generic Library                                               |               |2445584|D:\oracle\ora92\bin                                                                            |
+|02CA0000|MSVCIRT.dll     |Windows NT IOStreams DLL                                                   |7.0.2600.0     |50688  |D:\WINDOWS\System32                                                                            |
+|10000000|MsgPlusH1.dll   |Hook DLL                                                                   |2.54.0.75      |1114112|D:\Program Files\Messenger Plus! 2                                                             |
+|1B5C0000|MSWSTR10.DLL    |Microsoft Jet Sort Library                                                 |4.0.3829.2     |614474 |D:\WINDOWS\System32                                                                            |
+|1F320000|msadce.dll      |Microsoft Data Access - OLE DB Cursor Engine                               |2.71.9030.0    |307200 |D:\Program Files\Common Files\system\msadc                                                     |
+|1F370000|msadcer.dll     |Microsoft Data Access - OLE DB Cursor Engine Resources                     |2.70.7713.0    |20480  |D:\Program Files\Common Files\system\msadc                                                     |
+|1F430000|msado15.dll     |Microsoft Data Access - ActiveX Data Objects                               |2.71.9030.0    |487424 |D:\Program Files\Common Files\system\ado                                                       |
+|1F690000|msdasql.dll     |Microsoft Data Access - OLE DB Provider for ODBC Drivers                   |2.71.9030.0    |303104 |D:\Program Files\Common Files\system\ole db                                                    |
+|1F6E0000|MSDASQLR.DLL    |Microsoft Data Access - OLE DB Provider for ODBC Drivers Resources         |2.70.7713.0    |16384  |D:\Program Files\Common Files\system\ole db                                                    |
+|1F7B0000|ODBC32.dll      |Microsoft Data Access - ODBC Driver Manager                                |3.520.9030.0   |200704 |D:\WINDOWS\System32                                                                            |
+|1F800000|odbccp32.dll    |Microsoft Data Access - ODBC Installer                                     |3.520.9030.0   |94208  |D:\WINDOWS\System32                                                                            |
+|1F850000|odbcint.dll     |Microsoft Data Access - ODBC Resources                                     |3.520.7713.0   |90112  |D:\WINDOWS\System32                                                                            |
+|1F8A0000|oledb32.dll     |Microsoft Data Access - OLE DB Core Services                               |2.71.9030.0    |413696 |D:\Program Files\Common Files\system\ole db                                                    |
+|1F910000|OLEDB32R.DLL    |Microsoft Data Access - OLE DB Core Services Resources                     |2.70.7713.0    |65536  |D:\Program Files\Common Files\system\ole db                                                    |
+|55560000|CLUSAPI.DLL     |Cluster API Library                                                        |5.1.2600.1106  |54272  |D:\WINDOWS\System32                                                                            |
+|55600000|wspwsp.dll      |Microsoft WinSockProxy WS2.0 provider                                      |3.0.1200.166   |96528  |D:\Program Files\Microsoft Firewall Client                                                     |
+|5AD70000|uxtheme.dll     |Microsoft UxTheme Library                                                  |6.0.2800.1106  |203264 |D:\WINDOWS\System32                                                                            |
+|5B0A0000|umdmxfrm.dll    |Unimodem Tranform Module                                                   |5.1.2600.0     |13312  |D:\WINDOWS\System32                                                                            |
+|5CD70000|serwvdrv.dll    |Unimodem Serial Wave driver                                                |5.1.2600.0     |14848  |D:\WINDOWS\System32                                                                            |
+|60500000|oracommon9.dll  |Oracle RDBMS Common Library                                                |               |590096 |D:\oracle\ora92\bin                                                                            |
+|60600000|OraClient9.Dll  |Oracle RDBMS Client Library                                                |               |1536272|D:\oracle\ora92\bin                                                                            |
+|60800000|oravsn9.dll     |Oracle RDBMS Version Library                                               |               |24848  |D:\oracle\ora92\bin                                                                            |
+|60810000|orawtc9.dll     |Oracle RDBMS WTC Library                                                   |               |24848  |D:\oracle\ora92\bin                                                                            |
+|60A00000|orapls9.dll     |Oracle PLS runtime Library                                                 |               |3223824|D:\oracle\ora92\bin                                                                            |
+|60E30000|MSDATL3.dll     |Microsoft Data Access - OLE DB Implementation Support Routines             |2.71.9030.0    |86016  |D:\Program Files\Common Files\system\ole db                                                    |
+|610A0000|oracore9.dll    |Oracle CORE Library                                                        |               |647440 |D:\oracle\ora92\bin                                                                            |
+|612A0000|oranls9.dll     |Oracle NLS Runtime Library                                                 |               |491792 |D:\oracle\ora92\bin                                                                            |
+|61350000|orasnls9.dll    |Oracle SNLS Runtime Library                                                |               |65808  |D:\oracle\ora92\bin                                                                            |
+|613A0000|oraunls9.dll    |Oracle UNLS Runtime Library                                                |               |69904  |D:\oracle\ora92\bin                                                                            |
+|61400000|oranl9.dll      |Oracle SQL*Net ORANL9 DLL                                                  |               |180496 |D:\oracle\ora92\bin                                                                            |
+|61480000|oran9.dll       |Oracle SQL*Net ORAN9 DLL                                                   |               |733456 |D:\oracle\ora92\bin                                                                            |
+|615A0000|orannzsbb9.dll  |Oracle SQL*Net ORANNZSBB9 DLL                                              |               |561424 |D:\oracle\ora92\bin                                                                            |
+|616A0000|orancds9.dll    |Oracle SQL*Net ORANCDS9 DLL                                                |               |24848  |D:\oracle\ora92\bin                                                                            |
+|616B0000|orancrypt9.dll  |Oracle SQL*Net ORANCRYPT9 DLL                                              |               |98576  |D:\oracle\ora92\bin                                                                            |
+|61730000|oranro9.dll     |Oracle SQL*Net ORANRO9 DLL                                                 |               |221456 |D:\oracle\ora92\bin                                                                            |
+|617C0000|oranhost9.dll   |Oracle SQL*Net ORANHOST9 DLL                                               |               |24848  |D:\oracle\ora92\bin                                                                            |
+|617D0000|oranoname9.dll  |Oracle SQL*Net ORANONAME9 DLL                                              |               |24848  |D:\oracle\ora92\bin                                                                            |
+|61820000|orantns9.dll    |Oracle SQL*Net ORANTNS9 DLL                                                |               |28944  |D:\oracle\ora92\bin                                                                            |
+|61910000|orantcp9.dll    |Oracle SQL*Net ORANTCP9 DLL                                                |               |49424  |D:\oracle\ora92\bin                                                                            |
+|61960000|oranldap9.dll   |Oracle SQL*Net ORANLDAP9 DLL                                               |               |69904  |D:\oracle\ora92\bin                                                                            |
+|62000000|oraldapclnt9.dll|Oracle Internet Directory Client Library                                   |               |147728 |D:\oracle\ora92\bin                                                                            |
+|62300000|ORATRACE9.dll   |                                                                           |               |246032 |D:\oracle\ora92\bin                                                                            |
+|62500000|oraslax9.dll    |Oracle SLAX runtime Library                                                |               |28944  |D:\oracle\ora92\bin                                                                            |
+|62600000|orasql9.dll     |Oracle SQL Runtime Library                                                 |               |475408 |D:\oracle\ora92\bin                                                                            |
+|62FC0000|oraxml9.dll     |                                                                           |               |512272 |D:\oracle\ora92\bin                                                                            |
+|630F0000|oraxsd9.dll     |                                                                           |               |127248 |D:\oracle\ora92\bin                                                                            |
+|64000000|oranms.dll      |Oracle SNMP Library                                                        |               |28944  |D:\oracle\ora92\bin                                                                            |
+|64020000|oranmsp.dll     |Oracle SNMP Peer adaptor Library                                           |               |65808  |D:\oracle\ora92\bin                                                                            |
+|6B050000|vfpodbc.dll     |Microsoft® Visual Foxpro® ODBC Driver                                      |6.1.8629.1     |977680 |D:\WINDOWS\System32                                                                            |
+|70A70000|SHLWAPI.dll     |Shell Light-weight Utility Library                                         |6.0.2800.1106  |401920 |D:\WINDOWS\system32                                                                            |
+|71950000|comctl32.dll    |User Experience Controls Library                                           |6.0.2800.1106  |921600 |D:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.10.0_x-ww_f7fb5805|
+|71A50000|mswsock.dll     |Microsoft Windows Sockets 2.0 Service Provider                             |5.1.2600.0     |228352 |D:\WINDOWS\System32                                                                            |
+|71A90000|wshtcpip.dll    |Windows Sockets Helper DLL                                                 |5.1.2600.0     |17408  |D:\WINDOWS\System32                                                                            |
+|71AA0000|WS2HELP.dll     |Windows Socket 2.0 Helper for Windows NT                                   |5.1.2600.0     |18944  |D:\WINDOWS\System32                                                                            |
+|71AB0000|WS2_32.dll      |Windows Socket 2.0 32-Bit DLL                                              |5.1.2600.0     |75264  |D:\WINDOWS\System32                                                                            |
+|71AD0000|wsock32.dll     |Windows Socket 32-Bit DLL                                                  |5.1.2600.0     |21504  |D:\WINDOWS\System32                                                                            |
+|71B20000|MPR.dll         |Multiple Provider Router DLL                                               |5.1.2600.0     |55808  |D:\WINDOWS\system32                                                                            |
+|71C20000|NETAPI32.dll    |Net Win32 API DLL                                                          |5.1.2600.1106  |309248 |D:\WINDOWS\system32                                                                            |
+|74C50000|MSDART.DLL      |Microsoft Data Access - OLE DB Runtime Routines                            |2.71.9030.0    |126976 |D:\WINDOWS\System32                                                                            |
+|750B0000|RESUTILS.DLL    |Microsoft Cluster Resource Utility DLL                                     |5.1.2600.0     |54784  |D:\WINDOWS\System32                                                                            |
+|750F0000|MTXCLU.DLL      |MS DTC amd MTS clustering support DLL                                      |2001.12.4414.42|61440  |D:\WINDOWS\system32                                                                            |
+|75130000|colbact.DLL     |                                                                           |2001.12.4414.42|56832  |D:\WINDOWS\system32                                                                            |
+|75730000|comsvcs.dll     |                                                                           |2001.12.4414.46|1172992|D:\WINDOWS\system32                                                                            |
+|75A70000|USERENV.dll     |Userenv                                                                    |5.1.2600.1106  |667136 |D:\WINDOWS\system32                                                                            |
+|763B0000|comdlg32.dll    |Common Dialogs DLL                                                         |6.0.2800.1106  |258048 |D:\WINDOWS\system32                                                                            |
+|76B40000|WINMM.dll       |MCI API DLL                                                                |5.1.2600.1106  |171520 |D:\WINDOWS\System32                                                                            |
+|76BF0000|PSAPI.DLL       |Process Status Helper                                                      |5.1.2600.1106  |17408  |D:\WINDOWS\System32                                                                            |
+|76D60000|iphlpapi.dll    |IP Helper API                                                              |5.1.2600.2     |82944  |D:\WINDOWS\System32                                                                            |
+|76F20000|DNSAPI.dll      |DNS Client API DLL                                                         |5.1.2600.1106  |139264 |D:\WINDOWS\System32                                                                            |
+|76F60000|WLDAP32.dll     |Win32 LDAP API DLL                                                         |5.1.2600.1106  |168448 |D:\WINDOWS\system32                                                                            |
+|76F90000|Secur32.dll     |Security Support Provider Interface                                        |5.1.2600.1106  |52224  |D:\WINDOWS\system32                                                                            |
+|76FB0000|winrnr.dll      |LDAP RnR Provider DLL                                                      |5.1.2600.0     |14848  |D:\WINDOWS\System32                                                                            |
+|76FC0000|rasadhlp.dll    |Remote Access AutoDial Helper                                              |5.1.2600.0     |6144   |D:\WINDOWS\System32                                                                            |
+|76FD0000|CLBCATQ.DLL     |                                                                           |2001.12.4414.42|468480 |D:\WINDOWS\System32                                                                            |
+|77050000|COMRes.dll      |                                                                           |2001.12.4414.42|792064 |D:\WINDOWS\System32                                                                            |
+|77120000|oleaut32.dll    |Microsoft OLE 3.50  for Windows NT(TM) and Windows 95(TM) Operating Systems|3.50.5016.0    |569344 |D:\WINDOWS\system32                                                                            |
+|771B0000|OLE32.DLL       |Microsoft OLE for Windows                                                  |5.1.2600.1106  |1169920|D:\WINDOWS\system32                                                                            |
+|77340000|comctl32.dll    |Common Controls Library                                                    |5.82.2800.1106 |557056 |D:\WINDOWS\system32                                                                            |
+|773D0000|shell32.dll     |Windows Shell Common Dll                                                   |6.0.2800.1106  |8336384|D:\WINDOWS\system32                                                                            |
+|77C00000|version.dll     |Version Checking and File Installation Libraries                           |5.1.2600.0     |16384  |D:\WINDOWS\system32                                                                            |
+|77C10000|MSVCRT.DLL      |Windows NT CRT DLL                                                         |7.0.2600.1106  |323072 |D:\WINDOWS\system32                                                                            |
+|77C70000|GDI32.dll       |GDI Client DLL                                                             |5.1.2600.1106  |250368 |D:\WINDOWS\system32                                                                            |
+|77D40000|user32.dll      |Windows XP USER API Client DLL                                             |5.1.2600.1106  |560128 |D:\WINDOWS\system32                                                                            |
+|77DD0000|ADVAPI32.dll    |Advanced Windows 32 Base API                                               |5.1.2600.1106  |558080 |D:\WINDOWS\system32                                                                            |
+|77E60000|kernel32.dll    |Windows NT BASE API Client DLL                                             |5.1.2600.1106  |930304 |D:\WINDOWS\system32                                                                            |
+|77F50000|ntdll.dll       |NT Layer DLL                                                               |5.1.2600.1106  |668672 |D:\WINDOWS\System32                                                                            |
+|78000000|RPCRT4.dll      |Remote Procedure Call Runtime                                              |5.1.2600.1106  |530432 |D:\WINDOWS\system32                                                                            |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Registers:
+-----------------------------
+EAX: 00000001   EDI: 00000000
+EBX: 00442B85   ESI: 0012DF08
+ECX: 00000000   ESP: 00000000
+EDX: 0EEDFAE0   EIP: 0012FE08
+
+Stack:               Memory Dump:
+------------------   ---------------------------------------------------------------------------
+0012E3FC: 0012E438   0051B873: E8 F8 91 EE FF 33 C0 5A 59 59 64 89 10 68 95 B8  .....3.ZYYd..h..
+0012E400: 004049A4   0051B883: 51 00 8D 45 FC E8 67 98 EE FF C3 E9 E1 90 EE FF  Q..E..g.........
+0012E404: 0012E414   0051B893: EB F0 5E 5B 59 5D C3 8B C0 84 D2 74 08 83 C4 F0  ..^[Y].....t....
+0012E408: 009FBCC8   0051B8A3: E8 9C 8C EE FF 84 D2 74 0F E8 EB 8C EE FF 64 8F  .......t......d.
+0012E40C: 00000000   0051B8B3: 05 00 00 00 00 83 C4 0C C3 B2 01 A1 00 FE 53 00  ..............S.
+0012E410: 00000000   0051B8C3: FF 50 0C C3 90 53 56 57 8B F9 8B DA 8B F0 BA 20  .P...SVW....... 
+0012E414: 0012E428   0051B8D3: B9 51 00 8B C3 E8 8F E3 EE FF 84 C0 74 0E 8B C7  .Q..........t...
+0012E418: 0051B7C6   0051B8E3: BA 34 B9 51 00 E8 5B 98 EE FF EB 23 8B D3 8B C6  .4.Q..[....#....
+0012E41C: 00000019   0051B8F3: E8 7C 04 00 00 84 C0 74 0B 8B C7 8B D3 E8 43 98  .|.....t......C.
+0012E420: FFFFFFFF   0051B903: EE FF EB 0B 8B CF 8B D3 8B C6 8B 18 FF 53 20 5F  .............S _
+0012E424: 009E660C   0051B913: 5E 5B C3 00 00 FF FF FF FF 09 00 00 00 4C 4F 43  ^[...........LOC
+0012E428: 0012E46C   0051B923: 41 4C 48 4F 53 54 00 00 00 FF FF FF FF 09 00 00  ALHOST..........
+0012E42C: 0051B787   0051B933: 00 31 32 37 2E 30 2E 30 2E 31 00 00 00 55 8B EC  .127.0.0.1...U..
+0012E430: FFFFFFFF   0051B943: 83 C4 E8 53 56 33 DB 89 5D FC 89 5D F8 8B D9 8B  ...SV3..]..]....
+0012E434: 005216D1   0051B953: F2 33 C0 55 68 3A BD 51 00 64 FF 30 64 89 20 8B  .3.Uh:.Q.d.0d. .
+0012E438: 0012E488   0051B963: C3 E8 8B 97 EE FF 8B C6 05 EC D8 FF FF 83 F8 3E  ...............>
+
+
+
+
+

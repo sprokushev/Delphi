@@ -1,0 +1,228 @@
+unit CSVToDB;
+interface
+uses Windows,Classes,SysUtils,StrUtils;
+type
+
+TFieldMap=packed record
+Idx:DWORD;
+FieldName:string;
+{NeedConversion:boolean;
+Vartype:Word;}
+end;
+
+TFieldsMapping=array of TFieldMap;
+
+TFieldsMap=class
+protected
+lDelimeter:char;
+function EnumMap(Out Mapping:TFieldsMapping):integer;virtual;abstract;
+public
+property Delimeter:char read lDelimeter;
+end;
+
+TFieldsMapDefault=class(TFieldsMap)
+protected
+Fields:string;
+function EnumMap(Out Mapping:TFieldsMapping):integer;override;
+public
+constructor create(Fields:string);overload;
+property Delimeter:char read lDelimeter;
+end;
+
+TCSVToDBMapper=class
+protected
+TableName:string;
+mapObj:TFieldsMap;
+lSkipEmptyValues:boolean;
+function IsValidMapping(MaxIdx:integer;const Mapping:array of TFieldMap):integer;
+public
+property SkipEmptyValues:boolean read lSkipEmptyValues write lSkipEmptyValues;
+constructor create(const Tablename:string;mapObj:TFieldsMap);
+destructor destroy;override;
+function MapFile(Filename:string):integer;
+end;
+
+implementation
+
+uses SystemConstants,dialogs;
+
+function FindStringComponent(s:string;DeviderSrt:string;Idx:integer;out offset,count:integer):boolean;
+var i,j,l:integer;
+begin
+l:=length(S);
+j:=0;
+while j<l do
+ begin
+ i:=j+1;
+ j:=PosEx(DeviderSrt,S,i);
+ if j=0  then j:=l+1;
+ dec(idx);
+ if idx=0 then
+      begin
+      offset:=i;
+      count:=j-i;
+      result:=true;
+      exit;
+      end;
+ end;
+result:=false;
+end;
+
+function ParseString(S:string;DeviderSrt:string;strings:TStrings;SkipEmptyString:boolean=false):integer;
+var i,j,l:integer;
+    Substring:string;
+begin
+strings.clear;
+l:=length(S);
+j:=0;
+while j<l do
+ begin
+ i:=j+1;
+ j:=PosEx(DeviderSrt,S,i);
+ if j=0  then j:=l+1;
+ Substring:=MidStr(S,i,j-i);
+ if (not SkipEmptyString) or (Substring<>'') then strings.Add(Substring);
+ end;
+end;
+
+{ TCSVToDBMapper }
+
+constructor TCSVToDBMapper.create(const Tablename: string; mapObj: TFieldsMap);
+begin
+Self.TableName:=Tablename;
+self.mapObj:=mapObj;
+SkipEmptyValues:=TRUE;
+end;
+
+destructor TCSVToDBMapper.destroy;
+begin
+mapObj.free;
+inherited;
+end;
+
+function TCSVToDBMapper.IsValidMapping(MaxIdx: integer;const Mapping: array of TFieldMap): integer;
+var i:integer;
+begin
+try
+for I := 0 to length(Mapping)-1 do
+  if Mapping[i].Idx>MaxIdx then
+            begin
+            result:=CONST_NOT;
+            exit;
+            end;
+result:=CONST_OK;
+except
+result:=CONST_EXCEPTION;
+end;
+end;
+
+function TCSVToDBMapper.MapFile(Filename: string): integer;
+const
+    _SQL_INSERT_='insert into $tableName$($Fields$) values($values$)';
+    _SQL_DELIMITER_=',';
+var FileList,RowItemsList,FList,VList:TStringList;
+    Mapping:TFieldsMapping;
+    i,j:integer;
+    BaseSQL,ExecSQL:string;
+    ItemValue:String;
+begin
+try
+mapObj.EnumMap(Mapping);
+if length(Mapping)>0 then
+     else
+     begin
+     result:=CONST_NOT;
+     exit;
+     end;
+FList:=TStringList.Create;
+VList:=TStringList.Create;
+ BaseSQL:=StringReplace(_SQL_INSERT_,'$tableName$',TableName,[rfIgnoreCase]);
+ try
+ FList.Delimiter:=_SQL_DELIMITER_;
+ VList.Delimiter:=_SQL_DELIMITER_;
+ FileList:=TStringList.Create;
+    try
+    RowItemsList:=TStringList.Create;
+      try
+       FileList.LoadFromFile(Filename);
+       for I := 0 to FileList.Count-1 do
+         begin
+         ParseString(FileList.Strings[i],mapObj.Delimeter,RowItemsList);
+////////////////////////////////////////////////////////////////////////////////
+{
+Формирование строки $SQLFields$ и $values$
+}
+         for j:=0 to length(Mapping)-1 do
+             begin
+             if Mapping[j].Idx>RowItemsList.Count then raise Exception.Create('Некорректный Файл');
+             ItemValue:=RowItemsList.Strings[Mapping[j].Idx-1];
+             if (ItemValue='') and SkipEmptyValues then
+                  else
+                    begin
+                    FList.Add(Mapping[j].FieldName);
+                    VList.Add(ItemValue);
+                    end;
+             end;
+         ExecSQL:=StringReplace(BaseSQL,'$Fields$',FList.DelimitedText,[rfIgnoreCase]);
+         ExecSQL:=StringReplace(ExecSQL,'$values$',VList.DelimitedText,[rfIgnoreCase]);
+         showmessage(ExecSQL);
+         FList.Clear;
+         VList.Clear;
+////////////////////////////////////////////////////////////////////////////////
+         RowItemsList.Clear;
+         end;
+      finally
+      RowItemsList.free;
+      end;
+    finally
+    FileList.free;
+    end;
+ finally
+ VList.free;
+ FList.free;
+ end;
+Except
+result:=CONST_EXCEPTION;
+end;
+end;
+
+{ TFieldsMapDefault }
+
+constructor TFieldsMapDefault.create(Fields: string);
+begin
+lDelimeter:=';';
+self.Fields:=Fields;
+end;
+
+function TFieldsMapDefault.EnumMap(out Mapping: TFieldsMapping): integer;
+const _DELIMITER_=';';
+var List:TStringList;
+    i:integer;
+    j:integer;
+begin
+try
+List:=TStringList.Create;
+  try
+  ParseString(Fields,_DELIMITER_,List);
+  SetLength(Mapping,List.Count);
+  j:=0;
+  for i := 0 to List.Count - 1 do
+     if List.Strings[i]='' then
+       else
+        begin
+        inc(j);
+        Mapping[j].Idx:=i+1;
+        Mapping[j].FieldName:=List.Strings[i];
+        end;
+  finally
+  List.free;
+  end;
+result:=CONST_OK;
+except
+result:=CONST_EXCEPTION;
+end;
+end;
+
+
+
+end.

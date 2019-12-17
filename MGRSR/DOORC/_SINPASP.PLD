@@ -1,0 +1,8 @@
+.CON D volgogradnb/sitoca@dev
+.INS L D C:\ORACLE\ORANT\OCA60\PLSQLLIB,F:\DBA\MGRSR\DOORC
+.A L Exec_sql.pll F S
+.LOA F sinhtabs.pls
+.LOA F sinhtabb.pls
+sinhtabl.pasport;
+.Q
+

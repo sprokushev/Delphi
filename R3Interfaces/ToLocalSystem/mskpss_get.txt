@@ -1,0 +1,3 @@
+mget SH015*.csv 
+mget SH022*.csv 
+mget otgr_*.csv 
