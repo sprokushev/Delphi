@@ -1,0 +1,9 @@
+-- 
+-- Non Foreign Key Constraints for Table REPL_SESSION 
+-- 
+ALTER TABLE SNP_REPL.REPL_SESSION ADD (
+  CONSTRAINT R_SESS_PK
+  PRIMARY KEY
+  (ID)
+  USING INDEX SNP_REPL.R_SESS_PK);
+

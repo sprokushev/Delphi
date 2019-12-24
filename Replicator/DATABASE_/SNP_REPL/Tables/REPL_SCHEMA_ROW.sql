@@ -1,0 +1,49 @@
+--
+-- REPL_SCHEMA_ROW  (Table) 
+--
+CREATE TABLE SNP_REPL.REPL_SCHEMA_ROW
+(
+  RN               NUMBER(17)                   NOT NULL,
+  SITE_SOURCE_RN   NUMBER(17)                   NOT NULL,
+  SITE_DEST_RN     NUMBER(17)                   NOT NULL,
+  SCHEMA_RN        NUMBER(17)                   NOT NULL,
+  TABLE_SOURCE_RN  NUMBER(17)                   NOT NULL,
+  SQL_FIELDS       VARCHAR2(500 BYTE)           DEFAULT '*',
+  SQL_WHERE        VARCHAR2(1000 BYTE),
+  REPL_TABLE       VARCHAR2(100 BYTE),
+  REPL_MODE        NUMBER(2)                    DEFAULT 1                     NOT NULL,
+  SORTBY           NUMBER(10)                   NOT NULL,
+  IS_ACTIVE        NUMBER(1)                    DEFAULT 0                     NOT NULL,
+  TABLE_DEST_RN    NUMBER(17)                   NOT NULL,
+  REPL_USER        VARCHAR2(30 BYTE)
+);
+
+COMMENT ON TABLE SNP_REPL.REPL_SCHEMA_ROW IS 'Строки схемы репликации';
+
+COMMENT ON COLUMN SNP_REPL.REPL_SCHEMA_ROW.RN IS 'SCHEMA_ROW_RN';
+
+COMMENT ON COLUMN SNP_REPL.REPL_SCHEMA_ROW.SITE_SOURCE_RN IS 'Узел-источник';
+
+COMMENT ON COLUMN SNP_REPL.REPL_SCHEMA_ROW.SITE_DEST_RN IS 'Узел-назначение';
+
+COMMENT ON COLUMN SNP_REPL.REPL_SCHEMA_ROW.SCHEMA_RN IS 'Схема репликации';
+
+COMMENT ON COLUMN SNP_REPL.REPL_SCHEMA_ROW.TABLE_SOURCE_RN IS 'Таблица на узле-источнике';
+
+COMMENT ON COLUMN SNP_REPL.REPL_SCHEMA_ROW.SQL_FIELDS IS 'Список полей';
+
+COMMENT ON COLUMN SNP_REPL.REPL_SCHEMA_ROW.SQL_WHERE IS 'Ограничивающее условие';
+
+COMMENT ON COLUMN SNP_REPL.REPL_SCHEMA_ROW.REPL_TABLE IS 'Репликационная таблица';
+
+COMMENT ON COLUMN SNP_REPL.REPL_SCHEMA_ROW.REPL_MODE IS 'Режим репликации';
+
+COMMENT ON COLUMN SNP_REPL.REPL_SCHEMA_ROW.SORTBY IS 'Порядок репликации';
+
+COMMENT ON COLUMN SNP_REPL.REPL_SCHEMA_ROW.IS_ACTIVE IS 'Активная таблица';
+
+COMMENT ON COLUMN SNP_REPL.REPL_SCHEMA_ROW.TABLE_DEST_RN IS 'Таблица на узле-назначении';
+
+COMMENT ON COLUMN SNP_REPL.REPL_SCHEMA_ROW.REPL_USER IS 'Пользователь, который реплицирует данную таблицу';
+
+

@@ -1,0 +1,9 @@
+-- 
+-- Non Foreign Key Constraints for Table REPL_INIT 
+-- 
+ALTER TABLE SNP_REPL.REPL_INIT ADD (
+  CONSTRAINT REPL_INIT_PK
+  PRIMARY KEY
+  (RN)
+  USING INDEX SNP_REPL.REPL_INIT_PK);
+

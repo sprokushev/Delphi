@@ -1,0 +1,16 @@
+--
+-- ENVIRONMENT_TYPES  (Table) 
+--
+CREATE TABLE SNP_REPL.ENVIRONMENT_TYPES
+(
+  ID    NUMBER(10)                              NOT NULL,
+  NAME  VARCHAR2(30 BYTE)                       NOT NULL
+);
+
+COMMENT ON TABLE SNP_REPL.ENVIRONMENT_TYPES IS 'Типы переменных окружения';
+
+COMMENT ON COLUMN SNP_REPL.ENVIRONMENT_TYPES.ID IS 'Тип переменной';
+
+COMMENT ON COLUMN SNP_REPL.ENVIRONMENT_TYPES.NAME IS 'Наименование';
+
+

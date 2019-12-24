@@ -1,0 +1,9 @@
+-- 
+-- Non Foreign Key Constraints for Table REPL_SITE 
+-- 
+ALTER TABLE SNP_REPL.REPL_SITE ADD (
+  CONSTRAINT REPL_SITE_PK
+  PRIMARY KEY
+  (RN)
+  USING INDEX SNP_REPL.REPL_SITE_PK);
+

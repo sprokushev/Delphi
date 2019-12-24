@@ -1,0 +1,16 @@
+--
+-- KLS_REPL_MODE  (Table) 
+--
+CREATE TABLE SNP_REPL.KLS_REPL_MODE
+(
+  RN    NUMBER(10)                              NOT NULL,
+  NAME  VARCHAR2(50 BYTE)
+);
+
+COMMENT ON TABLE SNP_REPL.KLS_REPL_MODE IS 'Справочник режимов репликации';
+
+COMMENT ON COLUMN SNP_REPL.KLS_REPL_MODE.RN IS 'ID';
+
+COMMENT ON COLUMN SNP_REPL.KLS_REPL_MODE.NAME IS 'Наименование';
+
+

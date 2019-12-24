@@ -1,0 +1,8 @@
+--
+-- QUEST_SOO_BDUMP_DIR  (Directory) 
+--
+CREATE OR REPLACE DIRECTORY 
+QUEST_SOO_BDUMP_DIR AS 
+'C:\DB_ORCL\bdump\';
+
+
