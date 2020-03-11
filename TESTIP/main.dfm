@@ -1,0 +1,200 @@
+object f_main: Tf_main
+  Left = 684
+  Top = 155
+  Width = 646
+  Height = 788
+  Caption = #1055#1088#1086#1074#1077#1088#1082#1072' '#1076#1086#1089#1090#1091#1087#1085#1086#1089#1090#1080' '#1087#1086' IP'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl: TPageControl
+    Left = 0
+    Top = 0
+    Width = 638
+    Height = 754
+    ActivePage = TabARM
+    Align = alClient
+    TabOrder = 0
+    object TabARM: TTabSheet
+      Caption = #1056#1072#1073#1086#1095#1080#1077' '#1084#1077#1089#1090#1072
+      object panARM: TPanel
+        Left = 0
+        Top = 685
+        Width = 630
+        Height = 41
+        Align = alBottom
+        TabOrder = 0
+        object BitBtn1: TBitBtn
+          Left = 32
+          Top = 8
+          Width = 193
+          Height = 25
+          Action = acPingExecute
+          Caption = #1055#1088#1086#1074#1077#1088#1080#1090#1100' '#1076#1086#1089#1090#1091#1087#1085#1086#1089#1090#1100' '#1040#1056#1052
+          Default = True
+          TabOrder = 0
+        end
+        object BitBtn2: TBitBtn
+          Left = 240
+          Top = 8
+          Width = 169
+          Height = 25
+          Action = acMainQuit
+          Cancel = True
+          Caption = #1047#1072#1074#1077#1088#1096#1080#1090#1100' '#1088#1072#1073#1086#1090#1091
+          TabOrder = 1
+          Glyph.Data = {
+            DE010000424DDE01000000000000760000002800000024000000120000000100
+            0400000000006801000000000000000000001000000000000000000000000000
+            80000080000000808000800000008000800080800000C0C0C000808080000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00388888888877
+            F7F787F8888888888333333F00004444400888FFF444448888888888F333FF8F
+            000033334D5007FFF4333388888888883338888F0000333345D50FFFF4333333
+            338F888F3338F33F000033334D5D0FFFF43333333388788F3338F33F00003333
+            45D50FEFE4333333338F878F3338F33F000033334D5D0FFFF43333333388788F
+            3338F33F0000333345D50FEFE4333333338F878F3338F33F000033334D5D0FFF
+            F43333333388788F3338F33F0000333345D50FEFE4333333338F878F3338F33F
+            000033334D5D0EFEF43333333388788F3338F33F0000333345D50FEFE4333333
+            338F878F3338F33F000033334D5D0EFEF43333333388788F3338F33F00003333
+            4444444444333333338F8F8FFFF8F33F00003333333333333333333333888888
+            8888333F00003333330000003333333333333FFFFFF3333F00003333330AAAA0
+            333333333333888888F3333F00003333330000003333333333338FFFF8F3333F
+            0000}
+          NumGlyphs = 2
+        end
+      end
+      object sbARM: TScrollBox
+        Left = 0
+        Top = 0
+        Width = 630
+        Height = 685
+        Align = alClient
+        BevelInner = bvNone
+        BevelOuter = bvNone
+        TabOrder = 1
+      end
+    end
+    object TabService: TTabSheet
+      Caption = #1057#1077#1088#1074#1080#1089#1099
+      ImageIndex = 1
+      object panService: TPanel
+        Left = 0
+        Top = 685
+        Width = 630
+        Height = 41
+        Align = alBottom
+        TabOrder = 0
+      end
+      object sbService: TScrollBox
+        Left = 0
+        Top = 0
+        Width = 630
+        Height = 685
+        Align = alClient
+        BevelInner = bvNone
+        BevelOuter = bvNone
+        TabOrder = 1
+      end
+    end
+  end
+  object rxtiMain: TRxTrayIcon
+    Hint = #1055#1088#1086#1074#1077#1088#1082#1072' '#1076#1086#1089#1090#1091#1087#1085#1086#1089#1090#1080' '#1087#1086' IP'
+    Icon.Data = {
+      0000010001002020100000000000E80200001600000028000000200000004000
+      0000010004000000000080020000000000000000000000000000000000000000
+      000000008000008000000080800080000000800080008080000080808000C0C0
+      C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000330000000000000000000000033303303303300000000000000
+      0003303330333003003300000000000000033003330330002333000000000000
+      0030000033003033333000000000000033333330000003330003330000000803
+      33333333333333300233330000000F033333333333333302333BB03000004F83
+      33333333333333333BB003BB00004FF3333333333333B33BB0033BBB00004FF3
+      33333333B3BB3BB0033BBBB000004FF83B333B3B3B3BBBB03BBBBB0300F04FFF
+      33B3B3B3BBBBBBBBBBBB00330FF04FFF8B3B3333BBBBBBBBBB0033330FF044FF
+      F8BBB03033BBBBB330333330FFF444FFF8BB0BB3003B330003333330FF44444F
+      F88B3BBB300000033333B33FFF44444FFF3BB0BBB3000333B33BB38FF4444444
+      FF003B0BB333333BBBBBB3FFF44444444FF00030BBBBBBBBBBBBBBFF44444444
+      0000000303BBB3300000BFF444444400000000000000000000000FF444440000
+      0000000000000000000000444444000000000000000000000000000044440000
+      0000000000000000000000000444000000000000000000000000000000040000
+      000000000000000000000000000000000000000000000000000000000000FFFF
+      FFFFFFFFFFFFFFFF1FFFFF8003FFFC0000FFF800007FF800007FE000003F0000
+      001F0000001F0000000F00000007000000070000000000000000000000000000
+      00000000000000000000000000000000000000000000000000000000000000C0
+      00000FE01F003FFFFF80FFFFFFC0FFFFFFF0FFFFFFF8FFFFFFFEFFFFFFFF}
+    PopupMenu = PopupMenuMain
+    Left = 48
+    Top = 40
+  end
+  object PopupMenuMain: TPopupMenu
+    Left = 144
+    Top = 40
+    object miCheck: TMenuItem
+      Action = acPingExecute
+    end
+    object miExit: TMenuItem
+      Action = acMainQuit
+    end
+  end
+  object ActionManager: TActionManager
+    Left = 52
+    Top = 104
+    StyleName = 'XP Style'
+    object acMainClose: TAction
+      Caption = 'acMainClose'
+      OnExecute = acMainCloseExecute
+    end
+    object acMainShow: TAction
+      Caption = 'acMainShow'
+      OnExecute = acMainShowExecute
+    end
+    object acMainQuit: TAction
+      Caption = #1047#1072#1074#1077#1088#1096#1080#1090#1100' '#1088#1072#1073#1086#1090#1091
+      OnExecute = acMainQuitExecute
+    end
+    object acPingExecute: TAction
+      Caption = #1055#1088#1086#1074#1077#1088#1080#1090#1100' '#1076#1086#1089#1090#1091#1087#1085#1086#1089#1090#1100' '#1040#1056#1052
+      OnExecute = acPingExecuteExecute
+    end
+    object acServiceClose: TAction
+      Caption = #1047#1072#1082#1088#1099#1090#1100
+    end
+  end
+  object ApplicationEvents: TApplicationEvents
+    OnMinimize = acMainCloseExecute
+    OnRestore = acMainShowExecute
+    Left = 156
+    Top = 104
+  end
+  object ora_Session: TOracleSession
+    Left = 252
+    Top = 104
+  end
+  object PingICMP: Ticmp
+    Address = -1
+    HostName = '0.0.0.0'
+    TimeOut = 1000
+    HostIP = '0.0.0.0'
+    status = 0
+    AlwaysResolve = True
+    Left = 332
+    Top = 104
+  end
+  object IdTCPClient: TIdTCPClient
+    MaxLineAction = maException
+    ReadTimeout = 0
+    Port = 0
+    Left = 52
+    Top = 164
+  end
+end

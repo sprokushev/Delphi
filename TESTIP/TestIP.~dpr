@@ -1,0 +1,16 @@
+program TestIP;
+
+uses
+  Forms,
+  main in 'main.pas' {f_main},
+  ForEnv in 'ForEnv.pas',
+  ForSESS in 'ForSESS.pas' {ApplSession};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.Title := 'Проверка доступности по IP';
+  Application.CreateForm(Tf_main, f_main);
+  Application.Run;
+end.

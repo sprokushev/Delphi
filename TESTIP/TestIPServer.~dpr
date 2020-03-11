@@ -1,0 +1,14 @@
+program TestIPServer;
+
+uses
+  Forms,
+  main_srv in 'main_srv.pas' {f_main},
+  ForFiles in 'ForFiles.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(Tf_main, f_main);
+  Application.Run;
+end.
